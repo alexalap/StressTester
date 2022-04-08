@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLogic\TestSite.cs" />
+    <Compile Include="BusinessLogic\DataType\SiteMetricData.cs" />
+    <Compile Include="BusinessLogic\SessionMetrics.cs" />
+    <Compile Include="BusinessLogic\SiteRequester.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

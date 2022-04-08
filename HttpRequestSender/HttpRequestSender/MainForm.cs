@@ -1,4 +1,5 @@
-﻿using HttpRequestSender.Utilities;
+﻿using HttpRequestSender.BusinessLogic;
+using HttpRequestSender.Utilities;
 using System;
 using System.Diagnostics;
 using System.Drawing;
@@ -10,9 +11,6 @@ namespace StressTester
 {
     public partial class StressTester_Form : Form
     {
-        private bool runThread = false;
-        private Thread requesterThread;
-
         public StressTester_Form()
         {
             InitializeComponent();
@@ -20,15 +18,15 @@ namespace StressTester
             UpdateButtons(false);
         }
 
-        private void start_BTN_Click(object sender, EventArgs e)
+        private async void start_BTN_Click(object sender, EventArgs e)
         {
             UpdateButtons(true);
             if (ValidateValue(reqPerSec_TB.Text))
             {
                 status_L.Text = "";
-                runThread = true;
-                requesterThread = new Thread(Threadtask);
-                requesterThread.Start();
+                SessionMetrics session = new SessionMetrics();
+                SiteRequester siteRequester = new SiteRequester(URL_TB.Text, session);
+                await siteRequester.GetResponseParallelBatched(1000, 100, 100);
             }
             else
             {
@@ -44,7 +42,6 @@ namespace StressTester
         private void stop_BTN_Click(object sender, EventArgs e)
         {
             UpdateButtons(false);
-            runThread = false;
         }
 
 
@@ -78,10 +75,7 @@ namespace StressTester
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            if(requesterThread != null)
-            {
-                requesterThread.Abort();
-            }
+            
         }
     }
 }

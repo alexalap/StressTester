@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using System.IO;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace HttpRequestSender.Utilities
@@ -29,25 +29,64 @@ namespace HttpRequestSender.Utilities
 
     static class Logger
     {
-        private delegate void PrintLog(LogEntry logEntry);
+        private delegate void PrintLog();
+
+        private const long logGridViewRefreshInterval = 2000;
+
+        private static object lockObject = new object();
+
+        private static System.Timers.Timer timer;
 
         public static DataGridView logGridView { get; set; }
 
         private static List<LogEntry> logEntries = new List<LogEntry>();
+
+        private static List<LogEntry> newLogEntries = new List<LogEntry>();
         //private static string logFile = Directory.GetCurrentDirectory() + "log_" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + ".log";
 
         public static void Log(LogPriority logPriority, string message)
         {
             LogEntry entry = new LogEntry(logPriority, DateTime.Now, message);
+            lock (lockObject)
+            {
+                if(timer == null)
+                {
+                    timer = new System.Timers.Timer();
+                    timer.Interval = logGridViewRefreshInterval;
+                    timer.Elapsed += TimerTick;
+                    timer.AutoReset = true;
+                    timer.Enabled = true;
+                }
 
-            logEntries.Add(entry); // TODO: NOT threadsafe
-            logGridView.Invoke(new PrintLog(LogToLogsTab), entry);
+                logEntries.Add(entry);
+                newLogEntries.Add(entry);
+            }
         }
 
-        private static void LogToLogsTab(LogEntry entry)
+        private static void LogGridViewRefresh()
         {
-            logGridView.Rows.Add(entry.logPriority.ToString(), entry.timeStamp.ToString("G", CultureInfo.CurrentCulture), entry.message);
-            logGridView.FirstDisplayedScrollingRowIndex = logGridView.RowCount - 1;
+            logGridView.Invoke(new PrintLog(LogToLogsTab));
+        }
+
+        private static void LogToLogsTab()
+        {
+            if (newLogEntries.Count > 0)
+            {
+                lock (lockObject)
+                {
+                    foreach (LogEntry entry in newLogEntries)
+                    {
+                        logGridView.Rows.Add(entry.logPriority.ToString(), entry.timeStamp.ToString("G", CultureInfo.CurrentCulture), entry.message);
+                    }
+                    newLogEntries.Clear();
+                }
+                logGridView.FirstDisplayedScrollingRowIndex = logGridView.RowCount - 1;
+            }
+        }
+
+        private static void TimerTick(Object source, ElapsedEventArgs e)
+        {
+            LogGridViewRefresh();
         }
     }
 }

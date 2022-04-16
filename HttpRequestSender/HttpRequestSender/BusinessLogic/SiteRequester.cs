@@ -31,13 +31,13 @@ namespace HttpRequestSender.BusinessLogic
                 HttpResponseMessage response = await client.GetAsync(address, cancellation.Token).ConfigureAwait(false);
 
                 stopper.Stop();
-                sessionMetrics.AddResponse(address);
-                //Logger.Log(LogPriority.INFO, "Response received.\n" + stopper.ElapsedMilliseconds);
+                sessionMetrics.AddResponse(address, response.StatusCode.ToString());
+                Logger.Log(LogPriority.INFO, "Response received.\n" + stopper.ElapsedMilliseconds);
             }
             catch (TaskCanceledException t)
             {
                 //TODO: Timestamp
-                //Logger.Log(LogPriority.WARNING, "Request has been cancelled due to timeout.");
+                Logger.Log(LogPriority.WARNING, "Request has been cancelled due to timeout.");
             }
             catch (Exception e)
             {
@@ -73,6 +73,7 @@ namespace HttpRequestSender.BusinessLogic
                 await Task.WhenAll(currentTasks);
             }
             await Task.WhenAll(tasks);
+            cancellation.Cancel();
         }
 
         private void SetTimer(int millisec)

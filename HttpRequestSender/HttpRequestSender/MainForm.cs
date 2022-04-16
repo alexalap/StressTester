@@ -1,10 +1,7 @@
 ﻿using HttpRequestSender.BusinessLogic;
 using HttpRequestSender.Utilities;
 using System;
-using System.Diagnostics;
 using System.Drawing;
-using System.Net;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace StressTester
@@ -26,7 +23,7 @@ namespace StressTester
                 status_L.Text = "";
                 SessionMetrics session = new SessionMetrics();
                 SiteRequester siteRequester = new SiteRequester(URL_TB.Text, session);
-                await siteRequester.GetResponseParallelBatched(1000, 100, 100);
+                await siteRequester.GetResponseParallelBatched(400, 1000, 1000);
             }
             else
             {

@@ -1,11 +1,7 @@
 ﻿using HttpRequestSender.BusinessLogic.DataType;
 using HttpRequestSender.Utilities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HttpRequestSender.BusinessLogic
 {
@@ -23,14 +19,17 @@ namespace HttpRequestSender.BusinessLogic
 
         public void CloseMetric(string address)
         {
-            activeMetrics[address].Close();
-            Logger.Log(LogPriority.INFO, "Metric closed with result: " + activeMetrics[address].ResponseTimeRate() + " response / sec");
-            activeMetrics.Remove(address);
+            if (activeMetrics.ContainsKey(address))
+            {
+                activeMetrics[address].Close();
+                Logger.Log(LogPriority.INFO, "Metric closed with result: " + activeMetrics[address].ResponseTimeRate() + " response / sec");
+                activeMetrics.Remove(address);
+            }
         }
 
-        public void AddResponse(string address)
+        public void AddResponse(string address, string statusCode)
         {
-            activeMetrics[address].AddResponse();
+            activeMetrics[address].AddResponse(statusCode);
         }
     }
 }

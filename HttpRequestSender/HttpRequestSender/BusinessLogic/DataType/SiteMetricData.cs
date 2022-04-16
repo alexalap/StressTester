@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HttpRequestSender.BusinessLogic.DataType
 {
@@ -15,6 +13,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private DateTime start;
         private int responseCount;
         private double duration = 0;
+        private bool closed = false;
+
+        private Dictionary<string, int> responses = new Dictionary<string, int>();
 
         public double Duration
         {
@@ -41,19 +42,30 @@ namespace HttpRequestSender.BusinessLogic.DataType
             this.start = DateTime.Now;
         }
 
-        public void AddResponse()
+        public void AddResponse(string statusCode)
         {
-            responseCount++;
+            if (responses.ContainsKey(statusCode))
+            {
+                responses[statusCode]++;
+            }
+            else
+            {
+                responses.Add(statusCode, 1);
+            }
         }
 
         public float ResponseTimeRate()
         {
-            return responseCount / ((float)Duration / 1000);
+            return responses["OK"] / ((float)Duration / 1000);
         }
 
         public void Close()
         {
-            Duration = (DateTime.Now - start).TotalMilliseconds;
+            if (!closed)
+            {
+                closed = true;
+                Duration = (DateTime.Now - start).TotalMilliseconds;
+            }
         }
     }
 }

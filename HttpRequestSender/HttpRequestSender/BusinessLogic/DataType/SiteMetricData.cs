@@ -8,14 +8,15 @@ namespace HttpRequestSender.BusinessLogic.DataType
     {
         private static int ID = 0;
         
-        private int id = ID++;
-        private string address;
+        private readonly int id = ID++;
+        private readonly string address;
         private DateTime start;
-        private int responseCount;
         private double duration = 0;
         private bool closed = false;
 
         private Dictionary<string, int> responses = new Dictionary<string, int>();
+
+        private Dictionary<string, int> responsesLastSec = new Dictionary<string, int>();
 
         public double Duration
         {
@@ -36,6 +37,32 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        public int OKResponseCount
+        {
+            get
+            {
+                return responses["OK"];
+            }
+        }
+
+        public int ErrorResponseCount
+        {
+            get
+            {
+                int errorCount = 0;
+                foreach (string key in responses.Keys)
+                {
+                    if(key != "OK")
+                    {
+                        errorCount += responses[key];
+                    }
+                }
+                return errorCount;
+            }
+        }
+
+        public string Address => address;
+
         public SiteMetricData(string address)
         {
             this.address = address;
@@ -52,11 +79,46 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 responses.Add(statusCode, 1);
             }
+            if (responsesLastSec.ContainsKey(statusCode))
+            {
+                responsesLastSec[statusCode]++;
+            }
+            else
+            {
+                responsesLastSec.Add(statusCode, 1);
+            }
+            Duration = (DateTime.Now - start).TotalMilliseconds;
         }
 
         public float ResponseTimeRate()
         {
-            return responses["OK"] / ((float)Duration / 1000);
+            return OKResponseCount / ((float)Duration / 1000);
+        }
+
+        public float ErrorTimeRate()
+        {
+            return ErrorResponseCount / ((float)Duration / 1000);
+        }
+
+        public float ResponseTimeRateLastSec()
+        {
+            float res = responsesLastSec["OK"] / ((float)Duration / 1000);
+            responsesLastSec.Remove("OK");
+            return res;
+        }
+
+        public float ErrorTimeRateLastSec()
+        {
+            int errorCount = 0;
+            foreach (string key in responsesLastSec.Keys)
+            {
+                if (key != "OK")
+                {
+                    errorCount += responsesLastSec[key];
+                    responsesLastSec.Remove(key);
+                }
+            }
+            return errorCount / ((float)Duration / 1000);
         }
 
         public void Close()
@@ -64,7 +126,6 @@ namespace HttpRequestSender.BusinessLogic.DataType
             if (!closed)
             {
                 closed = true;
-                Duration = (DateTime.Now - start).TotalMilliseconds;
             }
         }
     }

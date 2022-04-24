@@ -1,4 +1,5 @@
 ﻿using HttpRequestSender.BusinessLogic;
+using HttpRequestSender.Forms;
 using HttpRequestSender.Utilities;
 using System;
 using System.Drawing;
@@ -73,6 +74,11 @@ namespace StressTester
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             
+        }
+
+        private void planEditor_BTN_Click(object sender, EventArgs e)
+        {
+            PlanEditor_Form planeditor = new PlanEditor_Form();
         }
     }
 }

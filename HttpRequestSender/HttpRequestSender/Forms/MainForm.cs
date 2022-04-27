@@ -1,40 +1,39 @@
 ﻿using HttpRequestSender.BusinessLogic;
+using HttpRequestSender.ErrorHandling;
 using HttpRequestSender.Forms;
 using HttpRequestSender.Utilities;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace StressTester
+namespace HttpRequestSender.Forms
 {
     public partial class StressTester_Form : Form
     {
+        SessionMetrics session;
+        SiteRequester siteRequester;
+
         public StressTester_Form()
         {
             InitializeComponent();
-            Logger.logGridView = logGrid_DGV;
+            //Logger.logGridView = logGrid_DGV;
             UpdateButtons(false);
         }
 
         private async void start_BTN_Click(object sender, EventArgs e)
         {
             UpdateButtons(true);
-            if (ValidateValue(reqPerSec_TB.Text))
+            if (TextBoxValidator.Validate<int>(reqPerSec_TB.Text, out int value))
             {
                 status_L.Text = "";
-                SessionMetrics session = new SessionMetrics();
-                SiteRequester siteRequester = new SiteRequester(URL_TB.Text, session);
-                await siteRequester.GetResponseParallelBatched(400, 1000, 1000);
+                session = new SessionMetrics();
+                siteRequester = new SiteRequester(URL_TB.Text, session);
+                await siteRequester.GetResponseParallel(int.MaxValue, value);
             }
             else
             {
                 status_L.Text = "Invalid value in \"Request per second\" field.";
             }
-        }
-
-        private bool ValidateValue(string text)
-        {
-            return int.TryParse(text, out int result);
         }
 
         private void stop_BTN_Click(object sender, EventArgs e)

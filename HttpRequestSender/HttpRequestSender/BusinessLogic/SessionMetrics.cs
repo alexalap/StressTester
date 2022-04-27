@@ -1,7 +1,7 @@
 ﻿using HttpRequestSender.BusinessLogic.DataType;
 using HttpRequestSender.Utilities;
 using System.Collections.Generic;
-using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace HttpRequestSender.BusinessLogic
 {
@@ -70,6 +70,16 @@ namespace HttpRequestSender.BusinessLogic
                 Logger.Log(LogPriority.INFO, "Metric closed with result: " + activeMetrics[address].ResponseTimeRate() + " response / sec");
                 activeMetrics.Remove(address);
             }
+        }
+
+        public void Pause(string address)
+        {
+            activeMetrics[address].Pause();
+        }
+
+        public void UnPause(string address)
+        {
+            activeMetrics[address].UnPause();
         }
     }
 }

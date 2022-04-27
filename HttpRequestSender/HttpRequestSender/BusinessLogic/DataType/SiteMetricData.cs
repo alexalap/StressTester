@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HttpRequestSender.ErrorHandling;
+using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,8 +13,10 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private readonly int id = ID++;
         private readonly string address;
         private DateTime start;
+        private DateTime durationLastUpdate;
         private double duration = 0;
         private bool closed = false;
+        private bool paused = false;
 
         private Dictionary<string, int> responses = new Dictionary<string, int>();
 
@@ -24,7 +28,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 if(duration == 0)
                 {
-                    return (DateTime.Now - start).TotalMilliseconds;
+                    return (DateTime.Now - durationLastUpdate).TotalMilliseconds;
                 }
                 else
                 {
@@ -63,14 +67,35 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         public string Address => address;
 
+        public DateTime DurationLastUpdate {
+            get
+            {
+                return ResetDurationLastUpdate();
+            }
+            private set => durationLastUpdate = value;
+        }
+
+        private DateTime ResetDurationLastUpdate()
+        {
+            DateTime temp = durationLastUpdate;
+            durationLastUpdate = DateTime.Now;
+            duration += (durationLastUpdate - temp).TotalMilliseconds;
+            return temp;
+        }
+
         public SiteMetricData(string address)
         {
             this.address = address;
-            this.start = DateTime.Now;
+            start = DateTime.Now;
+            DurationLastUpdate = DateTime.Now;
         }
 
         public void AddResponse(string statusCode)
         {
+            if(closed || paused)
+            {
+                throw new IncorrectMetricCallException(nameof(AddResponse), address);
+            }
             if (responses.ContainsKey(statusCode))
             {
                 responses[statusCode]++;
@@ -87,7 +112,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 responsesLastSec.Add(statusCode, 1);
             }
-            Duration = (DateTime.Now - start).TotalMilliseconds;
+            Duration = (DateTime.Now - DurationLastUpdate).TotalMilliseconds;
         }
 
         public float ResponseTimeRate()
@@ -127,6 +152,24 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 closed = true;
             }
+        }
+
+        public void Pause()
+        {
+            if (closed || paused)
+            {
+                throw new IncorrectMetricCallException(nameof(Pause), address);
+            }
+            ResetDurationLastUpdate();
+        }
+
+        public void UnPause()
+        {
+            if (closed || !paused)
+            {
+                throw new IncorrectMetricCallException(nameof(UnPause), address);
+            }
+            durationLastUpdate = DateTime.Now;
         }
     }
 }

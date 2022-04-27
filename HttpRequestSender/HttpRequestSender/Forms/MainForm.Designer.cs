@@ -1,5 +1,5 @@
 ﻿
-namespace StressTester
+namespace HttpRequestSender.Forms
 {
     partial class StressTester_Form
     {

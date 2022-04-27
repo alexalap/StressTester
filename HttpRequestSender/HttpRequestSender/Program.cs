@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace StressTester
+namespace HttpRequestSender.Forms
 {
     static class Program
     {

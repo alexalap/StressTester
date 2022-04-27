@@ -50,6 +50,8 @@
     <Compile Include="BusinessLogic\DataType\SiteMetricData.cs" />
     <Compile Include="BusinessLogic\SessionMetrics.cs" />
     <Compile Include="BusinessLogic\SiteRequester.cs" />
+    <Compile Include="ErrorHandling\IncorrectMetricCallException.cs" />
+    <Compile Include="ErrorHandling\TextBoxValidator.cs" />
     <Compile Include="Forms\Explorer_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +113,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="UI Logic\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

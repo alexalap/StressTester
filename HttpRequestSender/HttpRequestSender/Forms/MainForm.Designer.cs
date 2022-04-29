@@ -51,6 +51,7 @@ namespace HttpRequestSender.Forms
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.plannedActPlan_LB = new System.Windows.Forms.ListBox();
             this.planned_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.planEditor_BTN = new System.Windows.Forms.Button();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
@@ -62,6 +63,7 @@ namespace HttpRequestSender.Forms
             this.actualStep_TB = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.URLReport_BTN = new System.Windows.Forms.Button();
             this.URLStop_BTN = new System.Windows.Forms.Button();
             this.URLStart_BTN = new System.Windows.Forms.Button();
@@ -84,8 +86,6 @@ namespace HttpRequestSender.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.plannedActPlan_LB = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -210,7 +210,7 @@ namespace HttpRequestSender.Forms
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
             series1.Legend = "Legend1";
-            series1.Name = "Responses";
+            series1.Name = "Response rate";
             this.manual_CH.Series.Add(series1);
             this.manual_CH.Size = new System.Drawing.Size(583, 253);
             this.manual_CH.TabIndex = 9;
@@ -300,6 +300,15 @@ namespace HttpRequestSender.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(631, 748);
             this.panel1.TabIndex = 3;
+            // 
+            // plannedActPlan_LB
+            // 
+            this.plannedActPlan_LB.FormattingEnabled = true;
+            this.plannedActPlan_LB.ItemHeight = 16;
+            this.plannedActPlan_LB.Location = new System.Drawing.Point(23, 123);
+            this.plannedActPlan_LB.Name = "plannedActPlan_LB";
+            this.plannedActPlan_LB.Size = new System.Drawing.Size(583, 196);
+            this.plannedActPlan_LB.TabIndex = 10;
             // 
             // planned_CH
             // 
@@ -433,6 +442,15 @@ namespace HttpRequestSender.Forms
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(631, 748);
             this.panel4.TabIndex = 2;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(23, 126);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(583, 196);
+            this.listBox1.TabIndex = 13;
             // 
             // URLReport_BTN
             // 
@@ -687,24 +705,6 @@ namespace HttpRequestSender.Forms
             this.button7.TabIndex = 4;
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
-            // 
-            // plannedActPlan_LB
-            // 
-            this.plannedActPlan_LB.FormattingEnabled = true;
-            this.plannedActPlan_LB.ItemHeight = 16;
-            this.plannedActPlan_LB.Location = new System.Drawing.Point(23, 123);
-            this.plannedActPlan_LB.Name = "plannedActPlan_LB";
-            this.plannedActPlan_LB.Size = new System.Drawing.Size(583, 196);
-            this.plannedActPlan_LB.TabIndex = 10;
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(23, 126);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(583, 196);
-            this.listBox1.TabIndex = 13;
             // 
             // StressTester_Form
             // 

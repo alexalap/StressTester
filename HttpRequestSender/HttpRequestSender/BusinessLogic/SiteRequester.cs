@@ -11,15 +11,22 @@ namespace HttpRequestSender.BusinessLogic
 {
     class SiteRequester
     {
+        public delegate void OnTickDelegate();
+        public event OnTickDelegate Tick;
+
         private HttpClient client = new HttpClient();
         private string address;
-        private readonly CancellationTokenSource cancellation = new CancellationTokenSource();
+        private CancellationTokenSource cancellation = new CancellationTokenSource();
         private SessionMetrics sessionMetrics;
+        private System.Timers.Timer timer;
+        private bool paused = false;
+        private int numberOfRequestsPerSec;
 
-        public SiteRequester(string address, SessionMetrics sessionMetrics)
+        public SiteRequester(string address, SessionMetrics sessionMetrics, float timeoutSeconds = 100)
         {
             this.address = address;
             this.sessionMetrics = sessionMetrics;
+            this.client.Timeout = TimeSpan.FromSeconds(timeoutSeconds);
         }
 
         public async Task GetResponse()
@@ -45,17 +52,40 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
-        public async Task GetResponseParallel(int timeOutMillisec, int numberOfRequests)
+        public void GetResponseParallelPeriodic(int numberOfRequestsPerSec)
         {
-            SetTimer(timeOutMillisec);
+            cancellation.Token.Register(() => TimeOut());
+            sessionMetrics.StartMetric(address);
+            this.numberOfRequestsPerSec = numberOfRequestsPerSec;
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += (async (s, e) => 
+            {
+                if (!paused)
+                {
+                    await GetResponseParallel(this.numberOfRequestsPerSec);
+                }
+                else
+                {
+                    timer.Stop();
+                    cancellation.Cancel();
+                }
+                Tick?.Invoke();
+            });
+            timer.Start();
+        }
+
+        private async Task GetResponseParallel(int numberOfRequestsPerSec)
+        {
             var tasks = new List<Task>();
-            for (int i = 0; i < numberOfRequests; i++)
+            for (int i = 0; i < numberOfRequestsPerSec; i++)
             {
                 tasks.Add(GetResponse());
             }
             await Task.WhenAll(tasks);
         }
 
+        #region deprecated
         public async Task GetResponseParallelBatched(int timeOutMillisec, int numberOfRequests, int batchSize = 100)
         {
             SetTimer(timeOutMillisec);
@@ -88,6 +118,22 @@ namespace HttpRequestSender.BusinessLogic
         {
             sessionMetrics.CloseMetric(address);
             Logger.Log(LogPriority.INFO, "Session interval ended. Address: " + address);
+        }
+
+#endregion
+
+        public void Pause()
+        {
+            paused = true;
+        }
+
+        public async void Resume()
+        {
+            paused = false;
+            cancellation = new CancellationTokenSource();
+            cancellation.Token.Register(() => TimeOut());
+            timer.Start();
+            await GetResponseParallel(numberOfRequestsPerSec);
         }
     }
 }

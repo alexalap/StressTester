@@ -1,8 +1,8 @@
 ﻿using HttpRequestSender.ErrorHandling;
 using System;
-using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 
 namespace HttpRequestSender.BusinessLogic.DataType
 {
@@ -13,39 +13,27 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private readonly int id = ID++;
         private readonly string address;
         private DateTime start;
-        private DateTime durationLastUpdate;
-        private double duration = 0;
         private bool closed = false;
         private bool paused = false;
+        private Timer timer;
 
-        private Dictionary<string, int> responses = new Dictionary<string, int>();
+        private List<Dictionary<string, int>> responses = new List<Dictionary<string, int>>();
 
-        private Dictionary<string, int> responsesLastSec = new Dictionary<string, int>();
-
-        public double Duration
-        {
-            get
-            {
-                if(duration == 0)
-                {
-                    return (DateTime.Now - durationLastUpdate).TotalMilliseconds;
-                }
-                else
-                {
-                    return duration;
-                }
-            }
-            private set
-            {
-                duration = value;
-            }
-        }
+        public double Duration { get; private set; }
 
         public int OKResponseCount
         {
             get
             {
-                return responses["OK"];
+                int res = 0;
+                foreach (Dictionary<string, int> responsesInLastSec in responses)
+                {
+                    if (responsesInLastSec.ContainsKey("OK"))
+                    {
+                        res += responsesInLastSec["OK"];
+                    }
+                }
+                return res;
             }
         }
 
@@ -54,11 +42,14 @@ namespace HttpRequestSender.BusinessLogic.DataType
             get
             {
                 int errorCount = 0;
-                foreach (string key in responses.Keys)
+                foreach (Dictionary<string, int> responsesInLastSec in responses)
                 {
-                    if(key != "OK")
+                    foreach (string key in responsesInLastSec.Keys)
                     {
-                        errorCount += responses[key];
+                        if (key != "OK")
+                        {
+                            errorCount += responsesInLastSec[key];
+                        }
                     }
                 }
                 return errorCount;
@@ -67,27 +58,33 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         public string Address => address;
 
-        public DateTime DurationLastUpdate {
+        private Dictionary<string, int> currentResponses
+        {
             get
             {
-                return ResetDurationLastUpdate();
+                return responses.Last();
             }
-            private set => durationLastUpdate = value;
-        }
-
-        private DateTime ResetDurationLastUpdate()
-        {
-            DateTime temp = durationLastUpdate;
-            durationLastUpdate = DateTime.Now;
-            duration += (durationLastUpdate - temp).TotalMilliseconds;
-            return temp;
         }
 
         public SiteMetricData(string address)
         {
             this.address = address;
             start = DateTime.Now;
-            DurationLastUpdate = DateTime.Now;
+            responses.Add(new Dictionary<string, int>());
+            timer = new Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += (o, e) =>
+            {
+                if (!paused)
+                {
+                    responses.Add(new Dictionary<string, int>());
+                }
+                else
+                {
+                    timer.Stop();
+                }
+            };
+            timer.Start();
         }
 
         public void AddResponse(string statusCode)
@@ -96,54 +93,46 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 throw new IncorrectMetricCallException(nameof(AddResponse), address);
             }
-            if (responses.ContainsKey(statusCode))
+            if (currentResponses.ContainsKey(statusCode))
             {
-                responses[statusCode]++;
+                currentResponses[statusCode]++;
             }
             else
             {
-                responses.Add(statusCode, 1);
+                currentResponses.Add(statusCode, 1);
             }
-            if (responsesLastSec.ContainsKey(statusCode))
-            {
-                responsesLastSec[statusCode]++;
-            }
-            else
-            {
-                responsesLastSec.Add(statusCode, 1);
-            }
-            Duration = (DateTime.Now - DurationLastUpdate).TotalMilliseconds;
         }
 
         public float ResponseTimeRate()
         {
-            return OKResponseCount / ((float)Duration / 1000);
+            return ((float)Duration / 1000 / OKResponseCount);
         }
 
         public float ErrorTimeRate()
         {
-            return ErrorResponseCount / ((float)Duration / 1000);
+            return ((float)Duration / 1000 / ErrorResponseCount);
         }
 
         public float ResponseTimeRateLastSec()
         {
-            float res = responsesLastSec["OK"] / ((float)Duration / 1000);
-            responsesLastSec.Remove("OK");
-            return res;
+            if (currentResponses.ContainsKey("OK"))
+            {
+                return 1000 / (float)currentResponses["OK"];
+            }
+            return 0;
         }
 
         public float ErrorTimeRateLastSec()
         {
             int errorCount = 0;
-            foreach (string key in responsesLastSec.Keys)
+            foreach (string key in currentResponses.Keys)
             {
                 if (key != "OK")
                 {
-                    errorCount += responsesLastSec[key];
-                    responsesLastSec.Remove(key);
+                    errorCount += currentResponses[key];
                 }
             }
-            return errorCount / ((float)Duration / 1000);
+            return errorCount / 1000;
         }
 
         public void Close()
@@ -151,6 +140,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             if (!closed)
             {
                 closed = true;
+                timer.Stop();
             }
         }
 
@@ -160,7 +150,8 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 throw new IncorrectMetricCallException(nameof(Pause), address);
             }
-            ResetDurationLastUpdate();
+
+            paused = true;
         }
 
         public void UnPause()
@@ -169,7 +160,10 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 throw new IncorrectMetricCallException(nameof(UnPause), address);
             }
-            durationLastUpdate = DateTime.Now;
+
+            paused = false;
+            timer.Start();
+            responses.Add(new Dictionary<string, int>());
         }
     }
 }

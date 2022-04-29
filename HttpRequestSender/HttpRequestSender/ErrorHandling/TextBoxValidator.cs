@@ -23,7 +23,7 @@ namespace HttpRequestSender.ErrorHandling
                 if(converter != null)
                 {
                     result = (T)converter.ConvertFromString(input);
-                    return result == null;
+                    return result != null;
                 }
                 return false;
             }

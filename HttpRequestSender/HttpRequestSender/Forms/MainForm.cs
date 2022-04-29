@@ -5,13 +5,16 @@ using HttpRequestSender.Utilities;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HttpRequestSender.Forms
 {
     public partial class StressTester_Form : Form
     {
-        SessionMetrics session;
-        SiteRequester siteRequester;
+        private SessionMetrics session;
+        private SiteRequester siteRequester;
+        private string address;
+        private int tickCount = 0;
 
         public StressTester_Form()
         {
@@ -20,15 +23,17 @@ namespace HttpRequestSender.Forms
             UpdateButtons(false);
         }
 
-        private async void start_BTN_Click(object sender, EventArgs e)
+        private void start_BTN_Click(object sender, EventArgs e)
         {
             UpdateButtons(true);
             if (TextBoxValidator.Validate<int>(reqPerSec_TB.Text, out int value))
             {
+                address = URL_TB.Text;
                 status_L.Text = "";
                 session = new SessionMetrics();
-                siteRequester = new SiteRequester(URL_TB.Text, session);
-                await siteRequester.GetResponseParallel(int.MaxValue, value);
+                siteRequester = new SiteRequester(address, session, 10);
+                siteRequester.GetResponseParallelPeriodic(value);
+                siteRequester.Tick += PeriodicStatisticsUpdate;
             }
             else
             {
@@ -68,6 +73,22 @@ namespace HttpRequestSender.Forms
                 stop_BTN.Text = "Stopped";
                 stop_BTN.Enabled = false;
             }
+        }
+
+        private void PeriodicStatisticsUpdate()
+        {
+            MethodInvoker action = delegate
+            {
+                float responseRate = session.ResponseTimeRateLastSec(address);
+                DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
+                pointList.AddXY(tickCount++, responseRate);
+                if (pointList.Count > 36)
+                {
+                    pointList.RemoveAt(0);
+                }
+                manual_CH.ResetAutoValues();
+            };
+            manual_CH.Invoke(action);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

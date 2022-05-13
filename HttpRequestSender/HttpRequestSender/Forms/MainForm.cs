@@ -11,27 +11,37 @@ namespace HttpRequestSender.Forms
 {
     public partial class StressTester_Form : Form
     {
+        private enum States
+        {
+            Active,
+            Paused,
+            Inactive
+        }
+
         private SessionMetrics session;
         private SiteRequester siteRequester;
         private string address;
         private int tickCount = 0;
+        private States state = States.Inactive;
 
         public StressTester_Form()
         {
             InitializeComponent();
             //Logger.logGridView = logGrid_DGV;
-            UpdateButtons(false);
+            UpdateButtons();
         }
 
         private void start_BTN_Click(object sender, EventArgs e)
         {
-            UpdateButtons(true);
+            manual_CH.Series["Response rate"].Points.Clear();
+            state = States.Active;
+            UpdateButtons();
             if (TextBoxValidator.Validate<int>(reqPerSec_TB.Text, out int value))
             {
                 address = URL_TB.Text;
                 status_L.Text = "";
                 session = new SessionMetrics();
-                siteRequester = new SiteRequester(address, session, 10);
+                siteRequester = new SiteRequester(address, session, 1);
                 siteRequester.GetResponseParallelPeriodic(value);
                 siteRequester.Tick += PeriodicStatisticsUpdate;
             }
@@ -41,43 +51,76 @@ namespace HttpRequestSender.Forms
             }
         }
 
-        private void stop_BTN_Click(object sender, EventArgs e)
+        private void pause_BTN_Click(object sender, EventArgs e)
         {
-            UpdateButtons(false);
-        }
-
-
-        private void UpdateButtons(bool toggle)
-        {
-            if (toggle)
+            if(state == States.Paused)
             {
-                start_BTN.BackColor = Color.Gray;
-                start_BTN.ForeColor = Color.White;
-                start_BTN.Text = "Running...";
-                start_BTN.Enabled = false;
-
-                stop_BTN.BackColor = Color.OrangeRed;
-                stop_BTN.ForeColor = Color.White;
-                stop_BTN.Text = "Stop";
-                stop_BTN.Enabled = true;
+                siteRequester.Resume();
+                state = States.Active;
             }
             else
             {
-                start_BTN.BackColor = Color.LimeGreen;
-                start_BTN.ForeColor = Color.White;
-                start_BTN.Text = "Start";
-                start_BTN.Enabled = true;
+                siteRequester.Pause();
+                state = States.Paused;
+            }
+            UpdateButtons();
+        }
 
-                stop_BTN.BackColor = Color.Gray;
-                stop_BTN.ForeColor = Color.White;
-                stop_BTN.Text = "Stopped";
-                stop_BTN.Enabled = false;
+        private void stop_BTN_Click(object sender, EventArgs e)
+        {
+            state = States.Inactive;
+            siteRequester.Stop();
+            UpdateButtons();
+        }
+
+
+        private void UpdateButtons()
+        {
+            switch (state)
+            {
+                case States.Active:
+                    start_BTN.BackColor = Color.Gray;
+                    start_BTN.ForeColor = Color.White;
+                    start_BTN.Text = "Running...";
+                    start_BTN.Enabled = false;
+
+                    pause_BTN.BackColor = Color.Orange;
+                    pause_BTN.ForeColor = Color.White;
+                    pause_BTN.Text = "Pause";
+                    pause_BTN.Enabled = true;
+
+                    stop_BTN.BackColor = Color.OrangeRed;
+                    stop_BTN.ForeColor = Color.White;
+                    stop_BTN.Text = "Stop";
+                    stop_BTN.Enabled = true;
+                    break;
+                case States.Paused:
+                    pause_BTN.Text = "Resume";
+                    break;
+                case States.Inactive:
+                    start_BTN.BackColor = Color.LimeGreen;
+                    start_BTN.ForeColor = Color.White;
+                    start_BTN.Text = "Start";
+                    start_BTN.Enabled = true;
+
+                    pause_BTN.BackColor = Color.Gray;
+                    pause_BTN.ForeColor = Color.White;
+                    pause_BTN.Text = "Pause";
+                    pause_BTN.Enabled = false;
+
+                    state = States.Inactive;
+
+                    stop_BTN.BackColor = Color.Gray;
+                    stop_BTN.ForeColor = Color.White;
+                    stop_BTN.Text = "Stopped";
+                    stop_BTN.Enabled = false;
+                    break;
             }
         }
 
         private void PeriodicStatisticsUpdate()
         {
-            MethodInvoker action = delegate
+            MethodInvoker updateMetricsVisual = delegate
             {
                 float responseRate = session.ResponseTimeRateLastSec(address);
                 DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
@@ -88,7 +131,21 @@ namespace HttpRequestSender.Forms
                 }
                 manual_CH.ResetAutoValues();
             };
-            manual_CH.Invoke(action);
+            MethodInvoker updateNumberOfRes = delegate
+            {
+                numberOfRes_L.Text = session.GetOKResponseCount(address).ToString();
+            };
+
+            MethodInvoker updateAverageResTime = delegate
+            {
+                if(session.GetDuration(address) != -1 && session.GetOKResponseCount(address) != -1)
+                {
+                    averageResTime_L.Text = session.GetDuration(address) / session.GetOKResponseCount(address) + " ms";
+                }
+            };
+            manual_CH.Invoke(updateMetricsVisual);
+            numberOfRes_L.Invoke(updateNumberOfRes);
+            averageResTime_L.Invoke(updateAverageResTime);
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

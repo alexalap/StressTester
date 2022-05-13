@@ -1,6 +1,8 @@
 ﻿using HttpRequestSender.ErrorHandling;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlTypes;
 using System.Linq;
 using System.Timers;
 
@@ -16,10 +18,24 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private bool closed = false;
         private bool paused = false;
         private Timer timer;
+        private DateTime lastDurationGetTime;
+        private double duration = 0;
 
         private List<Dictionary<string, int>> responses = new List<Dictionary<string, int>>();
 
-        public double Duration { get; private set; }
+        public double Duration {
+            get
+            {
+                RefreshDuration();
+                return duration;
+            }
+        }
+
+        private void RefreshDuration()
+        {
+            duration += (DateTime.Now - lastDurationGetTime).TotalMilliseconds;
+            lastDurationGetTime = DateTime.Now;
+        }
 
         public int OKResponseCount
         {
@@ -71,6 +87,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             this.address = address;
             start = DateTime.Now;
             responses.Add(new Dictionary<string, int>());
+            lastDurationGetTime = DateTime.Now;
             timer = new Timer();
             timer.Interval = 1000;
             timer.Elapsed += (o, e) =>
@@ -152,6 +169,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
 
             paused = true;
+            RefreshDuration();
         }
 
         public void UnPause()
@@ -164,6 +182,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             paused = false;
             timer.Start();
             responses.Add(new Dictionary<string, int>());
+            lastDurationGetTime = DateTime.Now;
         }
     }
 }

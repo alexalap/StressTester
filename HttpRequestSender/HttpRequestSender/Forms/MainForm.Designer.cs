@@ -29,12 +29,12 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.URL_TB = new System.Windows.Forms.TextBox();
             this.reqPerSec_TB = new System.Windows.Forms.TextBox();
@@ -44,7 +44,7 @@ namespace HttpRequestSender.Forms
             this.stop_BTN = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.manual_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pause_BTN = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.status_L = new System.Windows.Forms.ToolStripStatusLabel();
             this.main_TC = new System.Windows.Forms.TabControl();
@@ -86,6 +86,10 @@ namespace HttpRequestSender.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.numberOfRes_L = new System.Windows.Forms.Label();
+            this.averageResTime_L = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -148,9 +152,9 @@ namespace HttpRequestSender.Forms
             this.label3.Location = new System.Drawing.Point(185, 129);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 17);
+            this.label3.Size = new System.Drawing.Size(123, 17);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Kérés / másodperc:";
+            this.label3.Text = "Request / second:";
             // 
             // start_BTN
             // 
@@ -169,6 +173,7 @@ namespace HttpRequestSender.Forms
             // stop_BTN
             // 
             this.stop_BTN.BackColor = System.Drawing.Color.OrangeRed;
+            this.stop_BTN.Enabled = false;
             this.stop_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold);
             this.stop_BTN.ForeColor = System.Drawing.Color.White;
             this.stop_BTN.Location = new System.Drawing.Point(432, 167);
@@ -182,8 +187,12 @@ namespace HttpRequestSender.Forms
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.averageResTime_L);
+            this.panel2.Controls.Add(this.numberOfRes_L);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.manual_CH);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.pause_BTN);
             this.panel2.Controls.Add(this.statusStrip1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.stop_BTN);
@@ -201,33 +210,35 @@ namespace HttpRequestSender.Forms
             // 
             // manual_CH
             // 
-            chartArea1.Name = "ChartArea1";
-            this.manual_CH.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.manual_CH.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.manual_CH.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.manual_CH.Legends.Add(legend5);
             this.manual_CH.Location = new System.Drawing.Point(25, 228);
             this.manual_CH.Name = "manual_CH";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series1.Legend = "Legend1";
-            series1.Name = "Response rate";
-            this.manual_CH.Series.Add(series1);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series5.Legend = "Legend1";
+            series5.Name = "Response rate";
+            this.manual_CH.Series.Add(series5);
             this.manual_CH.Size = new System.Drawing.Size(583, 253);
             this.manual_CH.TabIndex = 9;
             this.manual_CH.Text = "chart2";
             // 
-            // button1
+            // pause_BTN
             // 
-            this.button1.BackColor = System.Drawing.Color.Orange;
-            this.button1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(228, 167);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 46);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Pause";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pause_BTN.BackColor = System.Drawing.Color.Orange;
+            this.pause_BTN.Enabled = false;
+            this.pause_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold);
+            this.pause_BTN.ForeColor = System.Drawing.Color.White;
+            this.pause_BTN.Location = new System.Drawing.Point(228, 167);
+            this.pause_BTN.Margin = new System.Windows.Forms.Padding(4);
+            this.pause_BTN.Name = "pause_BTN";
+            this.pause_BTN.Size = new System.Drawing.Size(176, 46);
+            this.pause_BTN.TabIndex = 8;
+            this.pause_BTN.Text = "Pause";
+            this.pause_BTN.UseVisualStyleBackColor = false;
+            this.pause_BTN.Click += new System.EventHandler(this.pause_BTN_Click);
             // 
             // statusStrip1
             // 
@@ -312,16 +323,16 @@ namespace HttpRequestSender.Forms
             // 
             // planned_CH
             // 
-            chartArea2.Name = "ChartArea1";
-            this.planned_CH.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.planned_CH.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.planned_CH.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.planned_CH.Legends.Add(legend6);
             this.planned_CH.Location = new System.Drawing.Point(23, 451);
             this.planned_CH.Name = "planned_CH";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.planned_CH.Series.Add(series2);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.planned_CH.Series.Add(series6);
             this.planned_CH.Size = new System.Drawing.Size(583, 253);
             this.planned_CH.TabIndex = 9;
             this.planned_CH.Text = "chart1";
@@ -706,6 +717,46 @@ namespace HttpRequestSender.Forms
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 502);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 17);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Number of responses:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(22, 529);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 17);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Average response time:";
+            // 
+            // numberOfRes_L
+            // 
+            this.numberOfRes_L.AutoSize = true;
+            this.numberOfRes_L.Location = new System.Drawing.Point(186, 502);
+            this.numberOfRes_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.numberOfRes_L.Name = "numberOfRes_L";
+            this.numberOfRes_L.Size = new System.Drawing.Size(31, 17);
+            this.numberOfRes_L.TabIndex = 14;
+            this.numberOfRes_L.Text = "N/A";
+            // 
+            // averageResTime_L
+            // 
+            this.averageResTime_L.AutoSize = true;
+            this.averageResTime_L.Location = new System.Drawing.Point(186, 529);
+            this.averageResTime_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.averageResTime_L.Name = "averageResTime_L";
+            this.averageResTime_L.Size = new System.Drawing.Size(31, 17);
+            this.averageResTime_L.TabIndex = 15;
+            this.averageResTime_L.Text = "N/A";
+            // 
             // StressTester_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -755,7 +806,7 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel status_L;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button pause_BTN;
         private System.Windows.Forms.TabControl main_TC;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -796,6 +847,10 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.ListBox plannedActPlan_LB;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label averageResTime_L;
+        private System.Windows.Forms.Label numberOfRes_L;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
     }
 }
 

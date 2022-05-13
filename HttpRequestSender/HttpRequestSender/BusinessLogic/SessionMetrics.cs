@@ -12,22 +12,38 @@ namespace HttpRequestSender.BusinessLogic
 
         public double GetDuration(string address)
         {
-            return activeMetrics[address].Duration;
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].Duration;
+            }
+            return -1;
         }
 
         public int GetOKResponseCount(string address)
         {
-            return activeMetrics[address].OKResponseCount;
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].OKResponseCount;
+            }
+            return -1;
         }
 
         public int GetErrorResponseCount(string address)
         {
-            return activeMetrics[address].ErrorResponseCount;
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].ErrorResponseCount;
+            }
+            return -1;
         }
 
         public string GetAddress(string address)
         {
-            return activeMetrics[address].Address;
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].Address;
+            }
+            return "";
         }
 
         public void StartMetric(string address)
@@ -39,27 +55,45 @@ namespace HttpRequestSender.BusinessLogic
 
         public void AddResponse(string address, string statusCode)
         {
-            activeMetrics[address].AddResponse(statusCode);
+            if (activeMetrics.ContainsKey(address))
+            {
+                activeMetrics[address].AddResponse(statusCode);
+            }
         }
 
         public float ResponseTimeRate(string address)
         {
-            return activeMetrics[address].ResponseTimeRate();
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].ResponseTimeRate();
+            }
+            return -1;
         }
 
         public float ErrorTimeRate(string address)
         {
-            return activeMetrics[address].ErrorTimeRate();
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].ErrorTimeRate();
+            }
+            return -1;
         }
 
         public float ResponseTimeRateLastSec(string address)
         {
-            return activeMetrics[address].ResponseTimeRateLastSec();
+            if (activeMetrics.ContainsKey(address)) {
+                return activeMetrics[address].ResponseTimeRateLastSec();
+            }
+            return -1;
         }
 
         public float ErrorTimeRateLastSec(string address)
         {
-            return activeMetrics[address].ErrorTimeRateLastSec();
+            if (activeMetrics.ContainsKey(address))
+            {
+                return activeMetrics[address].ErrorTimeRateLastSec();
+            }
+            return -1;
         }
 
         public void CloseMetric(string address)
@@ -74,12 +108,18 @@ namespace HttpRequestSender.BusinessLogic
 
         public void Pause(string address)
         {
-            activeMetrics[address].Pause();
+            if (activeMetrics.ContainsKey(address))
+            {
+                activeMetrics[address].Pause();
+            }
         }
 
         public void UnPause(string address)
         {
-            activeMetrics[address].UnPause();
+            if (activeMetrics.ContainsKey(address))
+            {
+                activeMetrics[address].UnPause();
+            }
         }
     }
 }

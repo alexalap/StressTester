@@ -116,8 +116,11 @@ namespace HttpRequestSender.BusinessLogic
 
         private void TimeOut()
         {
-            sessionMetrics.CloseMetric(address);
-            Logger.Log(LogPriority.INFO, "Session interval ended. Address: " + address);
+            if (!paused)
+            {
+                sessionMetrics.CloseMetric(address);
+                Logger.Log(LogPriority.INFO, "Session interval ended. Address: " + address);
+            }
         }
 
 #endregion
@@ -125,6 +128,7 @@ namespace HttpRequestSender.BusinessLogic
         public void Pause()
         {
             paused = true;
+            sessionMetrics.Pause(address);
         }
 
         public async void Resume()
@@ -133,7 +137,14 @@ namespace HttpRequestSender.BusinessLogic
             cancellation = new CancellationTokenSource();
             cancellation.Token.Register(() => TimeOut());
             timer.Start();
+            sessionMetrics.UnPause(address);
             await GetResponseParallel(numberOfRequestsPerSec);
+        }
+        
+        public void Stop()
+        {
+            timer.Stop();
+            cancellation.Cancel();
         }
     }
 }

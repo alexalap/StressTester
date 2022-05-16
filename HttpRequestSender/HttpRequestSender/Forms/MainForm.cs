@@ -123,24 +123,33 @@ namespace HttpRequestSender.Forms
             MethodInvoker updateMetricsVisual = delegate
             {
                 float responseRate = session.ResponseTimeRateLastSec(address);
-                DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
-                pointList.AddXY(tickCount++, responseRate);
-                if (pointList.Count > 36)
+                if(responseRate != -1)
                 {
-                    pointList.RemoveAt(0);
+                    DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
+                    pointList.AddXY(tickCount++, responseRate);
+                    if (pointList.Count > 36)
+                    {
+                        pointList.RemoveAt(0);
+                    }
+                    manual_CH.ResetAutoValues();
                 }
-                manual_CH.ResetAutoValues();
             };
             MethodInvoker updateNumberOfRes = delegate
             {
-                numberOfRes_L.Text = session.GetOKResponseCount(address).ToString();
+                double okResponseCount = session.GetOKResponseCount(address);
+                if (okResponseCount != -1)
+                {
+                    numberOfRes_L.Text = okResponseCount.ToString();
+                }
             };
 
             MethodInvoker updateAverageResTime = delegate
             {
-                if(session.GetDuration(address) != -1 && session.GetOKResponseCount(address) != -1)
+                double duration = session.GetDuration(address);
+                double okResponseCount = session.GetOKResponseCount(address);
+                if (duration != -1 && okResponseCount != -1)
                 {
-                    averageResTime_L.Text = session.GetDuration(address) / session.GetOKResponseCount(address) + " ms";
+                    averageResTime_L.Text = duration / okResponseCount + " ms";
                 }
             };
             manual_CH.Invoke(updateMetricsVisual);

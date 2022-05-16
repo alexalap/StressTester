@@ -1,4 +1,5 @@
 ﻿using HttpRequestSender.ErrorHandling;
+using HttpRequestSender.Reports;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -137,6 +138,15 @@ namespace HttpRequestSender.BusinessLogic.DataType
                 return 1000 / (float)currentResponses["OK"];
             }
             return 0;
+        }
+
+        internal void GenerateReport()
+        {
+            ReportGenerator.CreateReport(address);
+            //TODO: add title
+            ReportGenerator.SetGraphData(address, responses);
+            ReportGenerator.AddMetricData(address, "Number of OK responses: ", OKResponseCount.ToString());
+            ReportGenerator.AddMetricData(address, "Average response time: ", (Duration / OKResponseCount).ToString());
         }
 
         public float ErrorTimeRateLastSec()

@@ -1,4 +1,5 @@
 ﻿using HttpRequestSender.BusinessLogic.DataType;
+using HttpRequestSender.Reports;
 using HttpRequestSender.Utilities;
 using System.Collections.Generic;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -120,6 +121,15 @@ namespace HttpRequestSender.BusinessLogic
             {
                 activeMetrics[address].UnPause();
             }
+        }
+
+        public void GenerateReport()
+        {
+            foreach (SiteMetricData item in siteMetrics)
+            {
+                item.GenerateReport();
+            }
+            ReportGenerator.Generate();
         }
     }
 }

@@ -69,7 +69,7 @@ namespace HttpRequestSender.Forms
         private void stop_BTN_Click(object sender, EventArgs e)
         {
             state = States.Inactive;
-            siteRequester.Stop();
+            siteRequester?.Stop();
             UpdateButtons();
         }
 

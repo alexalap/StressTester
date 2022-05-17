@@ -22,75 +22,75 @@ namespace HttpRequestSender.Reports
             string res = $@"<!DOCTYPE html>
 
             <html lang=""en"" xmlns=""http://www.w3.org/1999/xhtml"">
-            < head >
-            < meta charset = ""utf-8"" />
+            <head>
+            <meta charset = ""utf-8""/>
  
-            < title >{Title}</ title >
-            </ head >";
+            <title>{Title}</title>
+            </head>";
 
-            res += @"<body onload=""autoSizeCanvas(); "">
-            < table width = ""100%"" border = ""1"" >
+            res += $@"<body onload=""autoSizeCanvas(); "">
+            <table width = ""100%"" border = ""1"">
     
-            < tr >
+            <tr>
     
-            < td align = ""center"" colspan = ""3"" >
+            <td align = ""center"" colspan = ""3"">
        
-            < h1 style = ""color: black"" > Hello bello </ h1 >
+            <h1 style = ""color: black""> {Title} </h1>
             
-            </ td >
+            </td>
             
-            </ tr > ";
+            </tr> ";
 
             res += $@"<tr>
             <td align=""center"">
-            < Button onclick = ""location.href=`{Previous}`"" > &#8592;</Button>
-            </ td > ";
+            <Button onclick = ""location.href=`{Previous}`""> &#8592;</Button>
+            </td> ";
 
             res += @"<td align=""center"" width=""40 % "">
-            < select>";
+            <select>";
 
             foreach (string item in OtherReports)
             {
                 res += $@"
-                < option value = ""{item}"" selected > {item} </ option >";
+                <option value = ""{item}"" selected> {item} </option>";
 
             }
         
             res+= @"
-            </ select >
-            </ td > ";
+            </select>
+            </td> ";
 
             res += $@"
             <td align=""center"">
-            < Button onclick = ""location.href=`{Next}`"" > &#8594;</Button>
-            </ td >
+            <Button onclick = ""location.href=`{Next}`""> &#8594;</Button>
+            </td>
             </tr>";
 
             res += @"
             <tr>
             <td align=""center"" colspan=""3"">
-            < canvas id = ""Chart Canvas"" style = ""width:100%; background-color:black"" height = ""150"" ></ canvas >
+            <canvas id = ""Chart Canvas"" style = ""width:100%; background-color:black"" height = ""150""></canvas>
      
-            </ td >
+            </td>
      
-            </ tr > ";
+            </tr> ";
 
             foreach (string item in MetricData.Keys)
             {
                 res += $@"<tr>
                 <td align=""left"" width=""30 % "">
-                < p >< b >{item}</ b ></ p >
+                <p><b>{item}</b></p>
      
-                </ td >
+                </td>
      
 
-                < td align = ""left"" colspan = ""2"" >
+                <td align = ""left"" colspan = ""2"">
         
-                < p > {MetricData[item]} </ p >
+                <p> {MetricData[item]} </p>
         
-                </ td >
+                </td>
         
-                </ tr > ";
+                </tr> ";
             }
 
             res += @"</table>

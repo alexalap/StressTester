@@ -29,7 +29,6 @@ namespace HttpRequestSender.Reports
 
         public static void Generate()
         {
-            reports.Clear();
             foreach (string key in reports.Keys)
             {
                 reports[key].Next = "http://google.com";
@@ -38,6 +37,7 @@ namespace HttpRequestSender.Reports
                 reports[key].OtherReports.Add("http://gmail.com");
                 reports[key].Generate();
             }
+            reports.Clear();
         }
     }
 }

@@ -4,6 +4,7 @@ using HttpRequestSender.Forms;
 using HttpRequestSender.Utilities;
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -42,7 +43,7 @@ namespace HttpRequestSender.Forms
                 status_L.Text = "";
                 session = new SessionMetrics();
                 siteRequester = new SiteRequester(address, session, 1);
-                siteRequester.GetResponseParallelPeriodic(value);
+                siteRequester.GetResponseParallelPeriodic(value, RequesterMode.Manual);
                 siteRequester.Tick += PeriodicStatisticsUpdate;
             }
             else
@@ -93,6 +94,8 @@ namespace HttpRequestSender.Forms
                     stop_BTN.ForeColor = Color.White;
                     stop_BTN.Text = "Stop";
                     stop_BTN.Enabled = true;
+
+                    report_BTN.Enabled = false;
                     break;
                 case States.Paused:
                     pause_BTN.Text = "Resume";
@@ -114,6 +117,11 @@ namespace HttpRequestSender.Forms
                     stop_BTN.ForeColor = Color.White;
                     stop_BTN.Text = "Stopped";
                     stop_BTN.Enabled = false;
+
+                    if(session != null)
+                    {
+                        report_BTN.Enabled = true;
+                    }
                     break;
             }
         }
@@ -165,6 +173,17 @@ namespace HttpRequestSender.Forms
         private void planEditor_BTN_Click(object sender, EventArgs e)
         {
             PlanEditor_Form planeditor = new PlanEditor_Form();
+        }
+
+        private void report_BTN_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.Description = "Select folder for report files.";
+            folderBrowserDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            if(folderBrowserDialog.ShowDialog() == DialogResult.OK && Directory.Exists(folderBrowserDialog.SelectedPath))
+            {
+                session.GenerateReport(folderBrowserDialog.SelectedPath);
+            }
         }
     }
 }

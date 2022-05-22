@@ -9,6 +9,13 @@ using System.Threading.Tasks;
 
 namespace HttpRequestSender.BusinessLogic
 {
+    public enum RequesterMode
+    {
+        Manual,
+        Planned,
+        Fleet
+    }
+
     class SiteRequester
     {
         public delegate void OnTickDelegate();
@@ -52,10 +59,19 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
-        public void GetResponseParallelPeriodic(int numberOfRequestsPerSec)
+        public void GetResponseParallelPeriodic(int numberOfRequestsPerSec, RequesterMode mode)
         {
             cancellation.Token.Register(() => TimeOut());
-            sessionMetrics.StartMetric(address);
+            switch (mode)
+            {
+                case RequesterMode.Manual:
+                    sessionMetrics.StartMetric(address, "Manual_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
+                    break;
+                case RequesterMode.Planned:
+                    break;
+                case RequesterMode.Fleet:
+                    break;
+            }
             this.numberOfRequestsPerSec = numberOfRequestsPerSec;
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
@@ -110,7 +126,7 @@ namespace HttpRequestSender.BusinessLogic
         {
             cancellation.CancelAfter(millisec);
             cancellation.Token.Register(() => TimeOut());
-            sessionMetrics.StartMetric(address);
+            //sessionMetrics.StartMetric(address);
             Logger.Log(LogPriority.INFO, "New session interval started. Timeout: " + millisec + "ms, Address: " + address);
         }
 

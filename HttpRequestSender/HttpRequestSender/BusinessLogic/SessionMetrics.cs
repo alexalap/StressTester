@@ -47,9 +47,9 @@ namespace HttpRequestSender.BusinessLogic
             return "";
         }
 
-        public void StartMetric(string address)
+        public void StartMetric(string address, string title)
         {
-            SiteMetricData siteMetricData = new SiteMetricData(address);
+            SiteMetricData siteMetricData = new SiteMetricData(address, title);
             siteMetrics.Add(siteMetricData);
             activeMetrics.Add(address, siteMetricData);
         }
@@ -123,13 +123,13 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
-        public void GenerateReport()
+        public void GenerateReport(string selectedPath)
         {
             foreach (SiteMetricData item in siteMetrics)
             {
                 item.GenerateReport();
             }
-            ReportGenerator.Generate();
+            ReportGenerator.Generate(selectedPath);
         }
     }
 }

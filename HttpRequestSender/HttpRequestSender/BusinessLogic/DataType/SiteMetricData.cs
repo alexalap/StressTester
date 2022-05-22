@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlTypes;
 using System.Linq;
 using System.Timers;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HttpRequestSender.BusinessLogic.DataType
 {
@@ -30,12 +31,6 @@ namespace HttpRequestSender.BusinessLogic.DataType
                 RefreshDuration();
                 return duration;
             }
-        }
-
-        private void RefreshDuration()
-        {
-            duration += (DateTime.Now - lastDurationGetTime).TotalMilliseconds;
-            lastDurationGetTime = DateTime.Now;
         }
 
         public int OKResponseCount
@@ -75,6 +70,8 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         public string Address => address;
 
+        public string Title { get; set; }
+
         private Dictionary<string, int> currentResponses
         {
             get
@@ -83,8 +80,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
-        public SiteMetricData(string address)
+        public SiteMetricData(string address, string title)
         {
+            Title = title;
             this.address = address;
             start = DateTime.Now;
             responses.Add(new Dictionary<string, int>());
@@ -142,11 +140,10 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         internal void GenerateReport()
         {
-            ReportGenerator.CreateReport(address);
-            //TODO: add title
-            ReportGenerator.SetGraphData(address, responses);
-            ReportGenerator.AddMetricData(address, "Number of OK responses: ", OKResponseCount.ToString());
-            ReportGenerator.AddMetricData(address, "Average response time: ", (Duration / OKResponseCount).ToString());
+            ReportGenerator.CreateReport(Title, Address);
+            ReportGenerator.SetGraphData(Title, responses);
+            ReportGenerator.AddMetricData(Title, "Number of OK responses: ", OKResponseCount.ToString());
+            ReportGenerator.AddMetricData(Title, "Average response time: ", (Duration / OKResponseCount).ToString());
         }
 
         public float ErrorTimeRateLastSec()
@@ -160,6 +157,12 @@ namespace HttpRequestSender.BusinessLogic.DataType
                 }
             }
             return errorCount / 1000;
+        }
+
+        private void RefreshDuration()
+        {
+            duration += (DateTime.Now - lastDurationGetTime).TotalMilliseconds;
+            lastDurationGetTime = DateTime.Now;
         }
 
         public void Close()

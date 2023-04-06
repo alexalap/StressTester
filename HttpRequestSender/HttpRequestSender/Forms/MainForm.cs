@@ -1,8 +1,8 @@
 ﻿using HttpRequestSender.BusinessLogic;
+using HttpRequestSender.BusinessLogic.DataType;
 using HttpRequestSender.ErrorHandling;
-using HttpRequestSender.Forms;
-using HttpRequestSender.Utilities;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -24,6 +24,7 @@ namespace HttpRequestSender.Forms
         private string address;
         private int tickCount = 0;
         private States state = States.Inactive;
+        private Schedule schedule = new Schedule();
 
         public StressTester_Form()
         {
@@ -172,7 +173,10 @@ namespace HttpRequestSender.Forms
 
         private void planEditor_BTN_Click(object sender, EventArgs e)
         {
-            PlanEditor_Form planeditor = new PlanEditor_Form();
+            Scheduler_Form planEditor = new Scheduler_Form();
+            planEditor.Schedule = schedule;
+            planEditor.ShowDialog();
+            RefreshGrid();
         }
 
         private void report_BTN_Click(object sender, EventArgs e)
@@ -183,6 +187,16 @@ namespace HttpRequestSender.Forms
             if(folderBrowserDialog.ShowDialog() == DialogResult.OK && Directory.Exists(folderBrowserDialog.SelectedPath))
             {
                 session.GenerateReport(folderBrowserDialog.SelectedPath);
+            }
+        }
+
+        private void RefreshGrid()
+        {
+            planGrid.Rows.Clear();
+            List<ScheduleStep> scheduler = schedule.GetSchedule();
+            for (int i = 0; i < scheduler.Count; i++)
+            {
+                planGrid.Rows.Add(i, scheduler[i].StartTime, scheduler[i].EndTime, scheduler[i].Requests);
             }
         }
     }

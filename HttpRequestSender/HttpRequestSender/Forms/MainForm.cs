@@ -199,5 +199,16 @@ namespace HttpRequestSender.Forms
                 planGrid.Rows.Add(i, scheduler[i].StartTime, scheduler[i].EndTime, scheduler[i].Requests);
             }
         }
+
+        private async void explorer_BTN_Click(object sender, EventArgs e)
+        {
+            exloration_Grid.Rows.Clear();
+            SiteStructureAnalyzer siteStructureAnalyzer = new SiteStructureAnalyzer(explorationURL_TB.Text);
+            Dictionary<string, int> result = await siteStructureAnalyzer.Analyze(exploration_CHB.Checked);
+            foreach (string key in result.Keys)
+            {
+                exloration_Grid.Rows.Add(key, result[key]);
+            }
+        }
     }
 }

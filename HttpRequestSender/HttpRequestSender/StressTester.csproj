@@ -36,6 +36,9 @@
     <Reference Include="Chart.Mvc, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Chart.Mvc.1.0.0.2\lib\net45\Chart.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.46.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.46\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
@@ -74,11 +77,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\AddressExclusions.cs" />
     <Compile Include="BusinessLogic\DataType\ScheduleStep.cs" />
     <Compile Include="BusinessLogic\DataType\SiteMetricData.cs" />
     <Compile Include="BusinessLogic\Schedule.cs" />
     <Compile Include="BusinessLogic\SessionMetrics.cs" />
     <Compile Include="BusinessLogic\SiteRequester.cs" />
+    <Compile Include="BusinessLogic\SiteStructureAnalyzer.cs" />
+    <Compile Include="BusinessLogic\SourceAnalyzer.cs" />
     <Compile Include="ErrorHandling\IncorrectMetricCallException.cs" />
     <Compile Include="ErrorHandling\TextBoxValidator.cs" />
     <Compile Include="Forms\Explorer_Form.cs">

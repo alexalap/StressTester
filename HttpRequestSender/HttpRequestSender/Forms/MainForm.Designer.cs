@@ -29,12 +29,12 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.URL_TB = new System.Windows.Forms.TextBox();
             this.reqPerSec_TB = new System.Windows.Forms.TextBox();
@@ -56,6 +56,11 @@ namespace HttpRequestSender.Forms
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.planGrid = new System.Windows.Forms.DataGridView();
+            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planned_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.planEditor_BTN = new System.Windows.Forms.Button();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
@@ -67,7 +72,6 @@ namespace HttpRequestSender.Forms
             this.actualStep_TB = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.URLReport_BTN = new System.Windows.Forms.Button();
             this.URLStop_BTN = new System.Windows.Forms.Button();
             this.URLStart_BTN = new System.Windows.Forms.Button();
@@ -76,7 +80,6 @@ namespace HttpRequestSender.Forms
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.URLReqPerSec_TB = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -90,11 +93,13 @@ namespace HttpRequestSender.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.planGrid = new System.Windows.Forms.DataGridView();
-            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.exloration_Grid = new System.Windows.Forms.DataGridView();
+            this.addressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.linksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.explorationURL_TB = new System.Windows.Forms.TextBox();
+            this.explorationRequest_NUD = new System.Windows.Forms.NumericUpDown();
+            this.exploration_CHB = new System.Windows.Forms.CheckBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -102,6 +107,7 @@ namespace HttpRequestSender.Forms
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planned_CH)).BeginInit();
             this.statusStrip2.SuspendLayout();
             this.tabPage3.SuspendLayout();
@@ -111,7 +117,8 @@ namespace HttpRequestSender.Forms
             this.panel3.SuspendLayout();
             this.statusStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -259,18 +266,18 @@ namespace HttpRequestSender.Forms
             // 
             // manual_CH
             // 
-            chartArea3.Name = "ChartArea1";
-            this.manual_CH.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.manual_CH.Legends.Add(legend3);
+            chartArea5.Name = "ChartArea1";
+            this.manual_CH.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.manual_CH.Legends.Add(legend5);
             this.manual_CH.Location = new System.Drawing.Point(19, 185);
-            this.manual_CH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.manual_CH.Margin = new System.Windows.Forms.Padding(2);
             this.manual_CH.Name = "manual_CH";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.Legend = "Legend1";
-            series3.Name = "Response rate";
-            this.manual_CH.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series5.Legend = "Legend1";
+            series5.Name = "Response rate";
+            this.manual_CH.Series.Add(series5);
             this.manual_CH.Size = new System.Drawing.Size(437, 206);
             this.manual_CH.TabIndex = 9;
             this.manual_CH.Text = "chart2";
@@ -315,7 +322,7 @@ namespace HttpRequestSender.Forms
             this.main_TC.Controls.Add(this.tabPage4);
             this.main_TC.Dock = System.Windows.Forms.DockStyle.Fill;
             this.main_TC.Location = new System.Drawing.Point(0, 0);
-            this.main_TC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.main_TC.Margin = new System.Windows.Forms.Padding(2);
             this.main_TC.Name = "main_TC";
             this.main_TC.SelectedIndex = 0;
             this.main_TC.Size = new System.Drawing.Size(484, 636);
@@ -325,9 +332,9 @@ namespace HttpRequestSender.Forms
             // 
             this.tabPage1.Controls.Add(this.panel2);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(476, 610);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Manual";
@@ -337,9 +344,9 @@ namespace HttpRequestSender.Forms
             // 
             this.tabPage2.Controls.Add(this.panel1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(476, 610);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Planned";
@@ -362,19 +369,67 @@ namespace HttpRequestSender.Forms
             this.panel1.Size = new System.Drawing.Size(472, 606);
             this.panel1.TabIndex = 3;
             // 
+            // planGrid
+            // 
+            this.planGrid.AllowUserToAddRows = false;
+            this.planGrid.AllowUserToDeleteRows = false;
+            this.planGrid.AllowUserToResizeColumns = false;
+            this.planGrid.AllowUserToResizeRows = false;
+            this.planGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.planGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.stepColumn,
+            this.startTimeColumn,
+            this.endTimeColumn,
+            this.requestsColumn});
+            this.planGrid.Location = new System.Drawing.Point(17, 97);
+            this.planGrid.Name = "planGrid";
+            this.planGrid.RowHeadersVisible = false;
+            this.planGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.planGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.planGrid.Size = new System.Drawing.Size(439, 175);
+            this.planGrid.TabIndex = 16;
+            // 
+            // stepColumn
+            // 
+            this.stepColumn.HeaderText = "Step";
+            this.stepColumn.Name = "stepColumn";
+            this.stepColumn.ReadOnly = true;
+            this.stepColumn.Width = 40;
+            // 
+            // startTimeColumn
+            // 
+            this.startTimeColumn.HeaderText = "Start Time";
+            this.startTimeColumn.Name = "startTimeColumn";
+            this.startTimeColumn.ReadOnly = true;
+            this.startTimeColumn.Width = 150;
+            // 
+            // endTimeColumn
+            // 
+            this.endTimeColumn.HeaderText = "End Time";
+            this.endTimeColumn.Name = "endTimeColumn";
+            this.endTimeColumn.ReadOnly = true;
+            this.endTimeColumn.Width = 150;
+            // 
+            // requestsColumn
+            // 
+            this.requestsColumn.HeaderText = "Requests";
+            this.requestsColumn.Name = "requestsColumn";
+            this.requestsColumn.ReadOnly = true;
+            this.requestsColumn.Width = 75;
+            // 
             // planned_CH
             // 
-            chartArea4.Name = "ChartArea1";
-            this.planned_CH.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.planned_CH.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.planned_CH.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.planned_CH.Legends.Add(legend6);
             this.planned_CH.Location = new System.Drawing.Point(17, 366);
-            this.planned_CH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.planned_CH.Margin = new System.Windows.Forms.Padding(2);
             this.planned_CH.Name = "planned_CH";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.planned_CH.Series.Add(series4);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.planned_CH.Series.Add(series6);
             this.planned_CH.Size = new System.Drawing.Size(437, 206);
             this.planned_CH.TabIndex = 9;
             this.planned_CH.Text = "chart1";
@@ -464,9 +519,9 @@ namespace HttpRequestSender.Forms
             // 
             this.tabPage3.Controls.Add(this.panel4);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(476, 610);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "URL Exploration";
@@ -474,7 +529,11 @@ namespace HttpRequestSender.Forms
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.listBox1);
+            this.panel4.Controls.Add(this.exploration_CHB);
+            this.panel4.Controls.Add(this.explorationRequest_NUD);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.explorationURL_TB);
+            this.panel4.Controls.Add(this.exloration_Grid);
             this.panel4.Controls.Add(this.URLReport_BTN);
             this.panel4.Controls.Add(this.URLStop_BTN);
             this.panel4.Controls.Add(this.URLStart_BTN);
@@ -482,28 +541,18 @@ namespace HttpRequestSender.Forms
             this.panel4.Controls.Add(this.statusStrip4);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.URLReqPerSec_TB);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(2, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(472, 606);
             this.panel4.TabIndex = 2;
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(17, 102);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(438, 160);
-            this.listBox1.TabIndex = 13;
-            // 
             // URLReport_BTN
             // 
             this.URLReport_BTN.BackColor = System.Drawing.SystemColors.Window;
             this.URLReport_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.URLReport_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.URLReport_BTN.Location = new System.Drawing.Point(147, 359);
+            this.URLReport_BTN.Location = new System.Drawing.Point(147, 419);
             this.URLReport_BTN.Name = "URLReport_BTN";
             this.URLReport_BTN.Size = new System.Drawing.Size(176, 37);
             this.URLReport_BTN.TabIndex = 12;
@@ -515,7 +564,7 @@ namespace HttpRequestSender.Forms
             this.URLStop_BTN.BackColor = System.Drawing.Color.OrangeRed;
             this.URLStop_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold);
             this.URLStop_BTN.ForeColor = System.Drawing.Color.White;
-            this.URLStop_BTN.Location = new System.Drawing.Point(256, 303);
+            this.URLStop_BTN.Location = new System.Drawing.Point(256, 363);
             this.URLStop_BTN.Name = "URLStop_BTN";
             this.URLStop_BTN.Size = new System.Drawing.Size(141, 46);
             this.URLStop_BTN.TabIndex = 11;
@@ -527,7 +576,7 @@ namespace HttpRequestSender.Forms
             this.URLStart_BTN.BackColor = System.Drawing.Color.LimeGreen;
             this.URLStart_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.URLStart_BTN.ForeColor = System.Drawing.Color.White;
-            this.URLStart_BTN.Location = new System.Drawing.Point(75, 303);
+            this.URLStart_BTN.Location = new System.Drawing.Point(75, 363);
             this.URLStart_BTN.Name = "URLStart_BTN";
             this.URLStart_BTN.Size = new System.Drawing.Size(141, 46);
             this.URLStart_BTN.TabIndex = 10;
@@ -539,12 +588,13 @@ namespace HttpRequestSender.Forms
             this.explorer_BTN.BackColor = System.Drawing.SystemColors.Window;
             this.explorer_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.explorer_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.explorer_BTN.Location = new System.Drawing.Point(170, 52);
+            this.explorer_BTN.Location = new System.Drawing.Point(170, 112);
             this.explorer_BTN.Name = "explorer_BTN";
             this.explorer_BTN.Size = new System.Drawing.Size(133, 37);
             this.explorer_BTN.TabIndex = 9;
-            this.explorer_BTN.Text = "Felderítő";
+            this.explorer_BTN.Text = "Felderítés";
             this.explorer_BTN.UseVisualStyleBackColor = false;
+            this.explorer_BTN.Click += new System.EventHandler(this.explorer_BTN_Click);
             // 
             // statusStrip4
             // 
@@ -577,26 +627,19 @@ namespace HttpRequestSender.Forms
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(133, 277);
+            this.label10.Location = new System.Drawing.Point(133, 337);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 13);
             this.label10.TabIndex = 3;
             this.label10.Text = "Kérés / másodperc:";
             // 
-            // URLReqPerSec_TB
-            // 
-            this.URLReqPerSec_TB.Location = new System.Drawing.Point(239, 275);
-            this.URLReqPerSec_TB.Name = "URLReqPerSec_TB";
-            this.URLReqPerSec_TB.Size = new System.Drawing.Size(100, 20);
-            this.URLReqPerSec_TB.TabIndex = 1;
-            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.panel3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(476, 610);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Logs";
@@ -738,53 +781,76 @@ namespace HttpRequestSender.Forms
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // planGrid
+            // exloration_Grid
             // 
-            this.planGrid.AllowUserToAddRows = false;
-            this.planGrid.AllowUserToDeleteRows = false;
-            this.planGrid.AllowUserToResizeColumns = false;
-            this.planGrid.AllowUserToResizeRows = false;
-            this.planGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.planGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.stepColumn,
-            this.startTimeColumn,
-            this.endTimeColumn,
-            this.requestsColumn});
-            this.planGrid.Location = new System.Drawing.Point(17, 97);
-            this.planGrid.Name = "planGrid";
-            this.planGrid.RowHeadersVisible = false;
-            this.planGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.planGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.planGrid.Size = new System.Drawing.Size(439, 175);
-            this.planGrid.TabIndex = 16;
+            this.exloration_Grid.AllowUserToAddRows = false;
+            this.exloration_Grid.AllowUserToDeleteRows = false;
+            this.exloration_Grid.AllowUserToResizeColumns = false;
+            this.exloration_Grid.AllowUserToResizeRows = false;
+            this.exloration_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.exloration_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.addressColumn,
+            this.linksColumn});
+            this.exloration_Grid.Location = new System.Drawing.Point(16, 155);
+            this.exloration_Grid.MultiSelect = false;
+            this.exloration_Grid.Name = "exloration_Grid";
+            this.exloration_Grid.RowHeadersVisible = false;
+            this.exloration_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.exloration_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.exloration_Grid.Size = new System.Drawing.Size(440, 174);
+            this.exloration_Grid.TabIndex = 13;
             // 
-            // stepColumn
+            // addressColumn
             // 
-            this.stepColumn.HeaderText = "Step";
-            this.stepColumn.Name = "stepColumn";
-            this.stepColumn.ReadOnly = true;
-            this.stepColumn.Width = 40;
+            this.addressColumn.HeaderText = "Address";
+            this.addressColumn.Name = "addressColumn";
+            this.addressColumn.ReadOnly = true;
+            this.addressColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.addressColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.addressColumn.Width = 350;
             // 
-            // startTimeColumn
+            // linksColumn
             // 
-            this.startTimeColumn.HeaderText = "Start Time";
-            this.startTimeColumn.Name = "startTimeColumn";
-            this.startTimeColumn.ReadOnly = true;
-            this.startTimeColumn.Width = 150;
+            this.linksColumn.HeaderText = "Links";
+            this.linksColumn.Name = "linksColumn";
+            this.linksColumn.ReadOnly = true;
+            this.linksColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.linksColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.linksColumn.Width = 65;
             // 
-            // endTimeColumn
+            // label7
             // 
-            this.endTimeColumn.HeaderText = "End Time";
-            this.endTimeColumn.Name = "endTimeColumn";
-            this.endTimeColumn.ReadOnly = true;
-            this.endTimeColumn.Width = 150;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(41, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "URL:";
             // 
-            // requestsColumn
+            // explorationURL_TB
             // 
-            this.requestsColumn.HeaderText = "Requests";
-            this.requestsColumn.Name = "requestsColumn";
-            this.requestsColumn.ReadOnly = true;
-            this.requestsColumn.Width = 75;
+            this.explorationURL_TB.Location = new System.Drawing.Point(82, 52);
+            this.explorationURL_TB.Name = "explorationURL_TB";
+            this.explorationURL_TB.Size = new System.Drawing.Size(351, 20);
+            this.explorationURL_TB.TabIndex = 14;
+            this.explorationURL_TB.Text = "https://hf.mit.bme.hu/tmp/alexandra/test.php?sleep=100";
+            // 
+            // explorationRequest_NUD
+            // 
+            this.explorationRequest_NUD.Location = new System.Drawing.Point(239, 335);
+            this.explorationRequest_NUD.Name = "explorationRequest_NUD";
+            this.explorationRequest_NUD.Size = new System.Drawing.Size(100, 20);
+            this.explorationRequest_NUD.TabIndex = 16;
+            // 
+            // exploration_CHB
+            // 
+            this.exploration_CHB.AutoSize = true;
+            this.exploration_CHB.Location = new System.Drawing.Point(200, 87);
+            this.exploration_CHB.Name = "exploration_CHB";
+            this.exploration_CHB.Size = new System.Drawing.Size(74, 17);
+            this.exploration_CHB.TabIndex = 17;
+            this.exploration_CHB.Text = "Recursive";
+            this.exploration_CHB.UseVisualStyleBackColor = true;
             // 
             // StressTester_Form
             // 
@@ -804,6 +870,7 @@ namespace HttpRequestSender.Forms
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.planned_CH)).EndInit();
             this.statusStrip2.ResumeLayout(false);
             this.statusStrip2.PerformLayout();
@@ -818,7 +885,8 @@ namespace HttpRequestSender.Forms
             this.statusStrip3.ResumeLayout(false);
             this.statusStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.planGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -857,7 +925,6 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox URLReqPerSec_TB;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.StatusStrip statusStrip3;
@@ -874,7 +941,6 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label averageResTime_L;
         private System.Windows.Forms.Label numberOfRes_L;
         private System.Windows.Forms.Label label11;
@@ -885,6 +951,13 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn startTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestsColumn;
+        private System.Windows.Forms.NumericUpDown explorationRequest_NUD;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox explorationURL_TB;
+        private System.Windows.Forms.DataGridView exloration_Grid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn linksColumn;
+        private System.Windows.Forms.CheckBox exploration_CHB;
     }
 }
 

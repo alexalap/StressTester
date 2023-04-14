@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -25,6 +26,7 @@ namespace HttpRequestSender.Forms
         private int tickCount = 0;
         private States state = States.Inactive;
         private Schedule schedule = new Schedule();
+        private Dictionary<string, (int, int)> siteStructureData;
 
         public StressTester_Form()
         {
@@ -205,10 +207,27 @@ namespace HttpRequestSender.Forms
             exloration_Grid.Rows.Clear();
             SiteStructureAnalyzer siteStructureAnalyzer = new SiteStructureAnalyzer(explorationURL_TB.Text);
             Dictionary<string, int> result = await siteStructureAnalyzer.Analyze(exploration_CHB.Checked);
-            foreach (string key in result.Keys)
+            int minValue = result.Min(x => x.Value);
+            siteStructureData = result.ToDictionary(x => x.Key, x => (x.Value, (int)Math.Round(x.Value / (double)minValue)));
+            foreach (string key in siteStructureData.Keys)
             {
-                exloration_Grid.Rows.Add(key, result[key]);
+                exloration_Grid.Rows.Add(key, siteStructureData[key].Item1, siteStructureData[key].Item2);
             }
+            RefreshTotalRequestLabel();
+        }
+
+        private void RefreshTotalRequestLabel()
+        {
+            if (siteStructureData != null && siteStructureData.Count > 0)
+            {
+                int multiplierSum = siteStructureData.Sum(x => x.Value.Item2);
+                totalRequest_L.Text = "(" + explorationRequest_NUD.Value * multiplierSum + " in total)";
+            }
+        }
+
+        private void explorationRequest_NUD_ValueChanged(object sender, EventArgs e)
+        {
+            RefreshTotalRequestLabel();
         }
     }
 }

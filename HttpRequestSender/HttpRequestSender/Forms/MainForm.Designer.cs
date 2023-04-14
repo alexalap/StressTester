@@ -72,6 +72,11 @@ namespace HttpRequestSender.Forms
             this.actualStep_TB = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.exploration_CHB = new System.Windows.Forms.CheckBox();
+            this.explorationRequest_NUD = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.explorationURL_TB = new System.Windows.Forms.TextBox();
+            this.exloration_Grid = new System.Windows.Forms.DataGridView();
             this.URLReport_BTN = new System.Windows.Forms.Button();
             this.URLStop_BTN = new System.Windows.Forms.Button();
             this.URLStart_BTN = new System.Windows.Forms.Button();
@@ -93,13 +98,10 @@ namespace HttpRequestSender.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.exloration_Grid = new System.Windows.Forms.DataGridView();
             this.addressColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.linksColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.explorationURL_TB = new System.Windows.Forms.TextBox();
-            this.explorationRequest_NUD = new System.Windows.Forms.NumericUpDown();
-            this.exploration_CHB = new System.Windows.Forms.CheckBox();
+            this.multiplierColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalRequest_L = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -112,13 +114,13 @@ namespace HttpRequestSender.Forms
             this.statusStrip2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).BeginInit();
             this.statusStrip4.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.statusStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -529,6 +531,7 @@ namespace HttpRequestSender.Forms
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.totalRequest_L);
             this.panel4.Controls.Add(this.exploration_CHB);
             this.panel4.Controls.Add(this.explorationRequest_NUD);
             this.panel4.Controls.Add(this.label7);
@@ -546,6 +549,76 @@ namespace HttpRequestSender.Forms
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(472, 606);
             this.panel4.TabIndex = 2;
+            // 
+            // exploration_CHB
+            // 
+            this.exploration_CHB.AutoSize = true;
+            this.exploration_CHB.Location = new System.Drawing.Point(200, 87);
+            this.exploration_CHB.Name = "exploration_CHB";
+            this.exploration_CHB.Size = new System.Drawing.Size(74, 17);
+            this.exploration_CHB.TabIndex = 17;
+            this.exploration_CHB.Text = "Recursive";
+            this.exploration_CHB.UseVisualStyleBackColor = true;
+            // 
+            // explorationRequest_NUD
+            // 
+            this.explorationRequest_NUD.Location = new System.Drawing.Point(239, 335);
+            this.explorationRequest_NUD.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.explorationRequest_NUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.explorationRequest_NUD.Name = "explorationRequest_NUD";
+            this.explorationRequest_NUD.Size = new System.Drawing.Size(100, 20);
+            this.explorationRequest_NUD.TabIndex = 16;
+            this.explorationRequest_NUD.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.explorationRequest_NUD.ValueChanged += new System.EventHandler(this.explorationRequest_NUD_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(41, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "URL:";
+            // 
+            // explorationURL_TB
+            // 
+            this.explorationURL_TB.Location = new System.Drawing.Point(82, 52);
+            this.explorationURL_TB.Name = "explorationURL_TB";
+            this.explorationURL_TB.Size = new System.Drawing.Size(351, 20);
+            this.explorationURL_TB.TabIndex = 14;
+            this.explorationURL_TB.Text = "https://hf.mit.bme.hu/tmp/alexandra/test.php?sleep=100";
+            // 
+            // exloration_Grid
+            // 
+            this.exloration_Grid.AllowUserToAddRows = false;
+            this.exloration_Grid.AllowUserToDeleteRows = false;
+            this.exloration_Grid.AllowUserToResizeColumns = false;
+            this.exloration_Grid.AllowUserToResizeRows = false;
+            this.exloration_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.exloration_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.addressColumn,
+            this.linksColumn,
+            this.multiplierColumn});
+            this.exloration_Grid.Location = new System.Drawing.Point(16, 155);
+            this.exloration_Grid.MultiSelect = false;
+            this.exloration_Grid.Name = "exloration_Grid";
+            this.exloration_Grid.RowHeadersVisible = false;
+            this.exloration_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.exloration_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.exloration_Grid.Size = new System.Drawing.Size(440, 174);
+            this.exloration_Grid.TabIndex = 13;
             // 
             // URLReport_BTN
             // 
@@ -781,25 +854,6 @@ namespace HttpRequestSender.Forms
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // exloration_Grid
-            // 
-            this.exloration_Grid.AllowUserToAddRows = false;
-            this.exloration_Grid.AllowUserToDeleteRows = false;
-            this.exloration_Grid.AllowUserToResizeColumns = false;
-            this.exloration_Grid.AllowUserToResizeRows = false;
-            this.exloration_Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.exloration_Grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.addressColumn,
-            this.linksColumn});
-            this.exloration_Grid.Location = new System.Drawing.Point(16, 155);
-            this.exloration_Grid.MultiSelect = false;
-            this.exloration_Grid.Name = "exloration_Grid";
-            this.exloration_Grid.RowHeadersVisible = false;
-            this.exloration_Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.exloration_Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.exloration_Grid.Size = new System.Drawing.Size(440, 174);
-            this.exloration_Grid.TabIndex = 13;
-            // 
             // addressColumn
             // 
             this.addressColumn.HeaderText = "Address";
@@ -807,7 +861,7 @@ namespace HttpRequestSender.Forms
             this.addressColumn.ReadOnly = true;
             this.addressColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.addressColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.addressColumn.Width = 350;
+            this.addressColumn.Width = 285;
             // 
             // linksColumn
             // 
@@ -818,39 +872,22 @@ namespace HttpRequestSender.Forms
             this.linksColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.linksColumn.Width = 65;
             // 
-            // label7
+            // multiplierColumn
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(41, 55);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "URL:";
+            this.multiplierColumn.HeaderText = "Multiplier";
+            this.multiplierColumn.Name = "multiplierColumn";
+            this.multiplierColumn.ReadOnly = true;
+            this.multiplierColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.multiplierColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.multiplierColumn.Width = 65;
             // 
-            // explorationURL_TB
+            // totalRequest_L
             // 
-            this.explorationURL_TB.Location = new System.Drawing.Point(82, 52);
-            this.explorationURL_TB.Name = "explorationURL_TB";
-            this.explorationURL_TB.Size = new System.Drawing.Size(351, 20);
-            this.explorationURL_TB.TabIndex = 14;
-            this.explorationURL_TB.Text = "https://hf.mit.bme.hu/tmp/alexandra/test.php?sleep=100";
-            // 
-            // explorationRequest_NUD
-            // 
-            this.explorationRequest_NUD.Location = new System.Drawing.Point(239, 335);
-            this.explorationRequest_NUD.Name = "explorationRequest_NUD";
-            this.explorationRequest_NUD.Size = new System.Drawing.Size(100, 20);
-            this.explorationRequest_NUD.TabIndex = 16;
-            // 
-            // exploration_CHB
-            // 
-            this.exploration_CHB.AutoSize = true;
-            this.exploration_CHB.Location = new System.Drawing.Point(200, 87);
-            this.exploration_CHB.Name = "exploration_CHB";
-            this.exploration_CHB.Size = new System.Drawing.Size(74, 17);
-            this.exploration_CHB.TabIndex = 17;
-            this.exploration_CHB.Text = "Recursive";
-            this.exploration_CHB.UseVisualStyleBackColor = true;
+            this.totalRequest_L.AutoSize = true;
+            this.totalRequest_L.Location = new System.Drawing.Point(356, 337);
+            this.totalRequest_L.Name = "totalRequest_L";
+            this.totalRequest_L.Size = new System.Drawing.Size(0, 13);
+            this.totalRequest_L.TabIndex = 18;
             // 
             // StressTester_Form
             // 
@@ -877,6 +914,8 @@ namespace HttpRequestSender.Forms
             this.tabPage3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).EndInit();
             this.statusStrip4.ResumeLayout(false);
             this.statusStrip4.PerformLayout();
             this.tabPage4.ResumeLayout(false);
@@ -885,8 +924,6 @@ namespace HttpRequestSender.Forms
             this.statusStrip3.ResumeLayout(false);
             this.statusStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -955,9 +992,11 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox explorationURL_TB;
         private System.Windows.Forms.DataGridView exloration_Grid;
+        private System.Windows.Forms.CheckBox exploration_CHB;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn linksColumn;
-        private System.Windows.Forms.CheckBox exploration_CHB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn multiplierColumn;
+        private System.Windows.Forms.Label totalRequest_L;
     }
 }
 

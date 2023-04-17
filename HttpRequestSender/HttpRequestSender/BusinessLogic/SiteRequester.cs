@@ -20,14 +20,18 @@ namespace HttpRequestSender.BusinessLogic
     {
         public delegate void OnTickDelegate();
         public event OnTickDelegate Tick;
+        public event OnTickDelegate OnPlanFinish;
 
         private HttpClient client = new HttpClient();
         private string address;
         private CancellationTokenSource cancellation = new CancellationTokenSource();
+        private CancellationTokenSource plannedCancellation = new CancellationTokenSource();
         private SessionMetrics sessionMetrics;
         private System.Timers.Timer timer;
-        private bool paused = false;
+        private System.Timers.Timer plannedTimer;
+        private bool isPaused = false;
         private int numberOfRequestsPerSec;
+        private bool isMeasuring = false;
 
         public SiteRequester(string address, SessionMetrics sessionMetrics, float timeoutSeconds = 100)
         {
@@ -59,25 +63,32 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
-        public void GetResponseParallelPeriodic(int numberOfRequestsPerSec, RequesterMode mode)
+        public void StartMeasurement(int numberOfRequestsPerSec, Schedule schedule, RequesterMode mode)
         {
             cancellation.Token.Register(() => TimeOut());
             switch (mode)
             {
                 case RequesterMode.Manual:
-                    sessionMetrics.StartMetric(address, "Manual_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
+                    StartManualMeasurement(numberOfRequestsPerSec);
                     break;
                 case RequesterMode.Planned:
+                    plannedCancellation.Token.Register(() => TimeOut());
+                    StartPlannedMeasurement(schedule);
                     break;
                 case RequesterMode.Fleet:
                     break;
             }
+        }
+
+        private void StartManualMeasurement(int numberOfRequestsPerSec)
+        {
+            sessionMetrics.StartMetric(address, "Manual_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
             this.numberOfRequestsPerSec = numberOfRequestsPerSec;
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
-            timer.Elapsed += (async (s, e) => 
+            timer.Elapsed += (async (s, e) =>
             {
-                if (!paused)
+                if (!isPaused)
                 {
                     await GetResponseParallel(this.numberOfRequestsPerSec);
                 }
@@ -89,6 +100,46 @@ namespace HttpRequestSender.BusinessLogic
                 Tick?.Invoke();
             });
             timer.Start();
+        }
+
+        private void StartPlannedMeasurement(Schedule schedule)
+        {
+            plannedTimer = new System.Timers.Timer();
+            plannedTimer.Interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
+            plannedTimer.Elapsed += (async (s, e) =>
+            {
+                if (isMeasuring)
+                {
+                    Stop();
+                    cancellation = new CancellationTokenSource();
+                    cancellation.Token.Register(() => TimeOut());
+                    isMeasuring = false;
+                }
+                if (schedule.NextStep() != null)
+                {
+                    if (schedule.NextStep().StartTime > DateTime.Now)
+                    {
+                        plannedTimer.Interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
+                    }
+                    else
+                    {
+                        schedule.Step();
+                        plannedTimer.Interval = (schedule.CurrentStep().EndTime - DateTime.Now).TotalMilliseconds;
+                        StartManualMeasurement(schedule.CurrentStep().Requests);
+                        isMeasuring = true;
+                    }
+                }
+                else
+                {
+                    if(schedule.CurrentStep() != null)
+                    {
+                        schedule.Step();
+                    }
+                    plannedTimer.Stop();
+                    OnPlanFinish.Invoke();
+                }
+            });
+            plannedTimer.Start();
         }
 
         private async Task GetResponseParallel(int numberOfRequestsPerSec)
@@ -132,35 +183,41 @@ namespace HttpRequestSender.BusinessLogic
 
         private void TimeOut()
         {
-            if (!paused)
+            if (!isPaused)
             {
                 sessionMetrics.CloseMetric(address);
                 Logger.Log(LogPriority.INFO, "Session interval ended. Address: " + address);
             }
         }
 
-#endregion
+        #endregion
 
         public void Pause()
         {
-            paused = true;
+            isPaused = true;
             sessionMetrics.Pause(address);
         }
 
         public async void Resume()
         {
-            paused = false;
+            isPaused = false;
             cancellation = new CancellationTokenSource();
             cancellation.Token.Register(() => TimeOut());
             timer.Start();
             sessionMetrics.UnPause(address);
             await GetResponseParallel(numberOfRequestsPerSec);
         }
-        
+
         public void Stop()
         {
             timer.Stop();
             cancellation.Cancel();
+        }
+
+        public void PlannedStop()
+        {
+            plannedTimer.Stop();
+            plannedCancellation.Cancel();
         }
     }
 }

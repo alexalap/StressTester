@@ -38,8 +38,8 @@ namespace HttpRequestSender.Reports
                 string key = reports.Keys.ElementAt(i);
                 string nextPath = Path.Combine(selectedPath, reports[reports.Keys.ElementAt(i == reports.Keys.Count - 1 ? 0 : i + 1)].Title + ".html");
                 string previousPath = Path.Combine(selectedPath, reports[reports.Keys.ElementAt(i == 0 ? reports.Keys.Count - 1 : i - 1)].Title + ".html");
-                reports[key].Next = nextPath.Replace(Path.DirectorySeparatorChar.ToString(), Path.DirectorySeparatorChar.ToString() + Path.DirectorySeparatorChar.ToString());
-                reports[key].Previous = previousPath.Replace(Path.DirectorySeparatorChar.ToString(), Path.DirectorySeparatorChar.ToString() + Path.DirectorySeparatorChar.ToString());
+                //reports[key].Next = nextPath.Replace(Path.DirectorySeparatorChar.ToString(), Path.DirectorySeparatorChar.ToString() + Path.DirectorySeparatorChar.ToString());
+                //reports[key].Previous = previousPath.Replace(Path.DirectorySeparatorChar.ToString(), Path.DirectorySeparatorChar.ToString() + Path.DirectorySeparatorChar.ToString());
                 foreach (string item in reports.Keys)
                 {
                     reports[key].OtherReports.Add(Path.Combine(selectedPath, reports[item].Title + ".html"));

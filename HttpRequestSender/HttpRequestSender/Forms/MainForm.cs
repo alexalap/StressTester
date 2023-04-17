@@ -24,7 +24,8 @@ namespace HttpRequestSender.Forms
         private SiteRequester siteRequester;
         private string address;
         private int tickCount = 0;
-        private States state = States.Inactive;
+        private States manualState = States.Inactive;
+        private States plannedState = States.Inactive;
         private Schedule schedule = new Schedule();
         private Dictionary<string, (int, int)> siteStructureData;
 
@@ -38,7 +39,7 @@ namespace HttpRequestSender.Forms
         private void start_BTN_Click(object sender, EventArgs e)
         {
             manual_CH.Series["Response rate"].Points.Clear();
-            state = States.Active;
+            manualState = States.Active;
             UpdateButtons();
             if (TextBoxValidator.Validate<int>(reqPerSec_TB.Text, out int value))
             {
@@ -46,8 +47,8 @@ namespace HttpRequestSender.Forms
                 status_L.Text = "";
                 session = new SessionMetrics();
                 siteRequester = new SiteRequester(address, session, 1);
-                siteRequester.GetResponseParallelPeriodic(value, RequesterMode.Manual);
-                siteRequester.Tick += PeriodicStatisticsUpdate;
+                siteRequester.StartMeasurement(value, null, RequesterMode.Manual);
+                siteRequester.Tick += ManualStatisticsUpdate;
             }
             else
             {
@@ -57,22 +58,22 @@ namespace HttpRequestSender.Forms
 
         private void pause_BTN_Click(object sender, EventArgs e)
         {
-            if(state == States.Paused)
+            if (manualState == States.Paused)
             {
                 siteRequester.Resume();
-                state = States.Active;
+                manualState = States.Active;
             }
             else
             {
                 siteRequester.Pause();
-                state = States.Paused;
+                manualState = States.Paused;
             }
             UpdateButtons();
         }
 
         private void stop_BTN_Click(object sender, EventArgs e)
         {
-            state = States.Inactive;
+            manualState = States.Inactive;
             siteRequester?.Stop();
             UpdateButtons();
         }
@@ -80,7 +81,7 @@ namespace HttpRequestSender.Forms
 
         private void UpdateButtons()
         {
-            switch (state)
+            switch (manualState)
             {
                 case States.Active:
                     start_BTN.BackColor = Color.Gray;
@@ -114,14 +115,14 @@ namespace HttpRequestSender.Forms
                     pause_BTN.Text = "Pause";
                     pause_BTN.Enabled = false;
 
-                    state = States.Inactive;
+                    manualState = States.Inactive;
 
                     stop_BTN.BackColor = Color.Gray;
                     stop_BTN.ForeColor = Color.White;
                     stop_BTN.Text = "Stopped";
                     stop_BTN.Enabled = false;
 
-                    if(session != null)
+                    if (session != null)
                     {
                         report_BTN.Enabled = true;
                     }
@@ -129,12 +130,12 @@ namespace HttpRequestSender.Forms
             }
         }
 
-        private void PeriodicStatisticsUpdate()
+        private void ManualStatisticsUpdate()
         {
             MethodInvoker updateMetricsVisual = delegate
             {
                 float responseRate = session.ResponseTimeRateLastSec(address);
-                if(responseRate != -1)
+                if (responseRate != -1)
                 {
                     DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
                     pointList.AddXY(tickCount++, responseRate);
@@ -170,15 +171,20 @@ namespace HttpRequestSender.Forms
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            
+
         }
 
         private void planEditor_BTN_Click(object sender, EventArgs e)
         {
             Scheduler_Form planEditor = new Scheduler_Form();
+            if (schedule.CurrentStep() != null)
+            {
+                schedule.Clear();
+            }
             planEditor.Schedule = schedule;
             planEditor.ShowDialog();
             RefreshGrid();
+            UpdatePlannedButtons();
         }
 
         private void report_BTN_Click(object sender, EventArgs e)
@@ -186,7 +192,7 @@ namespace HttpRequestSender.Forms
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
             folderBrowserDialog.Description = "Select folder for report files.";
             folderBrowserDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            if(folderBrowserDialog.ShowDialog() == DialogResult.OK && Directory.Exists(folderBrowserDialog.SelectedPath))
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK && Directory.Exists(folderBrowserDialog.SelectedPath))
             {
                 session.GenerateReport(folderBrowserDialog.SelectedPath);
             }
@@ -228,6 +234,116 @@ namespace HttpRequestSender.Forms
         private void explorationRequest_NUD_ValueChanged(object sender, EventArgs e)
         {
             RefreshTotalRequestLabel();
+        }
+
+        private void plannedStart_BTN_Click(object sender, EventArgs e)
+        {
+            plannedManual_CH.Series["Response rate"].Points.Clear();
+            plannedState = States.Active;
+            UpdatePlannedButtons();
+            address = plannedURL_TB.Text;
+            status_L.Text = "";
+            session = new SessionMetrics();
+            siteRequester = new SiteRequester(address, session, 1);
+            siteRequester.StartMeasurement(0, schedule, RequesterMode.Planned);
+            siteRequester.Tick += PlannedStatisticsUpdate;
+            siteRequester.OnPlanFinish += OnPlannedMeasurementFinish;
+        }
+
+        private void OnPlannedMeasurementFinish()
+        {
+            PlannedStatisticsUpdate();
+            MethodInvoker updateVisuals = delegate
+            {
+                plannedState = States.Inactive;
+                UpdatePlannedButtons();
+                RefreshGrid();
+            };
+            plannedStart_BTN.Invoke(updateVisuals);
+        }
+
+        private void plannedStop_BTN_Click(object sender, EventArgs e)
+        {
+            plannedState = States.Inactive;
+            siteRequester?.PlannedStop();
+            UpdatePlannedButtons();
+            schedule.Clear();
+        }
+
+        private void UpdatePlannedButtons()
+        {
+            switch (plannedState)
+            {
+                case States.Active:
+                    plannedStart_BTN.BackColor = Color.Gray;
+                    plannedStart_BTN.ForeColor = Color.White;
+                    plannedStart_BTN.Text = "Running...";
+                    plannedStart_BTN.Enabled = false;
+
+                    plannedStop_BTN.BackColor = Color.OrangeRed;
+                    plannedStop_BTN.ForeColor = Color.White;
+                    plannedStop_BTN.Text = "Stop";
+                    plannedStop_BTN.Enabled = true;
+
+                    plannedReport_BTN.Enabled = false;
+                    break;
+                case States.Inactive:
+                    ScheduleStep nextStep = schedule.NextStep();
+                    if (nextStep != null && nextStep.StartTime > DateTime.Now)
+                    {
+                        plannedStart_BTN.BackColor = Color.LimeGreen;
+                        plannedStart_BTN.ForeColor = Color.White;
+                        plannedStart_BTN.Text = "Start";
+                        plannedStart_BTN.Enabled = true;
+                    }
+                    else
+                    {
+                        plannedStart_BTN.BackColor = Color.Gray;
+                        plannedStart_BTN.ForeColor = Color.White;
+                        plannedStart_BTN.Text = nextStep == null ? "No plan" : "Invalid plan";
+                        plannedStart_BTN.Enabled = false;
+                    }
+
+                    plannedStop_BTN.BackColor = Color.Gray;
+                    plannedStop_BTN.ForeColor = Color.White;
+                    plannedStop_BTN.Text = "Stopped";
+                    plannedStop_BTN.Enabled = false;
+
+                    if (session != null)
+                    {
+                        plannedReport_BTN.Enabled = true;
+                    }
+                    break;
+            }
+        }
+
+        private void plannedReport_BTN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PlannedStatisticsUpdate()
+        {
+            MethodInvoker updateMetricsVisual = delegate
+            {
+                float responseRate = session.ResponseTimeRateLastSec(address);
+                if (responseRate != -1)
+                {
+                    DataPointCollection pointList = plannedManual_CH.Series["Response rate"].Points;
+                    pointList.AddXY(tickCount++, responseRate);
+                    if (pointList.Count > 36)
+                    {
+                        pointList.RemoveAt(0);
+                    }
+                    plannedManual_CH.ResetAutoValues();
+                }
+            };
+            MethodInvoker updateGrid = delegate
+            {
+                RefreshGrid();
+            };
+            plannedManual_CH.Invoke(updateMetricsVisual);
+            planGrid.Invoke(updateGrid);
         }
     }
 }

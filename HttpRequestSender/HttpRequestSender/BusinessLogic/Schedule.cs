@@ -51,11 +51,20 @@ namespace HttpRequestSender.BusinessLogic
 
         public void Step()
         {
-            if(scheduleSteps.Count > 0)
+            if (scheduleSteps.Count > 0 && isStarted == false)
             {
                 isStarted = true;
+            }
+            else if (scheduleSteps.Count > 0)
+            {
                 scheduleSteps.RemoveAt(0);
             }
+        }
+
+        public void Clear()
+        {
+            scheduleSteps.Clear();
+            isStarted = false;
         }
     }
 }

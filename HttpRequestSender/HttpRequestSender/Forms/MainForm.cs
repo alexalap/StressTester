@@ -319,7 +319,13 @@ namespace HttpRequestSender.Forms
 
         private void plannedReport_BTN_Click(object sender, EventArgs e)
         {
-
+            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
+            folderBrowserDialog.Description = "Select folder for report files.";
+            folderBrowserDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK && Directory.Exists(folderBrowserDialog.SelectedPath))
+            {
+                session.GenerateReport(folderBrowserDialog.SelectedPath);
+            }
         }
 
         private void PlannedStatisticsUpdate()

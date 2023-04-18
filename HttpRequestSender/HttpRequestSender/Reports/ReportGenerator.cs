@@ -3,10 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Razor.Generator;
-using System.Windows.Forms;
 
 namespace HttpRequestSender.Reports
 {
@@ -14,11 +10,13 @@ namespace HttpRequestSender.Reports
     {
         private static Dictionary<string, Report> reports = new Dictionary<string, Report>();
 
-        public static void CreateReport(string title, string address)
+        public static void CreateReport(string title, string address, DateTime start, DateTime lastUpdateTime)
         {
             reports.Add(title, new Report());
             reports[title].Title = title;
             reports[title].Address = address;
+            reports[title].Start = start;
+            reports[title].End = lastUpdateTime;
         }
 
         public static void SetGraphData(string title, List<Dictionary<string, int>> graphData)
@@ -35,18 +33,10 @@ namespace HttpRequestSender.Reports
         {
             for(int i=0; i<reports.Keys.Count; i++)
             {
+                HTMLGenerator hTMLGenerator = new HTMLGenerator(reports.Values.ToList());
+                string report = hTMLGenerator.Generate();
                 string key = reports.Keys.ElementAt(i);
-                string nextPath = Path.Combine(selectedPath, reports[reports.Keys.ElementAt(i == reports.Keys.Count - 1 ? 0 : i + 1)].Title + ".html");
-                string previousPath = Path.Combine(selectedPath, reports[reports.Keys.ElementAt(i == 0 ? reports.Keys.Count - 1 : i - 1)].Title + ".html");
-                //reports[key].Next = nextPath.Replace(Path.DirectorySeparatorChar.ToString(), Path.DirectorySeparatorChar.ToString() + Path.DirectorySeparatorChar.ToString());
-                //reports[key].Previous = previousPath.Replace(Path.DirectorySeparatorChar.ToString(), Path.DirectorySeparatorChar.ToString() + Path.DirectorySeparatorChar.ToString());
-                foreach (string item in reports.Keys)
-                {
-                    reports[key].OtherReports.Add(Path.Combine(selectedPath, reports[item].Title + ".html"));
-                    reports[key].OtherReports.Add(Path.Combine(selectedPath, reports[item].Title + ".html"));
-                }
-                string report = reports[key].Generate();
-                IOHandler.WriteToFile(Path.Combine(selectedPath, reports[key].Title + ".html"), report);
+                IOHandler.WriteToFile(Path.Combine(selectedPath, DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss") + ".html"), report);
             }
             reports.Clear();
         }

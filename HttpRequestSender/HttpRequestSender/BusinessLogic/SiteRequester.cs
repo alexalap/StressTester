@@ -80,9 +80,9 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
-        private void StartManualMeasurement(int numberOfRequestsPerSec)
+        private void StartManualMeasurement(int numberOfRequestsPerSec, string prefix = "Manual ")
         {
-            sessionMetrics.StartMetric(address, "Manual_" + DateTime.Now.ToString("yyyy_MM_dd_hh_mm"));
+            sessionMetrics.StartMetric(address, prefix + DateTime.Now.ToString("yyyy.MM.dd. hh:mm:ss.ff"));
             this.numberOfRequestsPerSec = numberOfRequestsPerSec;
             timer = new System.Timers.Timer();
             timer.Interval = 1000;

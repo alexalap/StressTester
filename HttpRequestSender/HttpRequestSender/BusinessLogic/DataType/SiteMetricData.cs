@@ -2,11 +2,8 @@
 using HttpRequestSender.Reports;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlTypes;
 using System.Linq;
 using System.Timers;
-using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HttpRequestSender.BusinessLogic.DataType
 {
@@ -20,7 +17,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private bool closed = false;
         private bool paused = false;
         private Timer timer;
-        private DateTime lastDurationGetTime;
+        private DateTime lastUpdateTime;
         private double duration = 0;
 
         private List<Dictionary<string, int>> responses = new List<Dictionary<string, int>>();
@@ -70,7 +67,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         public string Address => address;
 
-        public string Title { get; set; }
+        public string Title { get; private set; }
 
         private Dictionary<string, int> currentResponses
         {
@@ -86,7 +83,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             this.address = address;
             start = DateTime.Now;
             responses.Add(new Dictionary<string, int>());
-            lastDurationGetTime = DateTime.Now;
+            lastUpdateTime = DateTime.Now;
             timer = new Timer();
             timer.Interval = 1000;
             timer.Elapsed += (o, e) =>
@@ -140,7 +137,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         internal void GenerateReport()
         {
-            ReportGenerator.CreateReport(Title, Address);
+            ReportGenerator.CreateReport(Title, Address, start, lastUpdateTime);
             ReportGenerator.SetGraphData(Title, responses);
             ReportGenerator.AddMetricData(Title, "Number of OK responses: ", OKResponseCount.ToString());
             ReportGenerator.AddMetricData(Title, "Average response time: ", (Duration / OKResponseCount).ToString());
@@ -161,8 +158,8 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         private void RefreshDuration()
         {
-            duration += (DateTime.Now - lastDurationGetTime).TotalMilliseconds;
-            lastDurationGetTime = DateTime.Now;
+            duration += (DateTime.Now - lastUpdateTime).TotalMilliseconds;
+            lastUpdateTime = DateTime.Now;
         }
 
         public void Close()
@@ -195,7 +192,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             paused = false;
             timer.Start();
             responses.Add(new Dictionary<string, int>());
-            lastDurationGetTime = DateTime.Now;
+            lastUpdateTime = DateTime.Now;
         }
     }
 }

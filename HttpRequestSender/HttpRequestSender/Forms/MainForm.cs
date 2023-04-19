@@ -22,10 +22,12 @@ namespace HttpRequestSender.Forms
 
         private SessionMetrics session;
         private SiteRequester siteRequester;
+        private List<SiteRequester> siteRequesters = new List<SiteRequester>();
         private string address;
         private int tickCount = 0;
         private States manualState = States.Inactive;
         private States plannedState = States.Inactive;
+        private States explorationState = States.Inactive;
         private Schedule schedule = new Schedule();
         private Dictionary<string, (int, int)> siteStructureData;
 
@@ -211,6 +213,9 @@ namespace HttpRequestSender.Forms
         private async void explorer_BTN_Click(object sender, EventArgs e)
         {
             exloration_Grid.Rows.Clear();
+            siteStructureData?.Clear();
+            UpdateExplorationButtons();
+            explorer_BTN.Enabled = false;
             SiteStructureAnalyzer siteStructureAnalyzer = new SiteStructureAnalyzer(explorationURL_TB.Text);
             Dictionary<string, int> result = await siteStructureAnalyzer.Analyze(exploration_CHB.Checked);
             int minValue = result.Min(x => x.Value);
@@ -220,6 +225,7 @@ namespace HttpRequestSender.Forms
                 exloration_Grid.Rows.Add(key, siteStructureData[key].Item1, siteStructureData[key].Item2);
             }
             RefreshTotalRequestLabel();
+            UpdateExplorationButtons();
         }
 
         private void RefreshTotalRequestLabel()
@@ -238,7 +244,7 @@ namespace HttpRequestSender.Forms
 
         private void plannedStart_BTN_Click(object sender, EventArgs e)
         {
-            plannedManual_CH.Series["Response rate"].Points.Clear();
+            planned_CH.Series["Response rate"].Points.Clear();
             plannedState = States.Active;
             UpdatePlannedButtons();
             address = plannedURL_TB.Text;
@@ -275,6 +281,10 @@ namespace HttpRequestSender.Forms
             switch (plannedState)
             {
                 case States.Active:
+                    planEditor_BTN.BackColor = Color.Gray;
+                    planEditor_BTN.ForeColor = Color.White;
+                    planEditor_BTN.Enabled = false;
+
                     plannedStart_BTN.BackColor = Color.Gray;
                     plannedStart_BTN.ForeColor = Color.White;
                     plannedStart_BTN.Text = "Running...";
@@ -303,6 +313,10 @@ namespace HttpRequestSender.Forms
                         plannedStart_BTN.Text = nextStep == null ? "No plan" : "Invalid plan";
                         plannedStart_BTN.Enabled = false;
                     }
+
+                    planEditor_BTN.BackColor = SystemColors.Window;
+                    planEditor_BTN.ForeColor = Color.White;
+                    planEditor_BTN.Enabled = true;
 
                     plannedStop_BTN.BackColor = Color.Gray;
                     plannedStop_BTN.ForeColor = Color.White;
@@ -335,21 +349,128 @@ namespace HttpRequestSender.Forms
                 float responseRate = session.ResponseTimeRateLastSec(address);
                 if (responseRate != -1)
                 {
-                    DataPointCollection pointList = plannedManual_CH.Series["Response rate"].Points;
+                    DataPointCollection pointList = planned_CH.Series["Response rate"].Points;
                     pointList.AddXY(tickCount++, responseRate);
                     if (pointList.Count > 36)
                     {
                         pointList.RemoveAt(0);
                     }
-                    plannedManual_CH.ResetAutoValues();
+                    planned_CH.ResetAutoValues();
                 }
             };
             MethodInvoker updateGrid = delegate
             {
                 RefreshGrid();
             };
-            plannedManual_CH.Invoke(updateMetricsVisual);
+            planned_CH.Invoke(updateMetricsVisual);
             planGrid.Invoke(updateGrid);
+        }
+
+        private void URLStart_BTN_Click(object sender, EventArgs e)
+        {
+            siteRequesters.Clear();
+            exploration_CH.Series.Clear();
+            explorationState = States.Active;
+            UpdateExplorationButtons();
+            status_L.Text = "";
+            session = new SessionMetrics();
+            foreach (string address in siteStructureData.Keys)
+            {
+                SiteRequester siteRequester = new SiteRequester(address, session, 1);
+                siteRequester.StartMeasurement((int)explorationRequest_NUD.Value * siteStructureData[address].Item2, null, RequesterMode.Manual);
+                siteRequester.AddressedTick += ExplorationStatisticsUpdate;
+                siteRequesters.Add(siteRequester);
+            }
+        }
+
+        private void ExplorationStatisticsUpdate(string address)
+        {
+            MethodInvoker updateMetricsVisual = delegate
+            {
+                float responseRate = session.ResponseTimeRateLastSec(address);
+                if (responseRate != -1)
+                {
+                    if (exploration_CH.Series.FindByName(address) == null)
+                    {
+                        Series series = new Series();
+                        series.Name = address;
+                        series.ChartType = SeriesChartType.Area;
+                        exploration_CH.Series.Add(series);
+                    }
+                    DataPointCollection pointList = exploration_CH.Series[address].Points;
+                    pointList.AddXY(tickCount++, responseRate);
+                    if (pointList.Count > 36)
+                    {
+                        pointList.RemoveAt(0);
+                    }
+                    planned_CH.ResetAutoValues();
+                }
+            };
+            planned_CH.Invoke(updateMetricsVisual);
+        }
+
+        private void URLStop_BTN_Click(object sender, EventArgs e)
+        {
+            explorationState = States.Inactive;
+            foreach (SiteRequester siteRequester in siteRequesters)
+            {
+                siteRequester?.Stop();
+            }
+            UpdateExplorationButtons();
+        }
+
+        private void UpdateExplorationButtons()
+        {
+            switch (explorationState)
+            {
+                case States.Active:
+                    explorer_BTN.BackColor = Color.Gray;
+                    explorer_BTN.ForeColor = Color.White;
+                    explorer_BTN.Enabled = false;
+
+                    URLStart_BTN.BackColor = Color.Gray;
+                    URLStart_BTN.ForeColor = Color.White;
+                    URLStart_BTN.Text = "Running...";
+                    URLStart_BTN.Enabled = false;
+
+                    URLStop_BTN.BackColor = Color.OrangeRed;
+                    URLStop_BTN.ForeColor = Color.White;
+                    URLStop_BTN.Text = "Stop";
+                    URLStop_BTN.Enabled = true;
+
+                    URLReport_BTN.Enabled = false;
+                    break;
+                case States.Inactive:
+                    if (siteStructureData != null && siteStructureData.Count > 0)
+                    {
+                        URLStart_BTN.BackColor = Color.LimeGreen;
+                        URLStart_BTN.ForeColor = Color.White;
+                        URLStart_BTN.Text = "Start";
+                        URLStart_BTN.Enabled = true;
+                    }
+                    else
+                    {
+                        URLStart_BTN.BackColor = Color.Gray;
+                        URLStart_BTN.ForeColor = Color.White;
+                        URLStart_BTN.Text = "Unexplored";
+                        URLStart_BTN.Enabled = false;
+                    }
+
+                    explorer_BTN.BackColor = SystemColors.Window;
+                    explorer_BTN.ForeColor = Color.Black;
+                    explorer_BTN.Enabled = true;
+
+                    URLStop_BTN.BackColor = Color.Gray;
+                    URLStop_BTN.ForeColor = Color.White;
+                    URLStop_BTN.Text = "Stopped";
+                    URLStop_BTN.Enabled = false;
+
+                    if (session != null)
+                    {
+                        URLReport_BTN.Enabled = true;
+                    }
+                    break;
+            }
         }
     }
 }

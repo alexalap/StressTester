@@ -12,15 +12,16 @@ namespace HttpRequestSender.BusinessLogic
     public enum RequesterMode
     {
         Manual,
-        Planned,
-        Fleet
+        Planned
     }
 
     class SiteRequester
     {
         public delegate void OnTickDelegate();
+        public delegate void OnAddressedTickDelegate(string address);
         public event OnTickDelegate Tick;
         public event OnTickDelegate OnPlanFinish;
+        public event OnAddressedTickDelegate AddressedTick;
 
         private HttpClient client = new HttpClient();
         private string address;
@@ -69,18 +70,16 @@ namespace HttpRequestSender.BusinessLogic
             switch (mode)
             {
                 case RequesterMode.Manual:
-                    StartManualMeasurement(numberOfRequestsPerSec);
+                    StartSingularMeasurement(numberOfRequestsPerSec);
                     break;
                 case RequesterMode.Planned:
                     plannedCancellation.Token.Register(() => TimeOut());
                     StartPlannedMeasurement(schedule);
                     break;
-                case RequesterMode.Fleet:
-                    break;
             }
         }
 
-        private void StartManualMeasurement(int numberOfRequestsPerSec, string prefix = "Manual ")
+        private void StartSingularMeasurement(int numberOfRequestsPerSec, string prefix = "Manual ")
         {
             sessionMetrics.StartMetric(address, prefix + DateTime.Now.ToString("yyyy.MM.dd. hh:mm:ss.ff"));
             this.numberOfRequestsPerSec = numberOfRequestsPerSec;
@@ -98,6 +97,7 @@ namespace HttpRequestSender.BusinessLogic
                     cancellation.Cancel();
                 }
                 Tick?.Invoke();
+                AddressedTick?.Invoke(address);
             });
             timer.Start();
         }
@@ -125,7 +125,7 @@ namespace HttpRequestSender.BusinessLogic
                     {
                         schedule.Step();
                         plannedTimer.Interval = (schedule.CurrentStep().EndTime - DateTime.Now).TotalMilliseconds;
-                        StartManualMeasurement(schedule.CurrentStep().Requests);
+                        StartSingularMeasurement(schedule.CurrentStep().Requests);
                         isMeasuring = true;
                     }
                 }

@@ -35,7 +35,7 @@ namespace HttpRequestSender.Reports
             <title>Measurement Report</title>
             </head>";
 
-            res += $@"<body onload=""autoSizeCanvas(); "">";
+            res += $@"<body onload=""autoSizeCanvas();"" style=""width: 80%; margin-left: auto; margin-right: auto;"">";
 
             int reportIndex = 0;
 
@@ -49,14 +49,13 @@ namespace HttpRequestSender.Reports
                 List<Dictionary<string, int>> graphData = report.GraphData;
                 Dictionary<string, string> metricData = report.MetricData;
 
-                res += $@"<table style=""margin: 25px 10px 40px 10px;"" width = ""100%"" border = ""1"">
-    
+                res += $@"<div style=""width: 100%; padding: 30px 10px 30px 10px;"">
+                <table width = ""100%"" border = ""1"">
                 <tr>
                 <td align = ""center"" colspan = ""2"">
                 <h1 style = ""color: black""> {title} </h1>
                 </td>
                 </tr>
-
                 <tr>
                 <td align = ""center"" colspan = ""2"">
                 <h3 style = ""color: black""> Address: {address} </h3>
@@ -64,10 +63,10 @@ namespace HttpRequestSender.Reports
                 </tr>
                 <tr>
                 <td align = ""center"" style=""width: 50%;"">
-                <h5 style = ""color: black""> {start} </h3>
+                <h3 style = ""color: black""> {start} </h3>
                 </td>
                 <td align = ""center"" style=""width: 50%;"">
-                <h5 style = ""color: black""> {end} </h3>
+                <h3 style = ""color: black""> {end} </h3>
                 </td>
                 </tr>
                 <tr>
@@ -178,7 +177,8 @@ namespace HttpRequestSender.Reports
                     </tr> ";
                 }
 
-                res += @"</table>";
+                res += @"</table>
+                </div>";
             }
 
             res += @"</body>

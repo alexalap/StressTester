@@ -171,11 +171,6 @@ namespace HttpRequestSender.Forms
             averageResTime_L.Invoke(updateAverageResTime);
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-
-        }
-
         private void planEditor_BTN_Click(object sender, EventArgs e)
         {
             Scheduler_Form planEditor = new Scheduler_Form();
@@ -328,17 +323,6 @@ namespace HttpRequestSender.Forms
                         plannedReport_BTN.Enabled = true;
                     }
                     break;
-            }
-        }
-
-        private void plannedReport_BTN_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
-            folderBrowserDialog.Description = "Select folder for report files.";
-            folderBrowserDialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            if (folderBrowserDialog.ShowDialog() == DialogResult.OK && Directory.Exists(folderBrowserDialog.SelectedPath))
-            {
-                session.GenerateReport(folderBrowserDialog.SelectedPath);
             }
         }
 

@@ -10,7 +10,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
     class SiteMetricData
     {
         private static int ID = 0;
-        
+
         private readonly int id = ID++;
         private readonly string address;
         private DateTime start;
@@ -22,7 +22,8 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         private List<Dictionary<string, int>> responses = new List<Dictionary<string, int>>();
 
-        public double Duration {
+        public double Duration
+        {
             get
             {
                 RefreshDuration();
@@ -102,7 +103,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         public void AddResponse(string statusCode)
         {
-            if(closed || paused)
+            if (closed || paused)
             {
                 throw new IncorrectMetricCallException(nameof(AddResponse), address);
             }
@@ -138,9 +139,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
         internal void GenerateReport()
         {
             ReportGenerator.CreateReport(Title, Address, start, lastUpdateTime);
-            ReportGenerator.SetGraphData(Title, responses);
-            ReportGenerator.AddMetricData(Title, "Number of OK responses: ", OKResponseCount.ToString());
-            ReportGenerator.AddMetricData(Title, "Average response time: ", (Duration / OKResponseCount).ToString());
+            ReportGenerator.SetGraphData(Title, Address, responses);
+            ReportGenerator.AddMetricData(Title, Address, "Number of OK responses: ", OKResponseCount.ToString());
+            ReportGenerator.AddMetricData(Title, Address, "Average response time: ", (Duration / OKResponseCount).ToString());
         }
 
         public float ErrorTimeRateLastSec()

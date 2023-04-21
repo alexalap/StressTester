@@ -1,5 +1,6 @@
 ﻿using HttpRequestSender.Utilities;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -33,6 +34,7 @@ namespace HttpRequestSender.BusinessLogic
         private bool isPaused = false;
         private int numberOfRequestsPerSec;
         private bool isMeasuring = false;
+        private object lockObject = new object();
 
         public SiteRequester(string address, SessionMetrics sessionMetrics, float timeoutSeconds = 100)
         {
@@ -50,7 +52,10 @@ namespace HttpRequestSender.BusinessLogic
                 HttpResponseMessage response = await client.GetAsync(address, cancellation.Token).ConfigureAwait(false);
 
                 stopper.Stop();
-                sessionMetrics.AddResponse(address, response.StatusCode.ToString());
+                lock (lockObject)
+                {
+                    sessionMetrics.AddResponse(address, response.StatusCode.ToString());
+                }
                 Logger.Log(LogPriority.INFO, "Response received.\n" + stopper.ElapsedMilliseconds);
             }
             catch (TaskCanceledException t)
@@ -131,7 +136,7 @@ namespace HttpRequestSender.BusinessLogic
                 }
                 else
                 {
-                    if(schedule.CurrentStep() != null)
+                    if (schedule.CurrentStep() != null)
                     {
                         schedule.Step();
                     }
@@ -144,11 +149,40 @@ namespace HttpRequestSender.BusinessLogic
 
         private async Task GetResponseParallel(int numberOfRequestsPerSec)
         {
+            int batchSize = 50;
+            if (numberOfRequestsPerSec > 1000)
+            {
+                batchSize = 300;
+            }
+            else if (numberOfRequestsPerSec > 500)
+            {
+                batchSize = 200;
+            }
+            else if (numberOfRequestsPerSec > 200)
+            {
+                batchSize = 100;
+            }
+
             var tasks = new List<Task>();
             for (int i = 0; i < numberOfRequestsPerSec; i++)
             {
                 tasks.Add(GetResponse());
             }
+
+            var partitions = Partitioner.Create(tasks).GetPartitions(batchSize);
+
+            Parallel.ForEach(partitions, async partition =>
+            {
+                using (partition)
+                {
+                    while (partition.MoveNext())
+                    {
+                        var task = partition.Current;
+                        await Task.WhenAll(task);
+                    }
+                }
+            });
+
             await Task.WhenAll(tasks);
         }
 

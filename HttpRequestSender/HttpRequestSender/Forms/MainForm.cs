@@ -30,6 +30,7 @@ namespace HttpRequestSender.Forms
         private States explorationState = States.Inactive;
         private Schedule schedule = new Schedule();
         private Dictionary<string, (int, int)> siteStructureData;
+        private object lockObject = new object();
 
         public StressTester_Form()
         {
@@ -134,7 +135,9 @@ namespace HttpRequestSender.Forms
 
         private void ManualStatisticsUpdate()
         {
-            MethodInvoker updateMetricsVisual = delegate
+            lock (lockObject)
+            {
+                MethodInvoker updateMetricsVisual = delegate
             {
                 float responseRate = session.ResponseTimeRateLastSec(address);
                 if (responseRate != -1)
@@ -148,27 +151,28 @@ namespace HttpRequestSender.Forms
                     manual_CH.ResetAutoValues();
                 }
             };
-            MethodInvoker updateNumberOfRes = delegate
-            {
-                double okResponseCount = session.GetOKResponseCount(address);
-                if (okResponseCount != -1)
+                MethodInvoker updateNumberOfRes = delegate
                 {
-                    numberOfRes_L.Text = okResponseCount.ToString();
-                }
-            };
+                    double okResponseCount = session.GetOKResponseCount(address);
+                    if (okResponseCount != -1)
+                    {
+                        numberOfRes_L.Text = okResponseCount.ToString();
+                    }
+                };
 
-            MethodInvoker updateAverageResTime = delegate
-            {
-                double duration = session.GetDuration(address);
-                double okResponseCount = session.GetOKResponseCount(address);
-                if (duration != -1 && okResponseCount != -1)
+                MethodInvoker updateAverageResTime = delegate
                 {
-                    averageResTime_L.Text = duration / okResponseCount + " ms";
-                }
-            };
-            manual_CH.Invoke(updateMetricsVisual);
-            numberOfRes_L.Invoke(updateNumberOfRes);
-            averageResTime_L.Invoke(updateAverageResTime);
+                    double duration = session.GetDuration(address);
+                    double okResponseCount = session.GetOKResponseCount(address);
+                    if (duration != -1 && okResponseCount != -1)
+                    {
+                        averageResTime_L.Text = duration / okResponseCount + " ms";
+                    }
+                };
+                manual_CH.Invoke(updateMetricsVisual);
+                numberOfRes_L.Invoke(updateNumberOfRes);
+                averageResTime_L.Invoke(updateAverageResTime);
+            }
         }
 
         private void planEditor_BTN_Click(object sender, EventArgs e)
@@ -328,7 +332,9 @@ namespace HttpRequestSender.Forms
 
         private void PlannedStatisticsUpdate()
         {
-            MethodInvoker updateMetricsVisual = delegate
+            lock (lockObject)
+            {
+                MethodInvoker updateMetricsVisual = delegate
             {
                 float responseRate = session.ResponseTimeRateLastSec(address);
                 if (responseRate != -1)
@@ -342,12 +348,13 @@ namespace HttpRequestSender.Forms
                     planned_CH.ResetAutoValues();
                 }
             };
-            MethodInvoker updateGrid = delegate
-            {
-                RefreshGrid();
-            };
-            planned_CH.Invoke(updateMetricsVisual);
-            planGrid.Invoke(updateGrid);
+                MethodInvoker updateGrid = delegate
+                {
+                    RefreshGrid();
+                };
+                planned_CH.Invoke(updateMetricsVisual);
+                planGrid.Invoke(updateGrid);
+            }
         }
 
         private void URLStart_BTN_Click(object sender, EventArgs e)
@@ -369,7 +376,9 @@ namespace HttpRequestSender.Forms
 
         private void ExplorationStatisticsUpdate(string address)
         {
-            MethodInvoker updateMetricsVisual = delegate
+            lock (lockObject)
+            {
+                MethodInvoker updateMetricsVisual = delegate
             {
                 float responseRate = session.ResponseTimeRateLastSec(address);
                 if (responseRate != -1)
@@ -390,7 +399,8 @@ namespace HttpRequestSender.Forms
                     planned_CH.ResetAutoValues();
                 }
             };
-            planned_CH.Invoke(updateMetricsVisual);
+                planned_CH.Invoke(updateMetricsVisual);
+            }
         }
 
         private void URLStop_BTN_Click(object sender, EventArgs e)

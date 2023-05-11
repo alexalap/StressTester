@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace HttpRequestSender.Utilities
 {
+    /// <summary>
+    /// Logging priority types
+    /// </summary>
     public enum LogPriority
     {
         INFO,
@@ -44,6 +47,11 @@ namespace HttpRequestSender.Utilities
         private static List<LogEntry> newLogEntries = new List<LogEntry>();
         //private static string logFile = Directory.GetCurrentDirectory() + "log_" + DateTime.Now.ToString("yyyy_MM_dd_HH_mm_ss") + ".log";
 
+        /// <summary>
+        /// Logs a log.
+        /// </summary>
+        /// <param name="logPriority"> The priority of the log. </param>
+        /// <param name="message">The message of the log. </param>
         public static void Log(LogPriority logPriority, string message)
         {
             LogEntry entry = new LogEntry(logPriority, DateTime.Now, message);

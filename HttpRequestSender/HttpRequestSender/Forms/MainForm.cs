@@ -39,6 +39,11 @@ namespace HttpRequestSender.Forms
             UpdateButtons();
         }
 
+        /// <summary>
+        /// Starts the measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void start_BTN_Click(object sender, EventArgs e)
         {
             manual_CH.Series["Response rate"].Points.Clear();
@@ -59,6 +64,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Pauses the measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void pause_BTN_Click(object sender, EventArgs e)
         {
             if (manualState == States.Paused)
@@ -74,6 +84,11 @@ namespace HttpRequestSender.Forms
             UpdateButtons();
         }
 
+        /// <summary>
+        /// Stops the measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void stop_BTN_Click(object sender, EventArgs e)
         {
             manualState = States.Inactive;
@@ -81,7 +96,9 @@ namespace HttpRequestSender.Forms
             UpdateButtons();
         }
 
-
+        /// <summary>
+        /// Updates the buttons according to the measurement states.
+        /// </summary>
         private void UpdateButtons()
         {
             switch (manualState)
@@ -133,6 +150,9 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Updates the statistics of manual measurement.
+        /// </summary>
         private void ManualStatisticsUpdate()
         {
             lock (lockObject)
@@ -175,6 +195,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Opens the Scheduler window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void planEditor_BTN_Click(object sender, EventArgs e)
         {
             Scheduler_Form planEditor = new Scheduler_Form();
@@ -188,6 +213,11 @@ namespace HttpRequestSender.Forms
             UpdatePlannedButtons();
         }
 
+        /// <summary>
+        /// Creates a report of the measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void report_BTN_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog();
@@ -199,6 +229,9 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
+        /// </summary>
         private void RefreshGrid()
         {
             planGrid.Rows.Clear();
@@ -209,6 +242,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Explores a website to look for more addresses.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void explorer_BTN_Click(object sender, EventArgs e)
         {
             exloration_Grid.Rows.Clear();
@@ -227,6 +265,9 @@ namespace HttpRequestSender.Forms
             UpdateExplorationButtons();
         }
 
+        /// <summary>
+        /// Refreshes the total number of requests label.
+        /// </summary>
         private void RefreshTotalRequestLabel()
         {
             if (siteStructureData != null && siteStructureData.Count > 0)
@@ -236,11 +277,21 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Refreshes the total number of requests label if the NUD value has changed.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void explorationRequest_NUD_ValueChanged(object sender, EventArgs e)
         {
             RefreshTotalRequestLabel();
         }
 
+        /// <summary>
+        /// Starts a planned measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void plannedStart_BTN_Click(object sender, EventArgs e)
         {
             planned_CH.Series["Response rate"].Points.Clear();
@@ -255,6 +306,9 @@ namespace HttpRequestSender.Forms
             siteRequester.OnPlanFinish += OnPlannedMeasurementFinish;
         }
 
+        /// <summary>
+        /// Updates the statistics and UI of planned measurement.
+        /// </summary>
         private void OnPlannedMeasurementFinish()
         {
             PlannedStatisticsUpdate();
@@ -267,6 +321,11 @@ namespace HttpRequestSender.Forms
             plannedStart_BTN.Invoke(updateVisuals);
         }
 
+        /// <summary>
+        /// Stops a planned measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void plannedStop_BTN_Click(object sender, EventArgs e)
         {
             plannedState = States.Inactive;
@@ -275,6 +334,9 @@ namespace HttpRequestSender.Forms
             schedule.Clear();
         }
 
+        /// <summary>
+        /// Updates the planned buttons according to the planned measurement states.
+        /// </summary>
         private void UpdatePlannedButtons()
         {
             switch (plannedState)
@@ -330,6 +392,9 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Updates the statistics of planned measurement.
+        /// </summary>
         private void PlannedStatisticsUpdate()
         {
             lock (lockObject)
@@ -357,6 +422,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Starts the URL exploration.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void URLStart_BTN_Click(object sender, EventArgs e)
         {
             siteRequesters.Clear();
@@ -374,6 +444,10 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Updates the statistics of exploration measurement.
+        /// </summary>
+        /// <param name="address"></param>
         private void ExplorationStatisticsUpdate(string address)
         {
             lock (lockObject)
@@ -403,6 +477,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Stops the URL exploration.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void URLStop_BTN_Click(object sender, EventArgs e)
         {
             explorationState = States.Inactive;
@@ -413,6 +492,9 @@ namespace HttpRequestSender.Forms
             UpdateExplorationButtons();
         }
 
+        /// <summary>
+        /// Updates the exploration buttons according to the exploration measurement states.
+        /// </summary>
         private void UpdateExplorationButtons()
         {
             switch (explorationState)

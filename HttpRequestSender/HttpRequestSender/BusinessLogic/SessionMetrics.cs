@@ -20,6 +20,11 @@ namespace HttpRequestSender.BusinessLogic
             return -1;
         }
 
+        /// <summary>
+        /// Gets the number of OK responses.
+        /// </summary>
+        /// <param name="address">Website's address. </param>
+        /// <returns>Returns the number of OK responses. </returns>
         public int GetOKResponseCount(string address)
         {
             if (activeMetrics.ContainsKey(address))
@@ -29,6 +34,11 @@ namespace HttpRequestSender.BusinessLogic
             return -1;
         }
 
+        /// <summary>
+        /// Gets the number of error responses.
+        /// </summary>
+        /// <param name="address">Website's address. </param>
+        /// <returns>Returns the number of error responses. </returns>
         public int GetErrorResponseCount(string address)
         {
             if (activeMetrics.ContainsKey(address))
@@ -38,6 +48,11 @@ namespace HttpRequestSender.BusinessLogic
             return -1;
         }
 
+        /// <summary>
+        /// Gets the address of a website.
+        /// </summary>
+        /// <param name="address">Website's address. </param>
+        /// <returns>Returns the website's address if there is any. Otherwise returns an empty string. </returns>
         public string GetAddress(string address)
         {
             if (activeMetrics.ContainsKey(address))
@@ -47,6 +62,11 @@ namespace HttpRequestSender.BusinessLogic
             return "";
         }
 
+        /// <summary>
+        /// Starts the metric session and logs a log.
+        /// </summary>
+        /// <param name="address"> Website's address. </param>
+        /// <param name="title"> ??? </param>
         public void StartMetric(string address, string title)
         {
             SiteMetricData siteMetricData = new SiteMetricData(address, title);
@@ -54,6 +74,11 @@ namespace HttpRequestSender.BusinessLogic
             activeMetrics.Add(address, siteMetricData);
         }
 
+        /// <summary>
+        /// Adds the response to the dictionary of active metrics.
+        /// </summary>
+        /// <param name="address">Wesbite's address. </param>
+        /// <param name="statusCode">Status code of response. </param>
         public void AddResponse(string address, string statusCode)
         {
             if (activeMetrics.ContainsKey(address))
@@ -80,6 +105,11 @@ namespace HttpRequestSender.BusinessLogic
             return -1;
         }
 
+        /// <summary>
+        /// Adds the response time rate of the last second to the dictionary of active metrics.
+        /// </summary>
+        /// <param name="address">Website's address. </param>
+        /// <returns></returns>
         public float ResponseTimeRateLastSec(string address)
         {
             if (activeMetrics.ContainsKey(address)) {
@@ -97,6 +127,10 @@ namespace HttpRequestSender.BusinessLogic
             return -1;
         }
 
+        /// <summary>
+        /// Closes the metric session and logs a log.
+        /// </summary>
+        /// <param name="address">Website's address. </param>
         public void CloseMetric(string address)
         {
             if (activeMetrics.ContainsKey(address))
@@ -107,6 +141,10 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Pauses the metric session.
+        /// </summary>
+        /// <param name="address"></param>
         public void Pause(string address)
         {
             if (activeMetrics.ContainsKey(address))
@@ -115,6 +153,10 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Resumes the metric session.
+        /// </summary>
+        /// <param name="address"></param>
         public void UnPause(string address)
         {
             if (activeMetrics.ContainsKey(address))
@@ -123,6 +165,10 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Generates a report of the session.
+        /// </summary>
+        /// <param name="selectedPath">Path to the saving location. </param>
         public void GenerateReport(string selectedPath)
         {
             foreach (SiteMetricData item in siteMetrics)

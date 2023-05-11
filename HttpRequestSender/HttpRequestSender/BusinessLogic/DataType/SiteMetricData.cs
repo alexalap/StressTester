@@ -20,8 +20,14 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private DateTime lastUpdateTime;
         private double duration = 0;
 
+        /// <summary>
+        /// Responses of HTTP requests.
+        /// </summary>
         private List<Dictionary<string, int>> responses = new List<Dictionary<string, int>>();
 
+        /// <summary>
+        /// Measures the time duration of the session.
+        /// </summary>
         public double Duration
         {
             get
@@ -31,6 +37,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Counts and returns the total number of OK responses.
+        /// </summary>
         public int OKResponseCount
         {
             get
@@ -47,6 +56,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Counts and returns the total number of responses that do not include "OK".
+        /// </summary>
         public int ErrorResponseCount
         {
             get
@@ -70,6 +82,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         public string Title { get; private set; }
 
+        /// <summary>
+        /// Dictionary of current responses.
+        /// </summary>
         private Dictionary<string, int> currentResponses
         {
             get
@@ -101,11 +116,16 @@ namespace HttpRequestSender.BusinessLogic.DataType
             timer.Start();
         }
 
+        /// <summary>
+        /// Adds a response to the dictionary of current responses.
+        /// </summary>
+        /// <param name="statusCode">Status code of response. </param>
+        /// <exception cref="InvalidMethodCallException">Exception for when a method call in invalid. </exception>
         public void AddResponse(string statusCode)
         {
             if (closed || paused)
             {
-                throw new IncorrectMetricCallException(nameof(AddResponse), address);
+                throw new InvalidMethodCallException(nameof(AddResponse), address);
             }
             if (currentResponses.ContainsKey(statusCode))
             {
@@ -117,16 +137,28 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Calculates the OK response time rate.
+        /// </summary>
+        /// <returns>Returns the OK responses time rate.</returns>
         public float ResponseTimeRate()
         {
             return ((float)Duration / 1000 / OKResponseCount);
         }
 
+        /// <summary>
+        /// Calculates the OK response time rate.
+        /// </summary>
+        /// <returns>Returns the not OK responses time rate.</returns>
         public float ErrorTimeRate()
         {
             return ((float)Duration / 1000 / ErrorResponseCount);
         }
 
+        /// <summary>
+        /// Gets the OK responses time rate of the last second.
+        /// </summary>
+        /// <returns>Returns the time rate of OK responses of the last second. </returns>
         public float ResponseTimeRateLastSec()
         {
             if (currentResponses.ContainsKey("OK"))
@@ -136,6 +168,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
             return 0;
         }
 
+        /// <summary>
+        /// Generates a report.
+        /// </summary>
         internal void GenerateReport()
         {
             ReportGenerator.CreateReport(Title, Address, start, lastUpdateTime);
@@ -144,6 +179,10 @@ namespace HttpRequestSender.BusinessLogic.DataType
             ReportGenerator.AddMetricData(Title, Address, "Average response time: ", (Duration / OKResponseCount).ToString());
         }
 
+        /// <summary>
+        /// Gets the not OK responses time rate of the last second.
+        /// </summary>
+        /// <returns>Returns the time rate of not OK responses of the last second. </returns>
         public float ErrorTimeRateLastSec()
         {
             int errorCount = 0;
@@ -157,12 +196,18 @@ namespace HttpRequestSender.BusinessLogic.DataType
             return errorCount / 1000;
         }
 
+        /// <summary>
+        /// Refreshes the duration by setting the current DateTime.
+        /// </summary>
         private void RefreshDuration()
         {
             duration += (DateTime.Now - lastUpdateTime).TotalMilliseconds;
             lastUpdateTime = DateTime.Now;
         }
 
+        /// <summary>
+        /// Stops the timer.
+        /// </summary>
         public void Close()
         {
             if (!closed)
@@ -172,22 +217,30 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Pauses the timer.
+        /// </summary>
+        /// <exception cref="InvalidMethodCallException"> Exception for when a method call in invalid. </exception>
         public void Pause()
         {
             if (closed || paused)
             {
-                throw new IncorrectMetricCallException(nameof(Pause), address);
+                throw new InvalidMethodCallException(nameof(Pause), address);
             }
 
             paused = true;
             RefreshDuration();
         }
 
+        /// <summary>
+        /// Resumes the timer.
+        /// </summary>
+        /// <exception cref="InvalidMethodCallException"> Exception for when a method call in invalid. </exception>
         public void UnPause()
         {
             if (closed || !paused)
             {
-                throw new IncorrectMetricCallException(nameof(UnPause), address);
+                throw new InvalidMethodCallException(nameof(UnPause), address);
             }
 
             paused = false;

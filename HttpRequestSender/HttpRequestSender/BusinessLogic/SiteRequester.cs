@@ -43,6 +43,10 @@ namespace HttpRequestSender.BusinessLogic
             this.client.Timeout = TimeSpan.FromSeconds(timeoutSeconds);
         }
 
+        /// <summary>
+        /// Gets a HTTP request's response and creates a log.
+        /// </summary>
+        /// <returns></returns>
         public async Task GetResponse()
         {
             Stopwatch stopper = new Stopwatch();
@@ -69,6 +73,12 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Starts the measurement.
+        /// </summary>
+        /// <param name="numberOfRequestsPerSec">Number of requests per second. </param>
+        /// <param name="schedule">Schedule of planned stress testing. </param>
+        /// <param name="mode">Stress testing mode: can be manual or scheduled. </param>
         public void StartMeasurement(int numberOfRequestsPerSec, Schedule schedule, RequesterMode mode)
         {
             cancellation.Token.Register(() => TimeOut());
@@ -84,6 +94,11 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Starts a singular, manual measurement.
+        /// </summary>
+        /// <param name="numberOfRequestsPerSec">Number of requests per second. </param>
+        /// <param name="prefix">Measurement's mode. </param>
         private void StartSingularMeasurement(int numberOfRequestsPerSec, string prefix = "Manual ")
         {
             sessionMetrics.StartMetric(address, prefix + DateTime.Now.ToString("yyyy.MM.dd. hh:mm:ss.ff"));
@@ -107,6 +122,10 @@ namespace HttpRequestSender.BusinessLogic
             timer.Start();
         }
 
+        /// <summary>
+        /// Starts a scheduled measurement.
+        /// </summary>
+        /// <param name="schedule">Schedule of the measurement. </param>
         private void StartPlannedMeasurement(Schedule schedule)
         {
             plannedTimer = new System.Timers.Timer();
@@ -215,6 +234,9 @@ namespace HttpRequestSender.BusinessLogic
             Logger.Log(LogPriority.INFO, "New session interval started. Timeout: " + millisec + "ms, Address: " + address);
         }
 
+        /// <summary>
+        /// If the session is not paused, it closes the sesison.
+        /// </summary>
         private void TimeOut()
         {
             if (!isPaused)
@@ -226,12 +248,18 @@ namespace HttpRequestSender.BusinessLogic
 
         #endregion
 
+        /// <summary>
+        /// Pauses the metric session.
+        /// </summary>
         public void Pause()
         {
             isPaused = true;
             sessionMetrics.Pause(address);
         }
 
+        /// <summary>
+        /// Resumes the metric session.
+        /// </summary>
         public async void Resume()
         {
             isPaused = false;
@@ -242,12 +270,18 @@ namespace HttpRequestSender.BusinessLogic
             await GetResponseParallel(numberOfRequestsPerSec);
         }
 
+        /// <summary>
+        /// Stops the metric session.
+        /// </summary>
         public void Stop()
         {
             timer.Stop();
             cancellation.Cancel();
         }
 
+        /// <summary>
+        /// Stops the scheduled metric session.
+        /// </summary>
         public void PlannedStop()
         {
             plannedTimer.Stop();

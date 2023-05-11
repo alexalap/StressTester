@@ -1,7 +1,6 @@
 ﻿using HttpRequestSender.Utilities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using HtmlDocument = HtmlAgilityPack.HtmlDocument;
@@ -26,6 +25,15 @@ namespace HttpRequestSender.BusinessLogic
             return endResult;
         }
 
+        /// <summary>
+        /// Analyzes a site's HTML document. If the analyzing is set to be recursive, it also analyzes the side addresses of the root address.
+        /// </summary>
+        /// <param name="checkList"></param>
+        /// <param name="rootAddress"> Main website's address.</param>
+        /// <param name="address"></param>
+        /// <param name="recursive"> Checks if the analyzation should be recursive. </param>
+        /// <param name="endResult"> Result list of the addresses and the number of times are linked. </param>
+        /// <returns>?? </returns>
         private async Task AnalyzeSite(List<string> checkList, string rootAddress, string address, bool recursive, Dictionary<string, int> endResult)
         {
             checkList.Add(address);
@@ -49,6 +57,11 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Merges two lists.
+        /// </summary>
+        /// <param name="result"> Result list. </param>
+        /// <param name="partResult"> Prt result list. </param>
         private static void MergeList(Dictionary<string, int> result, Dictionary<string, int> partResult)
         {
             foreach (string key in partResult.Keys)
@@ -64,6 +77,11 @@ namespace HttpRequestSender.BusinessLogic
             }
         }
 
+        /// <summary>
+        /// Gets the source of the site. (HTML, JavaScript)
+        /// </summary>
+        /// <param name="address"> Website's address. </param>
+        /// <returns> Content of the site. </returns>
         private async Task<string> GetSource(string address)
         {
             try

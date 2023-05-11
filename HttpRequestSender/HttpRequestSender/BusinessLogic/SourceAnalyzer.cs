@@ -2,8 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HttpRequestSender.BusinessLogic
 {
@@ -18,6 +16,16 @@ namespace HttpRequestSender.BusinessLogic
             this.htmlDocument = htmlDocument ?? throw new ArgumentNullException(nameof(htmlDocument));
         }
 
+        /// <summary>
+        /// Analyzes an address.
+        /// 
+        /// Checks links in the site-contents given in the ctor. Only links that belong to the root domain are qualified.
+        /// For example:
+        /// root domain: www.alexa.com
+        /// qualified: www.alexa.com/aboutme
+        /// not qualified: www.other.com/aboutme
+        /// </summary>
+        /// <returns> Returns the addresses and the number of times they are linked. </returns>
         public Dictionary<string, int> Analyze()
         {
             Dictionary<string, int> result = new Dictionary<string, int>();

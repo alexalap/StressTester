@@ -12,6 +12,10 @@ namespace HttpRequestSender.Reports
             this.reports = reports;
         }
 
+        /// <summary>
+        /// Generates an .HTML code from reports, incorporating their information.
+        /// </summary>
+        /// <returns> Returns the .HTML code. </returns>
         public string Generate()
         {
             string res = @"<!DOCTYPE html>
@@ -39,6 +43,7 @@ namespace HttpRequestSender.Reports
 
             int reportIndex = 0;
 
+            // Loads in the data from the list of reports.
             foreach (Report report in reports)
             {
                 string title = report.Title;
@@ -187,6 +192,11 @@ namespace HttpRequestSender.Reports
             return res;
         }
 
+        /// <summary>
+        /// Gets the Y axis maximum from the OK response values of report.
+        /// </summary>
+        /// <param name="graphData"> List of graph data dictionaries. </param>
+        /// <returns> Returns a string of min and max values of Y axis. </returns>
         private string GetValueScaleOfReport(List<Dictionary<string, int>> graphData)
         {
             string res = "{ticks: {min: -1, max: ";
@@ -206,6 +216,11 @@ namespace HttpRequestSender.Reports
             return res;
         }
 
+        /// <summary>
+        /// Gets the Y axis maximum from the average OK response time values of report.
+        /// </summary>
+        /// <param name="graphData"> List of graph data dictionaries. </param>
+        /// <returns> Returns a string of min and max values of Y axis. </returns>
         private string GetValueTimeScaleOfReport(List<Dictionary<string, int>> graphData)
         {
             string res = "{ticks: {min: -1, max: ";
@@ -225,6 +240,11 @@ namespace HttpRequestSender.Reports
             return res;
         }
 
+        /// <summary>
+        /// Gets the "OK" response values of the report.
+        /// </summary>
+        /// <param name="graphData"> List of graph data dictionaries. </param>
+        /// <returns> Returns the string of result. </returns>
         private string GetResponseValuesOfReport(List<Dictionary<string, int>> graphData)
         {
             string res = "";
@@ -242,6 +262,11 @@ namespace HttpRequestSender.Reports
             return res;
         }
 
+        /// <summary>
+        /// Gets the average "OK" response time values of the report.
+        /// </summary>
+        /// <param name="graphData"> List of graph data dictionaries. </param>
+        /// <returns>Returns the string of result. </returns>
         private string GetResponseTimeValuesOfReport(List<Dictionary<string, int>> graphData)
         {
             string res = "";
@@ -259,6 +284,11 @@ namespace HttpRequestSender.Reports
             return res;
         }
 
+        /// <summary>
+        /// Gets the time values of the report. For the X axis placement.
+        /// </summary>
+        /// <param name="graphData"> List of graph data dictionaries. </param>
+        /// <returns> Returns the string of result. </returns>
         private string GetTimeValuesOfReport(List<Dictionary<string, int>> graphData)
         {
             string res = "";

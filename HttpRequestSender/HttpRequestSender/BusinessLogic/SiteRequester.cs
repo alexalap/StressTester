@@ -44,9 +44,8 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Gets a HTTP request's response and creates a log.
+        /// Sends a HTTP request and logs its response. Time is measured with a Stopwatch between sending the request and receiving the response.
         /// </summary>
-        /// <returns></returns>
         public async Task GetResponse()
         {
             Stopwatch stopper = new Stopwatch();
@@ -64,7 +63,6 @@ namespace HttpRequestSender.BusinessLogic
             }
             catch (TaskCanceledException t)
             {
-                //TODO: Timestamp
                 Logger.Log(LogPriority.WARNING, "Request has been cancelled due to timeout.");
             }
             catch (Exception e)
@@ -95,10 +93,10 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Starts a singular, manual measurement.
+        /// Starts a simple measurement with given number of requests per second.
         /// </summary>
         /// <param name="numberOfRequestsPerSec">Number of requests per second. </param>
-        /// <param name="prefix">Measurement's mode. </param>
+        /// <param name="prefix">Prefix of the title for the measurement. </param>
         private void StartSingularMeasurement(int numberOfRequestsPerSec, string prefix = "Manual ")
         {
             sessionMetrics.StartMetric(address, prefix + DateTime.Now.ToString("yyyy.MM.dd. hh:mm:ss.ff"));
@@ -124,6 +122,11 @@ namespace HttpRequestSender.BusinessLogic
 
         /// <summary>
         /// Starts a scheduled measurement.
+        ///
+        /// The planned timer keeps track of the scheduling. The timer is set for each steps duration or the time until the first ones start.
+        /// After the time has passed we use a cancellation token to close the current measurement.
+        /// 
+        /// We use a singular measurement for each scheduled steps. (row 155)
         /// </summary>
         /// <param name="schedule">Schedule of the measurement. </param>
         private void StartPlannedMeasurement(Schedule schedule)
@@ -166,6 +169,19 @@ namespace HttpRequestSender.BusinessLogic
             plannedTimer.Start();
         }
 
+        /// <summary>
+        /// We distribute the requests into batches for more optimal use.
+        /// 
+        /// We use batch sizes for numbers respectively:
+        /// 1000+ = 300
+        /// 500+ = 200
+        /// 200+ = 100
+        /// Default is 50.
+        /// 
+        /// We distribute the requests into partitions with given batch sizes and start them in parallel.
+        /// This reduces stress on the CPU which would otherwise start all the processes in their very own thread and eventually freeze.
+        /// </summary>
+        /// <param name="numberOfRequestsPerSec">Number of requests per second. </param>
         private async Task GetResponseParallel(int numberOfRequestsPerSec)
         {
             int batchSize = 50;
@@ -205,37 +221,8 @@ namespace HttpRequestSender.BusinessLogic
             await Task.WhenAll(tasks);
         }
 
-        #region deprecated
-        public async Task GetResponseParallelBatched(int timeOutMillisec, int numberOfRequests, int batchSize = 100)
-        {
-            SetTimer(timeOutMillisec);
-            int batchCount = (int)Math.Ceiling((double)numberOfRequests / batchSize);
-            var tasks = new List<Task>();
-
-            for (int i = 0; i < numberOfRequests; i++)
-            {
-                tasks.Add(GetResponse());
-            }
-
-            for (int i = 0; i < batchCount; i++)
-            {
-                var currentTasks = tasks.Skip(i * batchSize).Take(batchSize);
-                await Task.WhenAll(currentTasks);
-            }
-            await Task.WhenAll(tasks);
-            cancellation.Cancel();
-        }
-
-        private void SetTimer(int millisec)
-        {
-            cancellation.CancelAfter(millisec);
-            cancellation.Token.Register(() => TimeOut());
-            //sessionMetrics.StartMetric(address);
-            Logger.Log(LogPriority.INFO, "New session interval started. Timeout: " + millisec + "ms, Address: " + address);
-        }
-
         /// <summary>
-        /// If the session is not paused, it closes the sesison.
+        /// If the session is not paused, it closes the session.
         /// </summary>
         private void TimeOut()
         {
@@ -245,8 +232,6 @@ namespace HttpRequestSender.BusinessLogic
                 Logger.Log(LogPriority.INFO, "Session interval ended. Address: " + address);
             }
         }
-
-        #endregion
 
         /// <summary>
         /// Pauses the metric session.

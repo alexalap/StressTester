@@ -17,6 +17,11 @@ namespace HttpRequestSender.BusinessLogic
             this.address = address;
         }
 
+        /// <summary>
+        /// Analyzes a site's HTML document. If the analyzing is set to be recursive, it also analyzes the side addresses of the root address.
+        /// </summary>
+        /// <param name="recursive"> Checks if the analyzation should be recursive. </param>
+        /// <returns> Returns the result list of the addresses and the number of times are linked. </returns>
         public async Task<Dictionary<string, int>> Analyze(bool recursive)
         {
             List<string> checkList = new List<string>();
@@ -28,12 +33,11 @@ namespace HttpRequestSender.BusinessLogic
         /// <summary>
         /// Analyzes a site's HTML document. If the analyzing is set to be recursive, it also analyzes the side addresses of the root address.
         /// </summary>
-        /// <param name="checkList"></param>
+        /// <param name="checkList"> List of already checked addresses to avoid rechecking the same addresses twice. </param>
         /// <param name="rootAddress"> Main website's address.</param>
-        /// <param name="address"></param>
+        /// <param name="address"> Website's address. </param>
         /// <param name="recursive"> Checks if the analyzation should be recursive. </param>
         /// <param name="endResult"> Result list of the addresses and the number of times are linked. </param>
-        /// <returns>?? </returns>
         private async Task AnalyzeSite(List<string> checkList, string rootAddress, string address, bool recursive, Dictionary<string, int> endResult)
         {
             checkList.Add(address);
@@ -61,7 +65,7 @@ namespace HttpRequestSender.BusinessLogic
         /// Merges two lists.
         /// </summary>
         /// <param name="result"> Result list. </param>
-        /// <param name="partResult"> Prt result list. </param>
+        /// <param name="partResult"> Part result list. </param>
         private static void MergeList(Dictionary<string, int> result, Dictionary<string, int> partResult)
         {
             foreach (string key in partResult.Keys)
@@ -78,7 +82,7 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Gets the source of the site. (HTML, JavaScript)
+        /// Gets the source of the site. (HTML and JavaScript, but only the HTML will be processed.)
         /// </summary>
         /// <param name="address"> Website's address. </param>
         /// <returns> Content of the site. </returns>

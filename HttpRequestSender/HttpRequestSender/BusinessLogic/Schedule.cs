@@ -14,7 +14,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <summary>
         /// Gets the current scheduled metric step.
         /// </summary>
-        /// <returns>Returns the current scheduled metric step if </returns>
+        /// <returns>Returns the current scheduled metric step if it is started, otherwise it returns null. </returns>
         public ScheduleStep CurrentStep()
         {
             return isStarted ? scheduleSteps.FirstOrDefault() : null;
@@ -22,8 +22,12 @@ namespace HttpRequestSender.BusinessLogic
 
         /// <summary>
         /// Gets the next scheduled metric step.
+        /// Returns the 1st step if the schedule hasn't started yet or returns the next step or null.
+        /// 
+        /// Stepping the schedule is done by removing the first element. The next step always will be the second, if it is started.
+        /// If it has not been started yet, then it returns the first step. Otherwise it returns null.
         /// </summary>
-        /// <returns>Returns the 1st step if the schedule hasn't started yet or returns the 2nd step or null.</returns>
+        /// <returns>Returns the 1st step if the schedule hasn't started yet or returns the next step or null.</returns>
         public ScheduleStep NextStep()
         {
             return !isStarted && scheduleSteps.Count > 0 ? scheduleSteps[0] : scheduleSteps.Count > 1 ? scheduleSteps[1] : null;
@@ -84,7 +88,9 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Starts the schedule.
+        /// Steps the schedule.
+        /// 
+        /// If the schedule has not been started, it starts the schedule. Otherwise it removes the first step.
         /// </summary>
         public void Step()
         {

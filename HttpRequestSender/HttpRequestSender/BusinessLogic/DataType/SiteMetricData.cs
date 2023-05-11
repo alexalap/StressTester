@@ -78,8 +78,14 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Website's address.
+        /// </summary>
         public string Address => address;
 
+        /// <summary>
+        /// Title of measurement and the report.
+        /// </summary>
         public string Title { get; private set; }
 
         /// <summary>
@@ -93,6 +99,11 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Ctor.
+        /// </summary>
+        /// <param name="address">Website's address. </param>
+        /// <param name="title">Title of measurement. </param>
         public SiteMetricData(string address, string title)
         {
             Title = title;
@@ -147,7 +158,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         }
 
         /// <summary>
-        /// Calculates the OK response time rate.
+        /// Calculates the not OK response time rate.
         /// </summary>
         /// <returns>Returns the not OK responses time rate.</returns>
         public float ErrorTimeRate()
@@ -197,7 +208,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         }
 
         /// <summary>
-        /// Refreshes the duration by setting the current DateTime.
+        /// Refreshes the last update time and the duration using DateTime.Now.
         /// </summary>
         private void RefreshDuration()
         {
@@ -206,7 +217,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         }
 
         /// <summary>
-        /// Stops the timer.
+        /// Stops the measurement and the timer.
         /// </summary>
         public void Close()
         {
@@ -218,7 +229,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         }
 
         /// <summary>
-        /// Pauses the timer.
+        /// Pauses the measurement.
         /// </summary>
         /// <exception cref="InvalidMethodCallException"> Exception for when a method call in invalid. </exception>
         public void Pause()
@@ -233,7 +244,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         }
 
         /// <summary>
-        /// Resumes the timer.
+        /// Resumes the measurement.
         /// </summary>
         /// <exception cref="InvalidMethodCallException"> Exception for when a method call in invalid. </exception>
         public void UnPause()

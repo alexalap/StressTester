@@ -51,7 +51,7 @@ namespace HttpRequestSender.Reports
                 string start = "Measurement start: " + report.Start.ToString("yyyy.MM.dd. hh:mm:ss.ffff");
                 string end = "Measurement end: " + report.End.ToString("yyyy.MM.dd. hh:mm:ss.ffff");
 
-                List<Dictionary<string, int>> graphData = report.GraphData;
+                List<Dictionary<string, (int, double)>> graphData = report.GraphData;
                 Dictionary<string, string> metricData = report.MetricData;
 
                 res += $@"<div style=""width: 100%; padding: 30px 10px 30px 10px;"">
@@ -176,7 +176,7 @@ namespace HttpRequestSender.Reports
                     <p><b>{item}</b></p>
                     </td>
      
-                    <td align = ""left"" colspan = ""2"">
+                    <td align = ""right"" colspan = ""2"">
                     <p> {metricData[item]} </p>
                     </td>
                     </tr> ";
@@ -197,7 +197,7 @@ namespace HttpRequestSender.Reports
         /// </summary>
         /// <param name="graphData"> List of graph data dictionaries. </param>
         /// <returns> Returns a string of min and max values of Y axis. </returns>
-        private string GetValueScaleOfReport(List<Dictionary<string, int>> graphData)
+        private string GetValueScaleOfReport(List<Dictionary<string, (int, double)>> graphData)
         {
             string res = "{ticks: {min: -1, max: ";
             int maxValue = 0;
@@ -205,13 +205,13 @@ namespace HttpRequestSender.Reports
             {
                 if (graphData[i].ContainsKey("OK"))
                 {
-                    if (graphData[i]["OK"] > maxValue)
+                    if (graphData[i]["OK"].Item1 > maxValue)
                     {
-                        maxValue = graphData[i]["OK"];
+                        maxValue = graphData[i]["OK"].Item1;
                     }
                 }
             }
-            res += Math.Min(maxValue * 1.1, maxValue + 1);
+            res += Math.Max(maxValue * 1.1, maxValue + 1);
             res += "}}";
             return res;
         }
@@ -221,7 +221,7 @@ namespace HttpRequestSender.Reports
         /// </summary>
         /// <param name="graphData"> List of graph data dictionaries. </param>
         /// <returns> Returns a string of min and max values of Y axis. </returns>
-        private string GetValueTimeScaleOfReport(List<Dictionary<string, int>> graphData)
+        private string GetValueTimeScaleOfReport(List<Dictionary<string, (int, double)>> graphData)
         {
             string res = "{ticks: {min: -1, max: ";
             int maxValue = 0;
@@ -229,13 +229,13 @@ namespace HttpRequestSender.Reports
             {
                 if (graphData[i].ContainsKey("OK"))
                 {
-                    if (1000 / graphData[i]["OK"] > maxValue)
+                    if (1000 / graphData[i]["OK"].Item2 > maxValue)
                     {
-                        maxValue = 1000 / graphData[i]["OK"];
+                        maxValue = (int)Math.Ceiling(1000 / graphData[i]["OK"].Item2);
                     }
                 }
             }
-            res += Math.Min(maxValue * 1.1, maxValue + 1);
+            res += Math.Max(maxValue * 1.1, maxValue + 1);
             res += "}}";
             return res;
         }
@@ -245,14 +245,14 @@ namespace HttpRequestSender.Reports
         /// </summary>
         /// <param name="graphData"> List of graph data dictionaries. </param>
         /// <returns> Returns the string of result. </returns>
-        private string GetResponseValuesOfReport(List<Dictionary<string, int>> graphData)
+        private string GetResponseValuesOfReport(List<Dictionary<string, (int, double)>> graphData)
         {
             string res = "";
             for (int i = 0; i < graphData.Count; i++)
             {
                 if (graphData[i].ContainsKey("OK"))
                 {
-                    res += graphData[i]["OK"] + (i != graphData.Count - 1 ? "," : "");
+                    res += graphData[i]["OK"].Item1 + (i != graphData.Count - 1 ? "," : "");
                 }
                 else
                 {
@@ -267,14 +267,14 @@ namespace HttpRequestSender.Reports
         /// </summary>
         /// <param name="graphData"> List of graph data dictionaries. </param>
         /// <returns>Returns the string of result. </returns>
-        private string GetResponseTimeValuesOfReport(List<Dictionary<string, int>> graphData)
+        private string GetResponseTimeValuesOfReport(List<Dictionary<string, (int, double)>> graphData)
         {
             string res = "";
             for (int i = 0; i < graphData.Count; i++)
             {
                 if (graphData[i].ContainsKey("OK"))
                 {
-                    res += (1000.0 / graphData[i]["OK"]).ToString("n2") + (i != graphData.Count - 1 ? "," : "");
+                    res += Math.Round(1000.0 / graphData[i]["OK"].Item2, 2).ToString() + (i != graphData.Count - 1 ? "," : "");
                 }
                 else
                 {
@@ -289,7 +289,7 @@ namespace HttpRequestSender.Reports
         /// </summary>
         /// <param name="graphData"> List of graph data dictionaries. </param>
         /// <returns> Returns the string of result. </returns>
-        private string GetTimeValuesOfReport(List<Dictionary<string, int>> graphData)
+        private string GetTimeValuesOfReport(List<Dictionary<string, (int, double)>> graphData)
         {
             string res = "";
             for (int i = 0; i < graphData.Count; i++)

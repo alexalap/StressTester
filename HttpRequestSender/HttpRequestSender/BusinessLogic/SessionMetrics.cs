@@ -72,11 +72,11 @@ namespace HttpRequestSender.BusinessLogic
         /// </summary>
         /// <param name="address">Wesbite's address. </param>
         /// <param name="statusCode">Status code of response. </param>
-        public void AddResponse(string address, string statusCode)
+        public void AddResponse(string address, string statusCode, long elapsedMilliseconds)
         {
             if (activeMetrics.ContainsKey(address))
             {
-                activeMetrics[address].AddResponse(statusCode);
+                activeMetrics[address].AddResponse(statusCode, elapsedMilliseconds);
             }
         }
 
@@ -87,11 +87,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <returns>Returns the time rate of OK responses. </returns>
         public float ResponseTimeRate(string address)
         {
-            if (activeMetrics.ContainsKey(address))
-            {
-                return activeMetrics[address].ResponseTimeRate();
-            }
-            return -1;
+            return (float)activeMetrics[address].OKResponseRate;
         }
 
         /// <summary>
@@ -101,11 +97,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <returns>Returns the time rate of not OK responses. </returns>
         public float ErrorTimeRate(string address)
         {
-            if (activeMetrics.ContainsKey(address))
-            {
-                return activeMetrics[address].ErrorTimeRate();
-            }
-            return -1;
+            return (float)activeMetrics[address].ErrorResponseRate;
         }
 
         /// <summary>
@@ -115,7 +107,8 @@ namespace HttpRequestSender.BusinessLogic
         /// <returns>Returns the OK response time rate of the last second to the dictionary of active metrics. </returns>
         public float ResponseTimeRateLastSec(string address)
         {
-            if (activeMetrics.ContainsKey(address)) {
+            if (activeMetrics.ContainsKey(address))
+            {
                 return activeMetrics[address].ResponseTimeRateLastSec();
             }
             return -1;
@@ -144,7 +137,7 @@ namespace HttpRequestSender.BusinessLogic
             if (activeMetrics.ContainsKey(address))
             {
                 activeMetrics[address].Close();
-                Logger.Log(LogPriority.INFO, "Metric closed with result: " + activeMetrics[address].ResponseTimeRate() + " response / sec");
+                Logger.Log(LogPriority.INFO, "Metric closed with result: " + activeMetrics[address].OKResponseRate + " response / sec");
                 activeMetrics.Remove(address);
             }
         }

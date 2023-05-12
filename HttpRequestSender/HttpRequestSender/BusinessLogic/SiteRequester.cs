@@ -57,11 +57,11 @@ namespace HttpRequestSender.BusinessLogic
                 stopper.Stop();
                 lock (lockObject)
                 {
-                    sessionMetrics.AddResponse(address, response.StatusCode.ToString());
+                    sessionMetrics.AddResponse(address, response.StatusCode.ToString(), stopper.ElapsedMilliseconds);
                 }
                 Logger.Log(LogPriority.INFO, "Response received.\n" + stopper.ElapsedMilliseconds);
             }
-            catch (TaskCanceledException t)
+            catch (TaskCanceledException)
             {
                 Logger.Log(LogPriority.WARNING, "Request has been cancelled due to timeout.");
             }
@@ -133,7 +133,7 @@ namespace HttpRequestSender.BusinessLogic
         {
             plannedTimer = new System.Timers.Timer();
             plannedTimer.Interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
-            plannedTimer.Elapsed += (async (s, e) =>
+            plannedTimer.Elapsed += ((s, e) =>
             {
                 if (isMeasuring)
                 {

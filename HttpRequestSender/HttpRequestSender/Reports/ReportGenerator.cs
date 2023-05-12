@@ -32,7 +32,7 @@ namespace HttpRequestSender.Reports
         /// <param name="title"> Report's title. </param>
         /// <param name="address"> Report's address. </param>
         /// <param name="graphData"> List of graph data dictionaries. </param>
-        public static void SetGraphData(string title, string address, List<Dictionary<string, int>> graphData)
+        public static void SetGraphData(string title, string address, List<Dictionary<string, (int, double)>> graphData)
         {
             reports[(title, address)].GraphData = graphData;
         }

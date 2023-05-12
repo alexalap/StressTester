@@ -28,7 +28,7 @@ namespace HttpRequestSender.Reports
         /// <summary>
         /// A list of graph data dictionaries.
         /// </summary>
-        public List<Dictionary<string, int>> GraphData { get; set; }
+        public List<Dictionary<string, (int, double)>> GraphData { get; set; }
         /// <summary>
         /// A dictionary of metric data.
         /// </summary>

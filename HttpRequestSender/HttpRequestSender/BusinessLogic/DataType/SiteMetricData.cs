@@ -22,8 +22,12 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
         /// <summary>
         /// Responses of HTTP requests.
+        /// 
+        /// We contain the responses in a list. The responses are distributed into dictionaries based on each second.
+        /// The key of the dictionary is the response code ("OK").
+        /// The value is an int and double Value Touple from which the int is the total count of the responses and the double is the average response time.
         /// </summary>
-        private List<Dictionary<string, int>> responses = new List<Dictionary<string, int>>();
+        private List<Dictionary<string, (int, double)>> responses = new List<Dictionary<string, (int, double)>>();
 
         /// <summary>
         /// Measures the time duration of the session.
@@ -32,7 +36,10 @@ namespace HttpRequestSender.BusinessLogic.DataType
         {
             get
             {
-                RefreshDuration();
+                if (!closed)
+                {
+                    RefreshDuration();
+                }
                 return duration;
             }
         }
@@ -45,14 +52,39 @@ namespace HttpRequestSender.BusinessLogic.DataType
             get
             {
                 int res = 0;
-                foreach (Dictionary<string, int> responsesInLastSec in responses)
+                foreach (Dictionary<string, (int, double)> responsesInLastSec in responses)
                 {
                     if (responsesInLastSec.ContainsKey("OK"))
                     {
-                        res += responsesInLastSec["OK"];
+                        res += responsesInLastSec["OK"].Item1;
                     }
                 }
                 return res;
+            }
+        }
+
+        public double OKResponseRate
+        {
+            get
+            {
+                int responseCount = 0;
+                float rate = 0;
+                foreach (Dictionary<string, (int, double)> key in responses)
+                {
+                    if (key.ContainsKey("OK"))
+                    {
+                        int currentCount = key["OK"].Item1;
+                        // X amount * X rate = SUM(X response time)
+                        // current amount * current rate = SUM(current response time)
+                        // SUM(X response time) + SUM(current response time) = SUM(response time including current status code)
+                        // X amount + current amount = SUM(amount of responses including status code)
+                        // SUM(rticsc) / SUM (aorisc) = total response time / total amount => average response time including current status code
+                        // 42,85 =     20ms * 5 response +         100ms               *       2 response             / 7 total response;
+                        rate = (float)(rate * responseCount + currentCount * key["OK"].Item2) / (float)(responseCount + currentCount);
+                        responseCount += currentCount;
+                    }
+                }
+                return rate;
             }
         }
 
@@ -64,17 +96,45 @@ namespace HttpRequestSender.BusinessLogic.DataType
             get
             {
                 int errorCount = 0;
-                foreach (Dictionary<string, int> responsesInLastSec in responses)
+                foreach (Dictionary<string, (int, double)> responsesInLastSec in responses)
                 {
                     foreach (string key in responsesInLastSec.Keys)
                     {
                         if (key != "OK")
                         {
-                            errorCount += responsesInLastSec[key];
+                            errorCount += responsesInLastSec[key].Item1;
                         }
                     }
                 }
                 return errorCount;
+            }
+        }
+
+        public double ErrorResponseRate
+        {
+            get
+            {
+                int responseCount = 0;
+                float rate = 0;
+                foreach (Dictionary<string, (int, double)> second in responses)
+                {
+                    foreach (string statusCode in second.Keys)
+                    {
+                        if (statusCode != "OK")
+                        {
+                            int currentCount = second[statusCode].Item1;
+                            // X amount * X rate = SUM(X response time)
+                            // current amount * current rate = SUM(current response time)
+                            // SUM(X response time) + SUM(current response time) = SUM(response time including current status code)
+                            // X amount + current amount = SUM(amount of responses including status code)
+                            // SUM(rticsc) / SUM (aorisc) = total response time / total amount => average response time including current status code
+                            // 42,85 =     20ms * 5 response +         100ms               *       2 response             / 7 total response;
+                            rate = (float)(rate * responseCount + currentCount * second[statusCode].Item2) / (float)(responseCount + currentCount);
+                            responseCount += currentCount;
+                        }
+                    }
+                }
+                return rate;
             }
         }
 
@@ -91,7 +151,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         /// <summary>
         /// Dictionary of current responses.
         /// </summary>
-        private Dictionary<string, int> currentResponses
+        private Dictionary<string, (int, double)> currentResponses
         {
             get
             {
@@ -109,7 +169,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             Title = title;
             this.address = address;
             start = DateTime.Now;
-            responses.Add(new Dictionary<string, int>());
+            responses.Add(new Dictionary<string, (int, double)>());
             lastUpdateTime = DateTime.Now;
             timer = new Timer();
             timer.Interval = 1000;
@@ -117,7 +177,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             {
                 if (!paused)
                 {
-                    responses.Add(new Dictionary<string, int>());
+                    responses.Add(new Dictionary<string, (int, double)>());
                 }
                 else
                 {
@@ -132,7 +192,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         /// </summary>
         /// <param name="statusCode">Status code of response. </param>
         /// <exception cref="InvalidMethodCallException">Exception for when a method call in invalid. </exception>
-        public void AddResponse(string statusCode)
+        public void AddResponse(string statusCode, long elapsedMilliseconds)
         {
             if (closed || paused)
             {
@@ -140,30 +200,15 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
             if (currentResponses.ContainsKey(statusCode))
             {
-                currentResponses[statusCode]++;
+                int currentCount = currentResponses[statusCode].Item1;
+                double currentRate = currentResponses[statusCode].Item2 * currentCount;
+                currentCount++;
+                currentResponses[statusCode] = (currentCount, (currentRate + elapsedMilliseconds) / currentCount);
             }
             else
             {
-                currentResponses.Add(statusCode, 1);
+                currentResponses.Add(statusCode, (1, elapsedMilliseconds));
             }
-        }
-
-        /// <summary>
-        /// Calculates the OK response time rate.
-        /// </summary>
-        /// <returns>Returns the OK responses time rate.</returns>
-        public float ResponseTimeRate()
-        {
-            return ((float)Duration / 1000 / OKResponseCount);
-        }
-
-        /// <summary>
-        /// Calculates the not OK response time rate.
-        /// </summary>
-        /// <returns>Returns the not OK responses time rate.</returns>
-        public float ErrorTimeRate()
-        {
-            return ((float)Duration / 1000 / ErrorResponseCount);
         }
 
         /// <summary>
@@ -174,7 +219,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         {
             if (currentResponses.ContainsKey("OK"))
             {
-                return 1000 / (float)currentResponses["OK"];
+                return (float)currentResponses["OK"].Item2;
             }
             return 0;
         }
@@ -187,7 +232,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
             ReportGenerator.CreateReport(Title, Address, start, lastUpdateTime);
             ReportGenerator.SetGraphData(Title, Address, responses);
             ReportGenerator.AddMetricData(Title, Address, "Number of OK responses: ", OKResponseCount.ToString());
-            ReportGenerator.AddMetricData(Title, Address, "Average response time: ", (Duration / OKResponseCount).ToString());
+            ReportGenerator.AddMetricData(Title, Address, "Average response time: ", Math.Round(OKResponseRate).ToString());
         }
 
         /// <summary>
@@ -197,14 +242,23 @@ namespace HttpRequestSender.BusinessLogic.DataType
         public float ErrorTimeRateLastSec()
         {
             int errorCount = 0;
-            foreach (string key in currentResponses.Keys)
+            float rate = 0;
+            foreach (string statusCode in currentResponses.Keys)
             {
-                if (key != "OK")
+                if (statusCode != "OK")
                 {
-                    errorCount += currentResponses[key];
+                    int currentCount = currentResponses[statusCode].Item1;
+                    // X amount * X rate = SUM(X response time)
+                    // current amount * current rate = SUM(current response time)
+                    // SUM(X response time) + SUM(current response time) = SUM(response time including current status code)
+                    // X amount + current amount = SUM(amount of responses including status code)
+                    // SUM(rticsc) / SUM (aorisc) = total response time / total amount => average response time including current status code
+                    // 42,85 =     20ms * 5 response +         100ms               *       2 response             / 7 total response;
+                    rate = (float)(rate * errorCount + currentCount * currentResponses[statusCode].Item2) / (float)(errorCount + currentCount);
+                    errorCount += currentCount;
                 }
             }
-            return errorCount / 1000;
+            return rate;
         }
 
         /// <summary>
@@ -256,7 +310,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
             paused = false;
             timer.Start();
-            responses.Add(new Dictionary<string, int>());
+            responses.Add(new Dictionary<string, (int, double)>());
             lastUpdateTime = DateTime.Now;
         }
     }

@@ -29,14 +29,14 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.URL_TB = new System.Windows.Forms.TextBox();
             this.reqPerSec_TB = new System.Windows.Forms.TextBox();
@@ -75,6 +75,7 @@ namespace HttpRequestSender.Forms
             this.plannedStart_BTN = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.exploration_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.totalRequest_L = new System.Windows.Forms.Label();
             this.exploration_CHB = new System.Windows.Forms.CheckBox();
             this.explorationRequest_NUD = new System.Windows.Forms.NumericUpDown();
@@ -105,7 +106,6 @@ namespace HttpRequestSender.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.exploration_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -118,6 +118,7 @@ namespace HttpRequestSender.Forms
             this.statusStrip2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exploration_CH)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).BeginInit();
             this.statusStrip4.SuspendLayout();
@@ -125,7 +126,6 @@ namespace HttpRequestSender.Forms
             this.panel3.SuspendLayout();
             this.statusStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exploration_CH)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -237,21 +237,21 @@ namespace HttpRequestSender.Forms
             // 
             // averageResTime_L
             // 
-            this.averageResTime_L.AutoSize = true;
             this.averageResTime_L.Location = new System.Drawing.Point(140, 476);
             this.averageResTime_L.Name = "averageResTime_L";
-            this.averageResTime_L.Size = new System.Drawing.Size(27, 13);
+            this.averageResTime_L.Size = new System.Drawing.Size(95, 13);
             this.averageResTime_L.TabIndex = 15;
             this.averageResTime_L.Text = "N/A";
+            this.averageResTime_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // numberOfRes_L
             // 
-            this.numberOfRes_L.AutoSize = true;
             this.numberOfRes_L.Location = new System.Drawing.Point(140, 454);
             this.numberOfRes_L.Name = "numberOfRes_L";
-            this.numberOfRes_L.Size = new System.Drawing.Size(27, 13);
+            this.numberOfRes_L.Size = new System.Drawing.Size(95, 13);
             this.numberOfRes_L.TabIndex = 14;
             this.numberOfRes_L.Text = "N/A";
+            this.numberOfRes_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
@@ -273,18 +273,18 @@ namespace HttpRequestSender.Forms
             // 
             // manual_CH
             // 
-            chartArea10.Name = "ChartArea1";
-            this.manual_CH.ChartAreas.Add(chartArea10);
-            legend7.Name = "Legend1";
-            this.manual_CH.Legends.Add(legend7);
+            chartArea1.Name = "ChartArea1";
+            this.manual_CH.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.manual_CH.Legends.Add(legend1);
             this.manual_CH.Location = new System.Drawing.Point(19, 185);
             this.manual_CH.Margin = new System.Windows.Forms.Padding(2);
             this.manual_CH.Name = "manual_CH";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series10.Legend = "Legend1";
-            series10.Name = "Response rate";
-            this.manual_CH.Series.Add(series10);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series1.Legend = "Legend1";
+            series1.Name = "Response rate";
+            this.manual_CH.Series.Add(series1);
             this.manual_CH.Size = new System.Drawing.Size(437, 206);
             this.manual_CH.TabIndex = 9;
             this.manual_CH.Text = "chart2";
@@ -396,18 +396,18 @@ namespace HttpRequestSender.Forms
             // 
             // planned_CH
             // 
-            chartArea11.Name = "ChartArea1";
-            this.planned_CH.ChartAreas.Add(chartArea11);
-            legend8.Name = "Legend1";
-            this.planned_CH.Legends.Add(legend8);
+            chartArea2.Name = "ChartArea1";
+            this.planned_CH.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.planned_CH.Legends.Add(legend2);
             this.planned_CH.Location = new System.Drawing.Point(18, 359);
             this.planned_CH.Margin = new System.Windows.Forms.Padding(2);
             this.planned_CH.Name = "planned_CH";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series11.Legend = "Legend1";
-            series11.Name = "Response rate";
-            this.planned_CH.Series.Add(series11);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series2.Legend = "Legend1";
+            series2.Name = "Response rate";
+            this.planned_CH.Series.Add(series2);
             this.planned_CH.Size = new System.Drawing.Size(437, 206);
             this.planned_CH.TabIndex = 18;
             this.planned_CH.Text = "chart2";
@@ -576,6 +576,21 @@ namespace HttpRequestSender.Forms
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(472, 636);
             this.panel4.TabIndex = 2;
+            // 
+            // exploration_CH
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.exploration_CH.ChartAreas.Add(chartArea3);
+            this.exploration_CH.Location = new System.Drawing.Point(18, 360);
+            this.exploration_CH.Margin = new System.Windows.Forms.Padding(2);
+            this.exploration_CH.Name = "exploration_CH";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series3.Name = "Response rate";
+            this.exploration_CH.Series.Add(series3);
+            this.exploration_CH.Size = new System.Drawing.Size(437, 206);
+            this.exploration_CH.TabIndex = 19;
+            this.exploration_CH.Text = "chart2";
             // 
             // totalRequest_L
             // 
@@ -921,21 +936,6 @@ namespace HttpRequestSender.Forms
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // exploration_CH
-            // 
-            chartArea12.Name = "ChartArea1";
-            this.exploration_CH.ChartAreas.Add(chartArea12);
-            this.exploration_CH.Location = new System.Drawing.Point(18, 360);
-            this.exploration_CH.Margin = new System.Windows.Forms.Padding(2);
-            this.exploration_CH.Name = "exploration_CH";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series12.Name = "Response rate";
-            this.exploration_CH.Series.Add(series12);
-            this.exploration_CH.Size = new System.Drawing.Size(437, 206);
-            this.exploration_CH.TabIndex = 19;
-            this.exploration_CH.Text = "chart2";
-            // 
             // StressTester_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -964,6 +964,7 @@ namespace HttpRequestSender.Forms
             this.tabPage3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.exploration_CH)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.explorationRequest_NUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exloration_Grid)).EndInit();
             this.statusStrip4.ResumeLayout(false);
@@ -974,7 +975,6 @@ namespace HttpRequestSender.Forms
             this.statusStrip3.ResumeLayout(false);
             this.statusStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exploration_CH)).EndInit();
             this.ResumeLayout(false);
 
         }

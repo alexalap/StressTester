@@ -182,11 +182,9 @@ namespace HttpRequestSender.Forms
 
                 MethodInvoker updateAverageResTime = delegate
                 {
-                    double duration = session.GetDuration(address);
-                    double okResponseCount = session.GetOKResponseCount(address);
-                    if (duration != -1 && okResponseCount != -1)
+                    if (session.GetOKResponseCount(address) != -1)
                     {
-                        averageResTime_L.Text = duration / okResponseCount + " ms";
+                        averageResTime_L.Text = Math.Round(session.ResponseTimeRate(address)) + " ms";
                     }
                 };
                 manual_CH.Invoke(updateMetricsVisual);

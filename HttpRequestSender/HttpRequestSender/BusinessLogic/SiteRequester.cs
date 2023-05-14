@@ -21,6 +21,7 @@ namespace HttpRequestSender.BusinessLogic
         public delegate void OnTickDelegate();
         public delegate void OnAddressedTickDelegate(string address);
         public event OnTickDelegate Tick;
+        public event OnTickDelegate PlanTick;
         public event OnTickDelegate OnPlanFinish;
         public event OnAddressedTickDelegate AddressedTick;
 
@@ -35,6 +36,8 @@ namespace HttpRequestSender.BusinessLogic
         private int numberOfRequestsPerSec;
         private bool isMeasuring = false;
         private object lockObject = new object();
+
+        public string Status { get; private set; } = "Idle";
 
         public SiteRequester(string address, SessionMetrics sessionMetrics, float timeoutSeconds = 100)
         {
@@ -147,6 +150,7 @@ namespace HttpRequestSender.BusinessLogic
                     if (schedule.NextStep().StartTime > DateTime.Now)
                     {
                         plannedTimer.Interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
+                        Status = "Waiting";
                     }
                     else
                     {
@@ -154,6 +158,7 @@ namespace HttpRequestSender.BusinessLogic
                         plannedTimer.Interval = (schedule.CurrentStep().EndTime - DateTime.Now).TotalMilliseconds;
                         StartSingularMeasurement(schedule.CurrentStep().Requests);
                         isMeasuring = true;
+                        Status = "Running";
                     }
                 }
                 else
@@ -165,6 +170,7 @@ namespace HttpRequestSender.BusinessLogic
                     plannedTimer.Stop();
                     OnPlanFinish.Invoke();
                 }
+                PlanTick?.Invoke();
             });
             plannedTimer.Start();
         }

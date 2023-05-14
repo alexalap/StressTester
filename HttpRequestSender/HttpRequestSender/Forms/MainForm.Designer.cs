@@ -29,14 +29,14 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.URL_TB = new System.Windows.Forms.TextBox();
             this.reqPerSec_TB = new System.Windows.Forms.TextBox();
@@ -63,10 +63,6 @@ namespace HttpRequestSender.Forms
             this.planned_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.plannedReport_BTN = new System.Windows.Forms.Button();
             this.planGrid = new System.Windows.Forms.DataGridView();
-            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planEditor_BTN = new System.Windows.Forms.Button();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -106,6 +102,10 @@ namespace HttpRequestSender.Forms
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -273,18 +273,18 @@ namespace HttpRequestSender.Forms
             // 
             // manual_CH
             // 
-            chartArea1.Name = "ChartArea1";
-            this.manual_CH.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.manual_CH.Legends.Add(legend1);
+            chartArea7.Name = "ChartArea1";
+            this.manual_CH.ChartAreas.Add(chartArea7);
+            legend5.Name = "Legend1";
+            this.manual_CH.Legends.Add(legend5);
             this.manual_CH.Location = new System.Drawing.Point(19, 185);
             this.manual_CH.Margin = new System.Windows.Forms.Padding(2);
             this.manual_CH.Name = "manual_CH";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series1.Legend = "Legend1";
-            series1.Name = "Response rate";
-            this.manual_CH.Series.Add(series1);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series7.Legend = "Legend1";
+            series7.Name = "Response rate";
+            this.manual_CH.Series.Add(series7);
             this.manual_CH.Size = new System.Drawing.Size(437, 206);
             this.manual_CH.TabIndex = 9;
             this.manual_CH.Text = "chart2";
@@ -396,18 +396,18 @@ namespace HttpRequestSender.Forms
             // 
             // planned_CH
             // 
-            chartArea2.Name = "ChartArea1";
-            this.planned_CH.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.planned_CH.Legends.Add(legend2);
+            chartArea8.Name = "ChartArea1";
+            this.planned_CH.ChartAreas.Add(chartArea8);
+            legend6.Name = "Legend1";
+            this.planned_CH.Legends.Add(legend6);
             this.planned_CH.Location = new System.Drawing.Point(18, 359);
             this.planned_CH.Margin = new System.Windows.Forms.Padding(2);
             this.planned_CH.Name = "planned_CH";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series2.Legend = "Legend1";
-            series2.Name = "Response rate";
-            this.planned_CH.Series.Add(series2);
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series8.Legend = "Legend1";
+            series8.Name = "Response rate";
+            this.planned_CH.Series.Add(series8);
             this.planned_CH.Size = new System.Drawing.Size(437, 206);
             this.planned_CH.TabIndex = 18;
             this.planned_CH.Text = "chart2";
@@ -440,39 +440,13 @@ namespace HttpRequestSender.Forms
             this.requestsColumn});
             this.planGrid.Location = new System.Drawing.Point(17, 124);
             this.planGrid.Name = "planGrid";
+            this.planGrid.ReadOnly = true;
             this.planGrid.RowHeadersVisible = false;
             this.planGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.planGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.planGrid.Size = new System.Drawing.Size(439, 175);
             this.planGrid.TabIndex = 16;
-            // 
-            // stepColumn
-            // 
-            this.stepColumn.HeaderText = "Step";
-            this.stepColumn.Name = "stepColumn";
-            this.stepColumn.ReadOnly = true;
-            this.stepColumn.Width = 40;
-            // 
-            // startTimeColumn
-            // 
-            this.startTimeColumn.HeaderText = "Start Time";
-            this.startTimeColumn.Name = "startTimeColumn";
-            this.startTimeColumn.ReadOnly = true;
-            this.startTimeColumn.Width = 150;
-            // 
-            // endTimeColumn
-            // 
-            this.endTimeColumn.HeaderText = "End Time";
-            this.endTimeColumn.Name = "endTimeColumn";
-            this.endTimeColumn.ReadOnly = true;
-            this.endTimeColumn.Width = 150;
-            // 
-            // requestsColumn
-            // 
-            this.requestsColumn.HeaderText = "Requests";
-            this.requestsColumn.Name = "requestsColumn";
-            this.requestsColumn.ReadOnly = true;
-            this.requestsColumn.Width = 75;
+            this.planGrid.SelectionChanged += new System.EventHandler(this.planGrid_SelectionChanged);
             // 
             // planEditor_BTN
             // 
@@ -579,15 +553,15 @@ namespace HttpRequestSender.Forms
             // 
             // exploration_CH
             // 
-            chartArea3.Name = "ChartArea1";
-            this.exploration_CH.ChartAreas.Add(chartArea3);
+            chartArea9.Name = "ChartArea1";
+            this.exploration_CH.ChartAreas.Add(chartArea9);
             this.exploration_CH.Location = new System.Drawing.Point(18, 360);
             this.exploration_CH.Margin = new System.Windows.Forms.Padding(2);
             this.exploration_CH.Name = "exploration_CH";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.Name = "Response rate";
-            this.exploration_CH.Series.Add(series3);
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series9.Name = "Response rate";
+            this.exploration_CH.Series.Add(series9);
             this.exploration_CH.Size = new System.Drawing.Size(437, 206);
             this.exploration_CH.TabIndex = 19;
             this.exploration_CH.Text = "chart2";
@@ -936,6 +910,34 @@ namespace HttpRequestSender.Forms
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
             // 
+            // stepColumn
+            // 
+            this.stepColumn.HeaderText = "Step";
+            this.stepColumn.Name = "stepColumn";
+            this.stepColumn.ReadOnly = true;
+            this.stepColumn.Width = 60;
+            // 
+            // startTimeColumn
+            // 
+            this.startTimeColumn.HeaderText = "Start Time";
+            this.startTimeColumn.Name = "startTimeColumn";
+            this.startTimeColumn.ReadOnly = true;
+            this.startTimeColumn.Width = 140;
+            // 
+            // endTimeColumn
+            // 
+            this.endTimeColumn.HeaderText = "End Time";
+            this.endTimeColumn.Name = "endTimeColumn";
+            this.endTimeColumn.ReadOnly = true;
+            this.endTimeColumn.Width = 140;
+            // 
+            // requestsColumn
+            // 
+            this.requestsColumn.HeaderText = "Requests";
+            this.requestsColumn.Name = "requestsColumn";
+            this.requestsColumn.ReadOnly = true;
+            this.requestsColumn.Width = 75;
+            // 
             // StressTester_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1032,10 +1034,6 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button report_BTN;
         private System.Windows.Forms.DataGridView planGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stepColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requestsColumn;
         private System.Windows.Forms.NumericUpDown explorationRequest_NUD;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox explorationURL_TB;
@@ -1050,6 +1048,10 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox plannedURL_TB;
         private System.Windows.Forms.DataVisualization.Charting.Chart exploration_CH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stepColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn startTimeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endTimeColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn requestsColumn;
     }
 }
 

@@ -39,7 +39,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <returns>Returns a list of the scheduled metric steps.</returns>
         public List<ScheduleStep> GetSchedule()
         {
-            return scheduleSteps;
+            return scheduleSteps.Select(x => x).ToList();
         }
 
         /// <summary>

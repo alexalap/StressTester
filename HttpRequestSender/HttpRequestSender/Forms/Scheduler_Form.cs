@@ -54,6 +54,11 @@ namespace HttpRequestSender.Forms
             {
                 planGrid.Rows.Add(i, schedule[i].StartTime, schedule[i].EndTime, schedule[i].Requests);
             }
+            planGrid.ClearSelection();
+            if(planGrid.Rows.Count > 0)
+            {
+                planGrid.CurrentCell = planGrid.Rows[planGrid.Rows.Count - 1].Cells[0];
+            }
         }
 
         /// <summary>

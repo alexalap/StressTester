@@ -31,6 +31,7 @@ namespace HttpRequestSender.Forms
         private Schedule schedule = new Schedule();
         private Dictionary<string, (int, int)> siteStructureData;
         private object lockObject = new object();
+        private string planStatus = "";
 
         public StressTester_Form()
         {
@@ -207,7 +208,7 @@ namespace HttpRequestSender.Forms
             }
             planEditor.Schedule = schedule;
             planEditor.ShowDialog();
-            RefreshGrid();
+            RefreshGrid("0");
             UpdatePlannedButtons();
         }
 
@@ -230,13 +231,17 @@ namespace HttpRequestSender.Forms
         /// <summary>
         /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
         /// </summary>
-        private void RefreshGrid()
+        private void RefreshGrid(string status)
         {
             planGrid.Rows.Clear();
             List<ScheduleStep> scheduler = schedule.GetSchedule();
+            if (scheduler.Count > 0 && scheduler.First().EndTime < DateTime.Now)
+            {
+                scheduler.RemoveAt(0);
+            }
             for (int i = 0; i < scheduler.Count; i++)
             {
-                planGrid.Rows.Add(i, scheduler[i].StartTime, scheduler[i].EndTime, scheduler[i].Requests);
+                planGrid.Rows.Add(i == 0 ? status : i.ToString(), scheduler[i].StartTime, scheduler[i].EndTime, scheduler[i].Requests);
             }
         }
 
@@ -297,11 +302,14 @@ namespace HttpRequestSender.Forms
             UpdatePlannedButtons();
             address = plannedURL_TB.Text;
             status_L.Text = "";
+            planStatus = "Waiting";
             session = new SessionMetrics();
             siteRequester = new SiteRequester(address, session, 1);
             siteRequester.StartMeasurement(0, schedule, RequesterMode.Planned);
             siteRequester.Tick += PlannedStatisticsUpdate;
+            siteRequester.PlanTick += PlannedStatusUpdate;
             siteRequester.OnPlanFinish += OnPlannedMeasurementFinish;
+            RefreshGrid(planStatus);
         }
 
         /// <summary>
@@ -314,7 +322,7 @@ namespace HttpRequestSender.Forms
             {
                 plannedState = States.Inactive;
                 UpdatePlannedButtons();
-                RefreshGrid();
+                RefreshGrid("0");
             };
             plannedStart_BTN.Invoke(updateVisuals);
         }
@@ -328,8 +336,10 @@ namespace HttpRequestSender.Forms
         {
             plannedState = States.Inactive;
             siteRequester?.PlannedStop();
+            planStatus = "Idle";
             UpdatePlannedButtons();
             schedule.Clear();
+            RefreshGrid(planStatus);
         }
 
         /// <summary>
@@ -374,7 +384,7 @@ namespace HttpRequestSender.Forms
                     }
 
                     planEditor_BTN.BackColor = SystemColors.Window;
-                    planEditor_BTN.ForeColor = Color.White;
+                    planEditor_BTN.ForeColor = Color.Black;
                     planEditor_BTN.Enabled = true;
 
                     plannedStop_BTN.BackColor = Color.Gray;
@@ -398,26 +408,31 @@ namespace HttpRequestSender.Forms
             lock (lockObject)
             {
                 MethodInvoker updateMetricsVisual = delegate
-            {
-                float responseRate = session.ResponseTimeRateLastSec(address);
-                if (responseRate != -1)
                 {
-                    DataPointCollection pointList = planned_CH.Series["Response rate"].Points;
-                    pointList.AddXY(tickCount++, responseRate);
-                    if (pointList.Count > 36)
+                    float responseRate = session.ResponseTimeRateLastSec(address);
+                    if (responseRate != -1)
                     {
-                        pointList.RemoveAt(0);
+                        DataPointCollection pointList = planned_CH.Series["Response rate"].Points;
+                        pointList.AddXY(tickCount++, responseRate);
+                        if (pointList.Count > 36)
+                        {
+                            pointList.RemoveAt(0);
+                        }
+                        planned_CH.ResetAutoValues();
                     }
-                    planned_CH.ResetAutoValues();
-                }
-            };
-                MethodInvoker updateGrid = delegate
-                {
-                    RefreshGrid();
                 };
                 planned_CH.Invoke(updateMetricsVisual);
-                planGrid.Invoke(updateGrid);
             }
+        }
+
+        private void PlannedStatusUpdate()
+        {
+            planStatus = siteRequester?.Status ?? "";
+            MethodInvoker updateGrid = delegate
+            {
+                RefreshGrid(planStatus);
+            };
+            planGrid.Invoke(updateGrid);
         }
 
         /// <summary>
@@ -545,6 +560,11 @@ namespace HttpRequestSender.Forms
                     }
                     break;
             }
+        }
+
+        private void planGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            planGrid.ClearSelection();
         }
     }
 }

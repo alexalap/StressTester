@@ -30,7 +30,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         private List<Dictionary<string, (int, double)>> responses = new List<Dictionary<string, (int, double)>>();
 
         /// <summary>
-        /// Measures the time duration of the session.
+        /// Measures the time duration of the session if it's not stopped.
         /// </summary>
         public double Duration
         {
@@ -63,6 +63,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Calculates the OK response rate.
+        /// </summary>
         public double OKResponseRate
         {
             get
@@ -110,6 +113,9 @@ namespace HttpRequestSender.BusinessLogic.DataType
             }
         }
 
+        /// <summary>
+        /// Calculates the not OK response rate.
+        /// </summary>
         public double ErrorResponseRate
         {
             get
@@ -191,6 +197,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         /// Adds a response to the dictionary of current responses.
         /// </summary>
         /// <param name="statusCode">Status code of response. </param>
+        /// <param name="elapsedMilliseconds">Elapsed milliseconds from sending out the HTTP request to receiving a response. </param>
         /// <exception cref="InvalidMethodCallException">Exception for when a method call in invalid. </exception>
         public void AddResponse(string statusCode, long elapsedMilliseconds)
         {

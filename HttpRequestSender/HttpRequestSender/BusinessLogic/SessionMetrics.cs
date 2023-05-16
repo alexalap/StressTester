@@ -158,11 +158,11 @@ namespace HttpRequestSender.BusinessLogic
         /// Resumes the metric session.
         /// </summary>
         /// <param name="address">Website's address. </param>
-        public void UnPause(string address)
+        public void UnPause(int delay, string address)
         {
             if (activeMetrics.ContainsKey(address))
             {
-                activeMetrics[address].UnPause();
+                activeMetrics[address].UnPause(delay);
             }
         }
 

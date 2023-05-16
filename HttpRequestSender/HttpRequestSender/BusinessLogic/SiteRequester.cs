@@ -1,4 +1,5 @@
-﻿using HttpRequestSender.Utilities;
+﻿using HttpRequestSender.BusinessLogic.DataType;
+using HttpRequestSender.Utilities;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -141,6 +142,8 @@ namespace HttpRequestSender.BusinessLogic
             plannedTimer.Interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
             plannedTimer.Elapsed += ((s, e) =>
             {
+                DateTime currentTime = DateTime.Now;
+                ScheduleStep nextStep = schedule.NextStep();
                 if (isMeasuring)
                 {
                     Stop();
@@ -148,11 +151,11 @@ namespace HttpRequestSender.BusinessLogic
                     cancellation.Token.Register(() => TimeOut());
                     isMeasuring = false;
                 }
-                if (schedule.NextStep() != null)
+                if (nextStep != null)
                 {
-                    if (schedule.NextStep().StartTime > DateTime.Now)
+                    if (nextStep.StartTime > currentTime)
                     {
-                        double interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
+                        double interval = (schedule.NextStep().StartTime - currentTime).TotalMilliseconds;
                         plannedTimer.Interval = interval;
                         Status = "Waiting";
                         timeSinceLastTick = (int)(interval / 1000.0);
@@ -162,7 +165,7 @@ namespace HttpRequestSender.BusinessLogic
                         schedule.Step();
                         tickCount += timeSinceLastTick;
                         timeSinceLastTick = 0;
-                        plannedTimer.Interval = (schedule.CurrentStep().EndTime - DateTime.Now).TotalMilliseconds;
+                        plannedTimer.Interval = (schedule.CurrentStep().EndTime - currentTime).TotalMilliseconds;
                         StartSingularMeasurement(schedule.CurrentStep().Requests);
                         isMeasuring = true;
                         Status = "Running";
@@ -265,9 +268,10 @@ namespace HttpRequestSender.BusinessLogic
             cancellation = new CancellationTokenSource();
             cancellation.Token.Register(() => TimeOut());
             timer.Start();
-            sessionMetrics.UnPause(address);
+            int delay = (int)(DateTime.Now - pauseTime).TotalSeconds;
+            tickCount += delay;
+            sessionMetrics.UnPause(delay, address);
             await GetResponseParallel(numberOfRequestsPerSec);
-            tickCount += (int)(pauseTime - DateTime.Now).TotalSeconds;
         }
 
         /// <summary>

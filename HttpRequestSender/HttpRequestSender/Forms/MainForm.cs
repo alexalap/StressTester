@@ -4,6 +4,7 @@ using HttpRequestSender.ErrorHandling;
 using HttpRequestSender.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -167,6 +168,7 @@ namespace HttpRequestSender.Forms
                 if (responseRate != -1)
                 {
                     DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
+                    InsertGapIfNeeded(tick, pointList);
                     pointList.AddXY(tick, responseRate);
                     if (pointList.Count > 36)
                     {
@@ -262,7 +264,7 @@ namespace HttpRequestSender.Forms
             explorer_BTN.Enabled = false;
             SiteStructureAnalyzer siteStructureAnalyzer = new SiteStructureAnalyzer(explorationURL_TB.Text);
             Dictionary<string, int> result = await siteStructureAnalyzer.Analyze(exploration_CHB.Checked);
-            if(result.Count == 0)
+            if (result.Count == 0)
             {
                 UpdateExplorationButtons();
                 return;
@@ -415,6 +417,7 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void PlannedStatisticsUpdate(int tick)
         {
+            Debug.WriteLine("Call: " + tick);
             lock (lockObject)
             {
                 MethodInvoker updateMetricsVisual = delegate
@@ -423,6 +426,7 @@ namespace HttpRequestSender.Forms
                     if (responseRate != -1)
                     {
                         DataPointCollection pointList = planned_CH.Series["Response rate"].Points;
+                        InsertGapIfNeeded(tick, pointList);
                         pointList.AddXY(tick, responseRate);
                         if (pointList.Count > 36)
                         {
@@ -488,10 +492,11 @@ namespace HttpRequestSender.Forms
                     {
                         Series series = new Series();
                         series.Name = address;
-                        series.ChartType = SeriesChartType.Area;
+                        series.ChartType = SeriesChartType.Line;
                         exploration_CH.Series.Add(series);
                     }
                     DataPointCollection pointList = exploration_CH.Series[address].Points;
+                    InsertGapIfNeeded(tick, pointList);
                     pointList.AddXY(tick, responseRate);
                     if (pointList.Count > 36)
                     {
@@ -501,6 +506,18 @@ namespace HttpRequestSender.Forms
                 }
             };
                 planned_CH.Invoke(updateMetricsVisual);
+            }
+        }
+
+        private static void InsertGapIfNeeded(int tick, DataPointCollection pointList)
+        {
+            if (pointList != null && pointList.Count > 0)
+            {
+                double lastX = pointList.Last().XValue;
+                if (lastX != tick - 1)
+                {
+                    pointList.AddXY(lastX + 1, Double.NaN);
+                }
             }
         }
 

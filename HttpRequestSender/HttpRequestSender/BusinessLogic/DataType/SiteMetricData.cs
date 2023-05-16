@@ -308,7 +308,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         /// Resumes the measurement.
         /// </summary>
         /// <exception cref="InvalidMethodCallException"> Exception for when a method call in invalid. </exception>
-        public void UnPause()
+        public void UnPause(int delay)
         {
             if (closed || !paused)
             {
@@ -317,6 +317,10 @@ namespace HttpRequestSender.BusinessLogic.DataType
 
             paused = false;
             timer.Start();
+            for (int i = 0; i < delay; i++)
+            {
+                responses.Add(new Dictionary<string, (int, double)>());
+            }
             responses.Add(new Dictionary<string, (int, double)>());
             lastUpdateTime = DateTime.Now;
         }

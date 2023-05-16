@@ -3,7 +3,6 @@ using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -18,8 +17,8 @@ namespace HttpRequestSender.BusinessLogic
 
     class SiteRequester
     {
-        public delegate void OnTickDelegate();
-        public delegate void OnAddressedTickDelegate(string address);
+        public delegate void OnTickDelegate(int tick);
+        public delegate void OnAddressedTickDelegate(int tick, string address);
         public event OnTickDelegate Tick;
         public event OnTickDelegate PlanTick;
         public event OnTickDelegate OnPlanFinish;
@@ -36,6 +35,9 @@ namespace HttpRequestSender.BusinessLogic
         private int numberOfRequestsPerSec;
         private bool isMeasuring = false;
         private object lockObject = new object();
+        private int tickCount = 0;
+        private int timeSinceLastTick = 0;
+        private DateTime pauseTime;
 
         public string Status { get; private set; } = "Idle";
 
@@ -117,8 +119,9 @@ namespace HttpRequestSender.BusinessLogic
                     timer.Stop();
                     cancellation.Cancel();
                 }
-                Tick?.Invoke();
-                AddressedTick?.Invoke(address);
+                Tick?.Invoke(tickCount);
+                AddressedTick?.Invoke(tickCount, address);
+                tickCount++;
             });
             timer.Start();
         }
@@ -149,12 +152,16 @@ namespace HttpRequestSender.BusinessLogic
                 {
                     if (schedule.NextStep().StartTime > DateTime.Now)
                     {
-                        plannedTimer.Interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
+                        double interval = (schedule.NextStep().StartTime - DateTime.Now).TotalMilliseconds;
+                        plannedTimer.Interval = interval;
                         Status = "Waiting";
+                        timeSinceLastTick = (int)(interval / 1000.0);
                     }
                     else
                     {
                         schedule.Step();
+                        tickCount += timeSinceLastTick;
+                        timeSinceLastTick = 0;
                         plannedTimer.Interval = (schedule.CurrentStep().EndTime - DateTime.Now).TotalMilliseconds;
                         StartSingularMeasurement(schedule.CurrentStep().Requests);
                         isMeasuring = true;
@@ -168,9 +175,9 @@ namespace HttpRequestSender.BusinessLogic
                         schedule.Step();
                     }
                     plannedTimer.Stop();
-                    OnPlanFinish.Invoke();
+                    OnPlanFinish.Invoke(tickCount);
                 }
-                PlanTick?.Invoke();
+                PlanTick?.Invoke(tickCount);
             });
             plannedTimer.Start();
         }
@@ -246,6 +253,7 @@ namespace HttpRequestSender.BusinessLogic
         {
             isPaused = true;
             sessionMetrics.Pause(address);
+            pauseTime = DateTime.Now;
         }
 
         /// <summary>
@@ -259,6 +267,7 @@ namespace HttpRequestSender.BusinessLogic
             timer.Start();
             sessionMetrics.UnPause(address);
             await GetResponseParallel(numberOfRequestsPerSec);
+            tickCount += (int)(pauseTime - DateTime.Now).TotalSeconds;
         }
 
         /// <summary>

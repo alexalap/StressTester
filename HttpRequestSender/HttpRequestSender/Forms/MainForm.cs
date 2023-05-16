@@ -157,7 +157,7 @@ namespace HttpRequestSender.Forms
         /// <summary>
         /// Updates the statistics of manual measurement.
         /// </summary>
-        private void ManualStatisticsUpdate()
+        private void ManualStatisticsUpdate(int tick)
         {
             lock (lockObject)
             {
@@ -167,7 +167,7 @@ namespace HttpRequestSender.Forms
                 if (responseRate != -1)
                 {
                     DataPointCollection pointList = manual_CH.Series["Response rate"].Points;
-                    pointList.AddXY(tickCount++, responseRate);
+                    pointList.AddXY(tick, responseRate);
                     if (pointList.Count > 36)
                     {
                         pointList.RemoveAt(0);
@@ -325,9 +325,9 @@ namespace HttpRequestSender.Forms
         /// <summary>
         /// Updates the statistics and UI of planned measurement.
         /// </summary>
-        private void OnPlannedMeasurementFinish()
+        private void OnPlannedMeasurementFinish(int tick)
         {
-            PlannedStatisticsUpdate();
+            PlannedStatisticsUpdate(tick);
             MethodInvoker updateVisuals = delegate
             {
                 plannedState = States.Inactive;
@@ -413,7 +413,7 @@ namespace HttpRequestSender.Forms
         /// <summary>
         /// Updates the statistics of planned measurement.
         /// </summary>
-        private void PlannedStatisticsUpdate()
+        private void PlannedStatisticsUpdate(int tick)
         {
             lock (lockObject)
             {
@@ -423,7 +423,7 @@ namespace HttpRequestSender.Forms
                     if (responseRate != -1)
                     {
                         DataPointCollection pointList = planned_CH.Series["Response rate"].Points;
-                        pointList.AddXY(tickCount++, responseRate);
+                        pointList.AddXY(tick, responseRate);
                         if (pointList.Count > 36)
                         {
                             pointList.RemoveAt(0);
@@ -438,7 +438,7 @@ namespace HttpRequestSender.Forms
         /// <summary>
         /// Updates the status of the schedule.
         /// </summary>
-        private void PlannedStatusUpdate()
+        private void PlannedStatusUpdate(int tick)
         {
             planStatus = siteRequester?.Status ?? "";
             MethodInvoker updateGrid = delegate
@@ -475,7 +475,7 @@ namespace HttpRequestSender.Forms
         /// Updates the statistics of exploration measurement.
         /// </summary>
         /// <param name="address"></param>
-        private void ExplorationStatisticsUpdate(string address)
+        private void ExplorationStatisticsUpdate(int tick, string address)
         {
             lock (lockObject)
             {
@@ -492,11 +492,7 @@ namespace HttpRequestSender.Forms
                         exploration_CH.Series.Add(series);
                     }
                     DataPointCollection pointList = exploration_CH.Series[address].Points;
-                    if (!urlTickCount.ContainsKey(address))
-                    {
-                        urlTickCount.Add(address, 0);
-                    }
-                    pointList.AddXY(urlTickCount[address]++, responseRate);
+                    pointList.AddXY(tick, responseRate);
                     if (pointList.Count > 36)
                     {
                         pointList.RemoveAt(0);

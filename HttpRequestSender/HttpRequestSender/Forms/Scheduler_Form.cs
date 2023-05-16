@@ -45,6 +45,7 @@ namespace HttpRequestSender.Forms
 
         /// <summary>
         /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
+        /// The selection will always be on the last row.
         /// </summary>
         private void RefreshGrid()
         {

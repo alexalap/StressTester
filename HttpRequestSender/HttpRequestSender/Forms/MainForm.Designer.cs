@@ -29,14 +29,14 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.URL_TB = new System.Windows.Forms.TextBox();
             this.reqPerSec_TB = new System.Windows.Forms.TextBox();
@@ -63,6 +63,10 @@ namespace HttpRequestSender.Forms
             this.planned_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.plannedReport_BTN = new System.Windows.Forms.Button();
             this.planGrid = new System.Windows.Forms.DataGridView();
+            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planEditor_BTN = new System.Windows.Forms.Button();
             this.statusStrip2 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -95,17 +99,12 @@ namespace HttpRequestSender.Forms
             this.statusStrip3 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.logs_DGV = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -273,18 +272,18 @@ namespace HttpRequestSender.Forms
             // 
             // manual_CH
             // 
-            chartArea7.Name = "ChartArea1";
-            this.manual_CH.ChartAreas.Add(chartArea7);
-            legend5.Name = "Legend1";
-            this.manual_CH.Legends.Add(legend5);
+            chartArea4.Name = "ChartArea1";
+            this.manual_CH.ChartAreas.Add(chartArea4);
+            legend3.Name = "Legend1";
+            this.manual_CH.Legends.Add(legend3);
             this.manual_CH.Location = new System.Drawing.Point(19, 185);
             this.manual_CH.Margin = new System.Windows.Forms.Padding(2);
             this.manual_CH.Name = "manual_CH";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series7.Legend = "Legend1";
-            series7.Name = "Response rate";
-            this.manual_CH.Series.Add(series7);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series4.Legend = "Legend1";
+            series4.Name = "Response rate";
+            this.manual_CH.Series.Add(series4);
             this.manual_CH.Size = new System.Drawing.Size(437, 206);
             this.manual_CH.TabIndex = 9;
             this.manual_CH.Text = "chart2";
@@ -396,18 +395,18 @@ namespace HttpRequestSender.Forms
             // 
             // planned_CH
             // 
-            chartArea8.Name = "ChartArea1";
-            this.planned_CH.ChartAreas.Add(chartArea8);
-            legend6.Name = "Legend1";
-            this.planned_CH.Legends.Add(legend6);
+            chartArea5.Name = "ChartArea1";
+            this.planned_CH.ChartAreas.Add(chartArea5);
+            legend4.Name = "Legend1";
+            this.planned_CH.Legends.Add(legend4);
             this.planned_CH.Location = new System.Drawing.Point(18, 359);
             this.planned_CH.Margin = new System.Windows.Forms.Padding(2);
             this.planned_CH.Name = "planned_CH";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series8.Legend = "Legend1";
-            series8.Name = "Response rate";
-            this.planned_CH.Series.Add(series8);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series5.Legend = "Legend1";
+            series5.Name = "Response rate";
+            this.planned_CH.Series.Add(series5);
             this.planned_CH.Size = new System.Drawing.Size(437, 206);
             this.planned_CH.TabIndex = 18;
             this.planned_CH.Text = "chart2";
@@ -447,6 +446,34 @@ namespace HttpRequestSender.Forms
             this.planGrid.Size = new System.Drawing.Size(439, 175);
             this.planGrid.TabIndex = 16;
             this.planGrid.SelectionChanged += new System.EventHandler(this.planGrid_SelectionChanged);
+            // 
+            // stepColumn
+            // 
+            this.stepColumn.HeaderText = "Step";
+            this.stepColumn.Name = "stepColumn";
+            this.stepColumn.ReadOnly = true;
+            this.stepColumn.Width = 60;
+            // 
+            // startTimeColumn
+            // 
+            this.startTimeColumn.HeaderText = "Start Time";
+            this.startTimeColumn.Name = "startTimeColumn";
+            this.startTimeColumn.ReadOnly = true;
+            this.startTimeColumn.Width = 140;
+            // 
+            // endTimeColumn
+            // 
+            this.endTimeColumn.HeaderText = "End Time";
+            this.endTimeColumn.Name = "endTimeColumn";
+            this.endTimeColumn.ReadOnly = true;
+            this.endTimeColumn.Width = 140;
+            // 
+            // requestsColumn
+            // 
+            this.requestsColumn.HeaderText = "Requests";
+            this.requestsColumn.Name = "requestsColumn";
+            this.requestsColumn.ReadOnly = true;
+            this.requestsColumn.Width = 75;
             // 
             // planEditor_BTN
             // 
@@ -553,15 +580,15 @@ namespace HttpRequestSender.Forms
             // 
             // exploration_CH
             // 
-            chartArea9.Name = "ChartArea1";
-            this.exploration_CH.ChartAreas.Add(chartArea9);
+            chartArea6.Name = "ChartArea1";
+            this.exploration_CH.ChartAreas.Add(chartArea6);
             this.exploration_CH.Location = new System.Drawing.Point(18, 360);
             this.exploration_CH.Margin = new System.Windows.Forms.Padding(2);
             this.exploration_CH.Name = "exploration_CH";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series9.Name = "Response rate";
-            this.exploration_CH.Series.Add(series9);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series6.Name = "Response rate";
+            this.exploration_CH.Series.Add(series6);
             this.exploration_CH.Size = new System.Drawing.Size(437, 206);
             this.exploration_CH.TabIndex = 19;
             this.exploration_CH.Text = "chart2";
@@ -674,6 +701,7 @@ namespace HttpRequestSender.Forms
             // URLReport_BTN
             // 
             this.URLReport_BTN.BackColor = System.Drawing.SystemColors.Window;
+            this.URLReport_BTN.Enabled = false;
             this.URLReport_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.URLReport_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
             this.URLReport_BTN.Location = new System.Drawing.Point(147, 571);
@@ -826,8 +854,7 @@ namespace HttpRequestSender.Forms
             this.logs_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
             this.Priority,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn5});
             this.logs_DGV.Location = new System.Drawing.Point(19, 100);
             this.logs_DGV.Name = "logs_DGV";
             this.logs_DGV.ReadOnly = true;
@@ -835,46 +862,6 @@ namespace HttpRequestSender.Forms
             this.logs_DGV.RowHeadersWidth = 51;
             this.logs_DGV.Size = new System.Drawing.Size(437, 245);
             this.logs_DGV.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Timestamp";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // Priority
-            // 
-            this.Priority.HeaderText = "Priority";
-            this.Priority.MinimumWidth = 6;
-            this.Priority.Name = "Priority";
-            this.Priority.ReadOnly = true;
-            this.Priority.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Priority.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Priority.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Message";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn5.Width = 165;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Duration";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn6.Width = 125;
             // 
             // label6
             // 
@@ -910,33 +897,35 @@ namespace HttpRequestSender.Forms
             this.button7.Text = "Start";
             this.button7.UseVisualStyleBackColor = false;
             // 
-            // stepColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.stepColumn.HeaderText = "Step";
-            this.stepColumn.Name = "stepColumn";
-            this.stepColumn.ReadOnly = true;
-            this.stepColumn.Width = 60;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Timestamp";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 150;
             // 
-            // startTimeColumn
+            // Priority
             // 
-            this.startTimeColumn.HeaderText = "Start Time";
-            this.startTimeColumn.Name = "startTimeColumn";
-            this.startTimeColumn.ReadOnly = true;
-            this.startTimeColumn.Width = 140;
+            this.Priority.HeaderText = "Priority";
+            this.Priority.MinimumWidth = 6;
+            this.Priority.Name = "Priority";
+            this.Priority.ReadOnly = true;
+            this.Priority.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Priority.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Priority.Width = 125;
             // 
-            // endTimeColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.endTimeColumn.HeaderText = "End Time";
-            this.endTimeColumn.Name = "endTimeColumn";
-            this.endTimeColumn.ReadOnly = true;
-            this.endTimeColumn.Width = 140;
-            // 
-            // requestsColumn
-            // 
-            this.requestsColumn.HeaderText = "Requests";
-            this.requestsColumn.Name = "requestsColumn";
-            this.requestsColumn.ReadOnly = true;
-            this.requestsColumn.Width = 75;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Message";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 165;
             // 
             // StressTester_Form
             // 
@@ -1024,10 +1013,6 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.Button URLStop_BTN;
         private System.Windows.Forms.Button URLStart_BTN;
         private System.Windows.Forms.Button explorer_BTN;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Label averageResTime_L;
         private System.Windows.Forms.Label numberOfRes_L;
         private System.Windows.Forms.Label label11;
@@ -1052,6 +1037,9 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn startTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestsColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Priority;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
 

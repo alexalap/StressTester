@@ -73,7 +73,7 @@ namespace HttpRequestSender.Utilities
 
         private static void LogGridViewRefresh()
         {
-            //logGridView.Invoke(new PrintLog(LogToLogsTab));
+            logGridView?.Invoke(new PrintLog(LogToLogsTab));
         }
 
         private static void LogToLogsTab()

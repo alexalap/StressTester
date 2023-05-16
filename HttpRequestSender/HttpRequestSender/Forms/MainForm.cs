@@ -1,6 +1,7 @@
 ﻿using HttpRequestSender.BusinessLogic;
 using HttpRequestSender.BusinessLogic.DataType;
 using HttpRequestSender.ErrorHandling;
+using HttpRequestSender.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -32,11 +33,12 @@ namespace HttpRequestSender.Forms
         private Dictionary<string, (int, int)> siteStructureData;
         private object lockObject = new object();
         private string planStatus = "";
+        private Dictionary<string, int> urlTickCount = new Dictionary<string, int>();
 
         public StressTester_Form()
         {
             InitializeComponent();
-            //Logger.logGridView = logGrid_DGV;
+            Logger.logGridView = logs_DGV;
             UpdateButtons();
         }
 
@@ -48,6 +50,7 @@ namespace HttpRequestSender.Forms
         private void start_BTN_Click(object sender, EventArgs e)
         {
             manual_CH.Series["Response rate"].Points.Clear();
+            tickCount = 0;
             manualState = States.Active;
             UpdateButtons();
             if (TextBoxValidator.Validate<int>(reqPerSec_TB.Text, out int value))
@@ -230,6 +233,7 @@ namespace HttpRequestSender.Forms
 
         /// <summary>
         /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
+        /// Gives a status to the first scheduled step in the plan grid.
         /// </summary>
         private void RefreshGrid(string status)
         {
@@ -258,6 +262,11 @@ namespace HttpRequestSender.Forms
             explorer_BTN.Enabled = false;
             SiteStructureAnalyzer siteStructureAnalyzer = new SiteStructureAnalyzer(explorationURL_TB.Text);
             Dictionary<string, int> result = await siteStructureAnalyzer.Analyze(exploration_CHB.Checked);
+            if(result.Count == 0)
+            {
+                UpdateExplorationButtons();
+                return;
+            }
             int minValue = result.Min(x => x.Value);
             siteStructureData = result.ToDictionary(x => x.Key, x => (x.Value, (int)Math.Round(x.Value / (double)minValue)));
             foreach (string key in siteStructureData.Keys)
@@ -298,6 +307,7 @@ namespace HttpRequestSender.Forms
         private void plannedStart_BTN_Click(object sender, EventArgs e)
         {
             planned_CH.Series["Response rate"].Points.Clear();
+            tickCount = 0;
             plannedState = States.Active;
             UpdatePlannedButtons();
             address = plannedURL_TB.Text;
@@ -425,6 +435,9 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Updates the status of the schedule.
+        /// </summary>
         private void PlannedStatusUpdate()
         {
             planStatus = siteRequester?.Status ?? "";
@@ -444,6 +457,7 @@ namespace HttpRequestSender.Forms
         {
             siteRequesters.Clear();
             exploration_CH.Series.Clear();
+            urlTickCount.Clear();
             explorationState = States.Active;
             UpdateExplorationButtons();
             status_L.Text = "";
@@ -478,7 +492,11 @@ namespace HttpRequestSender.Forms
                         exploration_CH.Series.Add(series);
                     }
                     DataPointCollection pointList = exploration_CH.Series[address].Points;
-                    pointList.AddXY(tickCount++, responseRate);
+                    if (!urlTickCount.ContainsKey(address))
+                    {
+                        urlTickCount.Add(address, 0);
+                    }
+                    pointList.AddXY(urlTickCount[address]++, responseRate);
                     if (pointList.Count > 36)
                     {
                         pointList.RemoveAt(0);
@@ -562,6 +580,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Clears the selection in the plan grid.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void planGrid_SelectionChanged(object sender, EventArgs e)
         {
             planGrid.ClearSelection();

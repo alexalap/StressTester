@@ -47,7 +47,7 @@ namespace HttpRequestSender.BusinessLogic
                     else
                     {
                         //if (address.Contains(rootAddress.Replace("https://", "http://").Replace("http://", "").Split('/')[0]) && !address.Contains("#"))
-                        if (address.Contains(rootAddress) && address.Split('/').Last().Count(x => x == '#') < 2)
+                        if ((address.Contains(rootAddress) || address.Contains(rootAddress.Replace("https://", "http://")) || address.Contains(rootAddress.Replace("http://", "https://"))) && address.Split('/').Last().Count(x => x == '#') < 2)
                         {
                             result.Add(address, 1);
                         }

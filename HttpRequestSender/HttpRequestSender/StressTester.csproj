@@ -78,8 +78,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessLogic\AddressExclusions.cs" />
+    <Compile Include="BusinessLogic\DataType\RelativeScheduleStep.cs" />
     <Compile Include="BusinessLogic\DataType\ScheduleStep.cs" />
     <Compile Include="BusinessLogic\DataType\SiteMetricData.cs" />
+    <Compile Include="BusinessLogic\RelativeSchedule.cs" />
     <Compile Include="BusinessLogic\Schedule.cs" />
     <Compile Include="BusinessLogic\SessionMetrics.cs" />
     <Compile Include="BusinessLogic\SiteRequester.cs" />
@@ -92,6 +94,12 @@
     </Compile>
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Relative_Scheduler_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Relative_Scheduler_Form.Designer.cs">
+      <DependentUpon>Relative_Scheduler_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Scheduler_Form.cs">
       <SubType>Form</SubType>
@@ -109,6 +117,9 @@
     <Compile Include="Utilities\Logger.cs" />
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Relative_Scheduler_Form.resx">
+      <DependentUpon>Relative_Scheduler_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Scheduler_Form.resx">
       <DependentUpon>Scheduler_Form.cs</DependentUpon>

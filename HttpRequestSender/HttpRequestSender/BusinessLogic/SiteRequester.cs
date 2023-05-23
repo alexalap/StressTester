@@ -13,7 +13,8 @@ namespace HttpRequestSender.BusinessLogic
     public enum RequesterMode
     {
         Manual,
-        Planned
+        PlannedAbsolute,
+        PlannedRelative
     }
 
     class SiteRequester
@@ -83,7 +84,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <param name="numberOfRequestsPerSec">Number of requests per second. </param>
         /// <param name="schedule">Schedule of planned stress testing. </param>
         /// <param name="mode">Stress testing mode: can be manual or scheduled. </param>
-        public void StartMeasurement(int numberOfRequestsPerSec, Schedule schedule, RequesterMode mode)
+        public void StartMeasurement(int numberOfRequestsPerSec, Schedule schedule, RelativeSchedule rSchedule, RequesterMode mode)
         {
             cancellation.Token.Register(() => TimeOut());
             switch (mode)
@@ -91,9 +92,13 @@ namespace HttpRequestSender.BusinessLogic
                 case RequesterMode.Manual:
                     StartSingularMeasurement(numberOfRequestsPerSec);
                     break;
-                case RequesterMode.Planned:
+                case RequesterMode.PlannedAbsolute:
                     plannedCancellation.Token.Register(() => TimeOut());
                     StartPlannedMeasurement(schedule);
+                    break;
+                case RequesterMode.PlannedRelative:
+                    plannedCancellation.Token.Register(() => TimeOut());
+                    StartRelativePlannedMeasurement(rSchedule);
                     break;
             }
         }
@@ -182,6 +187,57 @@ namespace HttpRequestSender.BusinessLogic
                 }
                 PlanTick?.Invoke(tickCount);
             });
+            plannedTimer.Start();
+        }
+
+        /// <summary>
+        /// Starts a scheduled measurement.
+        ///
+        /// The planned timer keeps track of the scheduling. The timer is set for each steps duration or the time until the first ones start.
+        /// After the time has passed we use a cancellation token to close the current measurement.
+        /// 
+        /// We use a singular measurement for each scheduled steps. (row 155)
+        /// </summary>
+        /// <param name="schedule">Schedule of the measurement. </param>
+        private void StartRelativePlannedMeasurement(RelativeSchedule schedule)
+        {
+            plannedTimer = new System.Timers.Timer();
+            plannedTimer.Interval = schedule.NextStep().Duration.TotalMilliseconds;
+            plannedTimer.Elapsed += ((s, e) =>
+            {
+                DateTime currentTime = DateTime.Now;
+                RelativeScheduleStep nextStep = schedule.NextStep();
+                if (isMeasuring)
+                {
+                    Stop();
+                    cancellation = new CancellationTokenSource();
+                    cancellation.Token.Register(() => TimeOut());
+                    isMeasuring = false;
+                }
+                if (nextStep != null)
+                {
+                    schedule.Step();
+                    plannedTimer.Interval = schedule.CurrentStep().Duration.TotalMilliseconds;
+                    StartSingularMeasurement(schedule.CurrentStep().Requests);
+                    isMeasuring = true;
+                    Status = "Running";
+                }
+                else
+                {
+                    if (schedule.CurrentStep() != null)
+                    {
+                        schedule.Step();
+                    }
+                    plannedTimer.Stop();
+                    OnPlanFinish.Invoke(tickCount);
+                }
+                PlanTick?.Invoke(tickCount);
+            });
+            schedule.Step();
+            plannedTimer.Interval = schedule.CurrentStep().Duration.TotalMilliseconds;
+            StartSingularMeasurement(schedule.CurrentStep().Requests);
+            isMeasuring = true;
+            Status = "Running";
             plannedTimer.Start();
         }
 
@@ -287,6 +343,15 @@ namespace HttpRequestSender.BusinessLogic
         /// Stops the scheduled metric session.
         /// </summary>
         public void PlannedStop()
+        {
+            plannedTimer.Stop();
+            plannedCancellation.Cancel();
+        }
+
+        /// <summary>
+        /// Stops the scheduled metric session.
+        /// </summary>
+        public void RelativePlannedStop()
         {
             plannedTimer.Stop();
             plannedCancellation.Cancel();

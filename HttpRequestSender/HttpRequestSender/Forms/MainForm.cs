@@ -26,11 +26,11 @@ namespace HttpRequestSender.Forms
         private SiteRequester siteRequester;
         private List<SiteRequester> siteRequesters = new List<SiteRequester>();
         private string address;
-        private int tickCount = 0;
         private States manualState = States.Inactive;
         private States plannedState = States.Inactive;
         private States explorationState = States.Inactive;
         private Schedule schedule = new Schedule();
+        private RelativeSchedule relativeSchedule = new RelativeSchedule();
         private Dictionary<string, (int, int)> siteStructureData;
         private object lockObject = new object();
         private string planStatus = "";
@@ -51,7 +51,6 @@ namespace HttpRequestSender.Forms
         private void start_BTN_Click(object sender, EventArgs e)
         {
             manual_CH.Series["Response rate"].Points.Clear();
-            tickCount = 0;
             manualState = States.Active;
             UpdateButtons();
             if (TextBoxValidator.Validate<int>(reqPerSec_TB.Text, out int value))
@@ -60,7 +59,7 @@ namespace HttpRequestSender.Forms
                 status_L.Text = "";
                 session = new SessionMetrics();
                 siteRequester = new SiteRequester(address, session, 1);
-                siteRequester.StartMeasurement(value, null, RequesterMode.Manual);
+                siteRequester.StartMeasurement(value, null, null, RequesterMode.Manual);
                 siteRequester.Tick += ManualStatisticsUpdate;
             }
             else
@@ -218,6 +217,24 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
+        /// Opens the Scheduler window.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RelativePlanEditor_BTN_Click(object sender, EventArgs e)
+        {
+            Relative_Scheduler_Form planEditor = new Relative_Scheduler_Form();
+            if (relativeSchedule.CurrentStep() != null)
+            {
+                relativeSchedule.Clear();
+            }
+            planEditor.Schedule = relativeSchedule;
+            planEditor.ShowDialog();
+            RefreshRelativeGrid("0");
+            UpdateRelativePlannedButtons();
+        }
+
+        /// <summary>
         /// Creates a report of the measurement.
         /// </summary>
         /// <param name="sender"></param>
@@ -248,6 +265,20 @@ namespace HttpRequestSender.Forms
             for (int i = 0; i < scheduler.Count; i++)
             {
                 planGrid.Rows.Add(i == 0 ? status : i.ToString(), scheduler[i].StartTime, scheduler[i].EndTime, scheduler[i].Requests);
+            }
+        }
+
+        /// <summary>
+        /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
+        /// Gives a status to the first scheduled step in the plan grid.
+        /// </summary>
+        private void RefreshRelativeGrid(string status)
+        {
+            relativePlanGrid.Rows.Clear();
+            List<RelativeScheduleStep> scheduler = relativeSchedule.GetSchedule();
+            for (int i = 0; i < scheduler.Count; i++)
+            {
+                relativePlanGrid.Rows.Add(i == 0 ? status : i.ToString(), scheduler[i].Duration, scheduler[i].Requests);
             }
         }
 
@@ -309,7 +340,6 @@ namespace HttpRequestSender.Forms
         private void plannedStart_BTN_Click(object sender, EventArgs e)
         {
             planned_CH.Series["Response rate"].Points.Clear();
-            tickCount = 0;
             plannedState = States.Active;
             UpdatePlannedButtons();
             address = plannedURL_TB.Text;
@@ -317,11 +347,33 @@ namespace HttpRequestSender.Forms
             planStatus = "Waiting";
             session = new SessionMetrics();
             siteRequester = new SiteRequester(address, session, 1);
-            siteRequester.StartMeasurement(0, schedule, RequesterMode.Planned);
+            siteRequester.StartMeasurement(0, schedule, null, RequesterMode.PlannedAbsolute);
             siteRequester.Tick += PlannedStatisticsUpdate;
             siteRequester.PlanTick += PlannedStatusUpdate;
             siteRequester.OnPlanFinish += OnPlannedMeasurementFinish;
             RefreshGrid(planStatus);
+        }
+
+        /// <summary>
+        /// Starts a planned measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RelativePlannedStart_BTN_Click(object sender, EventArgs e)
+        {
+            relativePlanned_CH.Series["Response rate"].Points.Clear();
+            plannedState = States.Active;
+            UpdateRelativePlannedButtons();
+            address = relativePlannedURL_TB.Text;
+            status_L.Text = "";
+            planStatus = "Running";
+            session = new SessionMetrics();
+            siteRequester = new SiteRequester(address, session, 1);
+            siteRequester.StartMeasurement(0, null, relativeSchedule, RequesterMode.PlannedRelative);
+            siteRequester.Tick += RelativePlannedStatisticsUpdate;
+            siteRequester.PlanTick += RelativePlannedStatusUpdate;
+            siteRequester.OnPlanFinish += OnRelativePlannedMeasurementFinish;
+            RefreshRelativeGrid(planStatus);
         }
 
         /// <summary>
@@ -340,6 +392,21 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
+        /// Updates the statistics and UI of planned measurement.
+        /// </summary>
+        private void OnRelativePlannedMeasurementFinish(int tick)
+        {
+            RelativePlannedStatisticsUpdate(tick);
+            MethodInvoker updateVisuals = delegate
+            {
+                plannedState = States.Inactive;
+                UpdateRelativePlannedButtons();
+                RefreshRelativeGrid("0");
+            };
+            relativePlannedStart_BTN.Invoke(updateVisuals);
+        }
+
+        /// <summary>
         /// Stops a planned measurement.
         /// </summary>
         /// <param name="sender"></param>
@@ -352,6 +419,21 @@ namespace HttpRequestSender.Forms
             UpdatePlannedButtons();
             schedule.Clear();
             RefreshGrid(planStatus);
+        }
+
+        /// <summary>
+        /// Stops a planned measurement.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RelativePlannedStop_BTN_Click(object sender, EventArgs e)
+        {
+            plannedState = States.Inactive;
+            siteRequester?.RelativePlannedStop();
+            planStatus = "Idle";
+            UpdateRelativePlannedButtons();
+            relativeSchedule.Clear();
+            RefreshRelativeGrid(planStatus);
         }
 
         /// <summary>
@@ -413,11 +495,68 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
+        /// Updates the planned buttons according to the planned measurement states.
+        /// </summary>
+        private void UpdateRelativePlannedButtons()
+        {
+            switch (plannedState)
+            {
+                case States.Active:
+                    relativePlanEditor_BTN.BackColor = Color.Gray;
+                    relativePlanEditor_BTN.ForeColor = Color.White;
+                    relativePlanEditor_BTN.Enabled = false;
+
+                    relativePlannedStart_BTN.BackColor = Color.Gray;
+                    relativePlannedStart_BTN.ForeColor = Color.White;
+                    relativePlannedStart_BTN.Text = "Running...";
+                    relativePlannedStart_BTN.Enabled = false;
+
+                    relativePlannedStop_BTN.BackColor = Color.OrangeRed;
+                    relativePlannedStop_BTN.ForeColor = Color.White;
+                    relativePlannedStop_BTN.Text = "Stop";
+                    relativePlannedStop_BTN.Enabled = true;
+
+                    relativePlannedReport_BTN.Enabled = false;
+                    break;
+                case States.Inactive:
+                    RelativeScheduleStep nextStep = relativeSchedule.NextStep();
+                    if (nextStep != null)
+                    {
+                        relativePlannedStart_BTN.BackColor = Color.LimeGreen;
+                        relativePlannedStart_BTN.ForeColor = Color.White;
+                        relativePlannedStart_BTN.Text = "Start";
+                        relativePlannedStart_BTN.Enabled = true;
+                    }
+                    else
+                    {
+                        relativePlannedStart_BTN.BackColor = Color.Gray;
+                        relativePlannedStart_BTN.ForeColor = Color.White;
+                        relativePlannedStart_BTN.Text = nextStep == null ? "No plan" : "Invalid plan";
+                        relativePlannedStart_BTN.Enabled = false;
+                    }
+
+                    relativePlanEditor_BTN.BackColor = SystemColors.Window;
+                    relativePlanEditor_BTN.ForeColor = Color.Black;
+                    relativePlanEditor_BTN.Enabled = true;
+
+                    relativePlannedStop_BTN.BackColor = Color.Gray;
+                    relativePlannedStop_BTN.ForeColor = Color.White;
+                    relativePlannedStop_BTN.Text = "Stopped";
+                    relativePlannedStop_BTN.Enabled = false;
+
+                    if (session != null)
+                    {
+                        relativePlannedReport_BTN.Enabled = true;
+                    }
+                    break;
+            }
+        }
+
+        /// <summary>
         /// Updates the statistics of planned measurement.
         /// </summary>
         private void PlannedStatisticsUpdate(int tick)
         {
-            Debug.WriteLine("Call: " + tick);
             lock (lockObject)
             {
                 MethodInvoker updateMetricsVisual = delegate
@@ -440,6 +579,32 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
+        /// Updates the statistics of planned measurement.
+        /// </summary>
+        private void RelativePlannedStatisticsUpdate(int tick)
+        {
+            lock (lockObject)
+            {
+                MethodInvoker updateMetricsVisual = delegate
+                {
+                    float responseRate = session.ResponseTimeRateLastSec(address);
+                    if (responseRate != -1)
+                    {
+                        DataPointCollection pointList = relativePlanned_CH.Series["Response rate"].Points;
+                        InsertGapIfNeeded(tick, pointList);
+                        pointList.AddXY(tick, responseRate);
+                        if (pointList.Count > 36)
+                        {
+                            pointList.RemoveAt(0);
+                        }
+                        relativePlanned_CH.ResetAutoValues();
+                    }
+                };
+                relativePlanned_CH.Invoke(updateMetricsVisual);
+            }
+        }
+
+        /// <summary>
         /// Updates the status of the schedule.
         /// </summary>
         private void PlannedStatusUpdate(int tick)
@@ -450,6 +615,19 @@ namespace HttpRequestSender.Forms
                 RefreshGrid(planStatus);
             };
             planGrid.Invoke(updateGrid);
+        }
+
+        /// <summary>
+        /// Updates the status of the schedule.
+        /// </summary>
+        private void RelativePlannedStatusUpdate(int tick)
+        {
+            planStatus = siteRequester?.Status ?? "";
+            MethodInvoker updateGrid = delegate
+            {
+                RefreshRelativeGrid(planStatus);
+            };
+            relativePlanGrid.Invoke(updateGrid);
         }
 
         /// <summary>
@@ -469,7 +647,7 @@ namespace HttpRequestSender.Forms
             foreach (string address in siteStructureData.Keys)
             {
                 SiteRequester siteRequester = new SiteRequester(address, session, 1);
-                siteRequester.StartMeasurement((int)explorationRequest_NUD.Value * siteStructureData[address].Item2, null, RequesterMode.Manual);
+                siteRequester.StartMeasurement((int)explorationRequest_NUD.Value * siteStructureData[address].Item2, null, null, RequesterMode.Manual);
                 siteRequester.AddressedTick += ExplorationStatisticsUpdate;
                 siteRequesters.Add(siteRequester);
             }
@@ -601,6 +779,16 @@ namespace HttpRequestSender.Forms
         private void planGrid_SelectionChanged(object sender, EventArgs e)
         {
             planGrid.ClearSelection();
+        }
+
+        /// <summary>
+        /// Clears the selection in the plan grid.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RelativePlanGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            relativePlanGrid.ClearSelection();
         }
     }
 }

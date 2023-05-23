@@ -29,17 +29,17 @@ namespace HttpRequestSender.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend10 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label1 = new System.Windows.Forms.Label();
             this.URL_TB = new System.Windows.Forms.TextBox();
             this.reqPerSec_TB = new System.Windows.Forms.TextBox();
@@ -59,6 +59,23 @@ namespace HttpRequestSender.Forms
             this.status_L = new System.Windows.Forms.ToolStripStatusLabel();
             this.main_TC = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.relativePlannedURL_TB = new System.Windows.Forms.TextBox();
+            this.relativePlanned_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.relativePlannedReport_BTN = new System.Windows.Forms.Button();
+            this.relativePlanGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.relativePlanEditor_BTN = new System.Windows.Forms.Button();
+            this.statusStrip5 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.relativePlannedStop_BTN = new System.Windows.Forms.Button();
+            this.relativePlannedStart_BTN = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -105,28 +122,18 @@ namespace HttpRequestSender.Forms
             this.Priority = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.relativePlannedURL_TB = new System.Windows.Forms.TextBox();
-            this.relativePlanned_CH = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.relativePlannedReport_BTN = new System.Windows.Forms.Button();
-            this.relativePlanGrid = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.relativePlanEditor_BTN = new System.Windows.Forms.Button();
-            this.statusStrip5 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.relativePlannedStop_BTN = new System.Windows.Forms.Button();
-            this.relativePlannedStart_BTN = new System.Windows.Forms.Button();
+            this.import_BTN = new System.Windows.Forms.Button();
+            this.export_BTN = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.manual_CH)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.main_TC.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.relativePlanned_CH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relativePlanGrid)).BeginInit();
+            this.statusStrip5.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.planned_CH)).BeginInit();
@@ -142,11 +149,6 @@ namespace HttpRequestSender.Forms
             this.panel3.SuspendLayout();
             this.statusStrip3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).BeginInit();
-            this.tabPage5.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.relativePlanned_CH)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.relativePlanGrid)).BeginInit();
-            this.statusStrip5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -294,18 +296,18 @@ namespace HttpRequestSender.Forms
             // 
             // manual_CH
             // 
-            chartArea9.Name = "ChartArea1";
-            this.manual_CH.ChartAreas.Add(chartArea9);
-            legend7.Name = "Legend1";
-            this.manual_CH.Legends.Add(legend7);
+            chartArea13.Name = "ChartArea1";
+            this.manual_CH.ChartAreas.Add(chartArea13);
+            legend10.Name = "Legend1";
+            this.manual_CH.Legends.Add(legend10);
             this.manual_CH.Location = new System.Drawing.Point(19, 185);
             this.manual_CH.Margin = new System.Windows.Forms.Padding(2);
             this.manual_CH.Name = "manual_CH";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series9.Legend = "Legend1";
-            series9.Name = "Response rate";
-            this.manual_CH.Series.Add(series9);
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series13.Legend = "Legend1";
+            series13.Name = "Response rate";
+            this.manual_CH.Series.Add(series13);
             this.manual_CH.Size = new System.Drawing.Size(437, 206);
             this.manual_CH.TabIndex = 9;
             this.manual_CH.Text = "chart2";
@@ -369,6 +371,206 @@ namespace HttpRequestSender.Forms
             this.tabPage1.Text = "Manual";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.panel5);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage5.Size = new System.Drawing.Size(476, 640);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Planned Relative";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.export_BTN);
+            this.panel5.Controls.Add(this.import_BTN);
+            this.panel5.Controls.Add(this.label12);
+            this.panel5.Controls.Add(this.relativePlannedURL_TB);
+            this.panel5.Controls.Add(this.relativePlanned_CH);
+            this.panel5.Controls.Add(this.relativePlannedReport_BTN);
+            this.panel5.Controls.Add(this.relativePlanGrid);
+            this.panel5.Controls.Add(this.relativePlanEditor_BTN);
+            this.panel5.Controls.Add(this.statusStrip5);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.relativePlannedStop_BTN);
+            this.panel5.Controls.Add(this.relativePlannedStart_BTN);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(2, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(472, 636);
+            this.panel5.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(40, 52);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(32, 13);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "URL:";
+            // 
+            // relativePlannedURL_TB
+            // 
+            this.relativePlannedURL_TB.Location = new System.Drawing.Point(81, 49);
+            this.relativePlannedURL_TB.Name = "relativePlannedURL_TB";
+            this.relativePlannedURL_TB.Size = new System.Drawing.Size(351, 20);
+            this.relativePlannedURL_TB.TabIndex = 19;
+            this.relativePlannedURL_TB.Text = "https://hf.mit.bme.hu/tmp/alexandra/test.php?sleep=100";
+            // 
+            // relativePlanned_CH
+            // 
+            chartArea14.Name = "ChartArea1";
+            this.relativePlanned_CH.ChartAreas.Add(chartArea14);
+            legend11.Name = "Legend1";
+            this.relativePlanned_CH.Legends.Add(legend11);
+            this.relativePlanned_CH.Location = new System.Drawing.Point(18, 359);
+            this.relativePlanned_CH.Margin = new System.Windows.Forms.Padding(2);
+            this.relativePlanned_CH.Name = "relativePlanned_CH";
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series14.Legend = "Legend1";
+            series14.Name = "Response rate";
+            this.relativePlanned_CH.Series.Add(series14);
+            this.relativePlanned_CH.Size = new System.Drawing.Size(437, 206);
+            this.relativePlanned_CH.TabIndex = 18;
+            this.relativePlanned_CH.Text = "chart2";
+            // 
+            // relativePlannedReport_BTN
+            // 
+            this.relativePlannedReport_BTN.BackColor = System.Drawing.SystemColors.Window;
+            this.relativePlannedReport_BTN.Enabled = false;
+            this.relativePlannedReport_BTN.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.relativePlannedReport_BTN.ForeColor = System.Drawing.Color.Black;
+            this.relativePlannedReport_BTN.Location = new System.Drawing.Point(169, 572);
+            this.relativePlannedReport_BTN.Name = "relativePlannedReport_BTN";
+            this.relativePlannedReport_BTN.Size = new System.Drawing.Size(132, 37);
+            this.relativePlannedReport_BTN.TabIndex = 17;
+            this.relativePlannedReport_BTN.Text = "Report";
+            this.relativePlannedReport_BTN.UseVisualStyleBackColor = false;
+            this.relativePlannedReport_BTN.Click += new System.EventHandler(this.report_BTN_Click);
+            // 
+            // relativePlanGrid
+            // 
+            this.relativePlanGrid.AllowUserToAddRows = false;
+            this.relativePlanGrid.AllowUserToDeleteRows = false;
+            this.relativePlanGrid.AllowUserToResizeColumns = false;
+            this.relativePlanGrid.AllowUserToResizeRows = false;
+            this.relativePlanGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.relativePlanGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn6});
+            this.relativePlanGrid.Location = new System.Drawing.Point(17, 124);
+            this.relativePlanGrid.Name = "relativePlanGrid";
+            this.relativePlanGrid.ReadOnly = true;
+            this.relativePlanGrid.RowHeadersVisible = false;
+            this.relativePlanGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.relativePlanGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.relativePlanGrid.Size = new System.Drawing.Size(439, 175);
+            this.relativePlanGrid.TabIndex = 16;
+            this.relativePlanGrid.SelectionChanged += new System.EventHandler(this.RelativePlanGrid_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Step";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 60;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Start Time";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "End Time";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Requests";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
+            // relativePlanEditor_BTN
+            // 
+            this.relativePlanEditor_BTN.BackColor = System.Drawing.SystemColors.Window;
+            this.relativePlanEditor_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.relativePlanEditor_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.relativePlanEditor_BTN.Location = new System.Drawing.Point(16, 79);
+            this.relativePlanEditor_BTN.Name = "relativePlanEditor_BTN";
+            this.relativePlanEditor_BTN.Size = new System.Drawing.Size(176, 37);
+            this.relativePlanEditor_BTN.TabIndex = 8;
+            this.relativePlanEditor_BTN.Text = "Plan Editor";
+            this.relativePlanEditor_BTN.UseVisualStyleBackColor = false;
+            this.relativePlanEditor_BTN.Click += new System.EventHandler(this.RelativePlanEditor_BTN_Click);
+            // 
+            // statusStrip5
+            // 
+            this.statusStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel4});
+            this.statusStrip5.Location = new System.Drawing.Point(0, 614);
+            this.statusStrip5.Name = "statusStrip5";
+            this.statusStrip5.Size = new System.Drawing.Size(472, 22);
+            this.statusStrip5.TabIndex = 7;
+            this.statusStrip5.Text = "statusStrip5";
+            // 
+            // toolStripStatusLabel4
+            // 
+            this.toolStripStatusLabel4.ForeColor = System.Drawing.Color.Red;
+            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
+            this.toolStripStatusLabel4.Size = new System.Drawing.Size(0, 17);
+            this.toolStripStatusLabel4.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(0, 19);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(470, 25);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Planned Relative Testing";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // relativePlannedStop_BTN
+            // 
+            this.relativePlannedStop_BTN.BackColor = System.Drawing.Color.Gray;
+            this.relativePlannedStop_BTN.Enabled = false;
+            this.relativePlannedStop_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold);
+            this.relativePlannedStop_BTN.ForeColor = System.Drawing.Color.White;
+            this.relativePlannedStop_BTN.Location = new System.Drawing.Point(256, 307);
+            this.relativePlannedStop_BTN.Name = "relativePlannedStop_BTN";
+            this.relativePlannedStop_BTN.Size = new System.Drawing.Size(141, 46);
+            this.relativePlannedStop_BTN.TabIndex = 5;
+            this.relativePlannedStop_BTN.Text = "Stopped";
+            this.relativePlannedStop_BTN.UseVisualStyleBackColor = false;
+            this.relativePlannedStop_BTN.Click += new System.EventHandler(this.RelativePlannedStop_BTN_Click);
+            // 
+            // relativePlannedStart_BTN
+            // 
+            this.relativePlannedStart_BTN.BackColor = System.Drawing.Color.Gray;
+            this.relativePlannedStart_BTN.Enabled = false;
+            this.relativePlannedStart_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.relativePlannedStart_BTN.ForeColor = System.Drawing.Color.White;
+            this.relativePlannedStart_BTN.Location = new System.Drawing.Point(74, 307);
+            this.relativePlannedStart_BTN.Name = "relativePlannedStart_BTN";
+            this.relativePlannedStart_BTN.Size = new System.Drawing.Size(141, 46);
+            this.relativePlannedStart_BTN.TabIndex = 4;
+            this.relativePlannedStart_BTN.Text = "No plan";
+            this.relativePlannedStart_BTN.UseVisualStyleBackColor = false;
+            this.relativePlannedStart_BTN.Click += new System.EventHandler(this.RelativePlannedStart_BTN_Click);
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.panel1);
@@ -418,18 +620,18 @@ namespace HttpRequestSender.Forms
             // 
             // planned_CH
             // 
-            chartArea11.Name = "ChartArea1";
-            this.planned_CH.ChartAreas.Add(chartArea11);
-            legend9.Name = "Legend1";
-            this.planned_CH.Legends.Add(legend9);
+            chartArea15.Name = "ChartArea1";
+            this.planned_CH.ChartAreas.Add(chartArea15);
+            legend12.Name = "Legend1";
+            this.planned_CH.Legends.Add(legend12);
             this.planned_CH.Location = new System.Drawing.Point(18, 359);
             this.planned_CH.Margin = new System.Windows.Forms.Padding(2);
             this.planned_CH.Name = "planned_CH";
-            series11.ChartArea = "ChartArea1";
-            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series11.Legend = "Legend1";
-            series11.Name = "Response rate";
-            this.planned_CH.Series.Add(series11);
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series15.Legend = "Legend1";
+            series15.Name = "Response rate";
+            this.planned_CH.Series.Add(series15);
             this.planned_CH.Size = new System.Drawing.Size(437, 206);
             this.planned_CH.TabIndex = 18;
             this.planned_CH.Text = "chart2";
@@ -603,15 +805,15 @@ namespace HttpRequestSender.Forms
             // 
             // exploration_CH
             // 
-            chartArea12.Name = "ChartArea1";
-            this.exploration_CH.ChartAreas.Add(chartArea12);
+            chartArea16.Name = "ChartArea1";
+            this.exploration_CH.ChartAreas.Add(chartArea16);
             this.exploration_CH.Location = new System.Drawing.Point(17, 357);
             this.exploration_CH.Margin = new System.Windows.Forms.Padding(2);
             this.exploration_CH.Name = "exploration_CH";
-            series12.ChartArea = "ChartArea1";
-            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series12.Name = "Response rate";
-            this.exploration_CH.Series.Add(series12);
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series16.Name = "Response rate";
+            this.exploration_CH.Series.Add(series16);
             this.exploration_CH.Size = new System.Drawing.Size(437, 206);
             this.exploration_CH.TabIndex = 19;
             this.exploration_CH.Text = "chart2";
@@ -911,203 +1113,31 @@ namespace HttpRequestSender.Forms
             this.label6.TabIndex = 0;
             this.label6.Text = "Logs";
             // 
-            // tabPage5
+            // import_BTN
             // 
-            this.tabPage5.Controls.Add(this.panel5);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(476, 640);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Planned Relative";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.import_BTN.BackColor = System.Drawing.SystemColors.Window;
+            this.import_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.import_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.import_BTN.Location = new System.Drawing.Point(218, 79);
+            this.import_BTN.Name = "import_BTN";
+            this.import_BTN.Size = new System.Drawing.Size(117, 37);
+            this.import_BTN.TabIndex = 21;
+            this.import_BTN.Text = "Import";
+            this.import_BTN.UseVisualStyleBackColor = false;
+            this.import_BTN.Click += new System.EventHandler(this.import_BTN_Click);
             // 
-            // panel5
+            // export_BTN
             // 
-            this.panel5.Controls.Add(this.label12);
-            this.panel5.Controls.Add(this.relativePlannedURL_TB);
-            this.panel5.Controls.Add(this.relativePlanned_CH);
-            this.panel5.Controls.Add(this.relativePlannedReport_BTN);
-            this.panel5.Controls.Add(this.relativePlanGrid);
-            this.panel5.Controls.Add(this.relativePlanEditor_BTN);
-            this.panel5.Controls.Add(this.statusStrip5);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.relativePlannedStop_BTN);
-            this.panel5.Controls.Add(this.relativePlannedStart_BTN);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(2, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(472, 636);
-            this.panel5.TabIndex = 4;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(40, 52);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 13);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "URL:";
-            // 
-            // relativePlannedURL_TB
-            // 
-            this.relativePlannedURL_TB.Location = new System.Drawing.Point(81, 49);
-            this.relativePlannedURL_TB.Name = "relativePlannedURL_TB";
-            this.relativePlannedURL_TB.Size = new System.Drawing.Size(351, 20);
-            this.relativePlannedURL_TB.TabIndex = 19;
-            this.relativePlannedURL_TB.Text = "https://hf.mit.bme.hu/tmp/alexandra/test.php?sleep=100";
-            // 
-            // relativePlanned_CH
-            // 
-            chartArea10.Name = "ChartArea1";
-            this.relativePlanned_CH.ChartAreas.Add(chartArea10);
-            legend8.Name = "Legend1";
-            this.relativePlanned_CH.Legends.Add(legend8);
-            this.relativePlanned_CH.Location = new System.Drawing.Point(18, 359);
-            this.relativePlanned_CH.Margin = new System.Windows.Forms.Padding(2);
-            this.relativePlanned_CH.Name = "relativePlanned_CH";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series10.Legend = "Legend1";
-            series10.Name = "Response rate";
-            this.relativePlanned_CH.Series.Add(series10);
-            this.relativePlanned_CH.Size = new System.Drawing.Size(437, 206);
-            this.relativePlanned_CH.TabIndex = 18;
-            this.relativePlanned_CH.Text = "chart2";
-            // 
-            // relativePlannedReport_BTN
-            // 
-            this.relativePlannedReport_BTN.BackColor = System.Drawing.SystemColors.Window;
-            this.relativePlannedReport_BTN.Enabled = false;
-            this.relativePlannedReport_BTN.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
-            this.relativePlannedReport_BTN.ForeColor = System.Drawing.Color.Black;
-            this.relativePlannedReport_BTN.Location = new System.Drawing.Point(169, 572);
-            this.relativePlannedReport_BTN.Name = "relativePlannedReport_BTN";
-            this.relativePlannedReport_BTN.Size = new System.Drawing.Size(132, 37);
-            this.relativePlannedReport_BTN.TabIndex = 17;
-            this.relativePlannedReport_BTN.Text = "Report";
-            this.relativePlannedReport_BTN.UseVisualStyleBackColor = false;
-            this.relativePlannedReport_BTN.Click += new System.EventHandler(this.report_BTN_Click);
-            // 
-            // relativePlanGrid
-            // 
-            this.relativePlanGrid.AllowUserToAddRows = false;
-            this.relativePlanGrid.AllowUserToDeleteRows = false;
-            this.relativePlanGrid.AllowUserToResizeColumns = false;
-            this.relativePlanGrid.AllowUserToResizeRows = false;
-            this.relativePlanGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.relativePlanGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn6});
-            this.relativePlanGrid.Location = new System.Drawing.Point(17, 124);
-            this.relativePlanGrid.Name = "relativePlanGrid";
-            this.relativePlanGrid.ReadOnly = true;
-            this.relativePlanGrid.RowHeadersVisible = false;
-            this.relativePlanGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.relativePlanGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.relativePlanGrid.Size = new System.Drawing.Size(439, 175);
-            this.relativePlanGrid.TabIndex = 16;
-            this.relativePlanGrid.SelectionChanged += new System.EventHandler(this.RelativePlanGrid_SelectionChanged);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Step";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 60;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Start Time";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "End Time";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Requests";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 75;
-            // 
-            // relativePlanEditor_BTN
-            // 
-            this.relativePlanEditor_BTN.BackColor = System.Drawing.SystemColors.Window;
-            this.relativePlanEditor_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.relativePlanEditor_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.relativePlanEditor_BTN.Location = new System.Drawing.Point(147, 79);
-            this.relativePlanEditor_BTN.Name = "relativePlanEditor_BTN";
-            this.relativePlanEditor_BTN.Size = new System.Drawing.Size(176, 37);
-            this.relativePlanEditor_BTN.TabIndex = 8;
-            this.relativePlanEditor_BTN.Text = "Plan Editor";
-            this.relativePlanEditor_BTN.UseVisualStyleBackColor = false;
-            this.relativePlanEditor_BTN.Click += new System.EventHandler(this.RelativePlanEditor_BTN_Click);
-            // 
-            // statusStrip5
-            // 
-            this.statusStrip5.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel4});
-            this.statusStrip5.Location = new System.Drawing.Point(0, 614);
-            this.statusStrip5.Name = "statusStrip5";
-            this.statusStrip5.Size = new System.Drawing.Size(472, 22);
-            this.statusStrip5.TabIndex = 7;
-            this.statusStrip5.Text = "statusStrip5";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.ForeColor = System.Drawing.Color.Red;
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(0, 17);
-            this.toolStripStatusLabel4.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(0, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(470, 25);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Planned Relative Testing";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // relativePlannedStop_BTN
-            // 
-            this.relativePlannedStop_BTN.BackColor = System.Drawing.Color.Gray;
-            this.relativePlannedStop_BTN.Enabled = false;
-            this.relativePlannedStop_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold);
-            this.relativePlannedStop_BTN.ForeColor = System.Drawing.Color.White;
-            this.relativePlannedStop_BTN.Location = new System.Drawing.Point(256, 307);
-            this.relativePlannedStop_BTN.Name = "relativePlannedStop_BTN";
-            this.relativePlannedStop_BTN.Size = new System.Drawing.Size(141, 46);
-            this.relativePlannedStop_BTN.TabIndex = 5;
-            this.relativePlannedStop_BTN.Text = "Stopped";
-            this.relativePlannedStop_BTN.UseVisualStyleBackColor = false;
-            this.relativePlannedStop_BTN.Click += new System.EventHandler(this.RelativePlannedStop_BTN_Click);
-            // 
-            // relativePlannedStart_BTN
-            // 
-            this.relativePlannedStart_BTN.BackColor = System.Drawing.Color.Gray;
-            this.relativePlannedStart_BTN.Enabled = false;
-            this.relativePlannedStart_BTN.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.relativePlannedStart_BTN.ForeColor = System.Drawing.Color.White;
-            this.relativePlannedStart_BTN.Location = new System.Drawing.Point(74, 307);
-            this.relativePlannedStart_BTN.Name = "relativePlannedStart_BTN";
-            this.relativePlannedStart_BTN.Size = new System.Drawing.Size(141, 46);
-            this.relativePlannedStart_BTN.TabIndex = 4;
-            this.relativePlannedStart_BTN.Text = "No plan";
-            this.relativePlannedStart_BTN.UseVisualStyleBackColor = false;
-            this.relativePlannedStart_BTN.Click += new System.EventHandler(this.RelativePlannedStart_BTN_Click);
+            this.export_BTN.BackColor = System.Drawing.SystemColors.Window;
+            this.export_BTN.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            this.export_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.export_BTN.Location = new System.Drawing.Point(340, 79);
+            this.export_BTN.Name = "export_BTN";
+            this.export_BTN.Size = new System.Drawing.Size(117, 37);
+            this.export_BTN.TabIndex = 22;
+            this.export_BTN.Text = "Export";
+            this.export_BTN.UseVisualStyleBackColor = false;
+            this.export_BTN.Click += new System.EventHandler(this.export_BTN_Click);
             // 
             // StressTester_Form
             // 
@@ -1127,6 +1157,13 @@ namespace HttpRequestSender.Forms
             this.statusStrip1.PerformLayout();
             this.main_TC.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.relativePlanned_CH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relativePlanGrid)).EndInit();
+            this.statusStrip5.ResumeLayout(false);
+            this.statusStrip5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -1148,13 +1185,6 @@ namespace HttpRequestSender.Forms
             this.statusStrip3.ResumeLayout(false);
             this.statusStrip3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logs_DGV)).EndInit();
-            this.tabPage5.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.relativePlanned_CH)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.relativePlanGrid)).EndInit();
-            this.statusStrip5.ResumeLayout(false);
-            this.statusStrip5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1243,6 +1273,8 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button relativePlannedStop_BTN;
         private System.Windows.Forms.Button relativePlannedStart_BTN;
+        private System.Windows.Forms.Button export_BTN;
+        private System.Windows.Forms.Button import_BTN;
     }
 }
 

@@ -79,6 +79,7 @@
   <ItemGroup>
     <Compile Include="BusinessLogic\AddressExclusions.cs" />
     <Compile Include="BusinessLogic\DataType\RelativeScheduleStep.cs" />
+    <Compile Include="BusinessLogic\DataType\SaveStepData.cs" />
     <Compile Include="BusinessLogic\DataType\ScheduleStep.cs" />
     <Compile Include="BusinessLogic\DataType\SiteMetricData.cs" />
     <Compile Include="BusinessLogic\RelativeSchedule.cs" />

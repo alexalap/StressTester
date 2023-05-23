@@ -2,12 +2,14 @@
 using HttpRequestSender.BusinessLogic.DataType;
 using HttpRequestSender.ErrorHandling;
 using HttpRequestSender.Utilities;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Web.Helpers;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -232,6 +234,47 @@ namespace HttpRequestSender.Forms
             planEditor.ShowDialog();
             RefreshRelativeGrid("0");
             UpdateRelativePlannedButtons();
+        }
+
+        private void import_BTN_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Title = "Select schedule file";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            openFileDialog.Filter = "Schedule files | *.schedule";
+            openFileDialog.DefaultExt = "schedule";
+            if (openFileDialog.ShowDialog() == DialogResult.OK && File.Exists(openFileDialog.FileName))
+            {
+                List<SaveStepData> data = JsonConvert.DeserializeObject<List<SaveStepData>>(File.ReadAllText(openFileDialog.FileName));
+                relativeSchedule.Clear();
+                foreach (SaveStepData step in data)
+                {
+                    relativeSchedule.AddStep(step.Duration, step.Requests);
+                }
+                RefreshRelativeGrid("0");
+                UpdateRelativePlannedButtons();
+            }
+        }
+
+        private void export_BTN_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Save schedule file";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            saveFileDialog.Filter = "Schedule files | *.schedule";
+            saveFileDialog.DefaultExt = "schedule";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK && !File.Exists(saveFileDialog.FileName))
+            {
+                List<SaveStepData> data = new List<SaveStepData>();
+                foreach (RelativeScheduleStep step in relativeSchedule.GetSchedule())
+                {
+                    data.Add(new SaveStepData(step));
+                }
+
+                string serialized = JsonConvert.SerializeObject(data);
+
+                File.WriteAllText(saveFileDialog.FileName, serialized);
+            }
         }
 
         /// <summary>

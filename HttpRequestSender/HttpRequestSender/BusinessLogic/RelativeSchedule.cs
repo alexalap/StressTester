@@ -42,6 +42,11 @@ namespace HttpRequestSender.BusinessLogic
             return scheduleSteps.Select(x => x).ToList();
         }
 
+        /// <summary>
+        /// Adds a new step into the list of scheduled steps.
+        /// </summary>
+        /// <param name="duration">Duration of step. </param>
+        /// <param name="req">Number of requests to be sent. </param>
         public void AddStep(TimeSpan duration, int req)
         {
             scheduleSteps.Add(new RelativeScheduleStep(duration, req));
@@ -73,8 +78,6 @@ namespace HttpRequestSender.BusinessLogic
         /// Edits a scheduled step.
         /// </summary>
         /// <param name="index">Index of scheduled step to be edited.</param>
-        /// <param name="startTime">Start time of the scheduled step.</param>
-        /// <param name="endTime">End time of the scheduled step.</param>
         /// <param name="req">Number of requests to be sent.</param>
         public void EditStep(int index, TimeSpan duration, int req)
         {

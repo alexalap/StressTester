@@ -133,12 +133,12 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Starts a scheduled measurement.
+        /// Starts an absolute scheduled measurement.
         ///
         /// The planned timer keeps track of the scheduling. The timer is set for each steps duration or the time until the first ones start.
         /// After the time has passed we use a cancellation token to close the current measurement.
         /// 
-        /// We use a singular measurement for each scheduled steps. (row 155)
+        /// We use a singular measurement for each scheduled steps. (row 174)
         /// </summary>
         /// <param name="schedule">Schedule of the measurement. </param>
         private void StartPlannedMeasurement(Schedule schedule)
@@ -191,12 +191,12 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Starts a scheduled measurement.
+        /// Starts a relative scheduled measurement.
         ///
         /// The planned timer keeps track of the scheduling. The timer is set for each steps duration or the time until the first ones start.
         /// After the time has passed we use a cancellation token to close the current measurement.
         /// 
-        /// We use a singular measurement for each scheduled steps. (row 155)
+        /// We use a singular measurement for each scheduled steps. (row 221)
         /// </summary>
         /// <param name="schedule">Schedule of the measurement. </param>
         private void StartRelativePlannedMeasurement(RelativeSchedule schedule)
@@ -340,7 +340,7 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Stops the scheduled metric session.
+        /// Stops the absolute scheduled metric session.
         /// </summary>
         public void PlannedStop()
         {
@@ -349,7 +349,7 @@ namespace HttpRequestSender.BusinessLogic
         }
 
         /// <summary>
-        /// Stops the scheduled metric session.
+        /// Stops the relative scheduled metric session.
         /// </summary>
         public void RelativePlannedStop()
         {

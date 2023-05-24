@@ -1,6 +1,5 @@
 ﻿using HttpRequestSender.BusinessLogic;
 using HttpRequestSender.BusinessLogic.DataType;
-using HttpRequestSender.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -33,7 +32,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Loads the scheduler form.
+        /// Loads the relative scheduler form.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -44,7 +43,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
+        /// Refreshes the relative scheduler grid by clearing the rows and refilling them with a schedule.
         /// The selection will always be on the last row.
         /// </summary>
         private void RefreshGrid()
@@ -63,7 +62,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Changes the values of Scheduler fields based on the selection change on the grid.
+        /// Changes the values of relative Scheduler fields based on the selection change on the grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -78,7 +77,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Adds a new scheduled step and refreshes the grid.
+        /// Adds a new relative scheduled step and refreshes the grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -91,7 +90,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Edits a scheduled step and refreshes the grid.
+        /// Edits a relative scheduled step and refreshes the grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -108,7 +107,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Removed a scheduled step and refreshes the grid.
+        /// Removed a relative scheduled step and refreshes the grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -122,7 +121,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Moves up a row in the Scheduler grid.
+        /// Moves up a row in the relative Scheduler grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -136,7 +135,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Moves down a row in the Scheduler grid.
+        /// Moves down a row in the relative Scheduler grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -150,7 +149,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Closes the schedule editor window.
+        /// Closes the relative schedule editor window.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -161,7 +160,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Resets the start and finish times in the Scheduler fields.
+        /// Resets the start and finish times in the relative Scheduler fields.
         /// </summary>
         private void ResetFields()
         {

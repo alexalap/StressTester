@@ -201,7 +201,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Opens the Scheduler window.
+        /// Opens the Absolute Scheduler window.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -219,7 +219,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Opens the Scheduler window.
+        /// Opens the Relative Scheduler window.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -236,6 +236,11 @@ namespace HttpRequestSender.Forms
             UpdateRelativePlannedButtons();
         }
 
+        /// <summary>
+        /// Deserializes and imports the relative schedule from a file.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void import_BTN_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -256,6 +261,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Serializes the relative schedule into a list and saves it as a .schedule file to a given path.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void export_BTN_Click(object sender, EventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -294,7 +304,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
+        /// Refreshes the absolute scheduler grid by clearing the rows and refilling them with a schedule.
         /// Gives a status to the first scheduled step in the plan grid.
         /// </summary>
         private void RefreshGrid(string status)
@@ -312,8 +322,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Refreshes the scheduler grid by clearing the rows and refilling them with a schedule.
-        /// Gives a status to the first scheduled step in the plan grid.
+        /// Refreshes the relative scheduler grid by clearing the rows and refilling them with a schedule.
         /// </summary>
         private void RefreshRelativeGrid(string status)
         {
@@ -376,7 +385,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Starts a planned measurement.
+        /// Starts an absolute  planned measurement.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -398,7 +407,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Starts a planned measurement.
+        /// Starts a relative planned measurement.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -420,7 +429,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the statistics and UI of planned measurement.
+        /// Updates the statistics and UI of the absolute planned measurement.
         /// </summary>
         private void OnPlannedMeasurementFinish(int tick)
         {
@@ -435,7 +444,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the statistics and UI of planned measurement.
+        /// Updates the statistics and UI of the relative planned measurement.
         /// </summary>
         private void OnRelativePlannedMeasurementFinish(int tick)
         {
@@ -450,7 +459,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Stops a planned measurement.
+        /// Stops an absolute planned measurement.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -465,7 +474,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Stops a planned measurement.
+        /// Stops a relative planned measurement.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -480,7 +489,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the planned buttons according to the planned measurement states.
+        /// Updates the absolute planned buttons according to the planned measurement states.
         /// </summary>
         private void UpdatePlannedButtons()
         {
@@ -538,7 +547,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the planned buttons according to the planned measurement states.
+        /// Updates the relative planned buttons according to the planned measurement states.
         /// </summary>
         private void UpdateRelativePlannedButtons()
         {
@@ -596,7 +605,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the statistics of planned measurement.
+        /// Updates the statistics of the absolute planned measurement.
         /// </summary>
         private void PlannedStatisticsUpdate(int tick)
         {
@@ -622,7 +631,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the statistics of planned measurement.
+        /// Updates the statistics of the relative planned measurement.
         /// </summary>
         private void RelativePlannedStatisticsUpdate(int tick)
         {
@@ -648,7 +657,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the status of the schedule.
+        /// Updates the status of the absolute schedule.
         /// </summary>
         private void PlannedStatusUpdate(int tick)
         {
@@ -661,7 +670,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Updates the status of the schedule.
+        /// Updates the status of the relative schedule.
         /// </summary>
         private void RelativePlannedStatusUpdate(int tick)
         {
@@ -730,6 +739,11 @@ namespace HttpRequestSender.Forms
             }
         }
 
+        /// <summary>
+        /// Inserts a gap into the planned chart when the requests are on-hold.
+        /// </summary>
+        /// <param name="tick"></param>
+        /// <param name="pointList"></param>
         private static void InsertGapIfNeeded(int tick, DataPointCollection pointList)
         {
             if (pointList != null && pointList.Count > 0)
@@ -815,7 +829,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Clears the selection in the plan grid.
+        /// Clears the selection in the absolute plan grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -825,7 +839,7 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Clears the selection in the plan grid.
+        /// Clears the selection in the relative plan grid.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

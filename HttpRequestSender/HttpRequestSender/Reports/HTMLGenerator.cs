@@ -256,7 +256,7 @@ namespace HttpRequestSender.Reports
                 }
                 else
                 {
-                    res += 0 + (i != graphData.Count - 1 ? "," : "");
+                    res += " " + (i != graphData.Count - 1 ? "," : "");
                 }
             }
             return res;
@@ -278,7 +278,7 @@ namespace HttpRequestSender.Reports
                 }
                 else
                 {
-                    res += 0 + (i != graphData.Count - 1 ? "," : "");
+                    res += " " + (i != graphData.Count - 1 ? "," : "");
                 }
             }
             return res;

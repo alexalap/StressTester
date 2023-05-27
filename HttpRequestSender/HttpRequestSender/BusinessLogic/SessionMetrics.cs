@@ -178,5 +178,10 @@ namespace HttpRequestSender.BusinessLogic
             }
             ReportGenerator.Generate(selectedPath);
         }
+
+        public bool IsEmpty()
+        {
+            return siteMetrics.Count == 0;
+        }
     }
 }

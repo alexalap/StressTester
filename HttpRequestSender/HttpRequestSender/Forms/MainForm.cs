@@ -290,6 +290,7 @@ namespace HttpRequestSender.Forms
         /// <param name="e"></param>
         private async void explorer_BTN_Click(object sender, EventArgs e)
         {
+            session = new SessionMetrics();
             exloration_Grid.Rows.Clear();
             siteStructureData?.Clear();
             UpdateExplorationButtons();
@@ -647,7 +648,6 @@ namespace HttpRequestSender.Forms
             explorationState = States.Active;
             UpdateExplorationButtons();
             status_L.Text = "";
-            session = new SessionMetrics();
             foreach (string address in siteStructureData.Keys)
             {
                 SiteRequester siteRequester = new SiteRequester(address, session, 1);
@@ -772,7 +772,7 @@ namespace HttpRequestSender.Forms
                     URLStop_BTN.Text = "Stopped";
                     URLStop_BTN.Enabled = false;
 
-                    if (session != null)
+                    if (session != null && !session.IsEmpty())
                     {
                         URLReport_BTN.Enabled = true;
                     }

@@ -33,18 +33,20 @@ namespace HttpRequestSender.Forms
             this.requests_NUB = new System.Windows.Forms.NumericUpDown();
             this.down_BTN = new System.Windows.Forms.Button();
             this.up_BTN = new System.Windows.Forms.Button();
+            this.duration_TP = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.planGrid = new System.Windows.Forms.DataGridView();
+            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planEditorOK_BTN = new System.Windows.Forms.Button();
             this.remove_BTN = new System.Windows.Forms.Button();
             this.edit_BTN = new System.Windows.Forms.Button();
             this.add_BTN = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.duration_TP = new System.Windows.Forms.DateTimePicker();
-            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.export_BTN = new System.Windows.Forms.Button();
+            this.import_BTN = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.requests_NUB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planGrid)).BeginInit();
@@ -52,6 +54,8 @@ namespace HttpRequestSender.Forms
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.import_BTN);
+            this.panel1.Controls.Add(this.export_BTN);
             this.panel1.Controls.Add(this.requests_NUB);
             this.panel1.Controls.Add(this.down_BTN);
             this.panel1.Controls.Add(this.up_BTN);
@@ -114,6 +118,25 @@ namespace HttpRequestSender.Forms
             this.up_BTN.UseVisualStyleBackColor = false;
             this.up_BTN.Click += new System.EventHandler(this.up_BTN_Click);
             // 
+            // duration_TP
+            // 
+            this.duration_TP.CustomFormat = "HH:mm:ss";
+            this.duration_TP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.duration_TP.Location = new System.Drawing.Point(79, 89);
+            this.duration_TP.Name = "duration_TP";
+            this.duration_TP.ShowUpDown = true;
+            this.duration_TP.Size = new System.Drawing.Size(160, 20);
+            this.duration_TP.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(23, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Duration";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -142,6 +165,27 @@ namespace HttpRequestSender.Forms
             this.planGrid.Size = new System.Drawing.Size(439, 205);
             this.planGrid.TabIndex = 15;
             this.planGrid.SelectionChanged += new System.EventHandler(this.planGrid_SelectionChanged);
+            // 
+            // stepColumn
+            // 
+            this.stepColumn.HeaderText = "Step";
+            this.stepColumn.Name = "stepColumn";
+            this.stepColumn.ReadOnly = true;
+            this.stepColumn.Width = 40;
+            // 
+            // endTimeColumn
+            // 
+            this.endTimeColumn.HeaderText = "Duration";
+            this.endTimeColumn.Name = "endTimeColumn";
+            this.endTimeColumn.ReadOnly = true;
+            this.endTimeColumn.Width = 190;
+            // 
+            // requestsColumn
+            // 
+            this.requestsColumn.HeaderText = "Requests";
+            this.requestsColumn.Name = "requestsColumn";
+            this.requestsColumn.ReadOnly = true;
+            this.requestsColumn.Width = 185;
             // 
             // planEditorOK_BTN
             // 
@@ -205,45 +249,31 @@ namespace HttpRequestSender.Forms
             this.label4.TabIndex = 1;
             this.label4.Text = "Scheduler";
             // 
-            // label2
+            // export_BTN
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Duration";
+            this.export_BTN.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.export_BTN.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.export_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.export_BTN.Location = new System.Drawing.Point(358, 86);
+            this.export_BTN.Name = "export_BTN";
+            this.export_BTN.Size = new System.Drawing.Size(104, 29);
+            this.export_BTN.TabIndex = 23;
+            this.export_BTN.Text = "Export";
+            this.export_BTN.UseVisualStyleBackColor = false;
+            this.export_BTN.Click += new System.EventHandler(this.Export_BTN_Click);
             // 
-            // duration_TP
+            // import_BTN
             // 
-            this.duration_TP.CustomFormat = "HH:mm:ss";
-            this.duration_TP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.duration_TP.Location = new System.Drawing.Point(79, 89);
-            this.duration_TP.Name = "duration_TP";
-            this.duration_TP.ShowUpDown = true;
-            this.duration_TP.Size = new System.Drawing.Size(160, 20);
-            this.duration_TP.TabIndex = 19;
-            // 
-            // stepColumn
-            // 
-            this.stepColumn.HeaderText = "Step";
-            this.stepColumn.Name = "stepColumn";
-            this.stepColumn.ReadOnly = true;
-            this.stepColumn.Width = 40;
-            // 
-            // endTimeColumn
-            // 
-            this.endTimeColumn.HeaderText = "Duration";
-            this.endTimeColumn.Name = "endTimeColumn";
-            this.endTimeColumn.ReadOnly = true;
-            this.endTimeColumn.Width = 190;
-            // 
-            // requestsColumn
-            // 
-            this.requestsColumn.HeaderText = "Requests";
-            this.requestsColumn.Name = "requestsColumn";
-            this.requestsColumn.ReadOnly = true;
-            this.requestsColumn.Width = 185;
+            this.import_BTN.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.import_BTN.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.import_BTN.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.import_BTN.Location = new System.Drawing.Point(358, 51);
+            this.import_BTN.Name = "import_BTN";
+            this.import_BTN.Size = new System.Drawing.Size(104, 29);
+            this.import_BTN.TabIndex = 24;
+            this.import_BTN.Text = "Import";
+            this.import_BTN.UseVisualStyleBackColor = false;
+            this.import_BTN.Click += new System.EventHandler(this.Import_BTN_Click);
             // 
             // Relative_Scheduler_Form
             // 
@@ -281,5 +311,7 @@ namespace HttpRequestSender.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn stepColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn endTimeColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn requestsColumn;
+        private System.Windows.Forms.Button import_BTN;
+        private System.Windows.Forms.Button export_BTN;
     }
 }

@@ -30,6 +30,8 @@ namespace HttpRequestSender.Forms
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.endTimer_TP = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.requests_NUB = new System.Windows.Forms.NumericUpDown();
             this.down_BTN = new System.Windows.Forms.Button();
             this.up_BTN = new System.Windows.Forms.Button();
@@ -37,17 +39,15 @@ namespace HttpRequestSender.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.planGrid = new System.Windows.Forms.DataGridView();
+            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planEditorOK_BTN = new System.Windows.Forms.Button();
             this.remove_BTN = new System.Windows.Forms.Button();
             this.edit_BTN = new System.Windows.Forms.Button();
             this.add_BTN = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.stepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endTimeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.requestsColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.endTimer_TP = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.requests_NUB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planGrid)).BeginInit();
@@ -75,6 +75,24 @@ namespace HttpRequestSender.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(484, 420);
             this.panel1.TabIndex = 0;
+            // 
+            // endTimer_TP
+            // 
+            this.endTimer_TP.CustomFormat = "yyyy.MM.dd. HH:mm:ss";
+            this.endTimer_TP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.endTimer_TP.Location = new System.Drawing.Point(79, 118);
+            this.endTimer_TP.Name = "endTimer_TP";
+            this.endTimer_TP.Size = new System.Drawing.Size(160, 20);
+            this.endTimer_TP.TabIndex = 24;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(23, 121);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "End Time";
             // 
             // requests_NUB
             // 
@@ -167,6 +185,34 @@ namespace HttpRequestSender.Forms
             this.planGrid.TabIndex = 15;
             this.planGrid.SelectionChanged += new System.EventHandler(this.planGrid_SelectionChanged);
             // 
+            // stepColumn
+            // 
+            this.stepColumn.HeaderText = "Step";
+            this.stepColumn.Name = "stepColumn";
+            this.stepColumn.ReadOnly = true;
+            this.stepColumn.Width = 40;
+            // 
+            // startTimeColumn
+            // 
+            this.startTimeColumn.HeaderText = "Start Time";
+            this.startTimeColumn.Name = "startTimeColumn";
+            this.startTimeColumn.ReadOnly = true;
+            this.startTimeColumn.Width = 150;
+            // 
+            // endTimeColumn
+            // 
+            this.endTimeColumn.HeaderText = "End Time";
+            this.endTimeColumn.Name = "endTimeColumn";
+            this.endTimeColumn.ReadOnly = true;
+            this.endTimeColumn.Width = 150;
+            // 
+            // requestsColumn
+            // 
+            this.requestsColumn.HeaderText = "Requests";
+            this.requestsColumn.Name = "requestsColumn";
+            this.requestsColumn.ReadOnly = true;
+            this.requestsColumn.Width = 75;
+            // 
             // planEditorOK_BTN
             // 
             this.planEditorOK_BTN.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -228,52 +274,6 @@ namespace HttpRequestSender.Forms
             this.label4.Size = new System.Drawing.Size(118, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Scheduler";
-            // 
-            // stepColumn
-            // 
-            this.stepColumn.HeaderText = "Step";
-            this.stepColumn.Name = "stepColumn";
-            this.stepColumn.ReadOnly = true;
-            this.stepColumn.Width = 40;
-            // 
-            // startTimeColumn
-            // 
-            this.startTimeColumn.HeaderText = "Start Time";
-            this.startTimeColumn.Name = "startTimeColumn";
-            this.startTimeColumn.ReadOnly = true;
-            this.startTimeColumn.Width = 150;
-            // 
-            // endTimeColumn
-            // 
-            this.endTimeColumn.HeaderText = "End Time";
-            this.endTimeColumn.Name = "endTimeColumn";
-            this.endTimeColumn.ReadOnly = true;
-            this.endTimeColumn.Width = 150;
-            // 
-            // requestsColumn
-            // 
-            this.requestsColumn.HeaderText = "Requests";
-            this.requestsColumn.Name = "requestsColumn";
-            this.requestsColumn.ReadOnly = true;
-            this.requestsColumn.Width = 75;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "End Time";
-            // 
-            // endTimer_TP
-            // 
-            this.endTimer_TP.CustomFormat = "yyyy.MM.dd. HH:mm:ss";
-            this.endTimer_TP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.endTimer_TP.Location = new System.Drawing.Point(79, 118);
-            this.endTimer_TP.Name = "endTimer_TP";
-            this.endTimer_TP.Size = new System.Drawing.Size(160, 20);
-            this.endTimer_TP.TabIndex = 24;
             // 
             // Scheduler_Form
             // 

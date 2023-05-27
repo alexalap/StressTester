@@ -2,14 +2,12 @@
 using HttpRequestSender.BusinessLogic.DataType;
 using HttpRequestSender.ErrorHandling;
 using HttpRequestSender.Utilities;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Web.Helpers;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -237,57 +235,6 @@ namespace HttpRequestSender.Forms
         }
 
         /// <summary>
-        /// Deserializes and imports the relative schedule from a file.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void import_BTN_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Select schedule file";
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            openFileDialog.Filter = "Schedule files | *.schedule";
-            openFileDialog.DefaultExt = "schedule";
-            if (openFileDialog.ShowDialog() == DialogResult.OK && File.Exists(openFileDialog.FileName))
-            {
-                List<SaveStepData> data = JsonConvert.DeserializeObject<List<SaveStepData>>(File.ReadAllText(openFileDialog.FileName));
-                relativeSchedule.Clear();
-                foreach (SaveStepData step in data)
-                {
-                    relativeSchedule.AddStep(step.Duration, step.Requests);
-                }
-                RefreshRelativeGrid("0");
-                UpdateRelativePlannedButtons();
-            }
-        }
-
-        /// <summary>
-        /// Serializes the relative schedule into a list and saves it as a .schedule file to a given path.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void export_BTN_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "Save schedule file";
-            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            saveFileDialog.Filter = "Schedule files | *.schedule";
-            saveFileDialog.DefaultExt = "schedule";
-            if (saveFileDialog.ShowDialog() == DialogResult.OK && !File.Exists(saveFileDialog.FileName))
-            {
-                List<SaveStepData> data = new List<SaveStepData>();
-                foreach (RelativeScheduleStep step in relativeSchedule.GetSchedule())
-                {
-                    data.Add(new SaveStepData(step));
-                }
-
-                string serialized = JsonConvert.SerializeObject(data);
-
-                File.WriteAllText(saveFileDialog.FileName, serialized);
-            }
-        }
-
-        /// <summary>
         /// Creates a report of the measurement.
         /// </summary>
         /// <param name="sender"></param>
@@ -327,11 +274,13 @@ namespace HttpRequestSender.Forms
         private void RefreshRelativeGrid(string status)
         {
             relativePlanGrid.Rows.Clear();
-            List<RelativeScheduleStep> scheduler = relativeSchedule.GetSchedule();
+            IReadOnlyList<RelativeScheduleStep> scheduler = relativeSchedule.GetSchedule();
+            int currentIndex = relativeSchedule.GetCurrentStepIndex();
             for (int i = 0; i < scheduler.Count; i++)
             {
-                relativePlanGrid.Rows.Add(i == 0 ? status : i.ToString(), scheduler[i].Duration, scheduler[i].Requests);
+                relativePlanGrid.Rows.Add(i == currentIndex ? status : i.ToString(), scheduler[i].Duration, scheduler[i].Requests);
             }
+            Debug.WriteLine(status);
         }
 
         /// <summary>
@@ -424,6 +373,7 @@ namespace HttpRequestSender.Forms
             siteRequester.StartMeasurement(0, null, relativeSchedule, RequesterMode.PlannedRelative);
             siteRequester.Tick += RelativePlannedStatisticsUpdate;
             siteRequester.PlanTick += RelativePlannedStatusUpdate;
+            siteRequester.OnPlanFinish += (i) => relativeSchedule.Reset();
             siteRequester.OnPlanFinish += OnRelativePlannedMeasurementFinish;
             RefreshRelativeGrid(planStatus);
         }
@@ -437,6 +387,7 @@ namespace HttpRequestSender.Forms
             MethodInvoker updateVisuals = delegate
             {
                 plannedState = States.Inactive;
+                planStatus = "Stopped";
                 UpdatePlannedButtons();
                 RefreshGrid("0");
             };
@@ -452,6 +403,7 @@ namespace HttpRequestSender.Forms
             MethodInvoker updateVisuals = delegate
             {
                 plannedState = States.Inactive;
+                planStatus = "Stopped";
                 UpdateRelativePlannedButtons();
                 RefreshRelativeGrid("0");
             };

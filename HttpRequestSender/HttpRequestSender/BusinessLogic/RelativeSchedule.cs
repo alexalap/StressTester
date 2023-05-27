@@ -9,7 +9,9 @@ namespace HttpRequestSender.BusinessLogic
     public class RelativeSchedule
     {
         private List<RelativeScheduleStep> scheduleSteps = new List<RelativeScheduleStep>();
-        private bool isStarted = false;
+        private int currentStep = -1;
+
+        private bool IsStarted => currentStep > -1;
 
         /// <summary>
         /// Gets the current scheduled metric step.
@@ -17,7 +19,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <returns>Returns the current scheduled metric step if it is started, otherwise it returns null. </returns>
         public RelativeScheduleStep CurrentStep()
         {
-            return isStarted ? scheduleSteps.FirstOrDefault() : null;
+            return IsStarted ? scheduleSteps[currentStep] : null;
         }
 
         /// <summary>
@@ -30,16 +32,16 @@ namespace HttpRequestSender.BusinessLogic
         /// <returns>Returns the 1st step if the schedule hasn't started yet or returns the next step or null.</returns>
         public RelativeScheduleStep NextStep()
         {
-            return !isStarted && scheduleSteps.Count > 0 ? scheduleSteps[0] : scheduleSteps.Count > 1 ? scheduleSteps[1] : null;
+            return scheduleSteps.Count > currentStep + 1 ? scheduleSteps[currentStep + 1] : null;
         }
 
         /// <summary>
         /// Gets the metric schedule.
         /// </summary>
         /// <returns>Returns a list of the scheduled metric steps.</returns>
-        public List<RelativeScheduleStep> GetSchedule()
+        public IReadOnlyList<RelativeScheduleStep> GetSchedule()
         {
-            return scheduleSteps.Select(x => x).ToList();
+            return scheduleSteps;
         }
 
         /// <summary>
@@ -91,14 +93,7 @@ namespace HttpRequestSender.BusinessLogic
         /// </summary>
         public void Step()
         {
-            if (scheduleSteps.Count > 0 && isStarted == false)
-            {
-                isStarted = true;
-            }
-            else if (scheduleSteps.Count > 0)
-            {
-                scheduleSteps.RemoveAt(0);
-            }
+            currentStep += currentStep + 1 == scheduleSteps.Count ? 0 : 1;
         }
 
         /// <summary>
@@ -106,8 +101,18 @@ namespace HttpRequestSender.BusinessLogic
         /// </summary>
         public void Clear()
         {
+            Reset();
             scheduleSteps.Clear();
-            isStarted = false;
+        }
+
+        public void Reset()
+        {
+            currentStep = -1;
+        }
+
+        internal int GetCurrentStepIndex()
+        {
+            return currentStep;
         }
     }
 }

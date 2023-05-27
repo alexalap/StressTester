@@ -1086,6 +1086,7 @@ namespace HttpRequestSender.Forms
             // 
             this.logs_DGV.AllowUserToAddRows = false;
             this.logs_DGV.AllowUserToDeleteRows = false;
+            this.logs_DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.logs_DGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.logs_DGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4,
@@ -1107,7 +1108,7 @@ namespace HttpRequestSender.Forms
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn4.Width = 120;
+            this.dataGridViewTextBoxColumn4.Width = 64;
             // 
             // Priority
             // 
@@ -1117,7 +1118,7 @@ namespace HttpRequestSender.Forms
             this.Priority.ReadOnly = true;
             this.Priority.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Priority.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Priority.Width = 75;
+            this.Priority.Width = 44;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -1127,7 +1128,7 @@ namespace HttpRequestSender.Forms
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewTextBoxColumn5.Width = 217;
+            this.dataGridViewTextBoxColumn5.Width = 56;
             // 
             // label6
             // 

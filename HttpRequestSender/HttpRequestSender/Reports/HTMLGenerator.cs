@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace HttpRequestSender.Reports
 {
@@ -274,7 +275,7 @@ namespace HttpRequestSender.Reports
             {
                 if (graphData[i].ContainsKey("OK"))
                 {
-                    res += Math.Round(1000.0 / graphData[i]["OK"].Item2, 2).ToString() + (i != graphData.Count - 1 ? "," : "");
+                    res += Math.Round(1000.0 / graphData[i]["OK"].Item2, 2).ToString(CultureInfo.InvariantCulture) + (i != graphData.Count - 1 ? "," : "");
                 }
                 else
                 {

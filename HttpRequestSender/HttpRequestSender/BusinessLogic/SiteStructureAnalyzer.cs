@@ -14,7 +14,7 @@ namespace HttpRequestSender.BusinessLogic
 
         public SiteStructureAnalyzer(string address)
         {
-            this.address = address;
+            this.address = address.TrimEnd('/');
         }
 
         /// <summary>

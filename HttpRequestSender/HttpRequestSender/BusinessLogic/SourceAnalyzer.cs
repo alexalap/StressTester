@@ -38,7 +38,7 @@ namespace HttpRequestSender.BusinessLogic
                 {
                     if ((address[0] == '/' || address[0] == '#') && !rootAddress.EndsWith(address))
                     {
-                        address = rootAddress + (address.StartsWith("/") ? address.Remove(0, 1) : address);
+                        address = rootAddress + '/' + (address.StartsWith("/") ? address.Remove(0, 1) : address);
                     }
                     if (result.ContainsKey(address))
                     {

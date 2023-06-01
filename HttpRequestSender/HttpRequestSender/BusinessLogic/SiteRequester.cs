@@ -66,11 +66,11 @@ namespace HttpRequestSender.BusinessLogic
                 {
                     sessionMetrics.AddResponse(address, response.StatusCode.ToString(), stopper.ElapsedMilliseconds);
                 }
-                Logger.Log(LogPriority.INFO, "Response received.\n" + stopper.ElapsedMilliseconds);
+                //Logger.Log(LogPriority.INFO, "Response received.\n" + stopper.ElapsedMilliseconds);
             }
             catch (TaskCanceledException)
             {
-                Logger.Log(LogPriority.WARNING, "Request has been cancelled due to timeout.");
+                //Logger.Log(LogPriority.WARNING, "Request has been cancelled due to timeout.");
             }
             catch (Exception e)
             {

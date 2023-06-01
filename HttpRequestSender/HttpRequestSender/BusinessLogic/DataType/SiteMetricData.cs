@@ -284,6 +284,7 @@ namespace HttpRequestSender.BusinessLogic.DataType
         {
             if (!closed)
             {
+                lastUpdateTime = DateTime.Now;
                 closed = true;
                 timer.Stop();
             }

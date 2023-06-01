@@ -55,13 +55,10 @@ namespace HttpRequestSender.Reports
         /// <param name="selectedPath"> Path to the saving location. </param>
         public static void Generate(string selectedPath)
         {
-            for (int i = 0; i < reports.Keys.Count; i++)
-            {
-                HTMLGenerator hTMLGenerator = new HTMLGenerator(reports.Values.ToList());
-                string report = hTMLGenerator.Generate();
-                // Combines the path to the saving location with the current date time and the file format.
-                IOHandler.WriteToFile(Path.Combine(selectedPath, DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss") + ".html"), report);
-            }
+            HTMLGenerator hTMLGenerator = new HTMLGenerator(reports.Values.ToList());
+            string report = hTMLGenerator.Generate();
+            // Combines the path to the saving location with the current date time and the file format.
+            IOHandler.WriteToFile(Path.Combine(selectedPath, DateTime.Now.ToString("yyyy_MM_dd_hh_mm_ss") + ".html"), report);
             reports.Clear();
         }
     }

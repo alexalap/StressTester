@@ -40,7 +40,7 @@ namespace HttpRequestSender.BusinessLogic
         /// <param name="endResult"> Result list of the addresses and the number of times are linked. </param>
         private async Task AnalyzeSite(List<string> checkList, string rootAddress, string address, bool recursive, Dictionary<string, int> endResult)
         {
-            checkList.Add(address);
+            checkList.Add(address + '/');
             string content = await GetSource(address);
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(content);

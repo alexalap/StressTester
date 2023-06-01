@@ -651,7 +651,7 @@ namespace HttpRequestSender.Forms
             foreach (string address in siteStructureData.Keys)
             {
                 SiteRequester siteRequester = new SiteRequester(address, session, 1);
-                siteRequester.StartMeasurement((int)explorationRequest_NUD.Value * siteStructureData[address].Item2, null, null, RequesterMode.Manual);
+                siteRequester.StartMeasurement((int)explorationRequest_NUD.Value * siteStructureData[address].Item2, null, null, RequesterMode.Exploration);
                 siteRequester.AddressedTick += ExplorationStatisticsUpdate;
                 siteRequesters.Add(siteRequester);
             }

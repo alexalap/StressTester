@@ -14,7 +14,8 @@ namespace HttpRequestSender.BusinessLogic
     {
         Manual,
         PlannedAbsolute,
-        PlannedRelative
+        PlannedRelative,
+        Exploration
     }
 
     class SiteRequester
@@ -92,6 +93,9 @@ namespace HttpRequestSender.BusinessLogic
                 case RequesterMode.Manual:
                     StartSingularMeasurement(numberOfRequestsPerSec);
                     break;
+                case RequesterMode.Exploration:
+                    StartSingularMeasurement(numberOfRequestsPerSec, "URL Exploration");
+                    break;
                 case RequesterMode.PlannedAbsolute:
                     plannedCancellation.Token.Register(() => TimeOut());
                     StartPlannedMeasurement(schedule);
@@ -108,9 +112,9 @@ namespace HttpRequestSender.BusinessLogic
         /// </summary>
         /// <param name="numberOfRequestsPerSec">Number of requests per second. </param>
         /// <param name="prefix">Prefix of the title for the measurement. </param>
-        private void StartSingularMeasurement(int numberOfRequestsPerSec, string prefix = "Manual ")
+        private void StartSingularMeasurement(int numberOfRequestsPerSec, string prefix = "Manual")
         {
-            sessionMetrics.StartMetric(address, prefix + DateTime.Now.ToString("yyyy.MM.dd. hh:mm:ss.ff"));
+            sessionMetrics.StartMetric(address, prefix + " " + DateTime.Now.ToString("yyyy.MM.dd. hh:mm:ss.ff"));
             this.numberOfRequestsPerSec = numberOfRequestsPerSec;
             timer = new System.Timers.Timer();
             timer.Interval = 1000;
@@ -171,7 +175,7 @@ namespace HttpRequestSender.BusinessLogic
                         tickCount += timeSinceLastTick;
                         timeSinceLastTick = 0;
                         plannedTimer.Interval = (schedule.CurrentStep().EndTime - currentTime).TotalMilliseconds;
-                        StartSingularMeasurement(schedule.CurrentStep().Requests);
+                        StartSingularMeasurement(schedule.CurrentStep().Requests, "Planned - Absolute");
                         isMeasuring = true;
                         Status = "Running";
                     }
@@ -218,7 +222,7 @@ namespace HttpRequestSender.BusinessLogic
                 {
                     schedule.Step();
                     plannedTimer.Interval = schedule.CurrentStep().Duration.TotalMilliseconds;
-                    StartSingularMeasurement(schedule.CurrentStep().Requests);
+                    StartSingularMeasurement(schedule.CurrentStep().Requests, "Planned - Relative");
                     isMeasuring = true;
                     Status = "Running";
                 }
@@ -235,7 +239,7 @@ namespace HttpRequestSender.BusinessLogic
             });
             schedule.Step();
             plannedTimer.Interval = schedule.CurrentStep().Duration.TotalMilliseconds;
-            StartSingularMeasurement(schedule.CurrentStep().Requests);
+            StartSingularMeasurement(schedule.CurrentStep().Requests, "Planned - Relative");
             isMeasuring = true;
             Status = "Running";
             plannedTimer.Start();

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d81975ffb462e78b79824fa5d10dfe2c" kind="dir">
+    <compoundname>HttpRequestSender</compoundname>
+    <innerdir refid="dir_5d2048bb7e3b1ecb208cd34ffd07aafa">HttpRequestSender/HttpRequestSender</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/"/>
+  </compounddef>
+</doxygen>

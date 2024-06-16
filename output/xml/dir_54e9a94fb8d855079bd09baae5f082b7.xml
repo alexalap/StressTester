@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_54e9a94fb8d855079bd09baae5f082b7" kind="dir">
+    <compoundname>HttpRequestSender/HttpRequestSender/Reports</compoundname>
+    <innerfile refid="_h_t_m_l_generator_8cs">HTMLGenerator.cs</innerfile>
+    <innerfile refid="_report_8cs">Report.cs</innerfile>
+    <innerfile refid="_report_generator_8cs">ReportGenerator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/Reports/"/>
+  </compounddef>
+</doxygen>

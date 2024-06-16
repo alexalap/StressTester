@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_http_request_sender_1_1_error_handling" kind="namespace" language="C#">
+    <compoundname>HttpRequestSender::ErrorHandling</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception" prot="public">HttpRequestSender::ErrorHandling::InvalidMethodCallException</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_error_handling_1_1_text_box_validator" prot="public">HttpRequestSender::ErrorHandling::TextBoxValidator</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/IncorrectMetricCallException.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

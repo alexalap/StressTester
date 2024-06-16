@@ -1,0 +1,260 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer" kind="class" language="C#" prot="package">
+    <compoundname>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a6cb44f5e45ba483271443632a1229188" prot="private" static="no" mutable="no">
+        <type>HttpClient</type>
+        <definition>HttpClient HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.client</qualifiedname>
+        <initializer>= new HttpClient()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="12" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1acae07525ad9d7f87101c29bab78798b7" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="13" column="24" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a5d747ed881461c0425c95bc54872512a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.SiteStructureAnalyzer</definition>
+        <argsstring>(string address)</argsstring>
+        <name>SiteStructureAnalyzer</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.SiteStructureAnalyzer</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="15" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1ac96c444259bed539c4765d7c0f85c053" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; Dictionary&lt; string, int &gt; &gt;</type>
+        <definition>async Task&lt; Dictionary&lt; string, int &gt; &gt; HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.Analyze</definition>
+        <argsstring>(bool recursive)</argsstring>
+        <name>Analyze</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.Analyze</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+        </param>
+        <briefdescription>
+<para>Analyzes a site&apos;s HTML document. If the analyzing is set to be recursive, it also analyzes the side addresses of the root address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>recursive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checks if the analyzation should be recursive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the result list of the addresses and the number of times are linked. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="25" column="27" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="25" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1aabf4356a6272ff8cc7f3d23f487f3645" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.AnalyzeSite</definition>
+        <argsstring>(List&lt; string &gt; checkList, string rootAddress, string address, bool recursive, Dictionary&lt; string, int &gt; endResult)</argsstring>
+        <name>AnalyzeSite</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.AnalyzeSite</qualifiedname>
+        <param>
+          <type>List&lt; string &gt;</type>
+          <declname>checkList</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>rootAddress</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, int &gt;</type>
+          <declname>endResult</declname>
+        </param>
+        <briefdescription>
+<para>Analyzes a site&apos;s HTML document. If the analyzing is set to be recursive, it also analyzes the side addresses of the root address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>checkList</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of already checked addresses to avoid rechecking the same addresses twice. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rootAddress</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Main website&apos;s address.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Website&apos;s address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recursive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Checks if the analyzation should be recursive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endResult</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Result list of the addresses and the number of times are linked. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="41" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="41" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1ac0bac7dabe71ea340d93d1a64ebf831b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; string &gt;</type>
+        <definition>async Task&lt; string &gt; HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.GetSource</definition>
+        <argsstring>(string address)</argsstring>
+        <name>GetSource</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.GetSource</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Gets the source of the site. (HTML and JavaScript, but only the HTML will be processed.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Website&apos;s address. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Content of the site. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="89" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="89" bodyend="104"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a6a860cb4c00cc7b8de15f76053dbed5f" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.MergeList</definition>
+        <argsstring>(Dictionary&lt; string, int &gt; result, Dictionary&lt; string, int &gt; partResult)</argsstring>
+        <name>MergeList</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer.MergeList</qualifiedname>
+        <param>
+          <type>Dictionary&lt; string, int &gt;</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, int &gt;</type>
+          <declname>partResult</declname>
+        </param>
+        <briefdescription>
+<para>Merges two lists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Result list. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>partResult</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Part result list. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="69" column="29" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="69" bodyend="82"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.SiteStructureAnalyzer</label>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" line="10" column="13" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteStructureAnalyzer.cs" bodystart="11" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1acae07525ad9d7f87101c29bab78798b7" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>address</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1ac96c444259bed539c4765d7c0f85c053" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>Analyze</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1aabf4356a6272ff8cc7f3d23f487f3645" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>AnalyzeSite</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a6cb44f5e45ba483271443632a1229188" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>client</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1ac0bac7dabe71ea340d93d1a64ebf831b" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>GetSource</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a6a860cb4c00cc7b8de15f76053dbed5f" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>MergeList</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a5d747ed881461c0425c95bc54872512a" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</scope><name>SiteStructureAnalyzer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

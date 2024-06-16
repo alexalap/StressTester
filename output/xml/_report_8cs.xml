@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_report_8cs" kind="file" language="C#">
+    <compoundname>Report.cs</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_reports_1_1_report" prot="public">HttpRequestSender::Reports::Report</innerclass>
+    <innernamespace refid="namespace_http_request_sender">HttpRequestSender</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_reports">HttpRequestSender::Reports</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">System.Collections.Generic;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_http_request_sender_1_1_reports" kindref="compound">HttpRequestSender.Reports</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9" refid="class_http_request_sender_1_1_reports_1_1_report" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_http_request_sender_1_1_reports_1_1_report" kindref="compound">Report</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="class_http_request_sender_1_1_reports_1_1_report_1a44c052dffcb9e107c933b2576689367d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_http_request_sender_1_1_reports_1_1_report_1a44c052dffcb9e107c933b2576689367d" kindref="member">Title</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="18" refid="class_http_request_sender_1_1_reports_1_1_report_1a7346e3a47d1bd9eab5deec944c97712e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_http_request_sender_1_1_reports_1_1_report_1a7346e3a47d1bd9eab5deec944c97712e" kindref="member">Address</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="22" refid="class_http_request_sender_1_1_reports_1_1_report_1a2f6fe5d90c99efcffe8608c429d251a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>DateTime<sp/><ref refid="class_http_request_sender_1_1_reports_1_1_report_1a2f6fe5d90c99efcffe8608c429d251a6" kindref="member">Start</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="26" refid="class_http_request_sender_1_1_reports_1_1_report_1aeefb6c407f7dcebd7527f9c5e7076050" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>DateTime<sp/><ref refid="class_http_request_sender_1_1_reports_1_1_report_1aeefb6c407f7dcebd7527f9c5e7076050" kindref="member">End</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_http_request_sender_1_1_reports_1_1_report_1aa66ca64c4d0888fd92434314d2c7eb72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>List&lt;Dictionary&lt;string,<sp/>(int,<sp/>double)&gt;&gt;<sp/><ref refid="class_http_request_sender_1_1_reports_1_1_report_1aa66ca64c4d0888fd92434314d2c7eb72" kindref="member">GraphData</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="35" refid="class_http_request_sender_1_1_reports_1_1_report_1ac587f711ae485642c73a71320a4dbae5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Dictionary&lt;string,<sp/>string&gt;<sp/><ref refid="class_http_request_sender_1_1_reports_1_1_report_1ac587f711ae485642c73a71320a4dbae5" kindref="member">MetricData</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Dictionary&lt;string,<sp/>string&gt;();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="HttpRequestSender/HttpRequestSender/Reports/Report.cs"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_5d2048bb7e3b1ecb208cd34ffd07aafa" kind="dir">
+    <compoundname>HttpRequestSender/HttpRequestSender</compoundname>
+    <innerdir refid="dir_d83eee6225ac99f00a7be08ab28c5198">HttpRequestSender/HttpRequestSender/BusinessLogic</innerdir>
+    <innerdir refid="dir_4df4b4dde9c3b5dfe0009a592382ddb5">HttpRequestSender/HttpRequestSender/ErrorHandling</innerdir>
+    <innerdir refid="dir_1be77d3cd8731b632fb2696e462a7ef2">HttpRequestSender/HttpRequestSender/Forms</innerdir>
+    <innerdir refid="dir_6f21c4ef6e3944b57be0e45be93a4251">HttpRequestSender/HttpRequestSender/obj</innerdir>
+    <innerdir refid="dir_74652d9a5c1657ab69adbf278e93d542">HttpRequestSender/HttpRequestSender/Properties</innerdir>
+    <innerdir refid="dir_54e9a94fb8d855079bd09baae5f082b7">HttpRequestSender/HttpRequestSender/Reports</innerdir>
+    <innerdir refid="dir_864caed829e11b56b83cfdd15a5e44dc">HttpRequestSender/HttpRequestSender/Utilities</innerdir>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_forms_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Forms::Program</compoundname>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_program_1a512e68b3a7f34cb7a3111205a7071bd8" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Forms.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <qualifiedname>HttpRequestSender.Forms.Program.Main</qualifiedname>
+        <briefdescription>
+<para>The main entry point for the application. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Program.cs" line="12" column="21" bodyfile="HttpRequestSender/HttpRequestSender/Program.cs" bodystart="12" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.Forms.Program</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_program"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Program.cs" line="6" column="12" bodyfile="HttpRequestSender/HttpRequestSender/Program.cs" bodystart="7" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_forms_1_1_program_1a512e68b3a7f34cb7a3111205a7071bd8" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

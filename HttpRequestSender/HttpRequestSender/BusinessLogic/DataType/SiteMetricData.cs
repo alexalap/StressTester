@@ -7,7 +7,7 @@ using System.Timers;
 
 namespace HttpRequestSender.BusinessLogic.DataType
 {
-    class SiteMetricData
+    public class SiteMetricData
     {
         private static int ID = 0;
 

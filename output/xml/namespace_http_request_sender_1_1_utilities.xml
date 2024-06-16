@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_http_request_sender_1_1_utilities" kind="namespace" language="C#">
+    <compoundname>HttpRequestSender::Utilities</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_utilities_1_1_extensions" prot="public">HttpRequestSender::Utilities::Extensions</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_utilities_1_1_i_o_handler" prot="public">HttpRequestSender::Utilities::IOHandler</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_utilities_1_1_log_entry" prot="public">HttpRequestSender::Utilities::LogEntry</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_utilities_1_1_logger" prot="public">HttpRequestSender::Utilities::Logger</innerclass>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3dee" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>LogPriority</name>
+        <qualifiedname>HttpRequestSender.Utilities.LogPriority</qualifiedname>
+        <enumvalue id="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3deea551b723eafd6a31d444fcb2f5920fbd3" prot="public">
+          <name>INFO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3deea059e9861e0400dfbe05c98a841f3f96b" prot="public">
+          <name>WARNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3deeabb1ca97ec761fc37101737ba0aa2e7c5" prot="public">
+          <name>ERROR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Logging priority types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" line="12" column="11" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" bodystart="13" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

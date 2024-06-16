@@ -13,7 +13,7 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace HttpRequestSender.Forms
 {
-    public partial class StressTester_Form : Form
+    public partial class S : Form
     {
         private enum States
         {
@@ -36,11 +36,27 @@ namespace HttpRequestSender.Forms
         private string planStatus = "";
         private Dictionary<string, int> urlTickCount = new Dictionary<string, int>();
 
-        public StressTester_Form()
+        public S()
         {
             InitializeComponent();
             Logger.logGridView = logs_DGV;
             UpdateButtons();
+        }
+
+        internal SiteRequester SiteRequester
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        internal SessionMetrics SessionMetrics
+        {
+            get => default;
+            set
+            {
+            }
         }
 
         /// <summary>

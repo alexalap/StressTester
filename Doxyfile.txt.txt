@@ -1,0 +1,14 @@
+PROJECT_NAME           = "StressTester"
+OUTPUT_DIRECTORY       = output   # Set the output directory
+RECURSIVE              = YES      # Recursively scan subdirectories
+EXTRACT_ALL            = YES      # Extract all entities
+EXTRACT_STATIC         = YES      # Extract static members
+INPUT                  = D:\BME\8_felev\Szakdolgozat\StressTester
+SOURCE_BROWSER         = YES      # Enable source code browser
+GENERATE_LATEX         = NO       # Disable LaTeX generation (optional)
+HAVE_DOT               = YES      # Enable Graphviz (PlantUML)
+UML_LOOK               = YES      # Enable PlantUML look for diagrams
+PLANTUML_JAR_PATH      = D:\BME\9_felev\plantuml-mit-1.2023.13.jar
+GENERATE_HTML          = NO
+GENERATE_XML           = YES
+XML_OUTPUT             = xml

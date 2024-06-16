@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data" kind="class" language="C#" prot="package">
+    <compoundname>HttpRequestSender::BusinessLogic::DataType::SaveStepData</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1aef1881665722ee239cc23f214c369fcb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan HttpRequestSender.BusinessLogic.DataType.SaveStepData.Duration</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SaveStepData.Duration</qualifiedname>
+        <briefdescription>
+<para>Duration of the relative measurement step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" line="10" column="25" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1ae7a8840f721c39ce7ad47b9a0a9dc56a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.DataType.SaveStepData.Requests</definition>
+        <argsstring></argsstring>
+        <name>Requests</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SaveStepData.Requests</qualifiedname>
+        <briefdescription>
+<para>The number of requests of a scheduled metric step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" line="14" column="20" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1a469922976fce9393c450218d17ed4515" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.DataType.SaveStepData.SaveStepData</definition>
+        <argsstring>()</argsstring>
+        <name>SaveStepData</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SaveStepData.SaveStepData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" line="16" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1a89fa190c87a266b397f7acd83fd4ac54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.DataType.SaveStepData.SaveStepData</definition>
+        <argsstring>(RelativeScheduleStep step)</argsstring>
+        <name>SaveStepData</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SaveStepData.SaveStepData</qualifiedname>
+        <param>
+          <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step" kindref="compound">RelativeScheduleStep</ref></type>
+          <declname>step</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" line="20" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.DataType.SaveStepData</label>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" line="5" column="13" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SaveStepData.cs" bodystart="6" bodyend="25"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1aef1881665722ee239cc23f214c369fcb" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SaveStepData</scope><name>Duration</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1ae7a8840f721c39ce7ad47b9a0a9dc56a" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SaveStepData</scope><name>Requests</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1a469922976fce9393c450218d17ed4515" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SaveStepData</scope><name>SaveStepData</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1a89fa190c87a266b397f7acd83fd4ac54" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SaveStepData</scope><name>SaveStepData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

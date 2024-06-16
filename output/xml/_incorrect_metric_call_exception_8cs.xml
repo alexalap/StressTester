@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_incorrect_metric_call_exception_8cs" kind="file" language="C#">
+    <compoundname>IncorrectMetricCallException.cs</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception" prot="public">HttpRequestSender::ErrorHandling::InvalidMethodCallException</innerclass>
+    <innernamespace refid="namespace_http_request_sender">HttpRequestSender</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_error_handling">HttpRequestSender::ErrorHandling</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="namespace_http_request_sender_1_1_error_handling" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_http_request_sender_1_1_error_handling" kindref="compound">HttpRequestSender.ErrorHandling</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>[Serializable]</highlight></codeline>
+<codeline lineno="6" refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception" kindref="compound">InvalidMethodCallException</ref><sp/>:<sp/>Exception</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception_1a8ab80a4c8e908e700fbd34a5467034ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception_1a8ab80a4c8e908e700fbd34a5467034ed" kindref="member">InvalidMethodCallException</ref><sp/>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>methodName,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>address)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>base($</highlight><highlight class="stringliteral">&quot;Invalid<sp/>call<sp/>of<sp/>\&quot;{methodName}\&quot;<sp/>in<sp/>metrics<sp/>of<sp/>\&quot;{address}\&quot;.&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/IncorrectMetricCallException.cs"/>
+  </compounddef>
+</doxygen>

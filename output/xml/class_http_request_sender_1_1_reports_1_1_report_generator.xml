@@ -1,0 +1,255 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_reports_1_1_report_generator" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Reports::ReportGenerator</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_reports_1_1_report_generator_1a6f3ef6066a8d599fd34c16bf832b9cd2" prot="private" static="yes" mutable="no">
+        <type>Dictionary&lt;(string, string), <ref refid="class_http_request_sender_1_1_reports_1_1_report" kindref="compound">Report</ref> &gt;</type>
+        <definition>Dictionary&lt;(string, string), Report&gt; HttpRequestSender.Reports.ReportGenerator.reports</definition>
+        <argsstring></argsstring>
+        <name>reports</name>
+        <qualifiedname>HttpRequestSender.Reports.ReportGenerator.reports</qualifiedname>
+        <initializer>= new Dictionary&lt;(string, string), <ref refid="class_http_request_sender_1_1_reports_1_1_report" kindref="compound">Report</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" line="11" column="35" bodyfile="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_report_generator_1a94a6da13990a1f5cd8823929e0458e20" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Reports.ReportGenerator.CreateReport</definition>
+        <argsstring>(string title, string address, DateTime start, DateTime lastUpdateTime)</argsstring>
+        <name>CreateReport</name>
+        <qualifiedname>HttpRequestSender.Reports.ReportGenerator.CreateReport</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>start</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>lastUpdateTime</declname>
+        </param>
+        <briefdescription>
+<para>Creates a new report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the report. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address / website link the report was made of. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start time of the stress testing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lastUpdateTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time the stress testing was last checked (ended). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" line="20" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" bodystart="20" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_report_generator_1aa6c5472fbff86ce3e9e4921f62d4ad28" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Reports.ReportGenerator.SetGraphData</definition>
+        <argsstring>(string title, string address, List&lt; Dictionary&lt; string,(int, double)&gt; &gt; graphData)</argsstring>
+        <name>SetGraphData</name>
+        <qualifiedname>HttpRequestSender.Reports.ReportGenerator.SetGraphData</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+          <declname>graphData</declname>
+        </param>
+        <briefdescription>
+<para>Sets the data of the graphs in the report selected by its title and address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Report&apos;s title. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Report&apos;s address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>graphData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of graph data dictionaries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" line="35" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_report_generator_1aa98ff6646ef82821fb31a54ecc1898ab" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Reports.ReportGenerator.AddMetricData</definition>
+        <argsstring>(string title, string address, string key, string value)</argsstring>
+        <name>AddMetricData</name>
+        <qualifiedname>HttpRequestSender.Reports.ReportGenerator.AddMetricData</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Adds metric data to a report selected by its title and address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Report&apos;s title. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Report&apos;s address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>key</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the data that is measured. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of the measured data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" line="47" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" bodystart="47" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_report_generator_1a8e88cd2754e2b3d519b210d6646fb7c0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Reports.ReportGenerator.Generate</definition>
+        <argsstring>(string selectedPath)</argsstring>
+        <name>Generate</name>
+        <qualifiedname>HttpRequestSender.Reports.ReportGenerator.Generate</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>selectedPath</declname>
+        </param>
+        <briefdescription>
+<para>Generates a report in .html format. Saves it in a file to a given path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>selectedPath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the saving location. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" line="56" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" bodystart="56" bodyend="63"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.Reports.ReportGenerator</label>
+        <link refid="class_http_request_sender_1_1_reports_1_1_report_generator"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" line="9" column="12" bodyfile="HttpRequestSender/HttpRequestSender/Reports/ReportGenerator.cs" bodystart="10" bodyend="64"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1aa98ff6646ef82821fb31a54ecc1898ab" prot="public" virt="non-virtual"><scope>HttpRequestSender::Reports::ReportGenerator</scope><name>AddMetricData</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1a94a6da13990a1f5cd8823929e0458e20" prot="public" virt="non-virtual"><scope>HttpRequestSender::Reports::ReportGenerator</scope><name>CreateReport</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1a8e88cd2754e2b3d519b210d6646fb7c0" prot="public" virt="non-virtual"><scope>HttpRequestSender::Reports::ReportGenerator</scope><name>Generate</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1a6f3ef6066a8d599fd34c16bf832b9cd2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::ReportGenerator</scope><name>reports</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1aa6c5472fbff86ce3e9e4921f62d4ad28" prot="public" virt="non-virtual"><scope>HttpRequestSender::Reports::ReportGenerator</scope><name>SetGraphData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

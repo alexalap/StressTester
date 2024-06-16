@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_utilities_1_1_i_o_handler" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Utilities::IOHandler</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_utilities_1_1_i_o_handler_1ad64c6a76a8840f98d3415174599dbe60" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Utilities.IOHandler.WriteToFile</definition>
+        <argsstring>(string path, string content)</argsstring>
+        <name>WriteToFile</name>
+        <qualifiedname>HttpRequestSender.Utilities.IOHandler.WriteToFile</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>content</declname>
+        </param>
+        <briefdescription>
+<para>Writes a given content to a given file path. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Given file path (location, file name). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Given content that needs to be saved. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/IOHandler.cs" line="12" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/IOHandler.cs" bodystart="12" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.Utilities.IOHandler</label>
+        <link refid="class_http_request_sender_1_1_utilities_1_1_i_o_handler"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Utilities/IOHandler.cs" line="5" column="12" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/IOHandler.cs" bodystart="6" bodyend="16"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_i_o_handler_1ad64c6a76a8840f98d3415174599dbe60" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::IOHandler</scope><name>WriteToFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

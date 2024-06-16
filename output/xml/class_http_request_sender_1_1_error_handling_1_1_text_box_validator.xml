@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_error_handling_1_1_text_box_validator" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::ErrorHandling::TextBoxValidator</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_error_handling_1_1_text_box_validator_1a32aba8e23403d6d6ef41a9a6d6a4148a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool HttpRequestSender.ErrorHandling.TextBoxValidator.Validate&lt; T &gt;</definition>
+        <argsstring>(string input, out T result, bool canBeEmpty=false)</argsstring>
+        <name>Validate&lt; T &gt;</name>
+        <qualifiedname>HttpRequestSender.ErrorHandling.TextBoxValidator.Validate&lt; T &gt;</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>out T</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>canBeEmpty</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Checks if the request per second value is valid. Tries to convert the string value into T. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Generic type. (most likely numeric value) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input in the text box. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T value of the given string. Out parameter. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>canBeEmpty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Whether empty value is accepted or not. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns validity. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/TextBoxValidator.cs" line="17" column="23" bodyfile="HttpRequestSender/HttpRequestSender/ErrorHandling/TextBoxValidator.cs" bodystart="17" bodyend="39"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.ErrorHandling.TextBoxValidator</label>
+        <link refid="class_http_request_sender_1_1_error_handling_1_1_text_box_validator"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/TextBoxValidator.cs" line="6" column="12" bodyfile="HttpRequestSender/HttpRequestSender/ErrorHandling/TextBoxValidator.cs" bodystart="7" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_error_handling_1_1_text_box_validator_1a32aba8e23403d6d6ef41a9a6d6a4148a" prot="public" virt="non-virtual"><scope>HttpRequestSender::ErrorHandling::TextBoxValidator</scope><name>Validate&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

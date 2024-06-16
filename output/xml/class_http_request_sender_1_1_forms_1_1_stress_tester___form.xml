@@ -1,0 +1,2552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_forms_1_1_stress_tester___form" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Forms::StressTester_Form</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>States</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.States</qualifiedname>
+        <enumvalue id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112a4d3d769b812b6faa6b76e1a8abaece2d" prot="private">
+          <name>Active</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112ae99180abf47a8b3a856e0bcb2656990a" prot="private">
+          <name>Paused</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112a3cab03c00dbd11bc3569afa0748013f0" prot="private">
+          <name>Inactive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="18" column="16" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="19" bodyend="23"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab86f916a70288fe312b083adf3a62dfa" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics" kindref="compound">SessionMetrics</ref></type>
+        <definition>SessionMetrics HttpRequestSender.Forms.StressTester_Form.session</definition>
+        <argsstring></argsstring>
+        <name>session</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.session</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="25" column="32" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a47289cb72e56d597866bb17c7a5db16e" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester" kindref="compound">SiteRequester</ref></type>
+        <definition>SiteRequester HttpRequestSender.Forms.StressTester_Form.siteRequester</definition>
+        <argsstring></argsstring>
+        <name>siteRequester</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.siteRequester</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="26" column="31" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a2a5fd26f420fb836780f9a3008b13bd6" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester" kindref="compound">SiteRequester</ref> &gt;</type>
+        <definition>List&lt;SiteRequester&gt; HttpRequestSender.Forms.StressTester_Form.siteRequesters</definition>
+        <argsstring></argsstring>
+        <name>siteRequesters</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.siteRequesters</qualifiedname>
+        <initializer>= new List&lt;<ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester" kindref="compound">SiteRequester</ref>&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="27" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5da90d9b65a333596837937b64e9fb4c" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.Forms.StressTester_Form.address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="28" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1acbd7f7744d002df87cc2f11fc291d183" prot="private" static="no" mutable="no">
+        <type>States</type>
+        <definition>States HttpRequestSender.Forms.StressTester_Form.manualState</definition>
+        <argsstring></argsstring>
+        <name>manualState</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.manualState</qualifiedname>
+        <initializer>= States.Inactive</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="29" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aca00177dad65ce68609e3aabcb39e12f" prot="private" static="no" mutable="no">
+        <type>States</type>
+        <definition>States HttpRequestSender.Forms.StressTester_Form.plannedState</definition>
+        <argsstring></argsstring>
+        <name>plannedState</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedState</qualifiedname>
+        <initializer>= States.Inactive</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="30" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad0c1e58e441eb8545364b43a48bdcb91" prot="private" static="no" mutable="no">
+        <type>States</type>
+        <definition>States HttpRequestSender.Forms.StressTester_Form.explorationState</definition>
+        <argsstring></argsstring>
+        <name>explorationState</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.explorationState</qualifiedname>
+        <initializer>= States.Inactive</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="31" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a30fb910b538a554975cdf00450a98751" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kindref="compound">Schedule</ref></type>
+        <definition>Schedule HttpRequestSender.Forms.StressTester_Form.schedule</definition>
+        <argsstring></argsstring>
+        <name>schedule</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.schedule</qualifiedname>
+        <initializer>= new <ref refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kindref="compound">Schedule</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="32" column="26" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa3faf3ab07537f030bfb94e1921db942" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kindref="compound">RelativeSchedule</ref></type>
+        <definition>RelativeSchedule HttpRequestSender.Forms.StressTester_Form.relativeSchedule</definition>
+        <argsstring></argsstring>
+        <name>relativeSchedule</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativeSchedule</qualifiedname>
+        <initializer>= new <ref refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kindref="compound">RelativeSchedule</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="33" column="34" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aef38fd749387e9afa7518241f65f95e6" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string,(int, int)&gt;</type>
+        <definition>Dictionary&lt;string, (int, int)&gt; HttpRequestSender.Forms.StressTester_Form.siteStructureData</definition>
+        <argsstring></argsstring>
+        <name>siteStructureData</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.siteStructureData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="34" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1acd52d83816922d3b71b9322ed729d682" prot="private" static="no" mutable="no">
+        <type>object</type>
+        <definition>object HttpRequestSender.Forms.StressTester_Form.lockObject</definition>
+        <argsstring></argsstring>
+        <name>lockObject</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.lockObject</qualifiedname>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="35" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3c3a5c6bc11bb0b42637c7b92ed84a67" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.Forms.StressTester_Form.planStatus</definition>
+        <argsstring></argsstring>
+        <name>planStatus</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.planStatus</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="36" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4bf2ec81c6ee22c7e9cebd4e8f3571f6" prot="private" static="no" mutable="no">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt;string, int&gt; HttpRequestSender.Forms.StressTester_Form.urlTickCount</definition>
+        <argsstring></argsstring>
+        <name>urlTickCount</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.urlTickCount</qualifiedname>
+        <initializer>= new Dictionary&lt;string, int&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="37" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa88774066d7af16884eed8b7d3d13918" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HttpRequestSender.Forms.StressTester_Form.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.components</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="9" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aed71deddc132a073624a1bec2d39d4f0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1156" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a97382b75d67e3dcccc2e8806ae6465ab" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HttpRequestSender.Forms.StressTester_Form.URL_TB</definition>
+        <argsstring></argsstring>
+        <name>URL_TB</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.URL_TB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1157" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8d71abee541c0a2eef2a436b8359e726" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HttpRequestSender.Forms.StressTester_Form.reqPerSec_TB</definition>
+        <argsstring></argsstring>
+        <name>reqPerSec_TB</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.reqPerSec_TB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1158" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a13d183583b5e96f67f7fc6a6c48916ed" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1159" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a525ec70ee579f007fa94fc5085497e72" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1160" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a0988035c9a4ef2cd74513e478f437cb8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.start_BTN</definition>
+        <argsstring></argsstring>
+        <name>start_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.start_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1161" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab8206f963ad15296d37f98cd05bbe988" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.stop_BTN</definition>
+        <argsstring></argsstring>
+        <name>stop_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.stop_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1162" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a51014b67751bcd103893346feb7ff593" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.StressTester_Form.panel2</definition>
+        <argsstring></argsstring>
+        <name>panel2</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.panel2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1163" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac5eaa414a9d5d20534e342bcdcb78944" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip HttpRequestSender.Forms.StressTester_Form.statusStrip1</definition>
+        <argsstring></argsstring>
+        <name>statusStrip1</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.statusStrip1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1164" column="47" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac53f65918c187116bb7411495debd2d1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel HttpRequestSender.Forms.StressTester_Form.status_L</definition>
+        <argsstring></argsstring>
+        <name>status_L</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.status_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1165" column="56" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac7627c10827460d549b600e71b942eca" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.pause_BTN</definition>
+        <argsstring></argsstring>
+        <name>pause_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.pause_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1166" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4ed1580e20e0d29409aa04db90b3d9db" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabControl</type>
+        <definition>System.Windows.Forms.TabControl HttpRequestSender.Forms.StressTester_Form.main_TC</definition>
+        <argsstring></argsstring>
+        <name>main_TC</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.main_TC</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1167" column="46" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a11e9617283716c97e1ac70e400ad4d09" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HttpRequestSender.Forms.StressTester_Form.tabPage1</definition>
+        <argsstring></argsstring>
+        <name>tabPage1</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.tabPage1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1168" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ade2cbe5d52ec7a939d20ae37ab09afb6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HttpRequestSender.Forms.StressTester_Form.tabPage2</definition>
+        <argsstring></argsstring>
+        <name>tabPage2</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.tabPage2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1169" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8036773e8a3738f3a2fdd5a94f5b3e1b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HttpRequestSender.Forms.StressTester_Form.tabPage3</definition>
+        <argsstring></argsstring>
+        <name>tabPage3</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.tabPage3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1170" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa00075972af77a24d7ad9b87cefc0471" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HttpRequestSender.Forms.StressTester_Form.tabPage4</definition>
+        <argsstring></argsstring>
+        <name>tabPage4</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.tabPage4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1171" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a57cfa3d81115cb08768259a28af2ff42" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.StressTester_Form.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.panel1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1172" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ae3fc30f910ed44bb53d7a9aa4f99f3e2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.planEditor_BTN</definition>
+        <argsstring></argsstring>
+        <name>planEditor_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.planEditor_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1173" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a72bd87b2faad174e4a8d49201bb0a18b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip HttpRequestSender.Forms.StressTester_Form.statusStrip2</definition>
+        <argsstring></argsstring>
+        <name>statusStrip2</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.statusStrip2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1174" column="47" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a30911ba5715b785982b17fb64f43a97c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel1</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel1</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1175" column="56" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a632cd2d6136f258e77a1d60221672c1a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1176" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1abad285621450efae7ce3765ca0e636c2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.plannedStop_BTN</definition>
+        <argsstring></argsstring>
+        <name>plannedStop_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedStop_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1177" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa662e02e1e3609034b9f42756f376776" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.plannedStart_BTN</definition>
+        <argsstring></argsstring>
+        <name>plannedStart_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedStart_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1178" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac73b4e5cee5c497cbe861c598b761b5b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart HttpRequestSender.Forms.StressTester_Form.manual_CH</definition>
+        <argsstring></argsstring>
+        <name>manual_CH</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.manual_CH</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1179" column="66" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a1c55d604a5b5ebbc8574595989b7aab2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.StressTester_Form.panel4</definition>
+        <argsstring></argsstring>
+        <name>panel4</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.panel4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1180" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a469fe3e14b4330b31a2777f15ab19147" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip HttpRequestSender.Forms.StressTester_Form.statusStrip4</definition>
+        <argsstring></argsstring>
+        <name>statusStrip4</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.statusStrip4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1181" column="47" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4504111be665de35468b39e6b6dda23f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel3</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel3</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1182" column="56" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4c3c2cd41a170c7b77fd21fee930e1fd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label9</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1183" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a25aeaa37c33dad83a3f2775b239f8f8c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label10</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1184" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ae798f17c1c038490a34956fe84c83466" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.StressTester_Form.panel3</definition>
+        <argsstring></argsstring>
+        <name>panel3</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.panel3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1185" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8b08e41fe156bfcfd19f879588d7a00d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip HttpRequestSender.Forms.StressTester_Form.statusStrip3</definition>
+        <argsstring></argsstring>
+        <name>statusStrip3</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.statusStrip3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1186" column="47" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a32b3bed27dce26398e51e98a2e379b8a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel2</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel2</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1187" column="56" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad1c55ea6788fcc976b29ed89976907af" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HttpRequestSender.Forms.StressTester_Form.logs_DGV</definition>
+        <argsstring></argsstring>
+        <name>logs_DGV</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.logs_DGV</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1188" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a89242f358c6f36cc23a5d0604b3715b2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1189" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6945e33bf2958ed2f88c952b9c4d16c7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.URLReport_BTN</definition>
+        <argsstring></argsstring>
+        <name>URLReport_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.URLReport_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1190" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6828bc9693bcfb025cdb5fbffcddc97a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.URLStop_BTN</definition>
+        <argsstring></argsstring>
+        <name>URLStop_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.URLStop_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1191" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a29208f8ef43930517448e5b79d9403f2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.URLStart_BTN</definition>
+        <argsstring></argsstring>
+        <name>URLStart_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.URLStart_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1192" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab8aefa7df1601a1bef18111e877f6119" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.explorer_BTN</definition>
+        <argsstring></argsstring>
+        <name>explorer_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.explorer_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1193" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a085d9f43d693efa918b8daf8dd4000af" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.averageResTime_L</definition>
+        <argsstring></argsstring>
+        <name>averageResTime_L</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.averageResTime_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1194" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aeefdf9f7955492d1c70a2bb25f7f145d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.numberOfRes_L</definition>
+        <argsstring></argsstring>
+        <name>numberOfRes_L</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.numberOfRes_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1195" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa1c15f61b2f6db56b37d57326c3526fc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label11</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1196" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a57b694e42ba29db9d433ce77560f3a08" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label8</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1197" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa36dabe3a265e951d984babe1133d397" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.report_BTN</definition>
+        <argsstring></argsstring>
+        <name>report_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.report_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1198" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a09152fbe3e2e95e31a6a5e0c591a9bc8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HttpRequestSender.Forms.StressTester_Form.planGrid</definition>
+        <argsstring></argsstring>
+        <name>planGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.planGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1199" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8a6d742c0a7681cdf98177824ec813dc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown HttpRequestSender.Forms.StressTester_Form.explorationRequest_NUD</definition>
+        <argsstring></argsstring>
+        <name>explorationRequest_NUD</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.explorationRequest_NUD</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1200" column="49" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a882549be8d711140dd84c899f755c3dd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label7</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1201" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a384dbf87653dd98aef7294b9e20d7ca4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HttpRequestSender.Forms.StressTester_Form.explorationURL_TB</definition>
+        <argsstring></argsstring>
+        <name>explorationURL_TB</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.explorationURL_TB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1202" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a7919256a8faac8c5f3c1ed8a43384987" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HttpRequestSender.Forms.StressTester_Form.exloration_Grid</definition>
+        <argsstring></argsstring>
+        <name>exloration_Grid</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.exloration_Grid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1203" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa0e33c4cecd0ad2b73fd844454fd0e4e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.CheckBox</type>
+        <definition>System.Windows.Forms.CheckBox HttpRequestSender.Forms.StressTester_Form.exploration_CHB</definition>
+        <argsstring></argsstring>
+        <name>exploration_CHB</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.exploration_CHB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1204" column="44" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aab7baf25f0af3af3235a67e6b47fbb6d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.addressColumn</definition>
+        <argsstring></argsstring>
+        <name>addressColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.addressColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1205" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af74ffbb4dc5d8edb56d5d85675267a3c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.linksColumn</definition>
+        <argsstring></argsstring>
+        <name>linksColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.linksColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1206" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af2ca9309419e32810f0b4c60284332ee" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.multiplierColumn</definition>
+        <argsstring></argsstring>
+        <name>multiplierColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.multiplierColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1207" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9f236b70083a53c90c3f233c8fe4517e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.totalRequest_L</definition>
+        <argsstring></argsstring>
+        <name>totalRequest_L</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.totalRequest_L</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1208" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9bb623400a5f949d1448d8154961a9ae" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.plannedReport_BTN</definition>
+        <argsstring></argsstring>
+        <name>plannedReport_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedReport_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1209" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab7ba679ddd77b7781fe89690206a76d5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart HttpRequestSender.Forms.StressTester_Form.planned_CH</definition>
+        <argsstring></argsstring>
+        <name>planned_CH</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.planned_CH</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1210" column="66" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a27d61ae39caee00625853f7717e495e4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1211" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9187b85a6105362383e78d0ada81ab2d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HttpRequestSender.Forms.StressTester_Form.plannedURL_TB</definition>
+        <argsstring></argsstring>
+        <name>plannedURL_TB</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedURL_TB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1212" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6226ef27a22644bda6efac4dc77c79e2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart HttpRequestSender.Forms.StressTester_Form.exploration_CH</definition>
+        <argsstring></argsstring>
+        <name>exploration_CH</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.exploration_CH</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1213" column="66" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa07ca0a21efc25f0d7ef962ba66b590e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.stepColumn</definition>
+        <argsstring></argsstring>
+        <name>stepColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.stepColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1214" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6a3a56994e61821c1cd1003a6e552ff4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.startTimeColumn</definition>
+        <argsstring></argsstring>
+        <name>startTimeColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.startTimeColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1215" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a55fb2946bd32507f9f8ab655ec8a83bd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.endTimeColumn</definition>
+        <argsstring></argsstring>
+        <name>endTimeColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.endTimeColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1216" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aad4c5e481752fe6b57116bdf1d1ac9e6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.requestsColumn</definition>
+        <argsstring></argsstring>
+        <name>requestsColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.requestsColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1217" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a0e62e2ca31176a9a5c16840fb6a1b672" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn4</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn4</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1218" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a91bd504e0f0bf593cf8231abe4684848" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.Priority</definition>
+        <argsstring></argsstring>
+        <name>Priority</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.Priority</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1219" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aadec2612bd3b86b72aa738ca0e0b5679" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn5</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn5</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1220" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a63adcd1f913679ec09240638e759dbe8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TabPage</type>
+        <definition>System.Windows.Forms.TabPage HttpRequestSender.Forms.StressTester_Form.tabPage5</definition>
+        <argsstring></argsstring>
+        <name>tabPage5</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.tabPage5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1221" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a104e48d78399d8d12c67de9906c83dc0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.StressTester_Form.panel5</definition>
+        <argsstring></argsstring>
+        <name>panel5</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.panel5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1222" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8fa12825fa33ab4ffc5dc970f54f9495" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label12</definition>
+        <argsstring></argsstring>
+        <name>label12</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label12</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1223" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5acbd109d2abb673368c5a6cdecb539d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.TextBox</type>
+        <definition>System.Windows.Forms.TextBox HttpRequestSender.Forms.StressTester_Form.relativePlannedURL_TB</definition>
+        <argsstring></argsstring>
+        <name>relativePlannedURL_TB</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlannedURL_TB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1224" column="43" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9973a2d512b24dbfba81331e1694e125" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataVisualization.Charting.Chart</type>
+        <definition>System.Windows.Forms.DataVisualization.Charting.Chart HttpRequestSender.Forms.StressTester_Form.relativePlanned_CH</definition>
+        <argsstring></argsstring>
+        <name>relativePlanned_CH</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlanned_CH</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1225" column="66" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9c24fe89c1c1253c35b4c5cd266f6d7e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.relativePlannedReport_BTN</definition>
+        <argsstring></argsstring>
+        <name>relativePlannedReport_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlannedReport_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1226" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a756b3af93cd58ed33b92ddf9d0e4235b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HttpRequestSender.Forms.StressTester_Form.relativePlanGrid</definition>
+        <argsstring></argsstring>
+        <name>relativePlanGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlanGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1227" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9f11245ce80fbe68cab53aaf0c49be92" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.relativePlanEditor_BTN</definition>
+        <argsstring></argsstring>
+        <name>relativePlanEditor_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlanEditor_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1228" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1accfd7f715b19da15dc5067f7c479bd34" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.StatusStrip</type>
+        <definition>System.Windows.Forms.StatusStrip HttpRequestSender.Forms.StressTester_Form.statusStrip5</definition>
+        <argsstring></argsstring>
+        <name>statusStrip5</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.statusStrip5</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1229" column="47" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af913e6c52c6c477d3ec68537001c03da" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripStatusLabel</type>
+        <definition>System.Windows.Forms.ToolStripStatusLabel HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel4</definition>
+        <argsstring></argsstring>
+        <name>toolStripStatusLabel4</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.toolStripStatusLabel4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1230" column="56" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a40c53c3b46c1ec5bcea4465ce0810546" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.StressTester_Form.label13</definition>
+        <argsstring></argsstring>
+        <name>label13</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.label13</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1231" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a91dce2e1ea2c2e757724c2042bbe3700" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.relativePlannedStop_BTN</definition>
+        <argsstring></argsstring>
+        <name>relativePlannedStop_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlannedStop_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1232" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1afe91b29ae31a2625cbf29c591836c0af" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.StressTester_Form.relativePlannedStart_BTN</definition>
+        <argsstring></argsstring>
+        <name>relativePlannedStart_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.relativePlannedStart_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1233" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1afc2b585ed91f42dc7de6c8b6dfcfdb19" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn1</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn1</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1234" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5e38674e7e719057cbb83b99a5f50279" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn3</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn3</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1235" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ace90e856a25d24d6f7e5c814f400e1ea" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn6</definition>
+        <argsstring></argsstring>
+        <name>dataGridViewTextBoxColumn6</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.dataGridViewTextBoxColumn6</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="1236" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="1236" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a2811e475b09a876c963d6a4db54bee5b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.Forms.StressTester_Form.StressTester_Form</definition>
+        <argsstring>()</argsstring>
+        <name>StressTester_Form</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.StressTester_Form</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="39" column="16" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="39" bodyend="44"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af892309fb3c0786902e924ce1bad2cd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.start_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>start_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.start_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Starts the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="51" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="51" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a61e75cf9c0df2ad339fcc34487f0def1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.pause_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>pause_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.pause_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Pauses the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="76" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="76" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9ccf9fb166164f2978741a96aa7f2afc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.stop_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>stop_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.stop_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Stops the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="96" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="96" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3b3601795e649a87e7394f0d862e5d3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.UpdateButtons</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateButtons</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.UpdateButtons</qualifiedname>
+        <briefdescription>
+<para>Updates the buttons according to the measurement states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="106" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="106" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa4513186e8a471b961cf21ba9decd113" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.ManualStatisticsUpdate</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>ManualStatisticsUpdate</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.ManualStatisticsUpdate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the statistics of manual measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="160" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="160" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a489d137d4303bc72264cde269f5d73d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.planEditor_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>planEditor_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.planEditor_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Opens the Absolute Scheduler window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="206" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="206" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a607a341417a26c115dc9abb0b5ec6d82" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RelativePlanEditor_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RelativePlanEditor_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RelativePlanEditor_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Opens the Relative Scheduler window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="224" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="224" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa73fc9d8926a210acfb1ef6b5851d503" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.report_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>report_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.report_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Creates a report of the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="242" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="242" bodyend="251"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af44037a6cc8a494e0fa91f2ebe6899a7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RefreshGrid</definition>
+        <argsstring>(string status)</argsstring>
+        <name>RefreshGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RefreshGrid</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Refreshes the absolute scheduler grid by clearing the rows and refilling them with a schedule. Gives a status to the first scheduled step in the plan grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="257" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="257" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a64c58d11597d598f056c0a0bc4691b51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RefreshRelativeGrid</definition>
+        <argsstring>(string status)</argsstring>
+        <name>RefreshRelativeGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RefreshRelativeGrid</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+<para>Refreshes the relative scheduler grid by clearing the rows and refilling them with a schedule. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="274" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="274" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4a6b655a7e50a835e88e822e17e51e42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void HttpRequestSender.Forms.StressTester_Form.explorer_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>explorer_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.explorer_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Explores a website to look for more addresses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="291" column="28" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="291" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3fc92870bf89ed9d522cfc6e47ff2582" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RefreshTotalRequestLabel</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshTotalRequestLabel</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RefreshTotalRequestLabel</qualifiedname>
+        <briefdescription>
+<para>Refreshes the total number of requests label. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="318" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="318" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad5d1208b2cd2738218d747ebe5c72f5e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.explorationRequest_NUD_ValueChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>explorationRequest_NUD_ValueChanged</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.explorationRequest_NUD_ValueChanged</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Refreshes the total number of requests label if the NUD value has changed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="332" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="332" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a1ca4443b5b3d0367cfb9be9d182c058a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.plannedStart_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>plannedStart_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedStart_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Starts an absolute planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="342" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="342" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a228a6c873eeee02deb9fea8428d33118" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RelativePlannedStart_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RelativePlannedStart_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RelativePlannedStart_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Starts a relative planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="364" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="364" bodyend="380"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aff71adb9d40091f764cff82a3a6c939e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.OnPlannedMeasurementFinish</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>OnPlannedMeasurementFinish</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.OnPlannedMeasurementFinish</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the statistics and UI of the absolute planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="385" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="385" bodyend="396"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6c840c17ed361cd4cc6a289a9e0ce42d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.OnRelativePlannedMeasurementFinish</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>OnRelativePlannedMeasurementFinish</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.OnRelativePlannedMeasurementFinish</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the statistics and UI of the relative planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="401" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="401" bodyend="412"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a785015f6994c868e17d33afd9758a1c7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.plannedStop_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>plannedStop_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.plannedStop_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Stops an absolute planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="419" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="419" bodyend="427"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a044ed2b4d795cfbc12cd5bdeb1a3a124" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RelativePlannedStop_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RelativePlannedStop_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RelativePlannedStop_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Stops a relative planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="434" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="434" bodyend="442"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac3fbf4a9cca1b4ea827e360e0674c562" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.UpdatePlannedButtons</definition>
+        <argsstring>()</argsstring>
+        <name>UpdatePlannedButtons</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.UpdatePlannedButtons</qualifiedname>
+        <briefdescription>
+<para>Updates the absolute planned buttons according to the planned measurement states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="447" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="447" bodyend="500"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a069126b0a76bae0e593f1ccaa59af123" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.UpdateRelativePlannedButtons</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateRelativePlannedButtons</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.UpdateRelativePlannedButtons</qualifiedname>
+        <briefdescription>
+<para>Updates the relative planned buttons according to the planned measurement states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="505" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="505" bodyend="558"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a97737d8e4d5a7d3ba47ea366505a13bc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.PlannedStatisticsUpdate</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>PlannedStatisticsUpdate</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.PlannedStatisticsUpdate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the statistics of the absolute planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="563" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="563" bodyend="584"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9e49b5fa6605d5bb3c49395867e60581" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RelativePlannedStatisticsUpdate</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>RelativePlannedStatisticsUpdate</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RelativePlannedStatisticsUpdate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the statistics of the relative planned measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="589" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="589" bodyend="610"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a33087bf9b254eddd13e3c280643cab2d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.PlannedStatusUpdate</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>PlannedStatusUpdate</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.PlannedStatusUpdate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the status of the absolute schedule. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="615" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="615" bodyend="623"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4ba9ca1f58082f44adc081cc1a4bccf2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RelativePlannedStatusUpdate</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>RelativePlannedStatusUpdate</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RelativePlannedStatusUpdate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+<para>Updates the status of the relative schedule. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="628" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="628" bodyend="636"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad3c28f709519927e4f913f5ff1f0a9df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.URLStart_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>URLStart_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.URLStart_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Starts the URL exploration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="643" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="643" bodyend="658"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9b76b6c320ae931e3f7947a4ed14fe28" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.ExplorationStatisticsUpdate</definition>
+        <argsstring>(int tick, string address)</argsstring>
+        <name>ExplorationStatisticsUpdate</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.ExplorationStatisticsUpdate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Updates the statistics of exploration measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="664" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="664" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1adaf2dfdf2d91114d10af227feb348f02" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.URLStop_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>URLStop_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.URLStop_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Stops the URL exploration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="716" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="716" bodyend="724"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a92b15a2f0f3f994be90429b8e00be5ea" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.UpdateExplorationButtons</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateExplorationButtons</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.UpdateExplorationButtons</qualifiedname>
+        <briefdescription>
+<para>Updates the exploration buttons according to the exploration measurement states. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="729" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="729" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a7005fdb42c7d13f1e384fb53c76e89fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.planGrid_SelectionChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>planGrid_SelectionChanged</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.planGrid_SelectionChanged</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Clears the selection in the absolute plan grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="788" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="788" bodyend="791"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa60b08e33e0790222c7d34346ae28091" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.RelativePlanGrid_SelectionChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RelativePlanGrid_SelectionChanged</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.RelativePlanGrid_SelectionChanged</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Clears the selection in the relative plan grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="798" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="798" bodyend="801"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a38aafaa73c334189229f0d8c6e1acac3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.StressTester_Form.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.InitializeComponent</qualifiedname>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="30" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="30" bodyend="1152"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8579ddee76d0f4a2b4eab295648f80cc" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Forms.StressTester_Form.InsertGapIfNeeded</definition>
+        <argsstring>(int tick, DataPointCollection pointList)</argsstring>
+        <name>InsertGapIfNeeded</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.InsertGapIfNeeded</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <param>
+          <type>DataPointCollection</type>
+          <declname>pointList</declname>
+        </param>
+        <briefdescription>
+<para>Inserts a gap into the planned chart when the requests are on-hold. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tick</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pointList</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="699" column="29" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="699" bodyend="709"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a89dd8aeda3367a4bd1a704b0530875c5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HttpRequestSender.Forms.StressTester_Form.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <qualifiedname>HttpRequestSender.Forms.StressTester_Form.Dispose</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" line="15" column="33" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Form</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.Forms.StressTester_Form</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Form</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.Forms.StressTester_Form</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="16" column="19" bodyfile="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" bodystart="17" bodyend="802"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5da90d9b65a333596837937b64e9fb4c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>address</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aab7baf25f0af3af3235a67e6b47fbb6d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>addressColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a085d9f43d693efa918b8daf8dd4000af" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>averageResTime_L</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa88774066d7af16884eed8b7d3d13918" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>components</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1afc2b585ed91f42dc7de6c8b6dfcfdb19" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>dataGridViewTextBoxColumn1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5e38674e7e719057cbb83b99a5f50279" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>dataGridViewTextBoxColumn3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a0e62e2ca31176a9a5c16840fb6a1b672" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>dataGridViewTextBoxColumn4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aadec2612bd3b86b72aa738ca0e0b5679" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>dataGridViewTextBoxColumn5</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ace90e856a25d24d6f7e5c814f400e1ea" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>dataGridViewTextBoxColumn6</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a89dd8aeda3367a4bd1a704b0530875c5" prot="protected" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>Dispose</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a55fb2946bd32507f9f8ab655ec8a83bd" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>endTimeColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a7919256a8faac8c5f3c1ed8a43384987" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>exloration_Grid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6226ef27a22644bda6efac4dc77c79e2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>exploration_CH</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa0e33c4cecd0ad2b73fd844454fd0e4e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>exploration_CHB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8a6d742c0a7681cdf98177824ec813dc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>explorationRequest_NUD</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad5d1208b2cd2738218d747ebe5c72f5e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>explorationRequest_NUD_ValueChanged</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad0c1e58e441eb8545364b43a48bdcb91" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>explorationState</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9b76b6c320ae931e3f7947a4ed14fe28" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>ExplorationStatisticsUpdate</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a384dbf87653dd98aef7294b9e20d7ca4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>explorationURL_TB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab8aefa7df1601a1bef18111e877f6119" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>explorer_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4a6b655a7e50a835e88e822e17e51e42" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>explorer_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a38aafaa73c334189229f0d8c6e1acac3" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>InitializeComponent</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8579ddee76d0f4a2b4eab295648f80cc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>InsertGapIfNeeded</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aed71deddc132a073624a1bec2d39d4f0" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a25aeaa37c33dad83a3f2775b239f8f8c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label10</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa1c15f61b2f6db56b37d57326c3526fc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label11</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8fa12825fa33ab4ffc5dc970f54f9495" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label12</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a40c53c3b46c1ec5bcea4465ce0810546" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label13</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a13d183583b5e96f67f7fc6a6c48916ed" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a525ec70ee579f007fa94fc5085497e72" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a632cd2d6136f258e77a1d60221672c1a" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a27d61ae39caee00625853f7717e495e4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label5</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a89242f358c6f36cc23a5d0604b3715b2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label6</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a882549be8d711140dd84c899f755c3dd" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label7</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a57b694e42ba29db9d433ce77560f3a08" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label8</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4c3c2cd41a170c7b77fd21fee930e1fd" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>label9</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af74ffbb4dc5d8edb56d5d85675267a3c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>linksColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1acd52d83816922d3b71b9322ed729d682" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>lockObject</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad1c55ea6788fcc976b29ed89976907af" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>logs_DGV</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4ed1580e20e0d29409aa04db90b3d9db" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>main_TC</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac73b4e5cee5c497cbe861c598b761b5b" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>manual_CH</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1acbd7f7744d002df87cc2f11fc291d183" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>manualState</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa4513186e8a471b961cf21ba9decd113" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>ManualStatisticsUpdate</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af2ca9309419e32810f0b4c60284332ee" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>multiplierColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aeefdf9f7955492d1c70a2bb25f7f145d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>numberOfRes_L</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aff71adb9d40091f764cff82a3a6c939e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>OnPlannedMeasurementFinish</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6c840c17ed361cd4cc6a289a9e0ce42d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>OnRelativePlannedMeasurementFinish</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a57cfa3d81115cb08768259a28af2ff42" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>panel1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a51014b67751bcd103893346feb7ff593" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>panel2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ae798f17c1c038490a34956fe84c83466" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>panel3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a1c55d604a5b5ebbc8574595989b7aab2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>panel4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a104e48d78399d8d12c67de9906c83dc0" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>panel5</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac7627c10827460d549b600e71b942eca" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>pause_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a61e75cf9c0df2ad339fcc34487f0def1" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>pause_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ae3fc30f910ed44bb53d7a9aa4f99f3e2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>planEditor_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a489d137d4303bc72264cde269f5d73d2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>planEditor_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a09152fbe3e2e95e31a6a5e0c591a9bc8" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>planGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a7005fdb42c7d13f1e384fb53c76e89fd" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>planGrid_SelectionChanged</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab7ba679ddd77b7781fe89690206a76d5" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>planned_CH</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9bb623400a5f949d1448d8154961a9ae" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedReport_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa662e02e1e3609034b9f42756f376776" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedStart_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a1ca4443b5b3d0367cfb9be9d182c058a" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedStart_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aca00177dad65ce68609e3aabcb39e12f" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedState</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a97737d8e4d5a7d3ba47ea366505a13bc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>PlannedStatisticsUpdate</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a33087bf9b254eddd13e3c280643cab2d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>PlannedStatusUpdate</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1abad285621450efae7ce3765ca0e636c2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedStop_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a785015f6994c868e17d33afd9758a1c7" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedStop_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9187b85a6105362383e78d0ada81ab2d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>plannedURL_TB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3c3a5c6bc11bb0b42637c7b92ed84a67" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>planStatus</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a91bd504e0f0bf593cf8231abe4684848" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>Priority</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af44037a6cc8a494e0fa91f2ebe6899a7" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RefreshGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a64c58d11597d598f056c0a0bc4691b51" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RefreshRelativeGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3fc92870bf89ed9d522cfc6e47ff2582" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RefreshTotalRequestLabel</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9f11245ce80fbe68cab53aaf0c49be92" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlanEditor_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a607a341417a26c115dc9abb0b5ec6d82" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RelativePlanEditor_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a756b3af93cd58ed33b92ddf9d0e4235b" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlanGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa60b08e33e0790222c7d34346ae28091" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RelativePlanGrid_SelectionChanged</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9973a2d512b24dbfba81331e1694e125" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlanned_CH</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9c24fe89c1c1253c35b4c5cd266f6d7e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlannedReport_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1afe91b29ae31a2625cbf29c591836c0af" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlannedStart_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a228a6c873eeee02deb9fea8428d33118" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RelativePlannedStart_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9e49b5fa6605d5bb3c49395867e60581" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RelativePlannedStatisticsUpdate</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4ba9ca1f58082f44adc081cc1a4bccf2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RelativePlannedStatusUpdate</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a91dce2e1ea2c2e757724c2042bbe3700" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlannedStop_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a044ed2b4d795cfbc12cd5bdeb1a3a124" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>RelativePlannedStop_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5acbd109d2abb673368c5a6cdecb539d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativePlannedURL_TB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa3faf3ab07537f030bfb94e1921db942" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>relativeSchedule</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa36dabe3a265e951d984babe1133d397" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>report_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa73fc9d8926a210acfb1ef6b5851d503" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>report_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8d71abee541c0a2eef2a436b8359e726" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>reqPerSec_TB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aad4c5e481752fe6b57116bdf1d1ac9e6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>requestsColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a30fb910b538a554975cdf00450a98751" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>schedule</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab86f916a70288fe312b083adf3a62dfa" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>session</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a47289cb72e56d597866bb17c7a5db16e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>siteRequester</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a2a5fd26f420fb836780f9a3008b13bd6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>siteRequesters</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aef38fd749387e9afa7518241f65f95e6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>siteStructureData</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a0988035c9a4ef2cd74513e478f437cb8" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>start_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af892309fb3c0786902e924ce1bad2cd1" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>start_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6a3a56994e61821c1cd1003a6e552ff4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>startTimeColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>States</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac53f65918c187116bb7411495debd2d1" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>status_L</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac5eaa414a9d5d20534e342bcdcb78944" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>statusStrip1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a72bd87b2faad174e4a8d49201bb0a18b" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>statusStrip2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8b08e41fe156bfcfd19f879588d7a00d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>statusStrip3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a469fe3e14b4330b31a2777f15ab19147" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>statusStrip4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1accfd7f715b19da15dc5067f7c479bd34" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>statusStrip5</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa07ca0a21efc25f0d7ef962ba66b590e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>stepColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab8206f963ad15296d37f98cd05bbe988" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>stop_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9ccf9fb166164f2978741a96aa7f2afc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>stop_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a2811e475b09a876c963d6a4db54bee5b" prot="public" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>StressTester_Form</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a11e9617283716c97e1ac70e400ad4d09" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>tabPage1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ade2cbe5d52ec7a939d20ae37ab09afb6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>tabPage2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8036773e8a3738f3a2fdd5a94f5b3e1b" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>tabPage3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa00075972af77a24d7ad9b87cefc0471" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>tabPage4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a63adcd1f913679ec09240638e759dbe8" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>tabPage5</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a30911ba5715b785982b17fb64f43a97c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>toolStripStatusLabel1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a32b3bed27dce26398e51e98a2e379b8a" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>toolStripStatusLabel2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4504111be665de35468b39e6b6dda23f" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>toolStripStatusLabel3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af913e6c52c6c477d3ec68537001c03da" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>toolStripStatusLabel4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9f236b70083a53c90c3f233c8fe4517e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>totalRequest_L</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3b3601795e649a87e7394f0d862e5d3b" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>UpdateButtons</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a92b15a2f0f3f994be90429b8e00be5ea" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>UpdateExplorationButtons</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac3fbf4a9cca1b4ea827e360e0674c562" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>UpdatePlannedButtons</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a069126b0a76bae0e593f1ccaa59af123" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>UpdateRelativePlannedButtons</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a97382b75d67e3dcccc2e8806ae6465ab" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>URL_TB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6945e33bf2958ed2f88c952b9c4d16c7" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>URLReport_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a29208f8ef43930517448e5b79d9403f2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>URLStart_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad3c28f709519927e4f913f5ff1f0a9df" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>URLStart_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6828bc9693bcfb025cdb5fbffcddc97a" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>URLStop_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1adaf2dfdf2d91114d10af227feb348f02" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>URLStop_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4bf2ec81c6ee22c7e9cebd4e8f3571f6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::StressTester_Form</scope><name>urlTickCount</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_http_request_sender_1_1_business_logic_1_1_data_type" kind="namespace" language="C#">
+    <compoundname>HttpRequestSender::BusinessLogic::DataType</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step" prot="public">HttpRequestSender::BusinessLogic::DataType::RelativeScheduleStep</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data" prot="package">HttpRequestSender::BusinessLogic::DataType::SaveStepData</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step" prot="public">HttpRequestSender::BusinessLogic::DataType::ScheduleStep</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data" prot="public">HttpRequestSender::BusinessLogic::DataType::SiteMetricData</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" line="3" column="1"/>
+  </compounddef>
+</doxygen>

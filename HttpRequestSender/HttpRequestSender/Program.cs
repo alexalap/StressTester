@@ -13,7 +13,7 @@ namespace HttpRequestSender.Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new StressTester_Form());
+            Application.Run(new S());
         }
     }
 }

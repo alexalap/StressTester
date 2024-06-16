@@ -1,7 +1,7 @@
 ﻿
 namespace HttpRequestSender.Forms
 {
-    partial class StressTester_Form
+    partial class S
     {
         /// <summary>
         /// Required designer variable.

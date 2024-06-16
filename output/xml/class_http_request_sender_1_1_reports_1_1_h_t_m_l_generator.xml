@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator" kind="class" language="C#" prot="package">
+    <compoundname>HttpRequestSender::Reports::HTMLGenerator</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a6bdb0cde12ac0e8d7ed61c2b2483761e" prot="private" static="no" mutable="no">
+        <type>List&lt; <ref refid="class_http_request_sender_1_1_reports_1_1_report" kindref="compound">Report</ref> &gt;</type>
+        <definition>List&lt;Report&gt; HttpRequestSender.Reports.HTMLGenerator.reports</definition>
+        <argsstring></argsstring>
+        <name>reports</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.reports</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="9" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1ab1c2a21c39490872e2e907b903e021d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.Reports.HTMLGenerator.HTMLGenerator</definition>
+        <argsstring>(List&lt; Report &gt; reports)</argsstring>
+        <name>HTMLGenerator</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.HTMLGenerator</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="class_http_request_sender_1_1_reports_1_1_report" kindref="compound">Report</ref> &gt;</type>
+          <declname>reports</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="11" column="16" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="11" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1af23c7820b749eeece2d1098d8cf3a4bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpRequestSender.Reports.HTMLGenerator.Generate</definition>
+        <argsstring>()</argsstring>
+        <name>Generate</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.Generate</qualifiedname>
+        <briefdescription>
+<para>Generates an .HTML code from reports, incorporating their information. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns the .HTML code. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="20" column="23" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="20" bodyend="137"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a1713b71fef3eed910f09134ca435d66e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpRequestSender.Reports.HTMLGenerator.GetValueScaleOfReport</definition>
+        <argsstring>(List&lt; Dictionary&lt; string,(int, double)&gt; &gt; graphData)</argsstring>
+        <name>GetValueScaleOfReport</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.GetValueScaleOfReport</qualifiedname>
+        <param>
+          <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+          <declname>graphData</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Y axis maximum from the OK response values of report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of graph data dictionaries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string of min and max values of Y axis. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="144" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="144" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1aeee81014f4749d5c6c5bb79a5f25e2d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpRequestSender.Reports.HTMLGenerator.GetValueTimeScaleOfReport</definition>
+        <argsstring>(List&lt; Dictionary&lt; string,(int, double)&gt; &gt; graphData)</argsstring>
+        <name>GetValueTimeScaleOfReport</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.GetValueTimeScaleOfReport</qualifiedname>
+        <param>
+          <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+          <declname>graphData</declname>
+        </param>
+        <briefdescription>
+<para>Gets the Y axis maximum from the average OK response time values of report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of graph data dictionaries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns a string of min and max values of Y axis. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="168" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="168" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a1e4c2361f6ed6d682b8ea7cdac91c39c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpRequestSender.Reports.HTMLGenerator.GetResponseValuesOfReport</definition>
+        <argsstring>(List&lt; Dictionary&lt; string,(int, double)&gt; &gt; graphData)</argsstring>
+        <name>GetResponseValuesOfReport</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.GetResponseValuesOfReport</qualifiedname>
+        <param>
+          <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+          <declname>graphData</declname>
+        </param>
+        <briefdescription>
+<para>Gets the &quot;OK&quot; response values of the report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of graph data dictionaries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string of result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="192" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="192" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1ac976fccb4cf4a8d3ebfb8797e9a151fc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpRequestSender.Reports.HTMLGenerator.GetResponseTimeValuesOfReport</definition>
+        <argsstring>(List&lt; Dictionary&lt; string,(int, double)&gt; &gt; graphData)</argsstring>
+        <name>GetResponseTimeValuesOfReport</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.GetResponseTimeValuesOfReport</qualifiedname>
+        <param>
+          <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+          <declname>graphData</declname>
+        </param>
+        <briefdescription>
+<para>Gets the average &quot;OK&quot; response time values of the report. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of graph data dictionaries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string of result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="214" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="214" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a511bb570a3f42266ee0c16faa4878c11" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string HttpRequestSender.Reports.HTMLGenerator.GetTimeValuesOfReport</definition>
+        <argsstring>(List&lt; Dictionary&lt; string,(int, double)&gt; &gt; graphData)</argsstring>
+        <name>GetTimeValuesOfReport</name>
+        <qualifiedname>HttpRequestSender.Reports.HTMLGenerator.GetTimeValuesOfReport</qualifiedname>
+        <param>
+          <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+          <declname>graphData</declname>
+        </param>
+        <briefdescription>
+<para>Gets the time values of the report. For the X axis placement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>graphData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of graph data dictionaries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the string of result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="236" column="24" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="236" bodyend="244"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.Reports.HTMLGenerator</label>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" line="7" column="13" bodyfile="HttpRequestSender/HttpRequestSender/Reports/HTMLGenerator.cs" bodystart="8" bodyend="245"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1af23c7820b749eeece2d1098d8cf3a4bb" prot="public" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>Generate</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1ac976fccb4cf4a8d3ebfb8797e9a151fc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>GetResponseTimeValuesOfReport</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a1e4c2361f6ed6d682b8ea7cdac91c39c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>GetResponseValuesOfReport</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a511bb570a3f42266ee0c16faa4878c11" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>GetTimeValuesOfReport</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a1713b71fef3eed910f09134ca435d66e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>GetValueScaleOfReport</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1aeee81014f4749d5c6c5bb79a5f25e2d4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>GetValueTimeScaleOfReport</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1ab1c2a21c39490872e2e907b903e021d0" prot="public" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>HTMLGenerator</name></member>
+      <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a6bdb0cde12ac0e8d7ed61c2b2483761e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Reports::HTMLGenerator</scope><name>reports</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

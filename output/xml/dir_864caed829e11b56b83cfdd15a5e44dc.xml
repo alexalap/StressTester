@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_864caed829e11b56b83cfdd15a5e44dc" kind="dir">
+    <compoundname>HttpRequestSender/HttpRequestSender/Utilities</compoundname>
+    <innerfile refid="_extensions_8cs">Extensions.cs</innerfile>
+    <innerfile refid="_i_o_handler_8cs">IOHandler.cs</innerfile>
+    <innerfile refid="_logger_8cs">Logger.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/Utilities/"/>
+  </compounddef>
+</doxygen>

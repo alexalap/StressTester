@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_address_exclusions" kind="class"><name>HttpRequestSender::BusinessLogic::AddressExclusions</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_address_exclusions_1a15be5b9c63071d21edd328b11ef21ff7" kind="variable"><name>UrlExclusions</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_utilities_1_1_extensions" kind="class"><name>HttpRequestSender::Utilities::Extensions</name>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_extensions_1a28f11db26c4f5a4643f7b7a3e60159ca" kind="function"><name>Swap&lt; T &gt;</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_extensions_1a19fa84eb365524c51a12f325aae23f3d" kind="function"><name>NextMinute</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator" kind="class"><name>HttpRequestSender::Reports::HTMLGenerator</name>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a6bdb0cde12ac0e8d7ed61c2b2483761e" kind="variable"><name>reports</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1ab1c2a21c39490872e2e907b903e021d0" kind="function"><name>HTMLGenerator</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1af23c7820b749eeece2d1098d8cf3a4bb" kind="function"><name>Generate</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a1713b71fef3eed910f09134ca435d66e" kind="function"><name>GetValueScaleOfReport</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1aeee81014f4749d5c6c5bb79a5f25e2d4" kind="function"><name>GetValueTimeScaleOfReport</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a1e4c2361f6ed6d682b8ea7cdac91c39c" kind="function"><name>GetResponseValuesOfReport</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1ac976fccb4cf4a8d3ebfb8797e9a151fc" kind="function"><name>GetResponseTimeValuesOfReport</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_h_t_m_l_generator_1a511bb570a3f42266ee0c16faa4878c11" kind="function"><name>GetTimeValuesOfReport</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception" kind="class"><name>HttpRequestSender::ErrorHandling::InvalidMethodCallException</name>
+    <member refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception_1a8ab80a4c8e908e700fbd34a5467034ed" kind="function"><name>InvalidMethodCallException</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_utilities_1_1_i_o_handler" kind="class"><name>HttpRequestSender::Utilities::IOHandler</name>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_i_o_handler_1ad64c6a76a8840f98d3415174599dbe60" kind="function"><name>WriteToFile</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_utilities_1_1_log_entry" kind="class"><name>HttpRequestSender::Utilities::LogEntry</name>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1a20d85c20362aa5918c1bfb20265a4031" kind="variable"><name>logPriority</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1a51021ac11e0c5cf15d5ad4c14fa4af98" kind="variable"><name>timeStamp</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1a0d5432f16f287d38d3f158043884d63b" kind="variable"><name>message</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1af49cced8d52720cde435d72c009d7a73" kind="function"><name>LogEntry</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_utilities_1_1_logger" kind="class"><name>HttpRequestSender::Utilities::Logger</name>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a7a1642037e2ed5ab86784bea48bb20f9" kind="variable"><name>logGridViewRefreshInterval</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a1ae08d54174f92e5d59512b42718e475" kind="variable"><name>lockObject</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1ad6141ff29596c564930859ba1b9b62d5" kind="variable"><name>timer</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a237f65350e670b945969ed8c04f2dfa0" kind="variable"><name>logEntries</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a7b0faea50ca516be4133027b296c0260" kind="variable"><name>newLogEntries</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a6adab0576d31088ad4bf36dd935c2480" kind="property"><name>logGridView</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a07518ca56f75fd864c4ec5d40792b543" kind="function"><name>PrintLog</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a535d9ebcd25009e237405ce9f772997f" kind="function"><name>Log</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1adc796c248e392fb73d77b37c88b22d10" kind="function"><name>LogGridViewRefresh</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a2d60cf041309960eec9bb6146d71aa50" kind="function"><name>LogToLogsTab</name></member>
+    <member refid="class_http_request_sender_1_1_utilities_1_1_logger_1a601589d39d27517222bd017bc06dd85b" kind="function"><name>TimerTick</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_forms_1_1_program" kind="class"><name>HttpRequestSender::Forms::Program</name>
+    <member refid="class_http_request_sender_1_1_forms_1_1_program_1a512e68b3a7f34cb7a3111205a7071bd8" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form" kind="class"><name>HttpRequestSender::Forms::Relative_Scheduler_Form</name>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a73f4cbb234a379fe385c667f56d951bc" kind="variable"><name>schedule</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1af98ecb69ed04dbe956a12eda50990c50" kind="variable"><name>components</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ab1a26bea3cb21b8fcd1cddda749edb48" kind="variable"><name>panel1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aefb0091eaf775c01d275a1e6764a29bf" kind="variable"><name>label4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad9a47533ca72fc55f8bd9676d3789879" kind="variable"><name>remove_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1abb8e49fd4ecb3e5eaf4f1ea0a2af5f63" kind="variable"><name>edit_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a6cd4a527270fe0bc6e7b89b0c4b0609e" kind="variable"><name>add_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad25531e5acdef8139dba8f13975873b4" kind="variable"><name>planEditorOK_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a3074e2e7e3dcbed15c684455871430c2" kind="variable"><name>planGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ac69bdd62ea0835ee9050bb6ec6a4aba4" kind="variable"><name>label1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a826b96db2058738610b4897fa998b18f" kind="variable"><name>down_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a55ec0b06afa47febc979af8a4cbab277" kind="variable"><name>up_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a77280458c2efe08aec9830108c5c4c95" kind="variable"><name>requests_NUB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1abfca4e66672a707f5e7abb90b3bfe314" kind="variable"><name>duration_TP</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aaa66cee751451bbf9c9ee281c43c267c" kind="variable"><name>label2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad59152dd68fad0186493a80466c91a84" kind="variable"><name>stepColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a9580e913fcfedd0f8856b80012a33f94" kind="variable"><name>endTimeColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ac61ece3b75d5232861f020ce4cdb1fc4" kind="variable"><name>requestsColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a19919b456f038636e1b4c0066c627415" kind="variable"><name>import_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a66e62dde0abef29e09af3817d74cac35" kind="variable"><name>export_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aceb548332812f0856898efada56e8ac4" kind="property"><name>Schedule</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1afa2b1e95439f4ab50eb3fe284239ea36" kind="function"><name>Relative_Scheduler_Form</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a584bc8b5e2336198eebde359b239d3de" kind="function"><name>Scheduler_Form_Load</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a8cab8f7ed6e5b70ccfa4ff7e03b0ebdd" kind="function"><name>RefreshGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aa06ec7094b58ee31c74aee34f39de25d" kind="function"><name>planGrid_SelectionChanged</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a7aac481ae8b78dae6b4a84b36a83fe9e" kind="function"><name>add_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a054a6c54d6a0dbf498e9f1ab303f813e" kind="function"><name>edit_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aa372041e988353ef3e538615ccc04a3f" kind="function"><name>remove_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a1f7e3101e187f1d93ec05e447395cd48" kind="function"><name>up_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ae6f6fa873239d0dbafbdd983273ef606" kind="function"><name>down_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a361f47aca5895237fcd44b6544dde002" kind="function"><name>planEditorOK_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a393ed4a7beb14f2d731fa1e25c69d8b5" kind="function"><name>ResetFields</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a402a1155c19e2f99097845cffb0a71e8" kind="function"><name>Import_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a4169d098ab0ca0440875054ed7fe0ad4" kind="function"><name>Export_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad42957f889f2b00dd0226b9875ab7f57" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a5c6f85c318cf6d02597f9032f633eb21" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kind="class"><name>HttpRequestSender::BusinessLogic::RelativeSchedule</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a423635bb07a0297dddf6a5184507b8b4" kind="variable"><name>scheduleSteps</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a6bf36b5d7b3e05704ee419b3b815fe40" kind="variable"><name>currentStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1ab15eca05fb0b1a52da1729ca27cc8045" kind="property"><name>IsStarted</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a8bc6266c95c31e9d5068dfacc8122d79" kind="function"><name>CurrentStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1abe7507e0562528ed4e462f1640d7a7cb" kind="function"><name>NextStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a4fe9ff7ac565c0ac884767d4bfc18898" kind="function"><name>GetSchedule</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1abf8a4619be1289e6c9d64c5388b55076" kind="function"><name>AddStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a5f2f4741edc97b1f8017176eb5bc383f" kind="function"><name>RemoveStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1abdd973d35c07834f713a6c0c9a12d426" kind="function"><name>MoveStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a0ccdd4dd884283e8ccda13aa7002b985" kind="function"><name>EditStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a9a31414575caa530e48e1ee26189ce40" kind="function"><name>Step</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1a447e8a9a484a2a48ec2db3608b95a41f" kind="function"><name>Clear</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1aeb998211d54d88ae62b1c259ef208170" kind="function"><name>Reset</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule_1ac79c41a60d33df274880e3730e86e4de" kind="function"><name>GetCurrentStepIndex</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step" kind="class"><name>HttpRequestSender::BusinessLogic::DataType::RelativeScheduleStep</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1adf4372225ea2f6577bc00c962d7c9a26" kind="property"><name>Duration</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1af76e33c16cd7de74886d6010c1eed22f" kind="property"><name>Requests</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1a7cd64510edc7e1f3db40b753085d748c" kind="function"><name>RelativeScheduleStep</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_reports_1_1_report" kind="class"><name>HttpRequestSender::Reports::Report</name>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_1a44c052dffcb9e107c933b2576689367d" kind="property"><name>Title</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_1a7346e3a47d1bd9eab5deec944c97712e" kind="property"><name>Address</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_1a2f6fe5d90c99efcffe8608c429d251a6" kind="property"><name>Start</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_1aeefb6c407f7dcebd7527f9c5e7076050" kind="property"><name>End</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_1aa66ca64c4d0888fd92434314d2c7eb72" kind="property"><name>GraphData</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_1ac587f711ae485642c73a71320a4dbae5" kind="property"><name>MetricData</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_reports_1_1_report_generator" kind="class"><name>HttpRequestSender::Reports::ReportGenerator</name>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1a6f3ef6066a8d599fd34c16bf832b9cd2" kind="variable"><name>reports</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1a94a6da13990a1f5cd8823929e0458e20" kind="function"><name>CreateReport</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1aa6c5472fbff86ce3e9e4921f62d4ad28" kind="function"><name>SetGraphData</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1aa98ff6646ef82821fb31a54ecc1898ab" kind="function"><name>AddMetricData</name></member>
+    <member refid="class_http_request_sender_1_1_reports_1_1_report_generator_1a8e88cd2754e2b3d519b210d6646fb7c0" kind="function"><name>Generate</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_properties_1_1_resources" kind="class"><name>HttpRequestSender::Properties::Resources</name>
+    <member refid="class_http_request_sender_1_1_properties_1_1_resources_1ac6849b61d3594af3148c8d32853e6bc6" kind="variable"><name>resourceMan</name></member>
+    <member refid="class_http_request_sender_1_1_properties_1_1_resources_1a2d11a82d4047ca01eed9b38466cca737" kind="variable"><name>resourceCulture</name></member>
+    <member refid="class_http_request_sender_1_1_properties_1_1_resources_1ab4486c04d0a498f40c64617746ba47cf" kind="property"><name>ResourceManager</name></member>
+    <member refid="class_http_request_sender_1_1_properties_1_1_resources_1ac05ceb15b567baf142044315df775a28" kind="property"><name>Culture</name></member>
+    <member refid="class_http_request_sender_1_1_properties_1_1_resources_1a25fe236cb2c8e9b0dcc30b757e0296fc" kind="function"><name>Resources</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data" kind="class"><name>HttpRequestSender::BusinessLogic::DataType::SaveStepData</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1aef1881665722ee239cc23f214c369fcb" kind="property"><name>Duration</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1ae7a8840f721c39ce7ad47b9a0a9dc56a" kind="property"><name>Requests</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1a469922976fce9393c450218d17ed4515" kind="function"><name>SaveStepData</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_save_step_data_1a89fa190c87a266b397f7acd83fd4ac54" kind="function"><name>SaveStepData</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kind="class"><name>HttpRequestSender::BusinessLogic::Schedule</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1afe73824198668746a2f99031d229a595" kind="variable"><name>scheduleSteps</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1a3a55a7ae6c01d923afdeac2d2c17a202" kind="variable"><name>isStarted</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1a798aa0d2eba88e26475beadd68432760" kind="function"><name>CurrentStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1a79b481e0d41b44a19e09b272c648e51e" kind="function"><name>NextStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1a6f3b9d5b44e0f881754a3f6f0bce2985" kind="function"><name>GetSchedule</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1aef13165a0080cac21adaf41322b9947a" kind="function"><name>AddStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1aa3a2c1f18362ec97c8b8c86add7c707b" kind="function"><name>RemoveStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1add9c37f7278809d5b34af4da97f929e8" kind="function"><name>MoveStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1a342c59e5433b332c8a57d0f40b0f363d" kind="function"><name>EditStep</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1ab0a23a42f30578efccb8b2dab1e3ca91" kind="function"><name>Step</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_schedule_1a60723456f34df7d8942314589c8f457a" kind="function"><name>Clear</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_forms_1_1_scheduler___form" kind="class"><name>HttpRequestSender::Forms::Scheduler_Form</name>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a8e3568bea3189ad6d1c0148c8601e0ea" kind="variable"><name>schedule</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ad7c89ef07db0a09c02125ca90e6d31f7" kind="variable"><name>components</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a76b1328bedd4cb4223ae00f06f57538b" kind="variable"><name>panel1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1af1f8b999dacdaaea43bbb61dc2e92966" kind="variable"><name>label4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a4adeb55d1a87c58a622bff58c39db216" kind="variable"><name>remove_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a15ff896ce826603c289d61f673bb9266" kind="variable"><name>edit_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a8cbb3ba4f8087cc06efa7c648bcd6a62" kind="variable"><name>add_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a07500a47832065b2a873d97f48a93dfb" kind="variable"><name>planEditorOK_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a6ce166cd9f6ce982f0c143ba2a537e1e" kind="variable"><name>planGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a872d8aec0d2db47a00a45e1844f9a4f6" kind="variable"><name>startTimer_TP</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a426bb920a35ce23ccfb84e7feb61d8b9" kind="variable"><name>label2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a9b715af73a90ab52276cea5a31b68200" kind="variable"><name>label1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a454540c8de132e574dd242e59bd5f044" kind="variable"><name>down_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0fc313ca0851e58d82165a68d972ef24" kind="variable"><name>up_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a068200ce73858ba9e428fc2fe15a1481" kind="variable"><name>requests_NUB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1adf181e1cee45f9db16a839b5c245d503" kind="variable"><name>stepColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a7e99093ffeabbd97c5f263c70ebf3bfd" kind="variable"><name>startTimeColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a020671f191d71c73589a1c847b54040c" kind="variable"><name>endTimeColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ab7083dccaf7c37315bea16b59aad3b6d" kind="variable"><name>requestsColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1aff806b458001555253786a4c434c08ef" kind="variable"><name>endTimer_TP</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0154d3147d42b22c94a3ac906608e650" kind="variable"><name>label3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a7f95331470d92b24e5b75f2943662363" kind="property"><name>Schedule</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1d88024050cbea0e53539c51194d96a1" kind="function"><name>Scheduler_Form</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a382d3f341706f536ffe5154b4f6e6c66" kind="function"><name>Scheduler_Form_Load</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1c2a907688237db07be24ee46dac0eb6" kind="function"><name>RefreshGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a6ff865806cb404036e683141e1a5216c" kind="function"><name>planGrid_SelectionChanged</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1e626a4d3b007c9292db724b67ec2482" kind="function"><name>add_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ae50ea7c20f8a055003017d27dbf22f5d" kind="function"><name>edit_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1aeb8f926c3d80a1955cb8eb38e9fd12cc" kind="function"><name>remove_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a2fba0c031f24bb18cfff4aa124f17e8e" kind="function"><name>up_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a497ef81cc9a5075e234216e3c9a2b625" kind="function"><name>down_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a325216387143cd15bb3e7516e6686571" kind="function"><name>planEditorOK_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0411a994851f16fcf6b798d3beea367c" kind="function"><name>ResetFields</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a18a4d92e50f19de258baeccc6d94791f" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1abc79be21703647e5ff638f0540cb4bec" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step" kind="class"><name>HttpRequestSender::BusinessLogic::DataType::ScheduleStep</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a00dc74a90f5d17087a3803a8e19d3c1c" kind="property"><name>StartTime</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a2eb8fcbde6581fa1377c5de0a31c3574" kind="property"><name>EndTime</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a61eb107ceb3e4825735185c29bda75a4" kind="property"><name>Requests</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a611c3fc0fdb68bda323d9c18b3148ff7" kind="function"><name>ScheduleStep</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics" kind="class"><name>HttpRequestSender::BusinessLogic::SessionMetrics</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a5ad00b109c46c4f40d9f80c30ab0016c" kind="variable"><name>siteMetrics</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a882fc079bb6a3e9f2ad6ff50dcbfd809" kind="variable"><name>activeMetrics</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a7772fb16e4304e23b184a8d2fbe883ab" kind="function"><name>GetDuration</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1aee622ef5efcddec9b2eb71175823bd85" kind="function"><name>GetOKResponseCount</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a45a2c4c05b5d8a0b7890b315775b3e0d" kind="function"><name>GetErrorResponseCount</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a89daf93fcee2dabbcdb56d530ef72b2e" kind="function"><name>StartMetric</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1aac8ecb03cd6c2a666b930e56316e5ff1" kind="function"><name>AddResponse</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1af06339231c6f7090851c0104ccfdf1c7" kind="function"><name>ResponseTimeRate</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1ae8d06890ca319fae6ab7e10e9ba8d2c4" kind="function"><name>ErrorTimeRate</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a6c1d39a70705954efeac895c1d8c763e" kind="function"><name>ResponseTimeRateLastSec</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a74c3265e5d7b3ef700d8347854bc3268" kind="function"><name>ErrorTimeRateLastSec</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a3addb1e2c1011ce3afaf8dc108facec7" kind="function"><name>CloseMetric</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a473f76e43fcc959fb632e7aea3b69a4d" kind="function"><name>Pause</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1aecb823c51dd66b1a0b3d56fc9627fa68" kind="function"><name>UnPause</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a71753b4ee7da073456680683c2213726" kind="function"><name>GenerateReport</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics_1a4045b6a21a1fc07a1de06969fca21490" kind="function"><name>IsEmpty</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_properties_1_1_settings" kind="class"><name>HttpRequestSender::Properties::Settings</name>
+    <member refid="class_http_request_sender_1_1_properties_1_1_settings_1a18f941b89f56d2e95d34ddf82ff561e3" kind="variable"><name>defaultInstance</name></member>
+    <member refid="class_http_request_sender_1_1_properties_1_1_settings_1ac4d0d689042c7c638aed546df55401d4" kind="property"><name>Default</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data" kind="class"><name>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1aa8694b21fc807e2e8b7b6582f38fff1e" kind="variable"><name>ID</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a43524ab588ea32ac6eb57be528d361d9" kind="variable"><name>id</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a8ba923e06679ab9fcab237dd4cb7bf81" kind="variable"><name>address</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a633c6437859951f55ec1e7010869efb5" kind="variable"><name>start</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a91ef9a2a293255b72344c5626fdaeadd" kind="variable"><name>closed</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a388fa3641a648c03611d63f67a3db5b3" kind="variable"><name>paused</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1abdc15ac368da0546cb58595550a5960c" kind="variable"><name>timer</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a18d3ed01225dcd8357d31c2ca79c094c" kind="variable"><name>lastUpdateTime</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1adf58162bed0ba767220759f0407b23ab" kind="variable"><name>duration</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a2081d7543718d3f2ca298ffd97e7dd34" kind="variable"><name>responses</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a56a87ab50079c5869049a8d152563b47" kind="property"><name>Duration</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1abe682d575c46e1b87dc600f1da989086" kind="property"><name>OKResponseCount</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a54f9f3a7d69ea06d5cee19de0af5993b" kind="property"><name>OKResponseRate</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a01b4577520c3c016d3f6d1d475d6e48d" kind="property"><name>ErrorResponseCount</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a1ca596dc6f54a80b855694d4214b818f" kind="property"><name>ErrorResponseRate</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7676b5f8bd8833f9a7628ab748cd4145" kind="property"><name>Address</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a5ce24be7562ac53bde07dea1b349376c" kind="property"><name>Title</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1ad2d7ff7a14e01213925a676acfbd8df1" kind="property"><name>currentResponses</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1adf5913614dbaf7785aeb7c9fc8d1aa32" kind="function"><name>SiteMetricData</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7dfbc109daac07f765e134955f91c5ff" kind="function"><name>AddResponse</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a64da98e49d622b9b16bb0de357f314a0" kind="function"><name>ResponseTimeRateLastSec</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a5d2cef6afc6af5f47b03470f4edd6e1d" kind="function"><name>ErrorTimeRateLastSec</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1ac2ff01f24849a74d9f5d8afc46db3b79" kind="function"><name>Close</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a99a05ff69814d774c120a1963847e4d9" kind="function"><name>Pause</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7ca6a880c978821177012f6345f41df9" kind="function"><name>UnPause</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a4eff50f420b84ca7545097877e7366af" kind="function"><name>GenerateReport</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a102ec1f2c058b00abeab799296245839" kind="function"><name>RefreshDuration</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_site_requester" kind="class"><name>HttpRequestSender::BusinessLogic::SiteRequester</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1acace151044739a1d0d5ccb7c1aabf95f" kind="event"><name>Tick</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a05b5d87a1634e13c3dda52eb7f5b452f" kind="event"><name>PlanTick</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a47c3f2aac4deeb198ba5cbc6b8d4c704" kind="event"><name>OnPlanFinish</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0276a99d1b8fe930b8f84488f9c4afee" kind="event"><name>AddressedTick</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a26e312b288f1f2bd26afbcf913205770" kind="variable"><name>client</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a05071a7fb095f9e81c080344d4bf003d" kind="variable"><name>address</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a2ca8f5c98c516fcc661cfe60f2f1581e" kind="variable"><name>cancellation</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af89caca19ca0f5afa96cbb0eb3064377" kind="variable"><name>plannedCancellation</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5e023a09a4df5bd48ef0ef95280bf7f9" kind="variable"><name>sessionMetrics</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a71e844317800874e8b9d3f4893005672" kind="variable"><name>timer</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1acc4d63636ce2ec5f0d9d77e6236c2dda" kind="variable"><name>plannedTimer</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a72bb08802000925d06c6c3c39f125cf6" kind="variable"><name>isPaused</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a8e34f2fce77b118262a9dbd917b471d7" kind="variable"><name>numberOfRequestsPerSec</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5fb9d399c8b830a6792104b7a35f1ca1" kind="variable"><name>isMeasuring</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a836b03a00b19036447121dc5e03319a6" kind="variable"><name>lockObject</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a74e39c256fb451948a37be46ba86d430" kind="variable"><name>tickCount</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0429fdcf1547dfbb012b488dc13e09d2" kind="variable"><name>timeSinceLastTick</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a39e7c9fe13ed5527d7feb720709a7f73" kind="variable"><name>pauseTime</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a6eab3d0d4569673179989225f5f76183" kind="property"><name>Status</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a9c1031622709783b967c594ec906cd42" kind="function"><name>OnTickDelegate</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ac848afe4888aceec68624bc77c7c273e" kind="function"><name>OnAddressedTickDelegate</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a1747f95a0d9e5e214e16c6de09a521ce" kind="function"><name>SiteRequester</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0d712cca639c766067cae51d8e9ab318" kind="function"><name>GetResponse</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a796c5acfa6907897789ec8daffc3736e" kind="function"><name>StartMeasurement</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a69cca1ee8ee86f4cb200c6b5e4e031b0" kind="function"><name>Pause</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ab4ac7ba324bd68f930ac8aadd0984afb" kind="function"><name>Resume</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a6bff4ed59a72401c004cf40666de0875" kind="function"><name>Stop</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a27005e2f635795ed25e9270c6aad7e56" kind="function"><name>PlannedStop</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ab328c677860a4f00ca747551d233cf5e" kind="function"><name>RelativePlannedStop</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1aaabeb586efe2b2c5fb814086d3a3d905" kind="function"><name>StartSingularMeasurement</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af331e53c2ab2b62b7ef3f41fd5a4258e" kind="function"><name>StartPlannedMeasurement</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af8f513d2820a60ee965c23c239d69eb5" kind="function"><name>StartRelativePlannedMeasurement</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0917d9eaa1e4d54e862cc99d6f8786b8" kind="function"><name>GetResponseParallel</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5541dc29bb8f36abd90020b4837ab37b" kind="function"><name>TimeOut</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer" kind="class"><name>HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a6cb44f5e45ba483271443632a1229188" kind="variable"><name>client</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1acae07525ad9d7f87101c29bab78798b7" kind="variable"><name>address</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a5d747ed881461c0425c95bc54872512a" kind="function"><name>SiteStructureAnalyzer</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1ac96c444259bed539c4765d7c0f85c053" kind="function"><name>Analyze</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1aabf4356a6272ff8cc7f3d23f487f3645" kind="function"><name>AnalyzeSite</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1ac0bac7dabe71ea340d93d1a64ebf831b" kind="function"><name>GetSource</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer_1a6a860cb4c00cc7b8de15f76053dbed5f" kind="function"><name>MergeList</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer" kind="class"><name>HttpRequestSender::BusinessLogic::SourceAnalyzer</name>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a39d1559537d7ac0e658f5df357d13231" kind="variable"><name>rootAddress</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1aab448afc903dfda711ad522a28b8fb47" kind="variable"><name>htmlDocument</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a1c2d3d847f7674fcb8c04457c2327cb8" kind="function"><name>SourceAnalyzer</name></member>
+    <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a1f2f160d2e9a8010686f91463d42ecbe" kind="function"><name>Analyze</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form" kind="class"><name>HttpRequestSender::Forms::StressTester_Form</name>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112" kind="enum"><name>States</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112a4d3d769b812b6faa6b76e1a8abaece2d" kind="enumvalue"><name>Active</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112ae99180abf47a8b3a856e0bcb2656990a" kind="enumvalue"><name>Paused</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac2a8d777ba3ea3b2e70fca36a282e112a3cab03c00dbd11bc3569afa0748013f0" kind="enumvalue"><name>Inactive</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab86f916a70288fe312b083adf3a62dfa" kind="variable"><name>session</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a47289cb72e56d597866bb17c7a5db16e" kind="variable"><name>siteRequester</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a2a5fd26f420fb836780f9a3008b13bd6" kind="variable"><name>siteRequesters</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5da90d9b65a333596837937b64e9fb4c" kind="variable"><name>address</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1acbd7f7744d002df87cc2f11fc291d183" kind="variable"><name>manualState</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aca00177dad65ce68609e3aabcb39e12f" kind="variable"><name>plannedState</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad0c1e58e441eb8545364b43a48bdcb91" kind="variable"><name>explorationState</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a30fb910b538a554975cdf00450a98751" kind="variable"><name>schedule</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa3faf3ab07537f030bfb94e1921db942" kind="variable"><name>relativeSchedule</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aef38fd749387e9afa7518241f65f95e6" kind="variable"><name>siteStructureData</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1acd52d83816922d3b71b9322ed729d682" kind="variable"><name>lockObject</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3c3a5c6bc11bb0b42637c7b92ed84a67" kind="variable"><name>planStatus</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4bf2ec81c6ee22c7e9cebd4e8f3571f6" kind="variable"><name>urlTickCount</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa88774066d7af16884eed8b7d3d13918" kind="variable"><name>components</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aed71deddc132a073624a1bec2d39d4f0" kind="variable"><name>label1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a97382b75d67e3dcccc2e8806ae6465ab" kind="variable"><name>URL_TB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8d71abee541c0a2eef2a436b8359e726" kind="variable"><name>reqPerSec_TB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a13d183583b5e96f67f7fc6a6c48916ed" kind="variable"><name>label2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a525ec70ee579f007fa94fc5085497e72" kind="variable"><name>label3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a0988035c9a4ef2cd74513e478f437cb8" kind="variable"><name>start_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab8206f963ad15296d37f98cd05bbe988" kind="variable"><name>stop_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a51014b67751bcd103893346feb7ff593" kind="variable"><name>panel2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac5eaa414a9d5d20534e342bcdcb78944" kind="variable"><name>statusStrip1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac53f65918c187116bb7411495debd2d1" kind="variable"><name>status_L</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac7627c10827460d549b600e71b942eca" kind="variable"><name>pause_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4ed1580e20e0d29409aa04db90b3d9db" kind="variable"><name>main_TC</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a11e9617283716c97e1ac70e400ad4d09" kind="variable"><name>tabPage1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ade2cbe5d52ec7a939d20ae37ab09afb6" kind="variable"><name>tabPage2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8036773e8a3738f3a2fdd5a94f5b3e1b" kind="variable"><name>tabPage3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa00075972af77a24d7ad9b87cefc0471" kind="variable"><name>tabPage4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a57cfa3d81115cb08768259a28af2ff42" kind="variable"><name>panel1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ae3fc30f910ed44bb53d7a9aa4f99f3e2" kind="variable"><name>planEditor_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a72bd87b2faad174e4a8d49201bb0a18b" kind="variable"><name>statusStrip2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a30911ba5715b785982b17fb64f43a97c" kind="variable"><name>toolStripStatusLabel1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a632cd2d6136f258e77a1d60221672c1a" kind="variable"><name>label4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1abad285621450efae7ce3765ca0e636c2" kind="variable"><name>plannedStop_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa662e02e1e3609034b9f42756f376776" kind="variable"><name>plannedStart_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac73b4e5cee5c497cbe861c598b761b5b" kind="variable"><name>manual_CH</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a1c55d604a5b5ebbc8574595989b7aab2" kind="variable"><name>panel4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a469fe3e14b4330b31a2777f15ab19147" kind="variable"><name>statusStrip4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4504111be665de35468b39e6b6dda23f" kind="variable"><name>toolStripStatusLabel3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4c3c2cd41a170c7b77fd21fee930e1fd" kind="variable"><name>label9</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a25aeaa37c33dad83a3f2775b239f8f8c" kind="variable"><name>label10</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ae798f17c1c038490a34956fe84c83466" kind="variable"><name>panel3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8b08e41fe156bfcfd19f879588d7a00d" kind="variable"><name>statusStrip3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a32b3bed27dce26398e51e98a2e379b8a" kind="variable"><name>toolStripStatusLabel2</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad1c55ea6788fcc976b29ed89976907af" kind="variable"><name>logs_DGV</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a89242f358c6f36cc23a5d0604b3715b2" kind="variable"><name>label6</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6945e33bf2958ed2f88c952b9c4d16c7" kind="variable"><name>URLReport_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6828bc9693bcfb025cdb5fbffcddc97a" kind="variable"><name>URLStop_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a29208f8ef43930517448e5b79d9403f2" kind="variable"><name>URLStart_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab8aefa7df1601a1bef18111e877f6119" kind="variable"><name>explorer_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a085d9f43d693efa918b8daf8dd4000af" kind="variable"><name>averageResTime_L</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aeefdf9f7955492d1c70a2bb25f7f145d" kind="variable"><name>numberOfRes_L</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa1c15f61b2f6db56b37d57326c3526fc" kind="variable"><name>label11</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a57b694e42ba29db9d433ce77560f3a08" kind="variable"><name>label8</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa36dabe3a265e951d984babe1133d397" kind="variable"><name>report_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a09152fbe3e2e95e31a6a5e0c591a9bc8" kind="variable"><name>planGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8a6d742c0a7681cdf98177824ec813dc" kind="variable"><name>explorationRequest_NUD</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a882549be8d711140dd84c899f755c3dd" kind="variable"><name>label7</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a384dbf87653dd98aef7294b9e20d7ca4" kind="variable"><name>explorationURL_TB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a7919256a8faac8c5f3c1ed8a43384987" kind="variable"><name>exloration_Grid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa0e33c4cecd0ad2b73fd844454fd0e4e" kind="variable"><name>exploration_CHB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aab7baf25f0af3af3235a67e6b47fbb6d" kind="variable"><name>addressColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af74ffbb4dc5d8edb56d5d85675267a3c" kind="variable"><name>linksColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af2ca9309419e32810f0b4c60284332ee" kind="variable"><name>multiplierColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9f236b70083a53c90c3f233c8fe4517e" kind="variable"><name>totalRequest_L</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9bb623400a5f949d1448d8154961a9ae" kind="variable"><name>plannedReport_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ab7ba679ddd77b7781fe89690206a76d5" kind="variable"><name>planned_CH</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a27d61ae39caee00625853f7717e495e4" kind="variable"><name>label5</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9187b85a6105362383e78d0ada81ab2d" kind="variable"><name>plannedURL_TB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6226ef27a22644bda6efac4dc77c79e2" kind="variable"><name>exploration_CH</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa07ca0a21efc25f0d7ef962ba66b590e" kind="variable"><name>stepColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6a3a56994e61821c1cd1003a6e552ff4" kind="variable"><name>startTimeColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a55fb2946bd32507f9f8ab655ec8a83bd" kind="variable"><name>endTimeColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aad4c5e481752fe6b57116bdf1d1ac9e6" kind="variable"><name>requestsColumn</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a0e62e2ca31176a9a5c16840fb6a1b672" kind="variable"><name>dataGridViewTextBoxColumn4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a91bd504e0f0bf593cf8231abe4684848" kind="variable"><name>Priority</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aadec2612bd3b86b72aa738ca0e0b5679" kind="variable"><name>dataGridViewTextBoxColumn5</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a63adcd1f913679ec09240638e759dbe8" kind="variable"><name>tabPage5</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a104e48d78399d8d12c67de9906c83dc0" kind="variable"><name>panel5</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8fa12825fa33ab4ffc5dc970f54f9495" kind="variable"><name>label12</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5acbd109d2abb673368c5a6cdecb539d" kind="variable"><name>relativePlannedURL_TB</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9973a2d512b24dbfba81331e1694e125" kind="variable"><name>relativePlanned_CH</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9c24fe89c1c1253c35b4c5cd266f6d7e" kind="variable"><name>relativePlannedReport_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a756b3af93cd58ed33b92ddf9d0e4235b" kind="variable"><name>relativePlanGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9f11245ce80fbe68cab53aaf0c49be92" kind="variable"><name>relativePlanEditor_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1accfd7f715b19da15dc5067f7c479bd34" kind="variable"><name>statusStrip5</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af913e6c52c6c477d3ec68537001c03da" kind="variable"><name>toolStripStatusLabel4</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a40c53c3b46c1ec5bcea4465ce0810546" kind="variable"><name>label13</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a91dce2e1ea2c2e757724c2042bbe3700" kind="variable"><name>relativePlannedStop_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1afe91b29ae31a2625cbf29c591836c0af" kind="variable"><name>relativePlannedStart_BTN</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1afc2b585ed91f42dc7de6c8b6dfcfdb19" kind="variable"><name>dataGridViewTextBoxColumn1</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a5e38674e7e719057cbb83b99a5f50279" kind="variable"><name>dataGridViewTextBoxColumn3</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ace90e856a25d24d6f7e5c814f400e1ea" kind="variable"><name>dataGridViewTextBoxColumn6</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a2811e475b09a876c963d6a4db54bee5b" kind="function"><name>StressTester_Form</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af892309fb3c0786902e924ce1bad2cd1" kind="function"><name>start_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a61e75cf9c0df2ad339fcc34487f0def1" kind="function"><name>pause_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9ccf9fb166164f2978741a96aa7f2afc" kind="function"><name>stop_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3b3601795e649a87e7394f0d862e5d3b" kind="function"><name>UpdateButtons</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa4513186e8a471b961cf21ba9decd113" kind="function"><name>ManualStatisticsUpdate</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a489d137d4303bc72264cde269f5d73d2" kind="function"><name>planEditor_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a607a341417a26c115dc9abb0b5ec6d82" kind="function"><name>RelativePlanEditor_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa73fc9d8926a210acfb1ef6b5851d503" kind="function"><name>report_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1af44037a6cc8a494e0fa91f2ebe6899a7" kind="function"><name>RefreshGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a64c58d11597d598f056c0a0bc4691b51" kind="function"><name>RefreshRelativeGrid</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4a6b655a7e50a835e88e822e17e51e42" kind="function"><name>explorer_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a3fc92870bf89ed9d522cfc6e47ff2582" kind="function"><name>RefreshTotalRequestLabel</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad5d1208b2cd2738218d747ebe5c72f5e" kind="function"><name>explorationRequest_NUD_ValueChanged</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a1ca4443b5b3d0367cfb9be9d182c058a" kind="function"><name>plannedStart_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a228a6c873eeee02deb9fea8428d33118" kind="function"><name>RelativePlannedStart_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aff71adb9d40091f764cff82a3a6c939e" kind="function"><name>OnPlannedMeasurementFinish</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a6c840c17ed361cd4cc6a289a9e0ce42d" kind="function"><name>OnRelativePlannedMeasurementFinish</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a785015f6994c868e17d33afd9758a1c7" kind="function"><name>plannedStop_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a044ed2b4d795cfbc12cd5bdeb1a3a124" kind="function"><name>RelativePlannedStop_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ac3fbf4a9cca1b4ea827e360e0674c562" kind="function"><name>UpdatePlannedButtons</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a069126b0a76bae0e593f1ccaa59af123" kind="function"><name>UpdateRelativePlannedButtons</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a97737d8e4d5a7d3ba47ea366505a13bc" kind="function"><name>PlannedStatisticsUpdate</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9e49b5fa6605d5bb3c49395867e60581" kind="function"><name>RelativePlannedStatisticsUpdate</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a33087bf9b254eddd13e3c280643cab2d" kind="function"><name>PlannedStatusUpdate</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a4ba9ca1f58082f44adc081cc1a4bccf2" kind="function"><name>RelativePlannedStatusUpdate</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1ad3c28f709519927e4f913f5ff1f0a9df" kind="function"><name>URLStart_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a9b76b6c320ae931e3f7947a4ed14fe28" kind="function"><name>ExplorationStatisticsUpdate</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1adaf2dfdf2d91114d10af227feb348f02" kind="function"><name>URLStop_BTN_Click</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a92b15a2f0f3f994be90429b8e00be5ea" kind="function"><name>UpdateExplorationButtons</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a7005fdb42c7d13f1e384fb53c76e89fd" kind="function"><name>planGrid_SelectionChanged</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1aa60b08e33e0790222c7d34346ae28091" kind="function"><name>RelativePlanGrid_SelectionChanged</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a38aafaa73c334189229f0d8c6e1acac3" kind="function"><name>InitializeComponent</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a8579ddee76d0f4a2b4eab295648f80cc" kind="function"><name>InsertGapIfNeeded</name></member>
+    <member refid="class_http_request_sender_1_1_forms_1_1_stress_tester___form_1a89dd8aeda3367a4bd1a704b0530875c5" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_http_request_sender_1_1_error_handling_1_1_text_box_validator" kind="class"><name>HttpRequestSender::ErrorHandling::TextBoxValidator</name>
+    <member refid="class_http_request_sender_1_1_error_handling_1_1_text_box_validator_1a32aba8e23403d6d6ef41a9a6d6a4148a" kind="function"><name>Validate&lt; T &gt;</name></member>
+  </compound>
+  <compound refid="namespaceglobal" kind="namespace"><name>global</name>
+  </compound>
+  <compound refid="namespaceglobal_1_1_system_configuration" kind="namespace"><name>global::SystemConfiguration</name>
+  </compound>
+  <compound refid="namespace_html_agility_pack" kind="namespace"><name>HtmlAgilityPack</name>
+  </compound>
+  <compound refid="namespace_html_document" kind="namespace"><name>HtmlDocument</name>
+  </compound>
+  <compound refid="namespace_http_request_sender" kind="namespace"><name>HttpRequestSender</name>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_business_logic" kind="namespace"><name>HttpRequestSender::BusinessLogic</name>
+    <member refid="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0" kind="enum"><name>RequesterMode</name></member>
+    <member refid="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0ae1ba155a9f2e8c3be94020eef32a0301" kind="enumvalue"><name>Manual</name></member>
+    <member refid="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0a7778baa465028efd54dcaa890b7ed675" kind="enumvalue"><name>PlannedAbsolute</name></member>
+    <member refid="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0a1195f6567ac7e902c00d73197daead22" kind="enumvalue"><name>PlannedRelative</name></member>
+    <member refid="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0a1b470bc07c97930698e1eed6258f8996" kind="enumvalue"><name>Exploration</name></member>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_business_logic_1_1_data_type" kind="namespace"><name>HttpRequestSender::BusinessLogic::DataType</name>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_error_handling" kind="namespace"><name>HttpRequestSender::ErrorHandling</name>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_forms" kind="namespace"><name>HttpRequestSender::Forms</name>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_properties" kind="namespace"><name>HttpRequestSender::Properties</name>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_reports" kind="namespace"><name>HttpRequestSender::Reports</name>
+  </compound>
+  <compound refid="namespace_http_request_sender_1_1_utilities" kind="namespace"><name>HttpRequestSender::Utilities</name>
+    <member refid="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3dee" kind="enum"><name>LogPriority</name></member>
+    <member refid="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3deea551b723eafd6a31d444fcb2f5920fbd3" kind="enumvalue"><name>INFO</name></member>
+    <member refid="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3deea059e9861e0400dfbe05c98a841f3f96b" kind="enumvalue"><name>WARNING</name></member>
+    <member refid="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3deeabb1ca97ec761fc37101737ba0aa2e7c5" kind="enumvalue"><name>ERROR</name></member>
+  </compound>
+  <compound refid="namespace_newtonsoft_1_1_json" kind="namespace"><name>Newtonsoft::Json</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_concurrent" kind="namespace"><name>System::Collections::Concurrent</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model" kind="namespace"><name>System::ComponentModel</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_drawing" kind="namespace"><name>System::Drawing</name>
+  </compound>
+  <compound refid="namespace_system_1_1_globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_http" kind="namespace"><name>System::Net::Http</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services_1_1_windows_runtime" kind="namespace"><name>System::Runtime::InteropServices::WindowsRuntime</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading" kind="namespace"><name>System::Threading</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_timers" kind="namespace"><name>System::Timers</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_forms" kind="namespace"><name>System::Windows::Forms</name>
+  </compound>
+  <compound refid="namespace_system_1_1_windows_1_1_forms_1_1_data_visualization_1_1_charting" kind="namespace"><name>System::Windows::Forms::DataVisualization::Charting</name>
+  </compound>
+  <compound refid="_address_exclusions_8cs" kind="file"><name>AddressExclusions.cs</name>
+  </compound>
+  <compound refid="_relative_schedule_step_8cs" kind="file"><name>RelativeScheduleStep.cs</name>
+  </compound>
+  <compound refid="_save_step_data_8cs" kind="file"><name>SaveStepData.cs</name>
+  </compound>
+  <compound refid="_schedule_step_8cs" kind="file"><name>ScheduleStep.cs</name>
+  </compound>
+  <compound refid="_site_metric_data_8cs" kind="file"><name>SiteMetricData.cs</name>
+  </compound>
+  <compound refid="_relative_schedule_8cs" kind="file"><name>RelativeSchedule.cs</name>
+  </compound>
+  <compound refid="_schedule_8cs" kind="file"><name>Schedule.cs</name>
+  </compound>
+  <compound refid="_session_metrics_8cs" kind="file"><name>SessionMetrics.cs</name>
+  </compound>
+  <compound refid="_site_requester_8cs" kind="file"><name>SiteRequester.cs</name>
+  </compound>
+  <compound refid="_site_structure_analyzer_8cs" kind="file"><name>SiteStructureAnalyzer.cs</name>
+    <member refid="_site_structure_analyzer_8cs_1af419474a0832771a86af15ca48aa4e4b" kind="typedef"><name>HtmlDocument</name></member>
+  </compound>
+  <compound refid="_source_analyzer_8cs" kind="file"><name>SourceAnalyzer.cs</name>
+  </compound>
+  <compound refid="_incorrect_metric_call_exception_8cs" kind="file"><name>IncorrectMetricCallException.cs</name>
+  </compound>
+  <compound refid="_text_box_validator_8cs" kind="file"><name>TextBoxValidator.cs</name>
+  </compound>
+  <compound refid="_main_form_8cs" kind="file"><name>MainForm.cs</name>
+  </compound>
+  <compound refid="_main_form_8_designer_8cs" kind="file"><name>MainForm.Designer.cs</name>
+  </compound>
+  <compound refid="_relative___scheduler___form_8cs" kind="file"><name>Relative_Scheduler_Form.cs</name>
+  </compound>
+  <compound refid="_relative___scheduler___form_8_designer_8cs" kind="file"><name>Relative_Scheduler_Form.Designer.cs</name>
+  </compound>
+  <compound refid="_scheduler___form_8cs" kind="file"><name>Scheduler_Form.cs</name>
+  </compound>
+  <compound refid="_scheduler___form_8_designer_8cs" kind="file"><name>Scheduler_Form.Designer.cs</name>
+  </compound>
+  <compound refid="_8_n_e_t_framework_00_version_0av4_87_82_8_assembly_attributes_8cs" kind="file"><name>.NETFramework,Version=v4.7.2.AssemblyAttributes.cs</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_resources_8_designer_8cs" kind="file"><name>Resources.Designer.cs</name>
+  </compound>
+  <compound refid="_settings_8_designer_8cs" kind="file"><name>Settings.Designer.cs</name>
+  </compound>
+  <compound refid="_h_t_m_l_generator_8cs" kind="file"><name>HTMLGenerator.cs</name>
+  </compound>
+  <compound refid="_report_8cs" kind="file"><name>Report.cs</name>
+  </compound>
+  <compound refid="_report_generator_8cs" kind="file"><name>ReportGenerator.cs</name>
+  </compound>
+  <compound refid="_extensions_8cs" kind="file"><name>Extensions.cs</name>
+  </compound>
+  <compound refid="_i_o_handler_8cs" kind="file"><name>IOHandler.cs</name>
+  </compound>
+  <compound refid="_logger_8cs" kind="file"><name>Logger.cs</name>
+  </compound>
+  <compound refid="dir_d83eee6225ac99f00a7be08ab28c5198" kind="dir"><name>HttpRequestSender/HttpRequestSender/BusinessLogic</name>
+  </compound>
+  <compound refid="dir_e1afbac0cffa403a50d3b190fd6bc0c3" kind="dir"><name>HttpRequestSender/HttpRequestSender/BusinessLogic/DataType</name>
+  </compound>
+  <compound refid="dir_627ead4318d0f40d426c4cc96d0f3ab4" kind="dir"><name>HttpRequestSender/HttpRequestSender/obj/Debug</name>
+  </compound>
+  <compound refid="dir_4df4b4dde9c3b5dfe0009a592382ddb5" kind="dir"><name>HttpRequestSender/HttpRequestSender/ErrorHandling</name>
+  </compound>
+  <compound refid="dir_1be77d3cd8731b632fb2696e462a7ef2" kind="dir"><name>HttpRequestSender/HttpRequestSender/Forms</name>
+  </compound>
+  <compound refid="dir_d81975ffb462e78b79824fa5d10dfe2c" kind="dir"><name>HttpRequestSender</name>
+  </compound>
+  <compound refid="dir_5d2048bb7e3b1ecb208cd34ffd07aafa" kind="dir"><name>HttpRequestSender/HttpRequestSender</name>
+  </compound>
+  <compound refid="dir_6f21c4ef6e3944b57be0e45be93a4251" kind="dir"><name>HttpRequestSender/HttpRequestSender/obj</name>
+  </compound>
+  <compound refid="dir_74652d9a5c1657ab69adbf278e93d542" kind="dir"><name>HttpRequestSender/HttpRequestSender/Properties</name>
+  </compound>
+  <compound refid="dir_54e9a94fb8d855079bd09baae5f082b7" kind="dir"><name>HttpRequestSender/HttpRequestSender/Reports</name>
+  </compound>
+  <compound refid="dir_864caed829e11b56b83cfdd15a5e44dc" kind="dir"><name>HttpRequestSender/HttpRequestSender/Utilities</name>
+  </compound>
+</doxygenindex>

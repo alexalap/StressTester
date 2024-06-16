@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_http_request_sender" kind="namespace" language="C#">
+    <compoundname>HttpRequestSender</compoundname>
+    <innernamespace refid="namespace_http_request_sender_1_1_business_logic">HttpRequestSender::BusinessLogic</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_error_handling">HttpRequestSender::ErrorHandling</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_forms">HttpRequestSender::Forms</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_properties">HttpRequestSender::Properties</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_reports">HttpRequestSender::Reports</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_utilities">HttpRequestSender::Utilities</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/AddressExclusions.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>

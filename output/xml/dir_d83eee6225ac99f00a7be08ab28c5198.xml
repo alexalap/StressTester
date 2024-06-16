@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_d83eee6225ac99f00a7be08ab28c5198" kind="dir">
+    <compoundname>HttpRequestSender/HttpRequestSender/BusinessLogic</compoundname>
+    <innerdir refid="dir_e1afbac0cffa403a50d3b190fd6bc0c3">HttpRequestSender/HttpRequestSender/BusinessLogic/DataType</innerdir>
+    <innerfile refid="_address_exclusions_8cs">AddressExclusions.cs</innerfile>
+    <innerfile refid="_relative_schedule_8cs">RelativeSchedule.cs</innerfile>
+    <innerfile refid="_schedule_8cs">Schedule.cs</innerfile>
+    <innerfile refid="_session_metrics_8cs">SessionMetrics.cs</innerfile>
+    <innerfile refid="_site_requester_8cs">SiteRequester.cs</innerfile>
+    <innerfile refid="_site_structure_analyzer_8cs">SiteStructureAnalyzer.cs</innerfile>
+    <innerfile refid="_source_analyzer_8cs">SourceAnalyzer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/"/>
+  </compounddef>
+</doxygen>

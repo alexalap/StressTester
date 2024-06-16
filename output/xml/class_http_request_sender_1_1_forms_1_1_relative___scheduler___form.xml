@@ -1,0 +1,822 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Forms::Relative_Scheduler_Form</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a73f4cbb234a379fe385c667f56d951bc" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kindref="compound">RelativeSchedule</ref></type>
+        <definition>RelativeSchedule HttpRequestSender.Forms.Relative_Scheduler_Form.schedule</definition>
+        <argsstring></argsstring>
+        <name>schedule</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.schedule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="13" column="34" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1af98ecb69ed04dbe956a12eda50990c50" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HttpRequestSender.Forms.Relative_Scheduler_Form.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.components</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="9" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ab1a26bea3cb21b8fcd1cddda749edb48" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.Relative_Scheduler_Form.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.panel1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="298" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aefb0091eaf775c01d275a1e6764a29bf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Relative_Scheduler_Form.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.label4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="299" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad9a47533ca72fc55f8bd9676d3789879" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.remove_BTN</definition>
+        <argsstring></argsstring>
+        <name>remove_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.remove_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="300" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1abb8e49fd4ecb3e5eaf4f1ea0a2af5f63" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.edit_BTN</definition>
+        <argsstring></argsstring>
+        <name>edit_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.edit_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="301" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a6cd4a527270fe0bc6e7b89b0c4b0609e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.add_BTN</definition>
+        <argsstring></argsstring>
+        <name>add_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.add_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="302" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad25531e5acdef8139dba8f13975873b4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.planEditorOK_BTN</definition>
+        <argsstring></argsstring>
+        <name>planEditorOK_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.planEditorOK_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="303" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a3074e2e7e3dcbed15c684455871430c2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HttpRequestSender.Forms.Relative_Scheduler_Form.planGrid</definition>
+        <argsstring></argsstring>
+        <name>planGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.planGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="304" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ac69bdd62ea0835ee9050bb6ec6a4aba4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Relative_Scheduler_Form.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.label1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="305" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a826b96db2058738610b4897fa998b18f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.down_BTN</definition>
+        <argsstring></argsstring>
+        <name>down_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.down_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="306" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a55ec0b06afa47febc979af8a4cbab277" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.up_BTN</definition>
+        <argsstring></argsstring>
+        <name>up_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.up_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="307" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a77280458c2efe08aec9830108c5c4c95" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown HttpRequestSender.Forms.Relative_Scheduler_Form.requests_NUB</definition>
+        <argsstring></argsstring>
+        <name>requests_NUB</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.requests_NUB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="308" column="49" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1abfca4e66672a707f5e7abb90b3bfe314" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker HttpRequestSender.Forms.Relative_Scheduler_Form.duration_TP</definition>
+        <argsstring></argsstring>
+        <name>duration_TP</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.duration_TP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="309" column="50" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aaa66cee751451bbf9c9ee281c43c267c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Relative_Scheduler_Form.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.label2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="310" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad59152dd68fad0186493a80466c91a84" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Relative_Scheduler_Form.stepColumn</definition>
+        <argsstring></argsstring>
+        <name>stepColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.stepColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="311" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a9580e913fcfedd0f8856b80012a33f94" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Relative_Scheduler_Form.endTimeColumn</definition>
+        <argsstring></argsstring>
+        <name>endTimeColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.endTimeColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="312" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ac61ece3b75d5232861f020ce4cdb1fc4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Relative_Scheduler_Form.requestsColumn</definition>
+        <argsstring></argsstring>
+        <name>requestsColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.requestsColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="313" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a19919b456f038636e1b4c0066c627415" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.import_BTN</definition>
+        <argsstring></argsstring>
+        <name>import_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.import_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="314" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a66e62dde0abef29e09af3817d74cac35" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Relative_Scheduler_Form.export_BTN</definition>
+        <argsstring></argsstring>
+        <name>export_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.export_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="315" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="315" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aceb548332812f0856898efada56e8ac4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kindref="compound">RelativeSchedule</ref></type>
+        <definition>RelativeSchedule HttpRequestSender.Forms.Relative_Scheduler_Form.Schedule</definition>
+        <argsstring></argsstring>
+        <name>Schedule</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.Schedule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="15" column="33" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="16" bodyend="29"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1afa2b1e95439f4ab50eb3fe284239ea36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.Forms.Relative_Scheduler_Form.Relative_Scheduler_Form</definition>
+        <argsstring>()</argsstring>
+        <name>Relative_Scheduler_Form</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.Relative_Scheduler_Form</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="31" column="16" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="31" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a584bc8b5e2336198eebde359b239d3de" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.Scheduler_Form_Load</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>Scheduler_Form_Load</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.Scheduler_Form_Load</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Loads the relative scheduler form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="41" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="41" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a8cab8f7ed6e5b70ccfa4ff7e03b0ebdd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.RefreshGrid</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.RefreshGrid</qualifiedname>
+        <briefdescription>
+<para>Refreshes the relative scheduler grid by clearing the rows and refilling them with a schedule. The selection will always be on the last row. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="51" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="51" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aa06ec7094b58ee31c74aee34f39de25d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.planGrid_SelectionChanged</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>planGrid_SelectionChanged</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.planGrid_SelectionChanged</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Changes the values of relative Scheduler fields based on the selection change on the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="71" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="71" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a7aac481ae8b78dae6b4a84b36a83fe9e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.add_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>add_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.add_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new relative scheduled step and refreshes the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="86" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="86" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a054a6c54d6a0dbf498e9f1ab303f813e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.edit_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>edit_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.edit_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Edits a relative scheduled step and refreshes the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="99" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="99" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aa372041e988353ef3e538615ccc04a3f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.remove_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>remove_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.remove_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Removed a relative scheduled step and refreshes the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="116" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="116" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a1f7e3101e187f1d93ec05e447395cd48" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.up_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>up_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.up_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Moves up a row in the relative Scheduler grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="130" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="130" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ae6f6fa873239d0dbafbdd983273ef606" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.down_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>down_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.down_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Moves down a row in the relative Scheduler grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="144" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="144" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a361f47aca5895237fcd44b6544dde002" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.planEditorOK_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>planEditorOK_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.planEditorOK_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Closes the relative schedule editor window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="158" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="158" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a393ed4a7beb14f2d731fa1e25c69d8b5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.ResetFields</definition>
+        <argsstring>()</argsstring>
+        <name>ResetFields</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.ResetFields</qualifiedname>
+        <briefdescription>
+<para>Resets the start and finish times in the relative Scheduler fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="167" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="167" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a402a1155c19e2f99097845cffb0a71e8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.Import_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Import_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.Import_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="173" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="173" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a4169d098ab0ca0440875054ed7fe0ad4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.Export_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Export_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.Export_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="193" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="193" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad42957f889f2b00dd0226b9875ab7f57" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Relative_Scheduler_Form.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.InitializeComponent</qualifiedname>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="30" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="30" bodyend="294"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a5c6f85c318cf6d02597f9032f633eb21" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HttpRequestSender.Forms.Relative_Scheduler_Form.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <qualifiedname>HttpRequestSender.Forms.Relative_Scheduler_Form.Dispose</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" line="15" column="33" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Form</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.Forms.Relative_Scheduler_Form</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Form</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.Forms.Relative_Scheduler_Form</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" line="11" column="19" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Relative_Scheduler_Form.cs" bodystart="12" bodyend="213"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a6cd4a527270fe0bc6e7b89b0c4b0609e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>add_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a7aac481ae8b78dae6b4a84b36a83fe9e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>add_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1af98ecb69ed04dbe956a12eda50990c50" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>components</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a5c6f85c318cf6d02597f9032f633eb21" prot="protected" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>Dispose</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a826b96db2058738610b4897fa998b18f" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>down_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ae6f6fa873239d0dbafbdd983273ef606" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>down_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1abfca4e66672a707f5e7abb90b3bfe314" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>duration_TP</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1abb8e49fd4ecb3e5eaf4f1ea0a2af5f63" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>edit_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a054a6c54d6a0dbf498e9f1ab303f813e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>edit_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a9580e913fcfedd0f8856b80012a33f94" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>endTimeColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a66e62dde0abef29e09af3817d74cac35" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>export_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a4169d098ab0ca0440875054ed7fe0ad4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>Export_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a19919b456f038636e1b4c0066c627415" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>import_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a402a1155c19e2f99097845cffb0a71e8" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>Import_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad42957f889f2b00dd0226b9875ab7f57" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>InitializeComponent</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ac69bdd62ea0835ee9050bb6ec6a4aba4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>label1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aaa66cee751451bbf9c9ee281c43c267c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>label2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aefb0091eaf775c01d275a1e6764a29bf" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>label4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ab1a26bea3cb21b8fcd1cddda749edb48" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>panel1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad25531e5acdef8139dba8f13975873b4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>planEditorOK_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a361f47aca5895237fcd44b6544dde002" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>planEditorOK_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a3074e2e7e3dcbed15c684455871430c2" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>planGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aa06ec7094b58ee31c74aee34f39de25d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>planGrid_SelectionChanged</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a8cab8f7ed6e5b70ccfa4ff7e03b0ebdd" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>RefreshGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1afa2b1e95439f4ab50eb3fe284239ea36" prot="public" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>Relative_Scheduler_Form</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad9a47533ca72fc55f8bd9676d3789879" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>remove_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aa372041e988353ef3e538615ccc04a3f" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>remove_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a77280458c2efe08aec9830108c5c4c95" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>requests_NUB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ac61ece3b75d5232861f020ce4cdb1fc4" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>requestsColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a393ed4a7beb14f2d731fa1e25c69d8b5" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>ResetFields</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1aceb548332812f0856898efada56e8ac4" prot="public" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>Schedule</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a73f4cbb234a379fe385c667f56d951bc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>schedule</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a584bc8b5e2336198eebde359b239d3de" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>Scheduler_Form_Load</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1ad59152dd68fad0186493a80466c91a84" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>stepColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a55ec0b06afa47febc979af8a4cbab277" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>up_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_relative___scheduler___form_1a1f7e3101e187f1d93ec05e447395cd48" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Relative_Scheduler_Form</scope><name>up_BTN_Click</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

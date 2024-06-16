@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_system_1_1_windows_1_1_forms_1_1_data_visualization_1_1_charting" kind="namespace" language="C#">
+    <compoundname>System::Windows::Forms::DataVisualization::Charting</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/Forms/MainForm.cs" line="12" column="54"/>
+  </compounddef>
+</doxygen>

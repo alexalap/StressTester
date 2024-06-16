@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::ErrorHandling::InvalidMethodCallException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception_1a8ab80a4c8e908e700fbd34a5467034ed" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.ErrorHandling.InvalidMethodCallException.InvalidMethodCallException</definition>
+        <argsstring>(string methodName, string address)</argsstring>
+        <name>InvalidMethodCallException</name>
+        <qualifiedname>HttpRequestSender.ErrorHandling.InvalidMethodCallException.InvalidMethodCallException</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>methodName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Exception for when a method call is invalid. For example pausing an already paused metric or adding a new value to a closed metric. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>methodName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the method that has been called. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Given url of the address in metrics. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/IncorrectMetricCallException.cs" line="14" column="16" bodyfile="HttpRequestSender/HttpRequestSender/ErrorHandling/IncorrectMetricCallException.cs" bodystart="14" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.ErrorHandling.InvalidMethodCallException</label>
+        <link refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Exception</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.ErrorHandling.InvalidMethodCallException</label>
+        <link refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/IncorrectMetricCallException.cs" line="6" column="5" bodyfile="HttpRequestSender/HttpRequestSender/ErrorHandling/IncorrectMetricCallException.cs" bodystart="7" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_error_handling_1_1_invalid_method_call_exception_1a8ab80a4c8e908e700fbd34a5467034ed" prot="public" virt="non-virtual"><scope>HttpRequestSender::ErrorHandling::InvalidMethodCallException</scope><name>InvalidMethodCallException</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

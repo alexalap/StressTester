@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_utilities_1_1_extensions" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Utilities::Extensions</compoundname>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_utilities_1_1_extensions_1a28f11db26c4f5a4643f7b7a3e60159ca" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void HttpRequestSender.Utilities.Extensions.Swap&lt; T &gt;</definition>
+        <argsstring>(this List&lt; T &gt; list, int i, int j)</argsstring>
+        <name>Swap&lt; T &gt;</name>
+        <qualifiedname>HttpRequestSender.Utilities.Extensions.Swap&lt; T &gt;</qualifiedname>
+        <param>
+          <type>this List&lt; T &gt;</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>j</declname>
+        </param>
+        <briefdescription>
+<para>Extension method. Swaps a list item with another item. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Generic type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current list. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of first list item. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>j</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of second list item. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" line="16" column="23" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" bodystart="16" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_utilities_1_1_extensions_1a19fa84eb365524c51a12f325aae23f3d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DateTime</type>
+        <definition>static DateTime HttpRequestSender.Utilities.Extensions.NextMinute</definition>
+        <argsstring>(this DateTime time)</argsstring>
+        <name>NextMinute</name>
+        <qualifiedname>HttpRequestSender.Utilities.Extensions.NextMinute</qualifiedname>
+        <param>
+          <type>this DateTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+<para>Extension method. Adds seconds to the current time to make the minute round also truncates the milliseconds of the value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Current DateTime. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns the next round minute. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" line="29" column="32" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" bodystart="29" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.Utilities.Extensions</label>
+        <link refid="class_http_request_sender_1_1_utilities_1_1_extensions"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" line="6" column="19" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Extensions.cs" bodystart="7" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_extensions_1a19fa84eb365524c51a12f325aae23f3d" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::Extensions</scope><name>NextMinute</name></member>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_extensions_1a28f11db26c4f5a4643f7b7a3e60159ca" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::Extensions</scope><name>Swap&lt; T &gt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

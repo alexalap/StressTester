@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="_schedule_step_8cs" kind="file" language="C#">
+    <compoundname>ScheduleStep.cs</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step" prot="public">HttpRequestSender::BusinessLogic::DataType::ScheduleStep</innerclass>
+    <innernamespace refid="namespace_http_request_sender">HttpRequestSender</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_business_logic">HttpRequestSender::BusinessLogic</innernamespace>
+    <innernamespace refid="namespace_http_request_sender_1_1_business_logic_1_1_data_type">HttpRequestSender::BusinessLogic::DataType</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_http_request_sender_1_1_business_logic_1_1_data_type" kindref="compound">HttpRequestSender.BusinessLogic.DataType</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step" kindref="compound">ScheduleStep</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10" refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a00dc74a90f5d17087a3803a8e19d3c1c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>DateTime<sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a00dc74a90f5d17087a3803a8e19d3c1c" kindref="member">StartTime</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="14" refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a2eb8fcbde6581fa1377c5de0a31c3574" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>DateTime<sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a2eb8fcbde6581fa1377c5de0a31c3574" kindref="member">EndTime</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="18" refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a61eb107ceb3e4825735185c29bda75a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a61eb107ceb3e4825735185c29bda75a4" kindref="member">Requests</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a611c3fc0fdb68bda323d9c18b3148ff7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a611c3fc0fdb68bda323d9c18b3148ff7" kindref="member">ScheduleStep</ref>(DateTime<sp/>startTime,<sp/>DateTime<sp/>endTime,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>requests)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a00dc74a90f5d17087a3803a8e19d3c1c" kindref="member">StartTime</ref><sp/>=<sp/>startTime;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a2eb8fcbde6581fa1377c5de0a31c3574" kindref="member">EndTime</ref><sp/>=<sp/>endTime;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a61eb107ceb3e4825735185c29bda75a4" kindref="member">Requests</ref><sp/>=<sp/>requests;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs"/>
+  </compounddef>
+</doxygen>

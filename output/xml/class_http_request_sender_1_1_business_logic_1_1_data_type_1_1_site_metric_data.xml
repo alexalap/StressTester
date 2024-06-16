@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1aa8694b21fc807e2e8b7b6582f38fff1e" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ID</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="12" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a43524ab588ea32ac6eb57be528d361d9" prot="private" static="no" mutable="no">
+        <type>readonly int</type>
+        <definition>readonly int HttpRequestSender.BusinessLogic.DataType.SiteMetricData.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.id</qualifiedname>
+        <initializer>= ID++</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="14" column="30" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a8ba923e06679ab9fcab237dd4cb7bf81" prot="private" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string HttpRequestSender.BusinessLogic.DataType.SiteMetricData.address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="15" column="33" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a633c6437859951f55ec1e7010869efb5" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime HttpRequestSender.BusinessLogic.DataType.SiteMetricData.start</definition>
+        <argsstring></argsstring>
+        <name>start</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.start</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="16" column="26" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a91ef9a2a293255b72344c5626fdaeadd" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HttpRequestSender.BusinessLogic.DataType.SiteMetricData.closed</definition>
+        <argsstring></argsstring>
+        <name>closed</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.closed</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="17" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a388fa3641a648c03611d63f67a3db5b3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HttpRequestSender.BusinessLogic.DataType.SiteMetricData.paused</definition>
+        <argsstring></argsstring>
+        <name>paused</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.paused</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="18" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1abdc15ac368da0546cb58595550a5960c" prot="private" static="no" mutable="no">
+        <type>Timer</type>
+        <definition>Timer HttpRequestSender.BusinessLogic.DataType.SiteMetricData.timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="19" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a18d3ed01225dcd8357d31c2ca79c094c" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime HttpRequestSender.BusinessLogic.DataType.SiteMetricData.lastUpdateTime</definition>
+        <argsstring></argsstring>
+        <name>lastUpdateTime</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.lastUpdateTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="20" column="26" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1adf58162bed0ba767220759f0407b23ab" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double HttpRequestSender.BusinessLogic.DataType.SiteMetricData.duration</definition>
+        <argsstring></argsstring>
+        <name>duration</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.duration</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="21" column="24" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a2081d7543718d3f2ca298ffd97e7dd34" prot="private" static="no" mutable="no">
+        <type>List&lt; Dictionary&lt; string,(int, double)&gt; &gt;</type>
+        <definition>List&lt;Dictionary&lt;string, (int, double)&gt; &gt; HttpRequestSender.BusinessLogic.DataType.SiteMetricData.responses</definition>
+        <argsstring></argsstring>
+        <name>responses</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.responses</qualifiedname>
+        <initializer>= new List&lt;Dictionary&lt;string, (int, double)&gt;&gt;()</initializer>
+        <briefdescription>
+<para>Responses of HTTP requests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>We contain the responses in a list. The responses are distributed into dictionaries based on each second. The key of the dictionary is the response code (&quot;OK&quot;). The value is an int and double Value Touple from which the int is the total count of the responses and the double is the average response time. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="30" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a56a87ab50079c5869049a8d152563b47" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Duration</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Duration</qualifiedname>
+        <briefdescription>
+<para>Measures the time duration of the session if it&apos;s not stopped. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="35" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="36" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1abe682d575c46e1b87dc600f1da989086" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.DataType.SiteMetricData.OKResponseCount</definition>
+        <argsstring></argsstring>
+        <name>OKResponseCount</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.OKResponseCount</qualifiedname>
+        <briefdescription>
+<para>Counts and returns the total number of OK responses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="50" column="20" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="51" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a54f9f3a7d69ea06d5cee19de0af5993b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double HttpRequestSender.BusinessLogic.DataType.SiteMetricData.OKResponseRate</definition>
+        <argsstring></argsstring>
+        <name>OKResponseRate</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.OKResponseRate</qualifiedname>
+        <briefdescription>
+<para>Calculates the OK response rate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="69" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="70" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a01b4577520c3c016d3f6d1d475d6e48d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ErrorResponseCount</definition>
+        <argsstring></argsstring>
+        <name>ErrorResponseCount</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ErrorResponseCount</qualifiedname>
+        <briefdescription>
+<para>Counts and returns the total number of responses that do not include &quot;OK&quot;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="97" column="20" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="98" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a1ca596dc6f54a80b855694d4214b818f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>double</type>
+        <definition>double HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ErrorResponseRate</definition>
+        <argsstring></argsstring>
+        <name>ErrorResponseRate</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ErrorResponseRate</qualifiedname>
+        <briefdescription>
+<para>Calculates the not OK response rate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="119" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="120" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7676b5f8bd8833f9a7628ab748cd4145" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Address</definition>
+        <argsstring></argsstring>
+        <name>Address</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Address</qualifiedname>
+        <briefdescription>
+<para>Website&apos;s address. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="150" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a5ce24be7562ac53bde07dea1b349376c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Title</qualifiedname>
+        <briefdescription>
+<para>Title of measurement and the report. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="155" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1ad2d7ff7a14e01213925a676acfbd8df1" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Dictionary&lt; string,(int, double)&gt;</type>
+        <definition>Dictionary&lt;string, (int, double)&gt; HttpRequestSender.BusinessLogic.DataType.SiteMetricData.currentResponses</definition>
+        <argsstring></argsstring>
+        <name>currentResponses</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.currentResponses</qualifiedname>
+        <briefdescription>
+<para>Dictionary of current responses. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="160" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="161" bodyend="166"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1adf5913614dbaf7785aeb7c9fc8d1aa32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.SiteMetricData</definition>
+        <argsstring>(string address, string title)</argsstring>
+        <name>SiteMetricData</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.SiteMetricData</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+<para>Ctor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Website&apos;s address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="173" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="173" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7dfbc109daac07f765e134955f91c5ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.DataType.SiteMetricData.AddResponse</definition>
+        <argsstring>(string statusCode, long elapsedMilliseconds)</argsstring>
+        <name>AddResponse</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.AddResponse</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>statusCode</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>elapsedMilliseconds</declname>
+        </param>
+        <briefdescription>
+<para>Adds a response to the dictionary of current responses. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>statusCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Status code of response. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elapsedMilliseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Elapsed milliseconds from sending out the HTTP request to receiving a response. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidMethodCallException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exception for when a method call in invalid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="202" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="202" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a64da98e49d622b9b16bb0de357f314a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ResponseTimeRateLastSec</definition>
+        <argsstring>()</argsstring>
+        <name>ResponseTimeRateLastSec</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ResponseTimeRateLastSec</qualifiedname>
+        <briefdescription>
+<para>Gets the OK responses time rate of the last second. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns the time rate of OK responses of the last second. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="225" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="225" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a5d2cef6afc6af5f47b03470f4edd6e1d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ErrorTimeRateLastSec</definition>
+        <argsstring>()</argsstring>
+        <name>ErrorTimeRateLastSec</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.ErrorTimeRateLastSec</qualifiedname>
+        <briefdescription>
+<para>Gets the not OK responses time rate of the last second. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Returns the time rate of not OK responses of the last second. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="249" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="249" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1ac2ff01f24849a74d9f5d8afc46db3b79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Close</definition>
+        <argsstring>()</argsstring>
+        <name>Close</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Close</qualifiedname>
+        <briefdescription>
+<para>Stops the measurement and the timer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="283" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="283" bodyend="291"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a99a05ff69814d774c120a1963847e4d9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Pause</definition>
+        <argsstring>()</argsstring>
+        <name>Pause</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.Pause</qualifiedname>
+        <briefdescription>
+<para>Pauses the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidMethodCallException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exception for when a method call in invalid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="297" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="297" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7ca6a880c978821177012f6345f41df9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.DataType.SiteMetricData.UnPause</definition>
+        <argsstring>(int delay)</argsstring>
+        <name>UnPause</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.UnPause</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+<para>Resumes the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>InvalidMethodCallException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exception for when a method call in invalid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="312" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="312" bodyend="327"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a4eff50f420b84ca7545097877e7366af" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.DataType.SiteMetricData.GenerateReport</definition>
+        <argsstring>()</argsstring>
+        <name>GenerateReport</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.GenerateReport</qualifiedname>
+        <briefdescription>
+<para>Generates a report. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="237" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="237" bodyend="243"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a102ec1f2c058b00abeab799296245839" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.DataType.SiteMetricData.RefreshDuration</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshDuration</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.SiteMetricData.RefreshDuration</qualifiedname>
+        <briefdescription>
+<para>Refreshes the last update time and the duration using DateTime.Now. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="274" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="274" bodyend="278"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.DataType.SiteMetricData</label>
+        <link refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" line="10" column="5" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/SiteMetricData.cs" bodystart="11" bodyend="328"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7dfbc109daac07f765e134955f91c5ff" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>AddResponse</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a8ba923e06679ab9fcab237dd4cb7bf81" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>address</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7676b5f8bd8833f9a7628ab748cd4145" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>Address</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1ac2ff01f24849a74d9f5d8afc46db3b79" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>Close</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a91ef9a2a293255b72344c5626fdaeadd" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>closed</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1ad2d7ff7a14e01213925a676acfbd8df1" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>currentResponses</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1adf58162bed0ba767220759f0407b23ab" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>duration</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a56a87ab50079c5869049a8d152563b47" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>Duration</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a01b4577520c3c016d3f6d1d475d6e48d" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>ErrorResponseCount</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a1ca596dc6f54a80b855694d4214b818f" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>ErrorResponseRate</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a5d2cef6afc6af5f47b03470f4edd6e1d" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>ErrorTimeRateLastSec</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a4eff50f420b84ca7545097877e7366af" prot="package" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>GenerateReport</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1aa8694b21fc807e2e8b7b6582f38fff1e" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>ID</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a43524ab588ea32ac6eb57be528d361d9" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>id</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a18d3ed01225dcd8357d31c2ca79c094c" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>lastUpdateTime</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1abe682d575c46e1b87dc600f1da989086" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>OKResponseCount</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a54f9f3a7d69ea06d5cee19de0af5993b" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>OKResponseRate</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a99a05ff69814d774c120a1963847e4d9" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>Pause</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a388fa3641a648c03611d63f67a3db5b3" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>paused</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a102ec1f2c058b00abeab799296245839" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>RefreshDuration</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a2081d7543718d3f2ca298ffd97e7dd34" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>responses</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a64da98e49d622b9b16bb0de357f314a0" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>ResponseTimeRateLastSec</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1adf5913614dbaf7785aeb7c9fc8d1aa32" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>SiteMetricData</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a633c6437859951f55ec1e7010869efb5" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>start</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1abdc15ac368da0546cb58595550a5960c" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>timer</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a5ce24be7562ac53bde07dea1b349376c" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>Title</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_site_metric_data_1a7ca6a880c978821177012f6345f41df9" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::SiteMetricData</scope><name>UnPause</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

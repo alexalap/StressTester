@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_4df4b4dde9c3b5dfe0009a592382ddb5" kind="dir">
+    <compoundname>HttpRequestSender/HttpRequestSender/ErrorHandling</compoundname>
+    <innerfile refid="_incorrect_metric_call_exception_8cs">IncorrectMetricCallException.cs</innerfile>
+    <innerfile refid="_text_box_validator_8cs">TextBoxValidator.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/ErrorHandling/"/>
+  </compounddef>
+</doxygen>

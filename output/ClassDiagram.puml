@@ -1,0 +1,8 @@
+@startuml
+!define CLASS diagram
+!define MEMBERS diagram
+!define FIELDS diagram
+!define METHODS diagram
+
+file "xml/*.xml"
+@enduml

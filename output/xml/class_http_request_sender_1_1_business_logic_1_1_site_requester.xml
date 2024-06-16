@@ -1,0 +1,702 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_site_requester" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::BusinessLogic::SiteRequester</compoundname>
+    <sectiondef kind="event">
+      <memberdef kind="event" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1acace151044739a1d0d5ccb7c1aabf95f" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a9c1031622709783b967c594ec906cd42" kindref="member">OnTickDelegate</ref></type>
+        <definition>OnTickDelegate HttpRequestSender.BusinessLogic.SiteRequester.Tick</definition>
+        <argsstring></argsstring>
+        <name>Tick</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.Tick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="25" column="37" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a05b5d87a1634e13c3dda52eb7f5b452f" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a9c1031622709783b967c594ec906cd42" kindref="member">OnTickDelegate</ref></type>
+        <definition>OnTickDelegate HttpRequestSender.BusinessLogic.SiteRequester.PlanTick</definition>
+        <argsstring></argsstring>
+        <name>PlanTick</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.PlanTick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="26" column="37" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a47c3f2aac4deeb198ba5cbc6b8d4c704" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a9c1031622709783b967c594ec906cd42" kindref="member">OnTickDelegate</ref></type>
+        <definition>OnTickDelegate HttpRequestSender.BusinessLogic.SiteRequester.OnPlanFinish</definition>
+        <argsstring></argsstring>
+        <name>OnPlanFinish</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.OnPlanFinish</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="27" column="37" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="event" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0276a99d1b8fe930b8f84488f9c4afee" prot="public" static="no" add="no" remove="no" raise="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ac848afe4888aceec68624bc77c7c273e" kindref="member">OnAddressedTickDelegate</ref></type>
+        <definition>OnAddressedTickDelegate HttpRequestSender.BusinessLogic.SiteRequester.AddressedTick</definition>
+        <argsstring></argsstring>
+        <name>AddressedTick</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.AddressedTick</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="28" column="46" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a26e312b288f1f2bd26afbcf913205770" prot="private" static="no" mutable="no">
+        <type>HttpClient</type>
+        <definition>HttpClient HttpRequestSender.BusinessLogic.SiteRequester.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.client</qualifiedname>
+        <initializer>= new HttpClient()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="30" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a05071a7fb095f9e81c080344d4bf003d" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.BusinessLogic.SiteRequester.address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.address</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="31" column="24" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a2ca8f5c98c516fcc661cfe60f2f1581e" prot="private" static="no" mutable="no">
+        <type>CancellationTokenSource</type>
+        <definition>CancellationTokenSource HttpRequestSender.BusinessLogic.SiteRequester.cancellation</definition>
+        <argsstring></argsstring>
+        <name>cancellation</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.cancellation</qualifiedname>
+        <initializer>= new CancellationTokenSource()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="32" column="41" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af89caca19ca0f5afa96cbb0eb3064377" prot="private" static="no" mutable="no">
+        <type>CancellationTokenSource</type>
+        <definition>CancellationTokenSource HttpRequestSender.BusinessLogic.SiteRequester.plannedCancellation</definition>
+        <argsstring></argsstring>
+        <name>plannedCancellation</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.plannedCancellation</qualifiedname>
+        <initializer>= new CancellationTokenSource()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="33" column="41" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5e023a09a4df5bd48ef0ef95280bf7f9" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics" kindref="compound">SessionMetrics</ref></type>
+        <definition>SessionMetrics HttpRequestSender.BusinessLogic.SiteRequester.sessionMetrics</definition>
+        <argsstring></argsstring>
+        <name>sessionMetrics</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.sessionMetrics</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="34" column="32" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a71e844317800874e8b9d3f4893005672" prot="private" static="no" mutable="no">
+        <type>System.Timers.Timer</type>
+        <definition>System.Timers.Timer HttpRequestSender.BusinessLogic.SiteRequester.timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.timer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="35" column="35" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1acc4d63636ce2ec5f0d9d77e6236c2dda" prot="private" static="no" mutable="no">
+        <type>System.Timers.Timer</type>
+        <definition>System.Timers.Timer HttpRequestSender.BusinessLogic.SiteRequester.plannedTimer</definition>
+        <argsstring></argsstring>
+        <name>plannedTimer</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.plannedTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="36" column="35" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a72bb08802000925d06c6c3c39f125cf6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HttpRequestSender.BusinessLogic.SiteRequester.isPaused</definition>
+        <argsstring></argsstring>
+        <name>isPaused</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.isPaused</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="37" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a8e34f2fce77b118262a9dbd917b471d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.SiteRequester.numberOfRequestsPerSec</definition>
+        <argsstring></argsstring>
+        <name>numberOfRequestsPerSec</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.numberOfRequestsPerSec</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="38" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5fb9d399c8b830a6792104b7a35f1ca1" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HttpRequestSender.BusinessLogic.SiteRequester.isMeasuring</definition>
+        <argsstring></argsstring>
+        <name>isMeasuring</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.isMeasuring</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="39" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a836b03a00b19036447121dc5e03319a6" prot="private" static="no" mutable="no">
+        <type>object</type>
+        <definition>object HttpRequestSender.BusinessLogic.SiteRequester.lockObject</definition>
+        <argsstring></argsstring>
+        <name>lockObject</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.lockObject</qualifiedname>
+        <initializer>= new object()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="40" column="24" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a74e39c256fb451948a37be46ba86d430" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.SiteRequester.tickCount</definition>
+        <argsstring></argsstring>
+        <name>tickCount</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.tickCount</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="41" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0429fdcf1547dfbb012b488dc13e09d2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.SiteRequester.timeSinceLastTick</definition>
+        <argsstring></argsstring>
+        <name>timeSinceLastTick</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.timeSinceLastTick</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="42" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a39e7c9fe13ed5527d7feb720709a7f73" prot="private" static="no" mutable="no">
+        <type>DateTime</type>
+        <definition>DateTime HttpRequestSender.BusinessLogic.SiteRequester.pauseTime</definition>
+        <argsstring></argsstring>
+        <name>pauseTime</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.pauseTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="43" column="26" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a6eab3d0d4569673179989225f5f76183" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.BusinessLogic.SiteRequester.Status</definition>
+        <argsstring></argsstring>
+        <name>Status</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.Status</qualifiedname>
+        <initializer>= &quot;Idle&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="45" column="23" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a9c1031622709783b967c594ec906cd42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void HttpRequestSender.BusinessLogic.SiteRequester.OnTickDelegate</definition>
+        <argsstring>(int tick)</argsstring>
+        <name>OnTickDelegate</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.OnTickDelegate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="23" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ac848afe4888aceec68624bc77c7c273e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate void</type>
+        <definition>delegate void HttpRequestSender.BusinessLogic.SiteRequester.OnAddressedTickDelegate</definition>
+        <argsstring>(int tick, string address)</argsstring>
+        <name>OnAddressedTickDelegate</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.OnAddressedTickDelegate</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>tick</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="24" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a1747f95a0d9e5e214e16c6de09a521ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.SiteRequester.SiteRequester</definition>
+        <argsstring>(string address, SessionMetrics sessionMetrics, float timeoutSeconds=100)</argsstring>
+        <name>SiteRequester</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.SiteRequester</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics" kindref="compound">SessionMetrics</ref></type>
+          <declname>sessionMetrics</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>timeoutSeconds</declname>
+          <defval>100</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="47" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="47" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0d712cca639c766067cae51d8e9ab318" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpRequestSender.BusinessLogic.SiteRequester.GetResponse</definition>
+        <argsstring>()</argsstring>
+        <name>GetResponse</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.GetResponse</qualifiedname>
+        <briefdescription>
+<para>Sends a HTTP request and logs its response. Time is measured with a Stopwatch between sending the request and receiving the response. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="57" column="27" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="57" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a796c5acfa6907897789ec8daffc3736e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.StartMeasurement</definition>
+        <argsstring>(int numberOfRequestsPerSec, Schedule schedule, RelativeSchedule rSchedule, RequesterMode mode)</argsstring>
+        <name>StartMeasurement</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.StartMeasurement</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>numberOfRequestsPerSec</declname>
+        </param>
+        <param>
+          <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kindref="compound">Schedule</ref></type>
+          <declname>schedule</declname>
+        </param>
+        <param>
+          <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kindref="compound">RelativeSchedule</ref></type>
+          <declname>rSchedule</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0" kindref="member">RequesterMode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <briefdescription>
+<para>Starts the measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfRequestsPerSec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of requests per second. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>schedule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Schedule of planned stress testing. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Stress testing mode: can be manual or scheduled. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="88" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="88" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a69cca1ee8ee86f4cb200c6b5e4e031b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.Pause</definition>
+        <argsstring>()</argsstring>
+        <name>Pause</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.Pause</qualifiedname>
+        <briefdescription>
+<para>Pauses the metric session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="315" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="315" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ab4ac7ba324bd68f930ac8aadd0984afb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async void</type>
+        <definition>async void HttpRequestSender.BusinessLogic.SiteRequester.Resume</definition>
+        <argsstring>()</argsstring>
+        <name>Resume</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.Resume</qualifiedname>
+        <briefdescription>
+<para>Resumes the metric session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="325" column="27" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="325" bodyend="335"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a6bff4ed59a72401c004cf40666de0875" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.Stop</qualifiedname>
+        <briefdescription>
+<para>Stops the metric session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="340" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="340" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a27005e2f635795ed25e9270c6aad7e56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.PlannedStop</definition>
+        <argsstring>()</argsstring>
+        <name>PlannedStop</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.PlannedStop</qualifiedname>
+        <briefdescription>
+<para>Stops the absolute scheduled metric session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="349" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="349" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ab328c677860a4f00ca747551d233cf5e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.RelativePlannedStop</definition>
+        <argsstring>()</argsstring>
+        <name>RelativePlannedStop</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.RelativePlannedStop</qualifiedname>
+        <briefdescription>
+<para>Stops the relative scheduled metric session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="358" column="21" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="358" bodyend="362"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1aaabeb586efe2b2c5fb814086d3a3d905" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.StartSingularMeasurement</definition>
+        <argsstring>(int numberOfRequestsPerSec, string prefix=&quot;Manual&quot;)</argsstring>
+        <name>StartSingularMeasurement</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.StartSingularMeasurement</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>numberOfRequestsPerSec</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>prefix</declname>
+          <defval>&quot;Manual&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Starts a simple measurement with given number of requests per second. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfRequestsPerSec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of requests per second. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>prefix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Prefix of the title for the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="115" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="115" bodyend="137"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af331e53c2ab2b62b7ef3f41fd5a4258e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.StartPlannedMeasurement</definition>
+        <argsstring>(Schedule schedule)</argsstring>
+        <name>StartPlannedMeasurement</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.StartPlannedMeasurement</qualifiedname>
+        <param>
+          <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kindref="compound">Schedule</ref></type>
+          <declname>schedule</declname>
+        </param>
+        <briefdescription>
+<para>Starts an absolute scheduled measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The planned timer keeps track of the scheduling. The timer is set for each steps duration or the time until the first ones start. After the time has passed we use a cancellation token to close the current measurement.</para>
+<para>We use a singular measurement for each scheduled steps. (row 174)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>schedule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Schedule of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="148" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="148" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af8f513d2820a60ee965c23c239d69eb5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.StartRelativePlannedMeasurement</definition>
+        <argsstring>(RelativeSchedule schedule)</argsstring>
+        <name>StartRelativePlannedMeasurement</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.StartRelativePlannedMeasurement</qualifiedname>
+        <param>
+          <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" kindref="compound">RelativeSchedule</ref></type>
+          <declname>schedule</declname>
+        </param>
+        <briefdescription>
+<para>Starts a relative scheduled measurement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The planned timer keeps track of the scheduling. The timer is set for each steps duration or the time until the first ones start. After the time has passed we use a cancellation token to close the current measurement.</para>
+<para>We use a singular measurement for each scheduled steps. (row 221)</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>schedule</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Schedule of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="206" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="206" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0917d9eaa1e4d54e862cc99d6f8786b8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task</type>
+        <definition>async Task HttpRequestSender.BusinessLogic.SiteRequester.GetResponseParallel</definition>
+        <argsstring>(int numberOfRequestsPerSec)</argsstring>
+        <name>GetResponseParallel</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.GetResponseParallel</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>numberOfRequestsPerSec</declname>
+        </param>
+        <briefdescription>
+<para>We distribute the requests into batches for more optimal use. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>We use batch sizes for numbers respectively: 1000+ = 300 500+ = 200 200+ = 100 Default is 50.</para>
+<para>We distribute the requests into partitions with given batch sizes and start them in parallel. This reduces stress on the CPU which would otherwise start all the processes in their very own thread and eventually freeze.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfRequestsPerSec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of requests per second. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="261" column="28" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="261" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5541dc29bb8f36abd90020b4837ab37b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.BusinessLogic.SiteRequester.TimeOut</definition>
+        <argsstring>()</argsstring>
+        <name>TimeOut</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SiteRequester.TimeOut</qualifiedname>
+        <briefdescription>
+<para>If the session is not paused, it closes the session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="303" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="303" bodyend="310"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.SiteRequester</label>
+        <link refid="class_http_request_sender_1_1_business_logic_1_1_site_requester"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="21" column="5" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="22" bodyend="363"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a05071a7fb095f9e81c080344d4bf003d" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>address</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0276a99d1b8fe930b8f84488f9c4afee" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>AddressedTick</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a2ca8f5c98c516fcc661cfe60f2f1581e" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>cancellation</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a26e312b288f1f2bd26afbcf913205770" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>client</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0d712cca639c766067cae51d8e9ab318" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>GetResponse</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0917d9eaa1e4d54e862cc99d6f8786b8" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>GetResponseParallel</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5fb9d399c8b830a6792104b7a35f1ca1" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>isMeasuring</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a72bb08802000925d06c6c3c39f125cf6" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>isPaused</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a836b03a00b19036447121dc5e03319a6" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>lockObject</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a8e34f2fce77b118262a9dbd917b471d7" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>numberOfRequestsPerSec</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ac848afe4888aceec68624bc77c7c273e" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>OnAddressedTickDelegate</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a47c3f2aac4deeb198ba5cbc6b8d4c704" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>OnPlanFinish</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a9c1031622709783b967c594ec906cd42" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>OnTickDelegate</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a69cca1ee8ee86f4cb200c6b5e4e031b0" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>Pause</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a39e7c9fe13ed5527d7feb720709a7f73" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>pauseTime</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af89caca19ca0f5afa96cbb0eb3064377" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>plannedCancellation</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a27005e2f635795ed25e9270c6aad7e56" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>PlannedStop</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1acc4d63636ce2ec5f0d9d77e6236c2dda" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>plannedTimer</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a05b5d87a1634e13c3dda52eb7f5b452f" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>PlanTick</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ab328c677860a4f00ca747551d233cf5e" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>RelativePlannedStop</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1ab4ac7ba324bd68f930ac8aadd0984afb" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>Resume</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5e023a09a4df5bd48ef0ef95280bf7f9" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>sessionMetrics</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a1747f95a0d9e5e214e16c6de09a521ce" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>SiteRequester</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a796c5acfa6907897789ec8daffc3736e" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>StartMeasurement</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af331e53c2ab2b62b7ef3f41fd5a4258e" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>StartPlannedMeasurement</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1af8f513d2820a60ee965c23c239d69eb5" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>StartRelativePlannedMeasurement</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1aaabeb586efe2b2c5fb814086d3a3d905" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>StartSingularMeasurement</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a6eab3d0d4569673179989225f5f76183" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>Status</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a6bff4ed59a72401c004cf40666de0875" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>Stop</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1acace151044739a1d0d5ccb7c1aabf95f" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>Tick</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a74e39c256fb451948a37be46ba86d430" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>tickCount</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a5541dc29bb8f36abd90020b4837ab37b" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>TimeOut</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a71e844317800874e8b9d3f4893005672" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>timer</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_site_requester_1a0429fdcf1547dfbb012b488dc13e09d2" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SiteRequester</scope><name>timeSinceLastTick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

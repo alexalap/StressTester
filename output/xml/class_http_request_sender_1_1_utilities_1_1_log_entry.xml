@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_utilities_1_1_log_entry" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Utilities::LogEntry</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_utilities_1_1_log_entry_1a20d85c20362aa5918c1bfb20265a4031" prot="public" static="no" mutable="no">
+        <type>readonly <ref refid="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3dee" kindref="member">LogPriority</ref></type>
+        <definition>readonly LogPriority HttpRequestSender.Utilities.LogEntry.logPriority</definition>
+        <argsstring></argsstring>
+        <name>logPriority</name>
+        <qualifiedname>HttpRequestSender.Utilities.LogEntry.logPriority</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" line="21" column="37" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_utilities_1_1_log_entry_1a51021ac11e0c5cf15d5ad4c14fa4af98" prot="public" static="no" mutable="no">
+        <type>readonly DateTime</type>
+        <definition>readonly DateTime HttpRequestSender.Utilities.LogEntry.timeStamp</definition>
+        <argsstring></argsstring>
+        <name>timeStamp</name>
+        <qualifiedname>HttpRequestSender.Utilities.LogEntry.timeStamp</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" line="22" column="34" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_utilities_1_1_log_entry_1a0d5432f16f287d38d3f158043884d63b" prot="public" static="no" mutable="no">
+        <type>readonly string</type>
+        <definition>readonly string HttpRequestSender.Utilities.LogEntry.message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <qualifiedname>HttpRequestSender.Utilities.LogEntry.message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" line="23" column="32" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_utilities_1_1_log_entry_1af49cced8d52720cde435d72c009d7a73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.Utilities.LogEntry.LogEntry</definition>
+        <argsstring>(LogPriority logPriority, DateTime timeStamp, string message)</argsstring>
+        <name>LogEntry</name>
+        <qualifiedname>HttpRequestSender.Utilities.LogEntry.LogEntry</qualifiedname>
+        <param>
+          <type><ref refid="namespace_http_request_sender_1_1_utilities_1adbeb70ebeaa330b6e9a3c37bbabe3dee" kindref="member">LogPriority</ref></type>
+          <declname>logPriority</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>timeStamp</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" line="25" column="16" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" bodystart="25" bodyend="30"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.Utilities.LogEntry</label>
+        <link refid="class_http_request_sender_1_1_utilities_1_1_log_entry"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" line="19" column="5" bodyfile="HttpRequestSender/HttpRequestSender/Utilities/Logger.cs" bodystart="20" bodyend="31"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1af49cced8d52720cde435d72c009d7a73" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::LogEntry</scope><name>LogEntry</name></member>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1a20d85c20362aa5918c1bfb20265a4031" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::LogEntry</scope><name>logPriority</name></member>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1a0d5432f16f287d38d3f158043884d63b" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::LogEntry</scope><name>message</name></member>
+      <member refid="class_http_request_sender_1_1_utilities_1_1_log_entry_1a51021ac11e0c5cf15d5ad4c14fa4af98" prot="public" virt="non-virtual"><scope>HttpRequestSender::Utilities::LogEntry</scope><name>timeStamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

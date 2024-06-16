@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::BusinessLogic::DataType::RelativeScheduleStep</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1adf4372225ea2f6577bc00c962d7c9a26" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>TimeSpan</type>
+        <definition>TimeSpan HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep.Duration</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep.Duration</qualifiedname>
+        <briefdescription>
+<para>Duration of the relative measurement step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" line="10" column="25" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1af76e33c16cd7de74886d6010c1eed22f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep.Requests</definition>
+        <argsstring></argsstring>
+        <name>Requests</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep.Requests</qualifiedname>
+        <briefdescription>
+<para>The number of requests of a scheduled metric step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" line="14" column="20" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1a7cd64510edc7e1f3db40b753085d748c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep.RelativeScheduleStep</definition>
+        <argsstring>(TimeSpan duration, int requests)</argsstring>
+        <name>RelativeScheduleStep</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep.RelativeScheduleStep</qualifiedname>
+        <param>
+          <type>TimeSpan</type>
+          <declname>duration</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requests</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" line="16" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" bodystart="16" bodyend="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.DataType.RelativeScheduleStep</label>
+        <link refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" line="5" column="11" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/RelativeScheduleStep.cs" bodystart="6" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1adf4372225ea2f6577bc00c962d7c9a26" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::RelativeScheduleStep</scope><name>Duration</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1a7cd64510edc7e1f3db40b753085d748c" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::RelativeScheduleStep</scope><name>RelativeScheduleStep</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_relative_schedule_step_1af76e33c16cd7de74886d6010c1eed22f" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::RelativeScheduleStep</scope><name>Requests</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

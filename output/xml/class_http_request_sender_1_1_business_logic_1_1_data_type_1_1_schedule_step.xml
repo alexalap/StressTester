@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::BusinessLogic::DataType::ScheduleStep</compoundname>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a00dc74a90f5d17087a3803a8e19d3c1c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HttpRequestSender.BusinessLogic.DataType.ScheduleStep.StartTime</definition>
+        <argsstring></argsstring>
+        <name>StartTime</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.ScheduleStep.StartTime</qualifiedname>
+        <briefdescription>
+<para>The start date time of a scheduled metric step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" line="10" column="25" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" bodystart="10" bodyend="10"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a2eb8fcbde6581fa1377c5de0a31c3574" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime HttpRequestSender.BusinessLogic.DataType.ScheduleStep.EndTime</definition>
+        <argsstring></argsstring>
+        <name>EndTime</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.ScheduleStep.EndTime</qualifiedname>
+        <briefdescription>
+<para>The end date time of a scheduled metric step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" line="14" column="25" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a61eb107ceb3e4825735185c29bda75a4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>int</type>
+        <definition>int HttpRequestSender.BusinessLogic.DataType.ScheduleStep.Requests</definition>
+        <argsstring></argsstring>
+        <name>Requests</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.ScheduleStep.Requests</qualifiedname>
+        <briefdescription>
+<para>The number of requests of a scheduled metric step. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" line="18" column="20" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a611c3fc0fdb68bda323d9c18b3148ff7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.DataType.ScheduleStep.ScheduleStep</definition>
+        <argsstring>(DateTime startTime, DateTime endTime, int requests)</argsstring>
+        <name>ScheduleStep</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.DataType.ScheduleStep.ScheduleStep</qualifiedname>
+        <param>
+          <type>DateTime</type>
+          <declname>startTime</declname>
+        </param>
+        <param>
+          <type>DateTime</type>
+          <declname>endTime</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requests</declname>
+        </param>
+        <briefdescription>
+<para>Ctor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>startTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The start time of a step. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>endTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The end time of the step. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>requests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of requests. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" line="26" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" bodystart="26" bodyend="31"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.DataType.ScheduleStep</label>
+        <link refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step"/>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" line="5" column="11" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/DataType/ScheduleStep.cs" bodystart="6" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a2eb8fcbde6581fa1377c5de0a31c3574" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::ScheduleStep</scope><name>EndTime</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a61eb107ceb3e4825735185c29bda75a4" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::ScheduleStep</scope><name>Requests</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a611c3fc0fdb68bda323d9c18b3148ff7" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::ScheduleStep</scope><name>ScheduleStep</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_data_type_1_1_schedule_step_1a00dc74a90f5d17087a3803a8e19d3c1c" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::DataType::ScheduleStep</scope><name>StartTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

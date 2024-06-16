@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_business_logic_1_1_source_analyzer" kind="class" language="C#" prot="package">
+    <compoundname>HttpRequestSender::BusinessLogic::SourceAnalyzer</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a39d1559537d7ac0e658f5df357d13231" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string HttpRequestSender.BusinessLogic.SourceAnalyzer.rootAddress</definition>
+        <argsstring></argsstring>
+        <name>rootAddress</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SourceAnalyzer.rootAddress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" line="10" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1aab448afc903dfda711ad522a28b8fb47" prot="private" static="no" mutable="no">
+        <type><ref refid="_site_structure_analyzer_8cs_1af419474a0832771a86af15ca48aa4e4b" kindref="member">HtmlDocument</ref></type>
+        <definition>HtmlDocument HttpRequestSender.BusinessLogic.SourceAnalyzer.htmlDocument</definition>
+        <argsstring></argsstring>
+        <name>htmlDocument</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SourceAnalyzer.htmlDocument</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" line="11" column="22" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a1c2d3d847f7674fcb8c04457c2327cb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.BusinessLogic.SourceAnalyzer.SourceAnalyzer</definition>
+        <argsstring>(string rootAddress, HtmlDocument htmlDocument)</argsstring>
+        <name>SourceAnalyzer</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SourceAnalyzer.SourceAnalyzer</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>rootAddress</declname>
+        </param>
+        <param>
+          <type><ref refid="_site_structure_analyzer_8cs_1af419474a0832771a86af15ca48aa4e4b" kindref="member">HtmlDocument</ref></type>
+          <declname>htmlDocument</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" line="13" column="16" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" bodystart="13" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a1f2f160d2e9a8010686f91463d42ecbe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, int &gt;</type>
+        <definition>Dictionary&lt; string, int &gt; HttpRequestSender.BusinessLogic.SourceAnalyzer.Analyze</definition>
+        <argsstring>()</argsstring>
+        <name>Analyze</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.SourceAnalyzer.Analyze</qualifiedname>
+        <briefdescription>
+<para>Analyzes an address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks links in the site-contents given in the ctor. Only links that belong to the root domain are qualified. For example: root domain: www.alexa.com qualified: www.alexa.com/aboutme not qualified: www.other.com/aboutme</para>
+<para><simplesect kind="return"><para>Returns the addresses and the number of times they are linked. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" line="29" column="27" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" bodystart="29" bodyend="58"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>HttpRequestSender.BusinessLogic.SourceAnalyzer</label>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" line="8" column="13" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SourceAnalyzer.cs" bodystart="9" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a1f2f160d2e9a8010686f91463d42ecbe" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SourceAnalyzer</scope><name>Analyze</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1aab448afc903dfda711ad522a28b8fb47" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SourceAnalyzer</scope><name>htmlDocument</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a39d1559537d7ac0e658f5df357d13231" prot="private" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SourceAnalyzer</scope><name>rootAddress</name></member>
+      <member refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer_1a1c2d3d847f7674fcb8c04457c2327cb8" prot="public" virt="non-virtual"><scope>HttpRequestSender::BusinessLogic::SourceAnalyzer</scope><name>SourceAnalyzer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,791 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="class_http_request_sender_1_1_forms_1_1_scheduler___form" kind="class" language="C#" prot="public">
+    <compoundname>HttpRequestSender::Forms::Scheduler_Form</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a8e3568bea3189ad6d1c0148c8601e0ea" prot="private" static="no" mutable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kindref="compound">Schedule</ref></type>
+        <definition>Schedule HttpRequestSender.Forms.Scheduler_Form.schedule</definition>
+        <argsstring></argsstring>
+        <name>schedule</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.schedule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="12" column="26" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ad7c89ef07db0a09c02125ca90e6d31f7" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer HttpRequestSender.Forms.Scheduler_Form.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.components</qualifiedname>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="9" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a76b1328bedd4cb4223ae00f06f57538b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel HttpRequestSender.Forms.Scheduler_Form.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.panel1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="298" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1af1f8b999dacdaaea43bbb61dc2e92966" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Scheduler_Form.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.label4</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="299" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a4adeb55d1a87c58a622bff58c39db216" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Scheduler_Form.remove_BTN</definition>
+        <argsstring></argsstring>
+        <name>remove_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.remove_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="300" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a15ff896ce826603c289d61f673bb9266" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Scheduler_Form.edit_BTN</definition>
+        <argsstring></argsstring>
+        <name>edit_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.edit_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="301" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a8cbb3ba4f8087cc06efa7c648bcd6a62" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Scheduler_Form.add_BTN</definition>
+        <argsstring></argsstring>
+        <name>add_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.add_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="302" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a07500a47832065b2a873d97f48a93dfb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Scheduler_Form.planEditorOK_BTN</definition>
+        <argsstring></argsstring>
+        <name>planEditorOK_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.planEditorOK_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="303" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a6ce166cd9f6ce982f0c143ba2a537e1e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView HttpRequestSender.Forms.Scheduler_Form.planGrid</definition>
+        <argsstring></argsstring>
+        <name>planGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.planGrid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="304" column="48" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a872d8aec0d2db47a00a45e1844f9a4f6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker HttpRequestSender.Forms.Scheduler_Form.startTimer_TP</definition>
+        <argsstring></argsstring>
+        <name>startTimer_TP</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.startTimer_TP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="305" column="50" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a426bb920a35ce23ccfb84e7feb61d8b9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Scheduler_Form.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.label2</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="306" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a9b715af73a90ab52276cea5a31b68200" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Scheduler_Form.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.label1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="307" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a454540c8de132e574dd242e59bd5f044" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Scheduler_Form.down_BTN</definition>
+        <argsstring></argsstring>
+        <name>down_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.down_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="308" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0fc313ca0851e58d82165a68d972ef24" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button HttpRequestSender.Forms.Scheduler_Form.up_BTN</definition>
+        <argsstring></argsstring>
+        <name>up_BTN</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.up_BTN</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="309" column="42" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a068200ce73858ba9e428fc2fe15a1481" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.NumericUpDown</type>
+        <definition>System.Windows.Forms.NumericUpDown HttpRequestSender.Forms.Scheduler_Form.requests_NUB</definition>
+        <argsstring></argsstring>
+        <name>requests_NUB</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.requests_NUB</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="310" column="49" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1adf181e1cee45f9db16a839b5c245d503" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Scheduler_Form.stepColumn</definition>
+        <argsstring></argsstring>
+        <name>stepColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.stepColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="311" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a7e99093ffeabbd97c5f263c70ebf3bfd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Scheduler_Form.startTimeColumn</definition>
+        <argsstring></argsstring>
+        <name>startTimeColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.startTimeColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="312" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="312" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a020671f191d71c73589a1c847b54040c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Scheduler_Form.endTimeColumn</definition>
+        <argsstring></argsstring>
+        <name>endTimeColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.endTimeColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="313" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ab7083dccaf7c37315bea16b59aad3b6d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn HttpRequestSender.Forms.Scheduler_Form.requestsColumn</definition>
+        <argsstring></argsstring>
+        <name>requestsColumn</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.requestsColumn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="314" column="61" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1aff806b458001555253786a4c434c08ef" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DateTimePicker</type>
+        <definition>System.Windows.Forms.DateTimePicker HttpRequestSender.Forms.Scheduler_Form.endTimer_TP</definition>
+        <argsstring></argsstring>
+        <name>endTimer_TP</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.endTimer_TP</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="315" column="50" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0154d3147d42b22c94a3ac906608e650" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label HttpRequestSender.Forms.Scheduler_Form.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.label3</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="316" column="41" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="316" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a7f95331470d92b24e5b75f2943662363" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_http_request_sender_1_1_business_logic_1_1_schedule" kindref="compound">Schedule</ref></type>
+        <definition>Schedule HttpRequestSender.Forms.Scheduler_Form.Schedule</definition>
+        <argsstring></argsstring>
+        <name>Schedule</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.Schedule</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="14" column="25" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="15" bodyend="28"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1d88024050cbea0e53539c51194d96a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>HttpRequestSender.Forms.Scheduler_Form.Scheduler_Form</definition>
+        <argsstring>()</argsstring>
+        <name>Scheduler_Form</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.Scheduler_Form</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="30" column="16" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a382d3f341706f536ffe5154b4f6e6c66" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.Scheduler_Form_Load</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>Scheduler_Form_Load</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.Scheduler_Form_Load</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Loads the scheduler form. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="40" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="40" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1c2a907688237db07be24ee46dac0eb6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.RefreshGrid</definition>
+        <argsstring>()</argsstring>
+        <name>RefreshGrid</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.RefreshGrid</qualifiedname>
+        <briefdescription>
+<para>Refreshes the scheduler grid by clearing the rows and refilling them with a schedule. The selection will always be on the last row. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="50" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="50" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a6ff865806cb404036e683141e1a5216c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.planGrid_SelectionChanged</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>planGrid_SelectionChanged</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.planGrid_SelectionChanged</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Changes the values of Scheduler fields based on the selection change on the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="70" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="70" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1e626a4d3b007c9292db724b67ec2482" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.add_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>add_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.add_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Adds a new scheduled step and refreshes the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="86" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ae50ea7c20f8a055003017d27dbf22f5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.edit_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>edit_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.edit_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Edits a scheduled step and refreshes the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="97" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="97" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1aeb8f926c3d80a1955cb8eb38e9fd12cc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.remove_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>remove_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.remove_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Removed a scheduled step and refreshes the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="112" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="112" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a2fba0c031f24bb18cfff4aa124f17e8e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.up_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>up_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.up_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Moves up a row in the Scheduler grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="126" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="126" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a497ef81cc9a5075e234216e3c9a2b625" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.down_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>down_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.down_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Moves down a row in the Scheduler grid. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="140" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="140" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a325216387143cd15bb3e7516e6686571" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.planEditorOK_BTN_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>planEditorOK_BTN_Click</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.planEditorOK_BTN_Click</qualifiedname>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+<para>Closes the schedule editor window. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>e</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="154" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="154" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0411a994851f16fcf6b798d3beea367c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.ResetFields</definition>
+        <argsstring>()</argsstring>
+        <name>ResetFields</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.ResetFields</qualifiedname>
+        <briefdescription>
+<para>Resets the start and finish times in the Scheduler fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="163" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="163" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a18a4d92e50f19de258baeccc6d94791f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void HttpRequestSender.Forms.Scheduler_Form.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.InitializeComponent</qualifiedname>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="30" column="22" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="30" bodyend="294"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_http_request_sender_1_1_forms_1_1_scheduler___form_1abc79be21703647e5ff638f0540cb4bec" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void HttpRequestSender.Forms.Scheduler_Form.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <qualifiedname>HttpRequestSender.Forms.Scheduler_Form.Dispose</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" line="15" column="33" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.Designer.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Form</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.Forms.Scheduler_Form</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_scheduler___form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Form</label>
+      </node>
+      <node id="1">
+        <label>HttpRequestSender.Forms.Scheduler_Form</label>
+        <link refid="class_http_request_sender_1_1_forms_1_1_scheduler___form"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" line="10" column="19" bodyfile="HttpRequestSender/HttpRequestSender/Forms/Scheduler_Form.cs" bodystart="11" bodyend="169"/>
+    <listofallmembers>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a8cbb3ba4f8087cc06efa7c648bcd6a62" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>add_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1e626a4d3b007c9292db724b67ec2482" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>add_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ad7c89ef07db0a09c02125ca90e6d31f7" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>components</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1abc79be21703647e5ff638f0540cb4bec" prot="protected" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>Dispose</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a454540c8de132e574dd242e59bd5f044" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>down_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a497ef81cc9a5075e234216e3c9a2b625" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>down_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a15ff896ce826603c289d61f673bb9266" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>edit_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ae50ea7c20f8a055003017d27dbf22f5d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>edit_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a020671f191d71c73589a1c847b54040c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>endTimeColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1aff806b458001555253786a4c434c08ef" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>endTimer_TP</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a18a4d92e50f19de258baeccc6d94791f" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>InitializeComponent</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a9b715af73a90ab52276cea5a31b68200" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>label1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a426bb920a35ce23ccfb84e7feb61d8b9" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>label2</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0154d3147d42b22c94a3ac906608e650" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>label3</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1af1f8b999dacdaaea43bbb61dc2e92966" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>label4</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a76b1328bedd4cb4223ae00f06f57538b" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>panel1</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a07500a47832065b2a873d97f48a93dfb" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>planEditorOK_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a325216387143cd15bb3e7516e6686571" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>planEditorOK_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a6ce166cd9f6ce982f0c143ba2a537e1e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>planGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a6ff865806cb404036e683141e1a5216c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>planGrid_SelectionChanged</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1c2a907688237db07be24ee46dac0eb6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>RefreshGrid</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a4adeb55d1a87c58a622bff58c39db216" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>remove_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1aeb8f926c3d80a1955cb8eb38e9fd12cc" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>remove_BTN_Click</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a068200ce73858ba9e428fc2fe15a1481" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>requests_NUB</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1ab7083dccaf7c37315bea16b59aad3b6d" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>requestsColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0411a994851f16fcf6b798d3beea367c" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>ResetFields</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a7f95331470d92b24e5b75f2943662363" prot="public" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>Schedule</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a8e3568bea3189ad6d1c0148c8601e0ea" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>schedule</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a1d88024050cbea0e53539c51194d96a1" prot="public" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>Scheduler_Form</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a382d3f341706f536ffe5154b4f6e6c66" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>Scheduler_Form_Load</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a7e99093ffeabbd97c5f263c70ebf3bfd" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>startTimeColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a872d8aec0d2db47a00a45e1844f9a4f6" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>startTimer_TP</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1adf181e1cee45f9db16a839b5c245d503" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>stepColumn</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a0fc313ca0851e58d82165a68d972ef24" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>up_BTN</name></member>
+      <member refid="class_http_request_sender_1_1_forms_1_1_scheduler___form_1a2fba0c031f24bb18cfff4aa124f17e8e" prot="private" virt="non-virtual"><scope>HttpRequestSender::Forms::Scheduler_Form</scope><name>up_BTN_Click</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

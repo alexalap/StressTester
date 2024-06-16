@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="namespace_http_request_sender_1_1_business_logic" kind="namespace" language="C#">
+    <compoundname>HttpRequestSender::BusinessLogic</compoundname>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_address_exclusions" prot="public">HttpRequestSender::BusinessLogic::AddressExclusions</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_relative_schedule" prot="public">HttpRequestSender::BusinessLogic::RelativeSchedule</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_schedule" prot="public">HttpRequestSender::BusinessLogic::Schedule</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_session_metrics" prot="public">HttpRequestSender::BusinessLogic::SessionMetrics</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_site_requester" prot="public">HttpRequestSender::BusinessLogic::SiteRequester</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_site_structure_analyzer" prot="package">HttpRequestSender::BusinessLogic::SiteStructureAnalyzer</innerclass>
+    <innerclass refid="class_http_request_sender_1_1_business_logic_1_1_source_analyzer" prot="package">HttpRequestSender::BusinessLogic::SourceAnalyzer</innerclass>
+    <innernamespace refid="namespace_http_request_sender_1_1_business_logic_1_1_data_type">HttpRequestSender::BusinessLogic::DataType</innernamespace>
+    <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>RequesterMode</name>
+        <qualifiedname>HttpRequestSender.BusinessLogic.RequesterMode</qualifiedname>
+        <enumvalue id="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0ae1ba155a9f2e8c3be94020eef32a0301" prot="public">
+          <name>Manual</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0a7778baa465028efd54dcaa890b7ed675" prot="public">
+          <name>PlannedAbsolute</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0a1195f6567ac7e902c00d73197daead22" prot="public">
+          <name>PlannedRelative</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_http_request_sender_1_1_business_logic_1a33407b46403c766858bce49feb22bcb0a1b470bc07c97930698e1eed6258f8996" prot="public">
+          <name>Exploration</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" line="13" column="11" bodyfile="HttpRequestSender/HttpRequestSender/BusinessLogic/SiteRequester.cs" bodystart="14" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="HttpRequestSender/HttpRequestSender/BusinessLogic/AddressExclusions.cs" line="1" column="1"/>
+  </compounddef>
+</doxygen>
